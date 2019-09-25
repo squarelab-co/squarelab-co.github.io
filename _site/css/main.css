@@ -496,7 +496,7 @@ body.is-loading #banner:after { opacity: 1; }
 
 .one .img-service { text-align: center; margin: 0; }
 
-.one .img-service img { padding: 8em 4.2em 0 4.2em; max-width: 100%; height: auto; }
+.one .img-service img { padding: 8em 4.2em 0 4.2em; max-width: 100%; height: auto; vertical-align: bottom; }
 
 /* Common */
 .one-box { height: auto; box-sizing: border-box; padding: 0 4.2em; display: inline-block; }
