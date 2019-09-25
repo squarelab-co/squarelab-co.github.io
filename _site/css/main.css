@@ -450,7 +450,7 @@ body.is-menu-visible #menu { -moz-transform: translateX(0); -webkit-transform: t
 
 #banner .more:after { background-image: url("images/arrow1.svg"); background-position: center; background-repeat: no-repeat; background-size: contain; bottom: 4em; content: ''; display: block; height: 3em; width: 3em; left: 50%; margin: 0 0 0 -0.75em; position: absolute; }
 
-#banner:after { -moz-pointer-events: none; -webkit-pointer-events: none; -ms-pointer-events: none; pointer-events: none; -moz-transition: opacity 3s ease-in-out; -webkit-transition: opacity 3s ease-in-out; -ms-transition: opacity 3s ease-in-out; transition: opacity 3s ease-in-out; -moz-transition-delay: 0.3s; -webkit-transition-delay: 0.3s; -ms-transition-delay: 0.3s; transition-delay: 0.3s; content: ''; background: #000; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; opacity: 0; }
+#banner:after { -moz-pointer-events: none; -webkit-pointer-events: none; -ms-pointer-events: none; pointer-events: none; -moz-transition: opacity 3s ease-in-out; -webkit-transition: opacity 3s ease-in-out; -ms-transition: opacity 3s ease-in-out; transition: opacity 3s ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -ms-transition-delay: 0s; transition-delay: 0s; content: ''; background: #000; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; opacity: 0; }
 
 body.is-loading #banner h2 { -moz-transform: scale(0.95); -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform: scale(0.95); opacity: 0; }
 

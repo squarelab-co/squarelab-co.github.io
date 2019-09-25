@@ -488,7 +488,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		&:after {
 			@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-			@include vendor('transition-delay', '0.3s');
+			@include vendor('transition-delay', '0s');
 			content: '';
 			background: _palette(bg);
 			display: block;
