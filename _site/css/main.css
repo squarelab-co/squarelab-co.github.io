@@ -421,15 +421,15 @@ body.is-menu-visible #page-wrapper:before { display: block; }
 body.is-menu-visible #menu { -moz-transform: translateX(0); -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
 
 /* Header */
-#header { -moz-transition: background-color 0.2s ease; -webkit-transition: background-color 0.2s ease; -ms-transition: background-color 0.2s ease; transition: background-color 0.2s ease; background: #000; height: 6.4em; left: 0; line-height: 3em; position: fixed; top: 0; width: 100%; z-index: 10000; /* nav { height: inherit; line-height: inherit; position: absolute; right: 0; top: 0; > ul { list-style: none; margin: 0; padding: 0; white-space: nowrap; > li { display: inline-block; padding: 0; > a { border: 0; color: _palette(fg-bold); display: block; font-size: 0.8em; letter-spacing: _size(letter-spacing-alt); padding: 0 1.5em; text-transform: uppercase; &.menuToggle { outline: 0; position: relative; &:after { background-image: url('images/bars.svg'); background-position: right center; background-repeat: no-repeat; content: ''; display: inline-block; height: 3.75em; vertical-align: top; width: 2em; } @include breakpoint(small) { padding: 0 1.5em; span { display: none; } } } @include breakpoint(small) { padding: 0 0 0 1.5em; } } &:first-child { margin-left: 0; } } } } */ }
+#header { -moz-transition: background-color 0.2s ease; -webkit-transition: background-color 0.2s ease; -ms-transition: background-color 0.2s ease; transition: background-color 0.2s ease; background: rgba(0, 0, 0, 0.3); height: 4.6em; left: 0; line-height: 3em; position: fixed; top: 0; width: 100%; z-index: 10000; /* nav { height: inherit; line-height: inherit; position: absolute; right: 0; top: 0; > ul { list-style: none; margin: 0; padding: 0; white-space: nowrap; > li { display: inline-block; padding: 0; > a { border: 0; color: _palette(fg-bold); display: block; font-size: 0.8em; letter-spacing: _size(letter-spacing-alt); padding: 0 1.5em; text-transform: uppercase; &.menuToggle { outline: 0; position: relative; &:after { background-image: url('images/bars.svg'); background-position: right center; background-repeat: no-repeat; content: ''; display: inline-block; height: 3.75em; vertical-align: top; width: 2em; } @include breakpoint(small) { padding: 0 1.5em; span { display: none; } } } @include breakpoint(small) { padding: 0 0 0 1.5em; } } &:first-child { margin-left: 0; } } } } */ }
 
-#header img { -moz-transition: opacity 0.2s ease; -webkit-transition: opacity 0.2s ease; -ms-transition: opacity 0.2s ease; transition: opacity 0.2s ease; left: 2.6em; top: 2.6em; position: absolute; width: 188px; }
+#header .bi { -moz-transition: opacity 0.2s ease; -webkit-transition: opacity 0.2s ease; -ms-transition: opacity 0.2s ease; transition: opacity 0.2s ease; left: 1.7em; top: 1.7em; position: absolute; }
 
-#header img a { border: 0; display: block; height: inherit; line-height: inherit; }
+#header .bi a { border: 0; display: block; height: inherit; line-height: inherit; }
 
-@media screen and (max-width: 736px) { #header img a { font-size: 0.8em; } }
+@media screen and (max-width: 736px) { #header .bi a { font-size: 0.8em; } }
 
-#header.alt { background: transparent; }
+#header.alt { background: transparent; height: 6.4em; }
 
 #header.alt h1 { -moz-pointer-events: none; -webkit-pointer-events: none; -ms-pointer-events: none; pointer-events: none; opacity: 0; }
 

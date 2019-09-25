@@ -285,21 +285,23 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
-		background: #000;
-		height: 6.4em;
+		background: rgba(0,0,0,.3);
+		height: 4.6em;
 		left: 0;
 		line-height: 3em;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: _misc(z-index-base);
+        
 
-		img {
-			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
-			left: 2.6em;
-            top: 2.6em;
-			position: absolute;
-            width: 188px;
+
+		.bi {
+		
+            @include vendor('transition', 'opacity #{_duration(transitions)} ease');
+            left: 1.7em;
+            top: 1.7em;
+            position: absolute;
 
 			a {
 				border: 0;
@@ -377,7 +379,13 @@ $baseurl: '{{ site.baseurl }}/images';
       */
 
 		&.alt {
-			background: transparent;
+			background: transparent; 
+            height: 6.4em;
+          
+          
+          
+            
+          
 
 			h1 {
 				@include vendor('pointer-events', 'none');
