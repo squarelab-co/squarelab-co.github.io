@@ -1,0 +1,1037 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$baseurl: '{{ site.baseurl }}/images';
+
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'font-awesome.min.css';
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+/*
+	Spectral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+	@import 'libs/skel';
+
+	@include skel-breakpoints((
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)'
+	));
+
+	@include skel-layout((
+		reset: 'full',
+		boxModel: 'border',
+		grid: ( gutters: 1.5em )
+	));
+
+/* Basic */
+
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	body {
+		background: _palette(bg);
+
+		&.is-loading {
+			*, *:before, *:after {
+				@include vendor('animation', 'none !important');
+				@include vendor('transition', 'none !important');
+			}
+		}
+	}
+
+	body, input, select, textarea {
+		color: _palette(fg);
+		font-family: _font(family);
+		font-size: 12pt;
+		font-weight: _font(weight);
+		line-height: 1.65em;
+
+	}
+
+	a {
+		@include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
+		color: inherit;
+		text-decoration: none;
+
+	}
+
+    b {
+        font-weight: 600;
+    }
+
+    h1{
+      font-weight: 600;
+      line-height: 1.2em;
+    }
+
+    h2{
+        font-size: 2.5em;
+        line-height: 1.3em;
+        word-break: keep-all;
+        font-weight: 600;
+    }
+
+    h5{
+      font-weight: 600;
+      font-size: 1em;
+    }
+
+    p{
+      font-size: 1em;
+    }
+
+
+
+/* Button */
+
+
+	button,
+	 {
+		@include vendor('appearance', 'none');
+		@include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
+		background-color: #000;
+		border-radius: 2px;
+		border: #000 solid 2px;
+		color: _palette(fg-bold);
+		cursor: pointer;
+		display: inline-block;
+		font-size: 14px;
+        width: 160px;
+        max-height: 45px;
+        padding: 0 14px;
+	    line-height: 42px;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+        font-weight: 300;
+        margin: 0 0 20px 0;
+       
+       
+        &:hover {
+        background-color: #fff;
+        color: rgba(0,0,0,.87);
+        
+        
+		}  
+       
+
+       
+       i{
+         margin-right: 6px;
+         
+       }
+
+       }
+
+       .social-box{
+          display: inline-block;
+
+          @include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+                  
+		  }
+       }
+
+        .social{
+          font-size: 24px;
+          display: inline-block;
+          width: 45px;
+          height: 45px;
+          line-height: 45px;
+          text-align: center;
+
+          &:last-child{
+            margin-right: 0;
+          }
+
+          @include breakpoint(small){ 
+            margin-right: 24px;
+          }
+
+
+        }
+              
+   
+   
+
+
+      .button1{
+        margin-right: 8px;
+      }
+
+
+
+
+/* Page Wrapper + Menu */
+
+	#page-wrapper {
+		@include vendor('transition', 'opacity #{_duration(menu)} ease');
+		opacity: 1;
+		padding-top: 3em;
+
+		&:before {
+			background: rgba(0,0,0,0);
+			content: '';
+			display: block;
+			display: none;
+			height: 100%;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: _misc(z-index-base) + 1;
+		}
+	}
+
+	#menu {
+		@include vendor('transform', 'translateX(20em)');
+		@include vendor('transition', 'transform #{_duration(menu)} ease');
+		-webkit-overflow-scrolling: touch;
+		background: _palette(accent1, bg);
+		color: _palette(accent1, fg-bold);
+		height: 100%;
+		max-width: 80%;
+		overflow-y: auto;
+		padding: 3em 2em;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 20em;
+		z-index: _misc(z-index-base) + 2;
+
+		ul {
+			list-style: none;
+			padding: 0;
+
+			> li {
+				border-top: solid 1px _palette(accent1, border);
+				margin: 0.5em 0 0 0;
+				padding: 0.5em 0 0 0;
+
+				&:first-child {
+					border-top: 0 !important;
+					margin-top: 0 !important;
+					padding-top: 0 !important;
+				}
+
+				> a {
+					border: 0;
+					color: inherit;
+					display: block;
+					font-size: 0.8em;
+					letter-spacing: _size(letter-spacing-alt);
+					outline: 0;
+					text-decoration: none;
+					text-transform: uppercase;
+
+					@include breakpoint(small) {
+						line-height: 3em;
+					}
+				}
+			}
+		}
+
+		.close {
+			background-image: url('images/close.svg');
+			background-position: 4.85em 1em;
+			background-repeat: no-repeat;
+			border: 0;
+			cursor: pointer;
+			display: block;
+			height: 3em;
+			position: absolute;
+			right: 0;
+			top: 0;
+			vertical-align: middle;
+			width: 7em;
+		}
+
+		@include breakpoint(small) {
+			padding: 3em 1.5em;
+		}
+	}
+
+	body.is-menu-visible {
+		#page-wrapper {
+			opacity: 0.35;
+
+			&:before {
+				display: block;
+			}
+		}
+
+		#menu {
+			@include vendor('transform', 'translateX(0)');
+		}
+	}
+
+
+
+/* Header */
+
+	#header {
+		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
+		background: #000;
+		height: 6.4em;
+		left: 0;
+		line-height: 3em;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: _misc(z-index-base);
+
+		img {
+			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
+			left: 2.6em;
+            top: 2.6em;
+			position: absolute;
+            width: 188px;
+
+			a {
+				border: 0;
+				display: block;
+				height: inherit;
+				line-height: inherit;
+
+				@include breakpoint(small) {
+					font-size: 0.8em;
+				}
+			}
+		}
+/*
+		nav {
+			height: inherit;
+			line-height: inherit;
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			> ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				white-space: nowrap;
+
+				> li {
+					display: inline-block;
+					padding: 0;
+
+					> a {
+						border: 0;
+						color: _palette(fg-bold);
+						display: block;
+						font-size: 0.8em;
+						letter-spacing: _size(letter-spacing-alt);
+						padding: 0 1.5em;
+						text-transform: uppercase;
+
+						&.menuToggle {
+							outline: 0;
+							position: relative;
+
+							&:after {
+								background-image: url('images/bars.svg');
+								background-position: right center;
+								background-repeat: no-repeat;
+								content: '';
+								display: inline-block;
+								height: 3.75em;
+								vertical-align: top;
+								width: 2em;
+							}
+
+							@include breakpoint(small) {
+								padding: 0 1.5em;
+
+								span {
+									display: none;
+								}
+							}
+						}
+
+						@include breakpoint(small) {
+							padding: 0 0 0 1.5em;
+						}
+					}
+
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+      */
+
+		&.alt {
+			background: transparent;
+
+			h1 {
+				@include vendor('pointer-events', 'none');
+				opacity: 0;
+			}
+		}
+	}
+
+/* Banner */
+
+	#banner {
+		@include vendor('display', 'flex');
+		@include vendor('flex-direction', 'column');
+		@include vendor('justify-content', 'center');
+		cursor: default;
+		height: 100vh;
+		min-height: 35em;
+		overflow: hidden;
+		text-align: center;
+
+      
+      .inner{
+        width: 100%;
+        position: fixed;
+        z-index: -1;
+      }
+
+      
+      #video{
+        position: fixed;
+         top: 0px;
+         left: 0px;
+         min-width: 100%;
+         min-height: 100%;
+         width: auto;
+         height: auto;
+         z-index: -2;
+         overflow: hidden;
+         opacity: 0.6;
+         
+    
+      }
+      
+		h1 {
+			@include vendor('transform', 'scale(1)');
+			@include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
+			display: inline-block;
+			font-size: 5em;
+			opacity: 1;
+			padding: 0 1em 0.35em 1em;
+			position: relative;
+		}
+
+		p {
+            font-size: 1.333em;
+
+			a {
+				color: inherit;
+			}
+		}
+
+		.more {
+			@include vendor('transition', ('transform 0.55s ease', 'opacity 0.5s ease'));
+			@include vendor('transition-delay', '1.5s');
+			@include vendor('transform', 'translateY(0)');
+			border: none;
+			bottom: 0;
+			color: inherit;
+			font-size: 0.8em;
+			height: 8.5em;
+			left: 50%;
+			letter-spacing: _size(letter-spacing-alt);
+			margin-left: -8.5em;
+			opacity: 1;
+			outline: 0;
+			padding-left: _size(letter-spacing-alt);
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			width: 16em;
+          
+
+			&:after {
+				background-image: url('images/arrow1.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				bottom: 4em;
+				content: '';
+				display: block;
+				height: 3em;
+                width: 3em;
+				left: 50%;
+				margin: 0 0 0 -0.75em;
+				position: absolute;
+				
+			}
+		}
+
+		&:after {
+			@include vendor('pointer-events', 'none');
+			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
+			@include vendor('transition-delay', '0.3s');
+			content: '';
+			background: _palette(bg);
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+		}
+
+
+	}
+
+	body.is-loading {
+		#banner {
+			h2 {
+				@include vendor('transform', 'scale(0.95)');
+				opacity: 0;
+
+				&:before, &:after {
+					width: 0;
+				}
+			}
+
+			.more {
+				@include vendor('transform', 'translateY(8.5em)');
+				opacity: 0;
+                
+			}
+
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+
+
+
+
+/* ONE */
+
+
+
+    .one{
+      overflow: hidden; 
+      background-color: #000;
+      text-align: left;
+      padding: 10em 0 0 0;
+
+
+      
+        .inner{
+          width: 1440px;
+          margin: 0 auto;
+      
+          @include breakpoint(large) {
+          
+			     }
+          
+
+            h2{
+              text-align: left;
+              }
+          
+            span{
+              font-size: 1.1em;
+              font-weight: 600;
+              display: block;
+              padding: 0 4.2em 1.6em 4.2em;
+              
+              
+              @include breakpoint(small) {
+                  padding: 0 2em;
+			     }
+            }
+
+            .one-box1{
+              height: auto;
+              box-sizing: border-box;
+              padding: 0 4.2em;
+              display: inline-block;
+              
+              @include breakpoint(large) {
+                
+			     }
+               @include breakpoint(small) {
+                  padding: 0 2em;
+			     }
+              
+            }
+          
+            .one-left1{
+              width: 50%;
+
+              @include breakpoint(large) {
+                  width: 100vw;
+                  height: auto;
+			     }
+              
+              @include breakpoint(medium) {
+                  
+			     }
+              
+               @include breakpoint(small) {
+                  
+			     }
+              }
+            .one-right1{
+              width: 50%;
+              float: right;
+              
+               @include breakpoint(large) {
+                 float:none;
+                 width: 100vw;
+                 margin-top: 3.125em;
+			     }
+              
+               @include breakpoint(medium) {
+			     }
+              
+                @include breakpoint(small) {
+                 display: block;
+			     }
+          
+              
+              .card1{
+                padding-bottom:5.333em;
+                
+                &:last-child{padding-bottom: 0;}
+                
+                img{
+                  margin-bottom: 2em;
+                  display: block;
+                  }
+                }
+              }
+          
+          
+        }
+      .img-service{
+        text-align: center;
+        margin: 0;
+        
+        img{
+          padding: 8em 4.2em 0 4.2em;
+          max-width: 100%;
+          height: auto;
+          
+
+        }
+      }
+
+}
+
+/* Common */
+
+    .one-box{
+        height: auto;
+        box-sizing: border-box;
+        padding: 0 4.2em;
+        display: inline-block;
+      
+        @include breakpoint(large) {
+        }
+
+        @include breakpoint(medium) {
+         
+        }
+
+         @include breakpoint(small) {
+            padding: 0 2em;
+           }
+
+        }
+
+    .one-left{
+        width: 50%;
+        position: relative;
+        float: right;
+
+        @include breakpoint(large) {
+          width: 50%; 
+
+           }
+      @include breakpoint(medium) {
+        width: 100%;
+      }
+
+        img{
+          width: 382px;
+          height: auto;
+          position: absolute;
+
+          @include breakpoint (large) {
+            width: 340px;
+              
+          }
+
+          @include breakpoint (medium) {
+              position: static;
+              width: 100vw;
+              padding: 0 2em;
+
+          }  
+        }
+      }
+
+/* TWO */
+
+    .two{
+      overflow: hidden; 
+      background-color: #fff;
+      text-align: left;
+      padding: 10em 0;
+      color: rgba(0,0,0,0.87);
+   
+        .inner{
+          max-width: 1440px;
+          margin: 0 auto;
+          width: 100%;
+
+            h2{
+              text-align: left;
+              margin-bottom: 0.2em;
+             
+              }
+            h5{
+              word-break: keep-all;
+              font-size: 1em;
+              margin-bottom: 6px;
+              }
+          
+            .one-left{
+                float: left;
+              
+              
+              .front{
+                top: -20px;
+                left: 4.2em;
+                
+                @include breakpoint (large) {
+                    top: 0;
+                    left: 5em;
+                }
+              }
+              
+              .back{
+                top: 105px;
+                left: 370px;
+                
+                @include breakpoint (large) {
+                    left: 340px;
+                }
+                
+                @include breakpoint(medium) {
+                  display: none;
+			     }           
+              }
+            }
+              
+            .one-right{
+              width: 50%;
+              float: right;
+              
+              p{
+                color: rgba(0,0,0,.6);
+                line-height: normal;
+                font-weight: 400;
+     
+              }
+
+             
+               @include breakpoint(large) {
+                 margin-top: 3.125em;
+			     }
+              
+               @include breakpoint(medium) {
+                 float:none;
+                 width: 100vw;
+			     }
+              
+                @include breakpoint(small) {
+                 display: block;
+			     }
+              
+              
+              .discription{
+                max-width: 400px;
+                margin-bottom: 4em;
+                
+                img{
+                  margin-bottom: 12px;
+                }
+
+              }
+              
+              
+              .card2{
+                padding-bottom:2.2em;
+
+                
+                }
+              }
+          
+          
+        }
+
+}
+
+
+/* THREE */
+
+    .three{
+      overflow: hidden; 
+      background-color: #fff;
+      text-align: left;
+      padding: 10em 0;
+      color: rgba(0,0,0,0.87); 
+
+
+      
+        .inner{
+          max-width: 1440px;
+          margin: 0 auto;
+          width: 100%;
+
+
+            h2{
+              text-align: left;
+              margin-bottom: 0.2em;
+             
+              }
+            h5{
+              word-break: keep-all;
+              font-size: 1em;
+              margin-bottom: 6px;
+            }
+          
+            .one-left{
+              float: right;
+
+              .front{
+                top: -80px;
+                left: 4.2em;
+                
+                @include breakpoint(large) {
+                  top: 50px;
+                  left: -10px;
+                
+                }
+                
+              }
+              
+              .back{
+                top: 200px;
+                left: 400px;
+                
+                @include breakpoint(large) {
+                  top: 180px;
+                  left: 280px;
+                
+                }
+                
+                @include breakpoint(medium) {
+                  display: none;
+			     }
+              }
+
+
+
+              }
+            .one-right{
+              width: 50%;
+              
+              
+              p{
+                color: rgba(0,0,0,.6);
+                line-height: normal;
+                font-weight: 400;
+     
+              }
+
+
+               @include breakpoint(large) {
+                 margin-top: 3.125em;
+			     }
+              
+               @include breakpoint(medium) {
+                 float:none;
+                 width: 100vw;
+			     }
+              
+                @include breakpoint(small) {
+                 display: block;
+			     }
+              
+              
+              
+              .discription{
+                max-width: 600px;
+                margin-bottom: 4em;
+                
+                img{
+                  margin-bottom: 12px;
+                }
+
+              }
+              
+              
+              .card2{
+                padding-bottom:2.2em;
+
+                
+                }
+              }
+          
+          
+        }
+
+
+}
+
+
+/* Four */
+    .four{
+        background-image: url(..//images/bg-four.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        width: 100%;
+        height: 496px;
+        text-align: center;
+        
+      .bg{
+        background-color: rgba(0,0,0,.8);
+        width: 100%;
+        height: 100%;
+      }
+      
+      .inner{
+        max-width: 720px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 120px 2em;
+        
+        h2{
+          margin-bottom: 16px;
+        }
+        
+        .button-w{
+          background-color: #fff;
+          color: #000;
+          font-weight: 400;
+          margin: 32px 0 0 0;
+          border: #fff 2px solid;
+          width: 200px;
+          
+          &:hover{
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+
+    }
+
+
+/* Footer */
+
+	#footer {
+		@include padding(6em, 0);
+		background-color: #fff;
+        
+        .inner{
+          max-width: 1440px;  
+          width: 100%;
+          margin: 0 auto;
+
+            .icons {
+              color: #000;
+              right: 0;
+              text-align: right;
+              float: right;
+              margin-right: 2em;
+
+              .icon{
+                display: inline-block;
+              }
+              
+              @include breakpoint(medium){
+                  margin-right: 0;
+                  .insta{
+                    margin-right: 47px;
+                  }
+                }
+
+              i{
+                font-size: 32px;
+              }
+              
+              @include breakpoint(medium) {
+                  float: none;
+                  text-align: center;
+                  margin-bottom: 20px;
+              }
+              
+            }
+
+          @include breakpoint(medium) {
+              }
+        }
+
+		.copyright {
+			color: rgba(0,0,0,.6);
+			list-style: none;
+			padding: 0;
+            font-size: 12px;
+            margin: 0 2em;
+            
+
+			li {
+				display: inline-block;
+				line-height: 1.5em;
+                vertical-align: top;
+                
+              
+              &:first-child{
+                margin-right: 80px;
+                font-size: 16px;
+              }
+              
+              @include breakpoint(medium) {
+                  display: block;
+                  width: 50%;
+                  margin: 0 auto;
+                  text-align: center;
+                
+                &:first-child{
+                  margin: 0 auto 8px auto;
+                }
+              }
+              @include breakpoint(small) {
+                  width: 100%;
+              }
+
+			}
+		}
+        
+        @include breakpoint(small) { 
+            padding: 2em 0;
+              } 
+	}
+
