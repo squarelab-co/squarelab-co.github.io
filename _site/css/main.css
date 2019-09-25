@@ -590,7 +590,7 @@ body.is-loading #banner:after { opacity: 1; }
 .three .inner .one-right .card2 { padding-bottom: 2.2em; }
 
 /* Four */
-.four { background-image: url(..//images/bg-four.png); background-repeat: no-repeat; background-position: top center; background-size: cover; width: 100%; height: 496px; text-align: center; }
+.four { background-image: url(..//images/bg-four.jpg); background-repeat: no-repeat; background-position: top center; background-size: cover; width: 100%; height: 496px; text-align: center; }
 
 .four .bg { background-color: rgba(0, 0, 0, 0.8); width: 100%; height: 100%; }
 
