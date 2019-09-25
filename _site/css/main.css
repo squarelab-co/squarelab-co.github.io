@@ -1,4 +1,3 @@
-@import url(font-awesome.min.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 /* Spectral by HTML5 UP html5up.net | @n33co Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) */
 /* Reset */
@@ -375,13 +374,17 @@ h5 { font-weight: 600; font-size: 1em; }
 p { font-size: 1em; }
 
 /* Button */
-button { -moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; background-color: #000; border-radius: 2px; border: #000 solid 2px; color: #fff; cursor: pointer; display: inline-block; font-size: 14px; width: 160px; max-height: 45px; padding: 0 14px; line-height: 42px; text-align: center; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 300; margin: 0 0 20px 0; }
+button { -moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; background-color: #000; border-radius: 2px; border: #000 solid 2px; color: #fff; cursor: pointer; display: inline-block; font-size: 14px; width: 160px; max-height: 45px; padding: 0 14px; line-height: 42px; text-align: center; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 300; margin: 0 0 20px 0; font-family: inherit; }
 
 button:hover { background-color: #fff; color: rgba(0, 0, 0, 0.87); }
 
 button i { margin-right: 6px; }
 
 .social-box { display: inline-block; }
+
+.social-box:first-child { margin-right: 24px; }
+
+@media screen and (max-width: 1280px) { .social-box:first-child { margin-right: 0; } }
 
 @media screen and (max-width: 980px) { .social-box { display: flex; align-items: center; justify-content: center; } }
 

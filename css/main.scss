@@ -7,7 +7,6 @@ $baseurl: '{{ site.baseurl }}/images';
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import 'font-awesome.min.css';
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 /*
@@ -117,6 +116,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		text-overflow: ellipsis;
         font-weight: 300;
         margin: 0 0 20px 0;
+        font-family: inherit;
        
        
         &:hover {
@@ -137,6 +137,14 @@ $baseurl: '{{ site.baseurl }}/images';
 
        .social-box{
           display: inline-block;
+          
+         &:first-child{
+           margin-right: 24px;
+           
+           @include breakpoint(large){
+             margin-right: 0;
+           }
+         }
 
           @include breakpoint(medium) {
             display: flex;
