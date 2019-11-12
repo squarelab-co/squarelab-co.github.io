@@ -45,7 +45,7 @@ $baseurl: '{{ site.baseurl }}/images';
 				@include vendor('animation', 'none !important');
 				@include vendor('transition', 'none !important');
 			}
-		}
+		} /* is-loading은 처음 랜딩했을 때 화면이 어두운 상태에서 밝아지는 효과 */
 	}
 
 	body, input, select, textarea {
@@ -54,6 +54,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		font-size: 12pt;
 		font-weight: _font(weight);
 		line-height: 1.65em;
+        
 
 	}
 
@@ -73,228 +74,95 @@ $baseurl: '{{ site.baseurl }}/images';
       line-height: 1.2em;
     }
 
-    h2{
-        font-size: 2.5em;
-        line-height: 1.3em;
-        word-break: keep-all;
-        font-weight: 600;
-    }
-
-    h5{
-      font-weight: 600;
-      font-size: 1em;
-    }
-
     p{
       font-size: 1em;
     }
 
-
-
 /* Button */
 
+    button {
+      background-color: _palette(bg);
+      border-radius: 2px;
+      border: _palette(bg) solid 2px;
+      color: _palette(fg);
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      width: 160px;
+      max-height: 45px;
+      padding: 0 14px;
+      line-height: 42px;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 300;
+      margin: 0 0 20px 0;
+      font-family: inherit;
 
-	button,
-	 {
-		@include vendor('appearance', 'none');
-		@include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
-		background-color: #000;
-		border-radius: 2px;
-		border: #000 solid 2px;
-		color: _palette(fg-bold);
-		cursor: pointer;
-		display: inline-block;
-		font-size: 14px;
-        width: 160px;
-        max-height: 45px;
-        padding: 0 14px;
-	    line-height: 42px;
-		text-align: center;
-		text-decoration: none;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-        font-weight: 300;
-        margin: 0 0 20px 0;
-        font-family: inherit;
-       
-       
-        &:hover {
-        background-color: #fff;
-        color: rgba(0,0,0,.87);
-        
-        
-		}  
-       
 
-       
-       i{
-         margin-right: 6px;
-         
-       }
+      &:hover {
+      background-color: _palette(fg);
+      color: _palette(bg-87);
 
-       }
 
-       .social-box{
-          display: inline-block;
+      }  
+
+
+
+     i{
+       margin-right: 6px;
+
+     }
+
+    }
+
+    .social-box {
+      display: inline-block;
           
-         &:first-child{
-           margin-right: 24px;
+      &:first-child{
+        margin-right: 24px;
            
-           @include breakpoint(large){
-             margin-right: 0;
-           }
-         }
-
-          @include breakpoint(medium) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-                  
-		  }
-       }
-
-        .social{
-          font-size: 24px;
-          display: inline-block;
-          width: 45px;
-          height: 45px;
-          line-height: 45px;
-          text-align: center;
-
-          &:last-child{
-            margin-right: 0;
-          }
-
-          @include breakpoint(small){ 
-            margin-right: 24px;
-          }
-
-
+        @include breakpoint(large){
+          margin-right: 0;
         }
-              
-   
-   
-
-
-      .button1{
-        margin-right: 8px;
       }
 
+        @include breakpoint(medium) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+       }
 
+    .social {
+      font-size: 24px;
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      line-height: 45px; 
+      text-align: center;
 
+      &:last-child{
+        margin-right: 0;
+      }
 
-/* Page Wrapper + Menu */
+      @include breakpoint(small){ 
+        margin-right: 24px;
+      }
+   }
 
-	#page-wrapper {
-		@include vendor('transition', 'opacity #{_duration(menu)} ease');
-		opacity: 1;
-		padding-top: 3em;
-
-		&:before {
-			background: rgba(0,0,0,0);
-			content: '';
-			display: block;
-			display: none;
-			height: 100%;
-			left: 0;
-			position: fixed;
-			top: 0;
-			width: 100%;
-			z-index: _misc(z-index-base) + 1;
-		}
-	}
-
-	#menu {
-		@include vendor('transform', 'translateX(20em)');
-		@include vendor('transition', 'transform #{_duration(menu)} ease');
-		-webkit-overflow-scrolling: touch;
-		background: _palette(accent1, bg);
-		color: _palette(accent1, fg-bold);
-		height: 100%;
-		max-width: 80%;
-		overflow-y: auto;
-		padding: 3em 2em;
-		position: fixed;
-		right: 0;
-		top: 0;
-		width: 20em;
-		z-index: _misc(z-index-base) + 2;
-
-		ul {
-			list-style: none;
-			padding: 0;
-
-			> li {
-				border-top: solid 1px _palette(accent1, border);
-				margin: 0.5em 0 0 0;
-				padding: 0.5em 0 0 0;
-
-				&:first-child {
-					border-top: 0 !important;
-					margin-top: 0 !important;
-					padding-top: 0 !important;
-				}
-
-				> a {
-					border: 0;
-					color: inherit;
-					display: block;
-					font-size: 0.8em;
-					letter-spacing: _size(letter-spacing-alt);
-					outline: 0;
-					text-decoration: none;
-					text-transform: uppercase;
-
-					@include breakpoint(small) {
-						line-height: 3em;
-					}
-				}
-			}
-		}
-
-		.close {
-			background-image: url('images/close.svg');
-			background-position: 4.85em 1em;
-			background-repeat: no-repeat;
-			border: 0;
-			cursor: pointer;
-			display: block;
-			height: 3em;
-			position: absolute;
-			right: 0;
-			top: 0;
-			vertical-align: middle;
-			width: 7em;
-		}
-
-		@include breakpoint(small) {
-			padding: 3em 1.5em;
-		}
-	}
-
-	body.is-menu-visible {
-		#page-wrapper {
-			opacity: 0.35;
-
-			&:before {
-				display: block;
-			}
-		}
-
-		#menu {
-			@include vendor('transform', 'translateX(0)');
-		}
-	}
-
-
+    .button1 {
+        margin-right: 8px;
+    }
 
 /* Header */
 
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
-		background: rgba(0,0,0,.3);
-		height: 4.6em;
+		background: _palette(bg-30);
+		height: 4.6em; 
 		left: 0;
 		line-height: 3em;
 		position: fixed;
@@ -322,8 +190,8 @@ $baseurl: '{{ site.baseurl }}/images';
 				}
 			}
 		}
-/*
-		nav {
+/* 메뉴 */
+	/*	nav {
 			height: inherit;
 			line-height: inherit;
 			position: absolute;
@@ -386,28 +254,19 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
       */
 
+        /*logo 영역 뒤의 배경이 최상단에서는 나타나지 않게 함*/
 		&.alt {
 			background: transparent; 
-            height: 6.4em;
-          
-          
-          
-            
-          
 
-			h1 {
-				@include vendor('pointer-events', 'none');
-				opacity: 0;
-			}
 		}
 	}
 
 /* Banner */
 
 	#banner {
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'column');
-		@include vendor('justify-content', 'center');
+		@include vendor('display', 'flex'); 
+		@include vendor('flex-direction', 'column'); 
+		@include vendor('justify-content', 'center'); 
 		cursor: default;
 		height: 100vh;
 		min-height: 35em;
@@ -415,9 +274,9 @@ $baseurl: '{{ site.baseurl }}/images';
 		text-align: center;
 
       
-      .inner{
+      .inner-top{
         width: 100%;
-        position: fixed;
+        
         z-index: -1;
       }
 
@@ -438,43 +297,26 @@ $baseurl: '{{ site.baseurl }}/images';
       }
       
 		h1 {
-			@include vendor('transform', 'scale(1)');
-			@include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
 			display: inline-block;
 			font-size: 5em;
-			opacity: 1;
 			padding: 0 1em 0.35em 1em;
 			position: relative;
 		}
 
 		p {
             font-size: 1.333em;
-
-			a {
-				color: inherit;
-			}
 		}
 
 		.more {
 			@include vendor('transition', ('transform 0.55s ease', 'opacity 0.5s ease'));
 			@include vendor('transition-delay', '1.5s');
 			@include vendor('transform', 'translateY(0)');
-			border: none;
 			bottom: 0;
-			color: inherit;
-			font-size: 0.8em;
 			height: 8.5em;
-			left: 50%;
-			letter-spacing: _size(letter-spacing-alt);
+            width: 16em;
 			margin-left: -8.5em;
-			opacity: 1;
-			outline: 0;
-			padding-left: _size(letter-spacing-alt);
 			position: absolute;
-			text-align: center;
-			text-transform: uppercase;
-			width: 16em;
-          
+
 
 			&:after {
 				background-image: url('images/arrow1.svg');
@@ -492,8 +334,9 @@ $baseurl: '{{ site.baseurl }}/images';
 				
 			}
 		}
-
-		&:after {
+      
+        /* 랜딩 딜레이 효과 */
+		&:after {  
 			@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
 			@include vendor('transition-delay', '0s');
@@ -506,166 +349,69 @@ $baseurl: '{{ site.baseurl }}/images';
 			left: 0;
 			top: 0;
 			opacity: 0;
-		}
+		}  
+     
 
 
 	}
 
+    /* 랜딩 딜레이 효과 */
 	body.is-loading {
 		#banner {
-			h2 {
-				@include vendor('transform', 'scale(0.95)');
-				opacity: 0;
-
-				&:before, &:after {
-					width: 0;
-				}
-			}
+		
 
 			.more {
 				@include vendor('transform', 'translateY(8.5em)');
 				opacity: 0;
                 
-			}
+			} 
 
 			&:after {
 				opacity: 1;
-			}
+			} 
 		}
 	}
 
 
+/* Common Contents */
 
-
-/* ONE */
-
-
-
-    .one{
+    .two, .three{
       overflow: hidden; 
-      background-color: #000;
+      background-color: _palette(fg);
       text-align: left;
-      padding: 10em 0 0 0;
+      padding: 10em 0;
+      color: _palette(bg-87);
+    }
 
-
+    .inner{
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
       
-        .inner{
-          width: 1440px;
-          margin: 0 auto;
-      
-          @include breakpoint(large) {
-          
-			     }
-          
-
-            h2{
-              text-align: left;
-              }
-          
-            span{
-              font-size: 1.1em;
-              font-weight: 600;
-              display: block;
-              padding: 0 4.2em 1.6em 4.2em;
-              
-              
-              @include breakpoint(small) {
-                  padding: 0 2em;
-			     }
-            }
-
-            .one-box1{
-              height: auto;
-              box-sizing: border-box;
-              padding: 0 4.2em;
-              display: inline-block;
-              
-              @include breakpoint(large) {
-                
-			     }
-               @include breakpoint(small) {
-                  padding: 0 2em;
-			     }
-              
-            }
-          
-            .one-left1{
-              width: 50%;
-
-              @include breakpoint(large) {
-                  width: 100vw;
-                  height: auto;
-			     }
-              
-              @include breakpoint(medium) {
-                  
-			     }
-              
-               @include breakpoint(small) {
-                  
-			     }
-              }
-            .one-right1{
-              width: 50%;
-              float: right;
-              
-               @include breakpoint(large) {
-                 float:none;
-                 width: 100vw;
-                 margin-top: 3.125em;
-			     }
-              
-               @include breakpoint(medium) {
-			     }
-              
-                @include breakpoint(small) {
-                 display: block;
-			     }
-          
-              
-              .card1{
-                padding-bottom:5.333em;
-                
-                &:last-child{padding-bottom: 0;}
-                
-                img{
-                  margin-bottom: 2em;
-                  display: block;
-                  }
-                }
-              }
-          
-          
-        }
-      .img-service{
-        text-align: center;
-        margin: 0;
-        
-        img{
-          padding: 8em 4.2em 0 4.2em;
-          max-width: 100%;
-          height: auto;
-          vertical-align: bottom;
-
-        }
+      h2{
+        text-align: left;
+        margin-bottom: 0.2em;
+        font-size: 2.5em;
+        line-height: 1.3em;
+        word-break: keep-all;
+        font-weight: 600;
+        text-align: left;
       }
-
-}
-
-/* Common */
+      
+      h5{
+        word-break: keep-all;
+        font-size: 1em;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+    }
 
     .one-box{
         height: auto;
         box-sizing: border-box;
         padding: 0 4.2em;
         display: inline-block;
-      
-        @include breakpoint(large) {
-        }
-
-        @include breakpoint(medium) {
-         
-        }
+        width: 50%;
 
          @include breakpoint(small) {
             padding: 0 2em;
@@ -682,9 +428,9 @@ $baseurl: '{{ site.baseurl }}/images';
           width: 50%; 
 
            }
-      @include breakpoint(medium) {
-        width: 100%;
-      }
+        @include breakpoint(medium) {
+          width: 100%;
+        }
 
         img{
           width: 382px;
@@ -705,34 +451,117 @@ $baseurl: '{{ site.baseurl }}/images';
         }
       }
 
+    .one-right{
+        width: 50%;
+
+        @include breakpoint(large) {
+          margin-top: 3.125em;
+		}
+              
+        @include breakpoint(medium) {
+          float:none;
+          width: 100vw;
+        }
+              
+        @include breakpoint(small) {
+          display: block;
+		}
+        
+        .discription{
+          margin-bottom: 4em;
+                
+          img{
+            margin-bottom: 12px;
+          }
+        }    
+      }
+
+    .card2{
+      padding-bottom:2.2em;
+
+      p{
+       color: _palette(bg-60);
+       line-height: normal;
+       font-weight: 400;
+      }
+    }
+
+
+/* ONE */
+
+    .one{
+      overflow: hidden; 
+      background-color: _palette(bg);
+      text-align: left;
+      padding: 10em 0 0 0;
+
+        .inner{
+            span{
+              font-size: 1.1em;
+              font-weight: 600;
+              display: block;
+              padding: 0 4.2em 1.6em 4.2em;
+                          
+              @include breakpoint(small) {
+                  padding: 0 2em;
+			  }
+            }
+          
+            .one-left1{
+
+              @include breakpoint(large) {
+                  width: 100vw;
+                  height: auto;
+			     }
+              }
+            .one-right1{
+              float: right;
+              
+               @include breakpoint(large) {
+                 float:none;
+                 width: 100vw;
+                 margin-top: 3.125em;
+			     }
+
+                @include breakpoint(small) {
+                 display: block;
+			     }
+          
+              
+              .card1{
+                padding-bottom:5.333em;
+                
+                &:last-child{padding-bottom: 0;}
+                
+                img{
+                  margin-bottom: 2em;
+                  display: block;
+                  }
+                }
+              }
+        }
+      
+      .img-service{
+        text-align: center;
+        margin: 0;
+        
+        img{
+          padding: 8em 4.2em 0 4.2em;
+          max-width: 100%;
+          height: auto;
+          vertical-align: bottom;
+
+        }
+      }
+
+}
+
 /* TWO */
 
     .two{
-      overflow: hidden; 
-      background-color: #fff;
-      text-align: left;
-      padding: 10em 0;
-      color: rgba(0,0,0,0.87);
-   
         .inner{
-          max-width: 1440px;
-          margin: 0 auto;
-          width: 100%;
-
-            h2{
-              text-align: left;
-              margin-bottom: 0.2em;
-             
-              }
-            h5{
-              word-break: keep-all;
-              font-size: 1em;
-              margin-bottom: 6px;
-              }
-          
             .one-left{
                 float: left;
-              
               
               .front{
                 top: -20px;
@@ -749,93 +578,29 @@ $baseurl: '{{ site.baseurl }}/images';
                 left: 370px;
                 
                 @include breakpoint (large) {
-                    left: 340px;
+                    left: 320px;
                 }
                 
                 @include breakpoint(medium) {
-                  display: none;
+                    display: none;
 			     }           
               }
             }
               
             .one-right{
-              width: 50%;
               float: right;
-              
-              p{
-                color: rgba(0,0,0,.6);
-                line-height: normal;
-                font-weight: 400;
-     
-              }
-
-             
-               @include breakpoint(large) {
-                 margin-top: 3.125em;
-			     }
-              
-               @include breakpoint(medium) {
-                 float:none;
-                 width: 100vw;
-			     }
-              
-                @include breakpoint(small) {
-                 display: block;
-			     }
-              
               
               .discription{
                 max-width: 400px;
-                margin-bottom: 4em;
-                
-                img{
-                  margin-bottom: 12px;
-                }
-
               }
-              
-              
-              .card2{
-                padding-bottom:2.2em;
-
-                
-                }
-              }
-          
-          
+            }
         }
-
-}
-
+    }
 
 /* THREE */
 
     .three{
-      overflow: hidden; 
-      background-color: #fff;
-      text-align: left;
-      padding: 10em 0;
-      color: rgba(0,0,0,0.87); 
-
-
-      
         .inner{
-          max-width: 1440px;
-          margin: 0 auto;
-          width: 100%;
-
-
-            h2{
-              text-align: left;
-              margin-bottom: 0.2em;
-             
-              }
-            h5{
-              word-break: keep-all;
-              font-size: 1em;
-              margin-bottom: 6px;
-            }
-          
             .one-left{
               float: right;
 
@@ -846,9 +611,7 @@ $baseurl: '{{ site.baseurl }}/images';
                 @include breakpoint(large) {
                   top: 50px;
                   left: -10px;
-                
                 }
-                
               }
               
               .back{
@@ -858,70 +621,24 @@ $baseurl: '{{ site.baseurl }}/images';
                 @include breakpoint(large) {
                   top: 180px;
                   left: 280px;
-                
                 }
                 
                 @include breakpoint(medium) {
                   display: none;
 			     }
               }
-
-
-
-              }
+            }
+          
             .one-right{
-              width: 50%;
-              
-              
-              p{
-                color: rgba(0,0,0,.6);
-                line-height: normal;
-                font-weight: 400;
-     
-              }
-
-
-               @include breakpoint(large) {
-                 margin-top: 3.125em;
-			     }
-              
-               @include breakpoint(medium) {
-                 float:none;
-                 width: 100vw;
-			     }
-              
-                @include breakpoint(small) {
-                 display: block;
-			     }
-              
-              
-              
               .discription{
                 max-width: 600px;
-                margin-bottom: 4em;
-                
-                img{
-                  margin-bottom: 12px;
-                }
-
               }
-              
-              
-              .card2{
-                padding-bottom:2.2em;
-
-                
-                }
-              }
-          
-          
+            }
         }
-
-
-}
-
+    }
 
 /* Four */
+
     .four{
         background-image: url(..//images/bg-four.jpg);
         background-repeat: no-repeat;
@@ -932,12 +649,12 @@ $baseurl: '{{ site.baseurl }}/images';
         text-align: center;
         
       .bg{
-        background-color: rgba(0,0,0,.8);
+        background-color: _palette(bg-87);
         width: 100%;
         height: 100%;
       }
       
-      .inner{
+      .inner-four{
         max-width: 720px;
         width: 100%;
         margin: 0 auto;
@@ -945,39 +662,38 @@ $baseurl: '{{ site.baseurl }}/images';
         
         h2{
           margin-bottom: 16px;
+          font-size: 2.5em;
+          line-height: 1.3em;
+          word-break: keep-all;
+          font-weight: 600;
         }
         
         .button-w{
-          background-color: #fff;
-          color: #000;
+          background-color: _palette(fg);
+          color: _palette(bg);
           font-weight: 400;
           margin: 32px 0 0 0;
-          border: #fff 2px solid;
+          border: _palette(fg) 2px solid;
           width: 200px;
           
           &:hover{
-            background-color: #000;
-            color: #fff;
+            background-color: _palette(bg);
+            color: _palette(fg);
           }
         }
       }
 
     }
 
-
 /* Footer */
 
 	#footer {
 		@include padding(6em, 0);
-		background-color: #fff;
+		background-color: _palette(fg);
         
         .inner{
-          max-width: 1440px;  
-          width: 100%;
-          margin: 0 auto;
-
             .icons {
-              color: #000;
+              color: _palette(bg);
               right: 0;
               text-align: right;
               float: right;
@@ -993,7 +709,6 @@ $baseurl: '{{ site.baseurl }}/images';
                     margin-right: 47px;
                   }
                 }
-
               i{
                 font-size: 32px;
               }
@@ -1002,16 +717,12 @@ $baseurl: '{{ site.baseurl }}/images';
                   float: none;
                   text-align: center;
                   margin-bottom: 20px;
-              }
-              
+              } 
             }
-
-          @include breakpoint(medium) {
-              }
         }
 
 		.copyright {
-			color: rgba(0,0,0,.6);
+			color: _palette(bg-60);
 			list-style: none;
 			padding: 0;
             font-size: 12px;
