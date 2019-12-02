@@ -296,10 +296,6 @@ document.documentElement.className = 'js';
   })
   .setTween(TweenMax.to('#header',0.0001 ,{backgroundColor: '#fff'}))
   .setClassToggle('.bi-b', 'bi-bb')
-  .addIndicators({
-      name: 'header',
-      indent: 200
-  })
   .addTo(controller);
   
   // Fade Scene Text
@@ -309,7 +305,6 @@ document.documentElement.className = 'js';
     triggerHook: 0.3
   })
   .setClassToggle(this.children[0], 'fade-in-up')
-  .addIndicators()
   .addTo(controller);
     
   });
@@ -321,7 +316,6 @@ document.documentElement.className = 'js';
     triggerHook: 0.3
   })
   .setClassToggle(this.children[0], 'fade-in-up')
-  .addIndicators()  
   .addTo(controller);
     
   });   
@@ -333,7 +327,6 @@ document.documentElement.className = 'js';
     triggerHook:0.3
   })
   .setClassToggle(this.children[1], 'fade-in-up')
-  .addIndicators()  
   .addTo(controller);
     
   });  
