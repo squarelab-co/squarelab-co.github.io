@@ -1,0 +1,57 @@
+
+@media screen and (max-width: 1280px) {
+	.content--layout {
+		transform: scale3d(0.8,0.8,1);
+	}
+}
+
+@media screen and (max-width: 980px) {
+	
+}
+
+@media screen and (max-width: 736px) {
+
+  .morph{
+    left: 50%;
+  }
+  .content--layout {
+		transform: scale3d(1,1,1);
+	}
+  
+  .content{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  .content__author{
+
+  }
+  
+  .content__title{
+    position: absolute;
+    top:55%;
+  }
+  .content__desc{
+    position: absolute;
+    top:72%;
+  }
+  
+  .content__link{
+    position: absolute;
+    top: 80%;
+  }
+  
+  .img1{
+    position: absolute;
+    left: -100%;
+    top:35%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+	.content--layout {
+
+	}
+  
+}
