@@ -1,9 +1,4 @@
-@font-face {
-	font-family: 'square';
-	font-weight: bold;
-	font-style: normal;
-	src: url('../fonts/SquareSansB.ttf');	
-}
+
 
 *,
 *::after,
@@ -192,26 +187,15 @@ video{
 
 .content__title {
 	grid-area: title;
-	font-family: 'Square', sans-serif;
-	letter-spacing: -3px;
-	font-size: 8em;
-	line-height: 160px;
 	margin: 0;
 	z-index: 10;
-	cursor: default;
 }
 
 .content__author {
-    font-family: 'Square', sans-serif;
-	letter-spacing: 0;
-    font-size: 18px;
 	grid-area: author;
 	margin: 0;
-    -webkit-writing-mode: horizontal-tb;
-    writing-mode: horizontal-tb;
 	padding: 1em;
 	z-index: 10;
-	cursor: default;
     transform: translate(0,100px);
 }
 
@@ -232,7 +216,7 @@ video{
 }
 
 .content__link {
-    font-family: 'Square', sans-serif;
+    font-family: 'Spoqa Han Sans', sans-serif;
 	letter-spacing: 0px;
     font-size: 18px;
 	pointer-events: auto;
