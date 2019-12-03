@@ -256,10 +256,11 @@ video{
 
 
 
+
 /* layout-3 */
 .content--layout-3 {
 	grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 294px 150px 110px 70px;
+    grid-template-rows: 294px 150px 40px 100px;
 	grid-template-areas:	"... ... ... ..."
 							"title title title title"
 							"... desc desc ..."
@@ -271,6 +272,16 @@ video{
 	grid-row: 1 / 4;
 }
 
+.content--layout-3 .content__author{
+    align-self: start;
+    transform: translate(0,50px);
+
+}
+
+.content--layout-3 .content__link{
+    align-self: end;
+
+}
 
 
 /* layout-4 */
@@ -393,9 +404,9 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0 20px 0;
-  font-family: inherit;
+  font-family: 'Malgun Gothic', 'Spoqa Han Sans', sans-serif;
   transition: all 0.2s ease-out;
 }
 
@@ -410,6 +421,9 @@ i{
 
 .social-box {
   display: inline-block;
+
+
+
 }
 
 .social-box:first-child{
