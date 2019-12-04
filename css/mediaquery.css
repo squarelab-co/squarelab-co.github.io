@@ -101,7 +101,7 @@
     .content--layout-5{
         grid-template-columns: 100%;
         grid-template-rows: 15% 15% 30% 10% 20% 10%;
-        grid-template-areas: "..." "author2" "..." "title2" "desc2" "...";
+        grid-template-areas: "..." "..." "..." "title2" "desc2" "...";
     }
 
     .content__author {
