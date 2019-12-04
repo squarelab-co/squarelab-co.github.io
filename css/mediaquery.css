@@ -353,7 +353,7 @@
 
     .content {
         height: 120vh;
-        margin: 10% 0;
+        margin: 32px 0;
 
 
     }
@@ -422,7 +422,7 @@
 
     /* Section 2 - What we do */
     .section-wrapper {
-        padding: 60px 24px;
+        padding: 60px 32px;
         height: auto;
 
     }
