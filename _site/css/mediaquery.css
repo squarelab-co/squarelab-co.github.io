@@ -115,8 +115,8 @@
 
     .content__title {
         grid-area: title2;
-        height: 6%;
-        min-height: 6%;
+        height: 6vh;
+        min-height: 6vh;
 
 
 
