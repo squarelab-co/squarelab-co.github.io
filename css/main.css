@@ -476,6 +476,7 @@ i {
     font-weight: 400;
     margin: 32px 0 0 0;
     width: 200px;
+    border:none;
 }
 
 .button-w:hover {
