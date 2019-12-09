@@ -56,15 +56,12 @@
 
 @media screen and (max-width: 1280px) {
     .section-wrapper {
-
     }
 
     .info-wrapper, .inner {
         max-width: 1028px;
         transform: scale3d(0.8, 0.8, 1);
     }
-
-
 }
 
 
@@ -316,7 +313,6 @@
         background-color: #ffffff;
 
         position: relative;
-
     }
 
     .inner {
@@ -324,7 +320,6 @@
         padding: 0 24px;
         flex-direction: column-reverse;
         transform: scale3d(1,1,1);
-
     }
 
     .icons {
@@ -350,13 +345,9 @@
         margin-right: 0;
         margin-bottom: 8px;
     }
-
-
 }
 
 @media screen and (max-width: 480px) {
     .content--layout {
-
     }
-
 }
