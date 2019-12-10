@@ -185,9 +185,14 @@ video {
 .content__author {
     grid-area: author;
     margin: 0;
-    padding: 1em;
+    padding: 0 1em;
     z-index: 10;
     transform: translate(0, 100px);
+
+}
+
+.author2 {
+    transform: translate(0, 0);
 }
 
 .content__desc {
@@ -214,7 +219,6 @@ video {
     font-size: 18px;
     pointer-events: auto;
     grid-area: link;
-    align-self: end;
     justify-self: start;
     z-index: 10;
     padding: 0 1em 0.15em;
@@ -224,7 +228,7 @@ video {
 /* layout-2 */
 .content--layout-2 {
     grid-template-columns: 50px 450px 200px 506px;
-    grid-template-rows: 117px 202px 155px 112px 142px;
+    grid-template-rows: 117px 202px 155px 112px 50px;
     grid-template-areas: "... ... ... ..." "... ... ... ..." "... ... title title" "... ... ... desc" "... ... link author";
 }
 
