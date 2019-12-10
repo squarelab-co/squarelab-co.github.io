@@ -318,7 +318,7 @@
     }
 
     .recruit-bg {
-        background: url('../img/recruit_s.jpg') no-repeat center;
+        background: url('../images/recruit-bg-s.jpg') no-repeat center;
         background-size: cover;
         height: 120%;
     }

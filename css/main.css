@@ -444,7 +444,7 @@ i {
 }
 
 .recruit-bg {
-    background: url('../img/recruit.jpg') no-repeat center;
+    background: url('../images/recruit-bg.jpg') no-repeat center;
     background-size: contain;
     position: absolute;
     width: 100%;
