@@ -1,4 +1,6 @@
 @media screen and (max-width: 1680px) {
+
+
     .content--layout {
         transform: scale3d(0.8, 0.8, 1);
     }
@@ -11,9 +13,18 @@
         transform: scale3d(0.8, 0.8, 1);
     }
 
+
+
 }
 
 @media screen and (max-width: 1440px) {
+    p{
+        font-size: 1.1em;
+        line-height: 1.7em;
+    }
+    button{
+        font-size: 1em;
+    }
     .info-wrapper, .inner {
         max-width: 1280px;
         transform: scale3d(0.8, 0.8, 1);
@@ -55,15 +66,20 @@
 }
 
 @media screen and (max-width: 1280px) {
-    .section-wrapper {
-    }
+
 
     .info-wrapper, .inner {
-        max-width: 1028px;
         transform: scale3d(0.8, 0.8, 1);
     }
 }
 
+@media screen and (max-width: 1028px) {
+
+
+    .info-wrapper, .inner {
+        max-width: 1028px;
+    }
+}
 
 @media screen and (max-width: 736px) {
 
