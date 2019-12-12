@@ -14,7 +14,13 @@ let supportsCssVars = function () {
 if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
 
 //Stellar
-$(window).stellar();
+$(function(){
+    $.stellar({
+        horizontalScrolling: false,
+        verticalOffset: 150
+    });
+});
+
 
 //Scroll Magic
 window.onload = function () { // 윈도우 로드를 기다리는 구문
