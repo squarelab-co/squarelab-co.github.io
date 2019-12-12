@@ -325,7 +325,7 @@
         height: 543px;
         max-height: 736px;
         background-image: url("../images/recruit-bg-s.jpg");
-        background-size: 100% 90%;
+        background-size: 90% 100%;
         background-attachment: scroll;
     }
 
