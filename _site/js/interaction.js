@@ -13,6 +13,9 @@ let supportsCssVars = function () {
 }
 if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
 
+//Stellar
+$(window).stellar();
+
 //Scroll Magic
 window.onload = function () { // 윈도우 로드를 기다리는 구문
     // Init ScrollMagic
@@ -30,7 +33,7 @@ window.onload = function () { // 윈도우 로드를 기다리는 구문
         .addTo(controller);
 
     //Parallax
-    let parallaxTl = new TimelineMax();
+  /*  let parallaxTl = new TimelineMax();
     parallaxTl
         .from('.recruit-wrapper', 1, {autoAlpha: 0, ease: Power0.easeNone})
         .from('.recruit-bg', 1, {y: '-40%', ease: Power0.easeNone})
@@ -41,7 +44,7 @@ window.onload = function () { // 윈도우 로드를 기다리는 구문
         duration: '90%'
     })
         .setTween(parallaxTl)
-        .addTo(controller);
+        .addTo(controller); */
 
     imagesLoaded(document.body, () => {
         anime.remove(DOM.svg);

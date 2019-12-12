@@ -13,6 +13,9 @@
         transform: scale3d(0.8, 0.8, 1);
     }
 
+    .recruit-bg{
+        background-image: url("../images/recruit-bg-m.jpg");
+    }
 
 
 }
@@ -48,11 +51,11 @@
     }
 
     #recruit {
-        height: 400px;
     }
 
     .recruit-bg {
-        height: 150%;
+        height: 400px;
+        background-size: 100% 90%;
     }
 
     .recruit-wrapper {
@@ -304,7 +307,7 @@
 
     /* Section 3 - Recruit */
     #recruit {
-        height: 496px;
+
     }
 
     .recruit-wrapper {
@@ -318,9 +321,9 @@
     }
 
     .recruit-bg {
-        background: url('../images/recruit-bg-s.jpg') no-repeat center;
-        background-size: cover;
-        height: 120%;
+        height: 543px;
+        background-image: url("../images/recruit-bg-s.jpg");
+        background-size: 100% 100%;
     }
 
 
