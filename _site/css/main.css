@@ -290,6 +290,7 @@ video {
 .content--layout-4 .content__author {
     justify-self: start;
     align-self: start;
+    transform: translate(0,0);
 }
 
 
