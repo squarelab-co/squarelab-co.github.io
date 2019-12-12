@@ -323,8 +323,9 @@
 
     .recruit-bg {
         height: 543px;
+        max-height: 736px;
         background-image: url("../images/recruit-bg-s.jpg");
-        background-size: 100% 100%;
+        background-size: 100% 110%;
     }
 
 
