@@ -317,6 +317,7 @@
 
     .recruit-h2 {
         white-space: pre-line;
+        min-width: 100%;
 
     }
 

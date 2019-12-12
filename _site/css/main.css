@@ -17,6 +17,7 @@ body {
     color: #fff;
     -moz-osx-font-smoothing: grayscale;
     background-color: #000000;
+    overflow-x: hidden;
 }
 
 /* Page Loader */
