@@ -79,6 +79,7 @@ h2 {
 
 p {
     font-size: 1em;
+
 }
 
 
@@ -330,6 +331,7 @@ video {
 
 .info-p {
     margin-bottom: 24px;
+
 }
 
 .text-bold {
@@ -362,6 +364,7 @@ video {
 
 .opacity60 {
     color: rgba(0, 0, 0, .6);
+    word-break: keep-all;
 }
 
 
@@ -472,6 +475,10 @@ i {
     min-width: 600px;
 }
 
+.recruit-wrapper p{
+    white-space: pre-line;
+}
+
 .button-w {
     background-color: #ffffff;
     color: #000000;
@@ -527,6 +534,7 @@ i {
     padding: 0;
     font-size: 12px;
     margin: 0 2em;
+    word-break: keep-all;
 }
 
 .copyright li {

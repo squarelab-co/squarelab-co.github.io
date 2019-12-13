@@ -138,11 +138,12 @@
 
     .content__desc {
         grid-area: desc2;
-        line-height: 20px;
+        line-height: 24px;
         margin-top: 8px;
         padding: 0;
+        word-break: keep-all;
+        font-size: 16px;
         white-space: normal;
-        font-size: 14px;
 
 
     }
@@ -314,6 +315,14 @@
         padding: 0 32px;
         transform: scale3d(1, 1, 1)
     }
+
+    .recruit-wrapper p{
+        white-space: normal;
+        word-break: keep-all;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
 
     .recruit-h2 {
         white-space: pre-line;
