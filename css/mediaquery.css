@@ -28,6 +28,12 @@
     button{
         font-size: 1em;
     }
+
+    #hiring{
+        top: 200px;
+        right: 80px;
+    }
+
     .info-wrapper, .inner {
         max-width: 1280px;
         transform: scale3d(0.8, 0.8, 1);
@@ -69,6 +75,10 @@
 }
 
 @media screen and (max-width: 1280px) {
+    #hiring{
+        top: 190px;
+        right: 40px;
+    }
 
 
     .info-wrapper, .inner {
@@ -85,6 +95,16 @@
 }
 
 @media screen and (max-width: 736px) {
+
+    .hiring-mobile{
+        display: block;
+        position: fixed;
+        right: 24px;
+        bottom:32px;
+    }
+    .hiring-web{
+        display: none;
+    }
 
 
     /* section 1 - Black */

@@ -38,19 +38,15 @@ window.onload = function () { // 윈도우 로드를 기다리는 구문
         .setClassToggle('.bi-b', 'bi-bb')
         .addTo(controller);
 
-    //Parallax
-  /*  let parallaxTl = new TimelineMax();
-    parallaxTl
-        .from('.recruit-wrapper', 1, {autoAlpha: 0, ease: Power0.easeNone})
-        .from('.recruit-bg', 1, {y: '-40%', ease: Power0.easeNone})
-
+    // Hiring
     new ScrollMagic.Scene({
-        triggerElement: '#recruit',
-        triggerHook: 1,
-        duration: '90%'
+        triggerElement: '#footer',
+        triggerHook: 1
     })
-        .setTween(parallaxTl)
-        .addTo(controller); */
+        .setTween(TweenMax.to('#hiring', 0.2, {autoAlpha:0}))
+        .setClassToggle('.bi-b', 'bi-bb')
+        .addTo(controller);
+
 
     imagesLoaded(document.body, () => {
         anime.remove(DOM.svg);

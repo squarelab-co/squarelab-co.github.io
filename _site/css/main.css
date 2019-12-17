@@ -82,6 +82,15 @@ p {
 
 }
 
+#hiring{
+    position: fixed;
+    top: 226px;
+    right: 120px;
+    z-index: 300;
+}
+.hiring-mobile{
+    display: none;
+}
 
 /* header */
 #header {
