@@ -30,7 +30,7 @@
     }
 
     #hiring{
-        top: 200px;
+        top: 80px;
         right: 80px;
     }
 
@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 1280px) {
     #hiring{
-        top: 190px;
+        top: 40px;
         right: 40px;
     }
 

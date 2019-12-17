@@ -44,7 +44,6 @@ window.onload = function () { // 윈도우 로드를 기다리는 구문
         triggerHook: 1
     })
         .setTween(TweenMax.to('#hiring', 0.2, {autoAlpha:0}))
-        .setClassToggle('.bi-b', 'bi-bb')
         .addTo(controller);
 
 
