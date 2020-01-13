@@ -381,6 +381,8 @@ video {
 
 .info-button {
     margin-top: 64px;
+    display: inline-flex;
+    
 }
 
 button {
@@ -389,7 +391,6 @@ button {
     border: #000000 solid 2px;
     color: #ffffff;
     cursor: pointer;
-    display: inline-block;
     font-size: 14px;
     height: 45px;
     width: 160px;
@@ -402,6 +403,8 @@ button {
     margin: 0 0 20px 0;
     font-family: 'Malgun Gothic', 'Spoqa Han Sans', sans-serif;
     transition: all 0.2s ease-out;
+    display: inline-flex;
+    justify-content: center;
 }
 
 button:hover {
@@ -411,13 +414,9 @@ button:hover {
 
 i {
     margin-right: 6px;
+    align-self: center;
 }
 
-.social-box {
-    display: inline-block;
-
-
-}
 
 .social-box:first-child {
     margin-right: 24px;
