@@ -14,7 +14,7 @@ permalink: /blog
                     <span class="category">{{ post.categories }}</span>
                     <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                     <p><csmall class="csmall-list">{{ post.date | date: "%b %-d, %Y" }}. | By: {{ post.author }}</csmall></p>
-                    {{ post.excerpt }}
+                    {{ post.excerpt | truncatewords: 30, '...' }}
                     <a href="{{ post.url | prepend: site.baseurl }}"><i class="ri-add-line road-more"></i></a>
                 </div>
                 <div class="post-img">
