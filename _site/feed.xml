@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jan 2020 15:34:46 +0900</pubDate>
-    <lastBuildDate>Wed, 22 Jan 2020 15:34:46 +0900</lastBuildDate>
+    <pubDate>Wed, 22 Jan 2020 15:39:44 +0900</pubDate>
+    <lastBuildDate>Wed, 22 Jan 2020 15:39:44 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -394,8 +394,8 @@ functions:
 &lt;p&gt;권영재, Youngjae Kwon (yjiq150@squarelab.co)&lt;/p&gt;
 </description>
         <pubDate>Tue, 21 Jan 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/engeeniring/2020/01/21/test.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/engeeniring/2020/01/21/test.html</guid>
+        <link>http://localhost:4000/engeeniring/2020/01/21/test.html</link>
+        <guid isPermaLink="true">http://localhost:4000/engeeniring/2020/01/21/test.html</guid>
         
         
         <category>Engeeniring</category>
