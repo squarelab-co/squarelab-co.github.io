@@ -1,0 +1,37 @@
+---
+layout: blog
+title: Blog
+permalink: /blog
+---
+<div class="blog-container">
+    <div class="blog-top">
+    </div>
+    <div class="blog-row">
+        <div class="post">
+            {% for post in site.posts %}
+            <div class="post-wrap">
+                <div class="post-txt">
+                    <span class="category">{{ post.categories }}</span>
+                    <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
+                    <p><csmall class="csmall-list">{{ post.date | date: "%b %-d, %Y" }}. | By: {{ post.author }}</csmall></p>
+                    {{ post.excerpt }}
+                    <a href="{{ post.url | prepend: site.baseurl }}"><i class="ri-add-line road-more"></i></a>
+                </div>
+                <div class="post-img">
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <img class="img-responsive" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img }}">
+                    </a>
+                </div>
+            </div>
+            <div class="spacing-24"></div>
+
+            <!--   <div class="hline"></div> -->
+
+            <div class="spacing-86"></div>
+            {% endfor %}
+
+        </div>
+
+        {% include sidebar.html %}
+    </div>
+</div>

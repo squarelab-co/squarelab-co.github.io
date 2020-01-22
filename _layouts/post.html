@@ -1,0 +1,30 @@
+---
+layout: blog
+---
+
+
+<div class="blog-container">
+    <div class="post-top">
+        <div class="title-container">
+            <h2 class="ctitle-top">{{ page.title }}</h2>
+            <p><csmall class="csmall-top">{{ page.date | date: "%b %-d, %Y" }}. | By: {{ page.author }}</csmall></p>
+        </div>
+        <div class="overlay"></div>
+        <img class="img-responsive-2" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img }}">
+    </div>
+    <div class="blog-row">
+        <! -- SINGLE POST -->
+        <div class="post">
+            <! -- Blog Post  -->
+            <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ page.title }}</h3></a>
+
+              
+            {{ content }}
+
+            <div class="spacing-72"></div>
+        </div>
+        
+        {% include sidebar.html %}
+
+    </div><! --/row -->
+</div><! --/container -->

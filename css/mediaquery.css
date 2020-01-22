@@ -15,6 +15,7 @@
 
     .recruit-bg{
         background-image: url("../images/recruit-bg-m.jpg");
+        background-size: cover;
     }
 
 
@@ -61,7 +62,7 @@
 
     .recruit-bg {
         height: 400px;
-        background-size: 100% 90%;
+        background-size: cover;
     }
 
     .recruit-wrapper {
@@ -354,7 +355,8 @@
         height: 543px;
         max-height: 736px;
         background-image: url("../images/recruit-bg-s.jpg");
-        background-size: 100% 120%;
+        background-size: cover;
+        background-position: center;
         background-attachment: scroll;
     }
 

@@ -1,0 +1,406 @@
+@media screen and (max-width: 1680px) {
+
+
+    .content--layout {
+        transform: scale3d(0.8, 0.8, 1);
+    }
+
+    .morph {
+        transform: scale3d(0.8, 0.8, 1);
+    }
+
+    .morph-wrap {
+        transform: scale3d(0.8, 0.8, 1);
+    }
+
+    .recruit-bg{
+        background-image: url("../images/recruit-bg-m.jpg");
+        background-size: cover;
+    }
+
+
+}
+
+@media screen and (max-width: 1440px) {
+    p{
+        font-size: 1.1em;
+        line-height: 1.7em;
+    }
+    button{
+        font-size: 1em;
+    }
+
+    #hiring{
+        top: 80px;
+        right: 80px;
+    }
+
+    .info-wrapper, .inner {
+        max-width: 1280px;
+        transform: scale3d(0.8, 0.8, 1);
+    }
+
+    .info-text {
+        width: 580px;
+
+    }
+
+    .first-img, .second-img {
+        width: 280px;
+    }
+
+    .bi {
+        width: 120px;
+    }
+
+    #header {
+        height: 66px;
+    }
+
+    #recruit {
+    }
+
+    .recruit-bg {
+        height: 400px;
+        background-size: cover;
+    }
+
+    .recruit-wrapper {
+        transform: scale3d(0.8, 0.8, 1);
+    }
+
+    #footer {
+        padding: 3em 0 3em 0;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    #hiring{
+        top: 40px;
+        right: 40px;
+    }
+
+
+    .info-wrapper, .inner {
+        transform: scale3d(0.8, 0.8, 1);
+    }
+}
+
+@media screen and (max-width: 1028px) {
+
+
+    .info-wrapper, .inner {
+        max-width: 1028px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .hiring-mobile{
+        display: block;
+        position: fixed;
+        right: 24px;
+        bottom:32px;
+    }
+    .hiring-web{
+        display: none;
+    }
+
+
+    /* section 1 - Black */
+    .morph-wrap {
+        transform: scale3d(1, 1, 1);
+    }
+
+    .morph {
+        left: 50%;
+        width: 280%;
+
+
+    }
+
+    .content--layout {
+        transform: scale3d(1, 1, 1);
+    }
+
+    .content {
+        width: 100vw;
+        height: 100vh;
+        margin: 32px 0;
+        padding: 0 32px;
+
+    }
+
+    .content--layout-5{
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 15% 30% 8% 15% 10%;
+        grid-template-areas: "..." "..." "..." "title2" "desc2" "...";
+    }
+
+    .content__author {
+        grid-area: author2;
+        height: 32px;
+        padding: 0;
+        transform: translate(0,0);
+        display: none;
+
+
+    }
+
+    .content__title {
+        grid-area: title2;
+        height: 6vh;
+        min-height: 6vh;
+
+
+
+    }
+
+    .content__desc {
+        grid-area: desc2;
+        line-height: 24px;
+        margin-top: 8px;
+        padding: 0;
+        word-break: keep-all;
+        font-size: 16px;
+        white-space: normal;
+
+
+    }
+
+    .content--layout-5 .content__link {
+        margin: 0;
+        grid-area: link2;
+        align-self: start;
+        padding: 0;
+        display: none;
+    }
+
+    .content__img {
+        position: absolute;
+
+    }
+
+    .img1 {
+        width: 700px;
+        right: 32px;
+        top: 100%;
+
+    }
+
+    .img2 {
+        display: none;
+    }
+
+    .img2-2 {
+        opacity: 1;
+        right: 32px;
+        width: 250px;
+        top: 20%;
+
+    }
+
+    .img3 {
+        width: 280px;
+        right: 32px;
+        top: 30%;
+    }
+
+    video {
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        right: 32px;
+        top: 10%;
+    }
+
+
+    /* Section 2 - What we do */
+    .section-wrapper {
+        padding: 60px 32px;
+        height: auto;
+
+    }
+
+    .info-wrapper {
+        display: flex;
+        flex-direction: column;
+        transform: scale3d(1, 1, 1);
+
+    }
+
+    .info-text {
+        width: 100%;
+        margin-top: 32px;
+        margin-right: 0;
+
+
+    }
+
+    h2 {
+        font-size: 32px;
+        margin: 16px 0 0 0;
+    }
+
+    .info-title {
+        white-space: pre-line;
+        margin-bottom: 0;
+
+
+    }
+
+    .info-title p {
+        margin: -10px 0 10px 0;
+    }
+
+    .info-p {
+        line-height: 24px;
+        font-size: 16px;
+    }
+
+
+    .pwbi {
+        width: 128px;
+        height: 32px;
+    }
+
+    .kytebi {
+        width: 66px;
+        height: 48px;
+    }
+
+
+    .info-img {
+        width: 100%;
+        display: inline-block;
+
+
+    }
+
+
+    .first-img {
+        width: 226px;
+        height: 458px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        filter: drop-shadow(0 16px 16px rgba(0, 0, 0, 0.3));
+
+
+    }
+
+    .second-img {
+        display: none;
+    }
+
+    .info-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        margin-top: 40px;
+
+    }
+
+    button {
+        width: 150px;
+
+    }
+
+    .button1 {
+        margin-right: 8px;
+    }
+
+    .social-box {
+        display: flex;
+        flex-direction: row;
+        margin-top: 16px;
+    }
+
+    .social-box:first-child {
+        margin-right: 0;
+    }
+
+
+    /* Section 3 - Recruit */
+    #recruit {
+
+    }
+
+    .recruit-wrapper {
+        padding: 0 32px;
+        transform: scale3d(1, 1, 1)
+    }
+
+    .recruit-wrapper p{
+        white-space: normal;
+        word-break: keep-all;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    .recruit-h2 {
+        white-space: pre-line;
+        min-width: 100%;
+
+    }
+
+    .recruit-bg {
+        height: 543px;
+        max-height: 736px;
+        background-image: url("../images/recruit-bg-s.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+
+    /* Footer */
+    #footer {
+        background-color: #ffffff;
+
+        position: relative;
+    }
+
+    .inner {
+        width: 100%;
+        padding: 0 24px;
+        flex-direction: column-reverse;
+        transform: scale3d(1,1,1);
+    }
+
+    .icons {
+        margin-right: 0;
+        margin-bottom: 24px;
+
+    }
+
+    .icon:first-child {
+        margin-right: 32px;
+    }
+
+    .copyright {
+        margin: 0;
+    }
+
+    .copyright li {
+        display: block;
+        text-align: center;
+    }
+
+    .copyright li:first-child {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content--layout {
+    }
+}

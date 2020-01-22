@@ -1,0 +1,169 @@
+#blog-header{
+    background-color: #ffffff;
+    height: 72px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+
+}
+
+.blog-header-container{
+    width: 1080px;
+    height: 72px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0em;
+}
+
+.blog-header-container>p{
+    color: rgba(0,0,0,.6);
+    font-weight: 600;
+    margin-left: 16px;
+
+}
+
+
+.blog-container{
+    color: rgba(0,0,0,.87);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+.blog-top{
+   width: 100vw;
+   height: 700px;
+   background-image: url("/assets/images/blog-bg.png");
+   background-size: cover;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.post-top{
+    width: 100vw;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+.overlay{
+    background-color: rgba(0,0,0,.3);
+    width: 100vw;
+    height: 500px;
+    position: absolute;
+
+}
+
+.img-responsive-2{
+    max-width: 100vw;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.title-container{
+    width: 1080px;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    top: 300px;
+}
+
+.csmall-top{
+    color: #ffffff;
+    font-size: 0.9em;
+
+}
+
+
+.ctitle-top{
+    color: #ffffff;
+
+
+}
+
+
+.blog-row{
+    width:1080px;
+    display: inline-flex;
+    margin-top: 100px;
+}
+
+.post{
+    width: 70%;
+}
+.post-wrap{
+    display: inline-flex;
+    align-items: center;
+}
+
+.post-img{
+    margin-left: 32px;
+}
+
+.side-bar{
+    width: 30%;
+    padding-left: 54px;
+}
+
+
+.spacing-72{
+    margin-top: 72px;
+}
+
+.spacing-24{
+    margin-top: 24px;
+}
+
+.hline{
+    border: 0.5px solid rgba(0,0,0,.12);
+}
+
+.hline-bold{
+    border: 1.5px solid rgba(0,0,0,.87);
+}
+
+.img-responsive{
+    width:200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+
+}
+
+
+.category{
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.ctitle{
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+.csmall-list{
+    color: rgba(0,0,0,.6);
+    font-size: 0.9em;
+}
+
+
+.road-more{
+    font-size: 20px;
+}
+
+.blog-top{
+
+}
