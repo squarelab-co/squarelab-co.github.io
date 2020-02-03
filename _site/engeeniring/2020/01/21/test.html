@@ -9,10 +9,15 @@
   <meta name="google-site-verification" content="-kdxteMBSgKizw-6qHNm1-5nfxb7H6947J64jmjbBEg" />
 
   <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/mediaquery.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <script src="/assets/js/slidenav.js"></script>
+
+
 
 </head>
 
@@ -23,15 +28,20 @@
         <a href="/index.html">
           <img src="/assets/images/squarelab-bi-black.png" width="140" class="bi-blog" alt="스퀘어랩 로고">
         </a>
-        <p>blog</p>
+        <a href="/blog" class="blog-header-title">Blog</a>
     </div>
 </header>
+
+
 
       <div class="blog-container">
     <div class="post-top">
         <div class="title-container">
             <h2 class="ctitle-top">Serverless한 회사 내부 서비스 만들기</h2>
-            <p><csmall class="csmall-top">Jan 21, 2020. | By: Youngjea Kwon</csmall></p>
+            <div class="author">
+                <img class="img-author-2" src="/assets/images/blog/author-youngjea.jpeg">
+                <csmall class="csmall-top">Youngjea Kwon |  Jan 21, 2020.</csmall>
+            </div>
         </div>
         <div class="overlay"></div>
         <img class="img-responsive-2" src="/assets/images/blog/post01.jpg">
@@ -421,104 +431,90 @@ functions:
 
 <p>참고로 <a href="https://yaml.org/faq.html">YAML 공식 웹사이트</a>에는 <code class="highlighter-rouge">.yaml</code> 확장자를 추천하고 있지만, 전통적으로 확장자는 3글자를 사용해왔던 컨벤션 때문에 프로젝트에따라 <code class="highlighter-rouge">.yml</code> 도 많이 사용되고있다. 예를들어 쿠버네티스 설정파일의 경우 <code class="highlighter-rouge">.yaml</code> 사용하지만, serverless framework의 경우에는 <code class="highlighter-rouge">.yml</code>을 사용하는 것에 주의하자.</p>
 
-<h2 id="author">Author</h2>
-
-<p>권영재, Youngjae Kwon (yjiq150@squarelab.co)</p>
 
 
             <div class="spacing-72"></div>
         </div>
         
         <div class="side-bar">
-   <!--  <h4>Search</h4>
-    <div class="hline"></div>
-        <p>
-            <br/>
-            <input type="text" class="form-control" placeholder="Search something">
-        </p>
-    <div class="spacing"></div>
-    <h4>Subscribe</h4>
-    <div class="hline"></div>
-        <p>
-            <p class="rss-subscribe">Subscribe to this blog <a href="/feed.xml">via RSS</a>.</p>
-        </p>  -->
     <div class="spacing"></div>
     <h4>Categories</h4>
     <div class="hline-bold"></div>
-    
+        <p>
+            <a href="/blog"><i class="fa fa-angle-right"></i> 전체보기</a>
+           <!-- <span class="badge badge-theme pull-right"></span>-->
+        </p>
+       
         <p>
             <a href="/category/#Playwings"><i class="fa fa-angle-right"></i> Playwings</a>
-            <span class="badge badge-theme pull-right">1</span>
+            <!--<span class="badge badge-theme pull-right">1</span>-->
         </p>
     
         <p>
             <a href="/category/#Kyte"><i class="fa fa-angle-right"></i> Kyte</a>
-            <span class="badge badge-theme pull-right">1</span>
+            <!--<span class="badge badge-theme pull-right">1</span>-->
         </p>
     
         <p>
             <a href="/category/#Design"><i class="fa fa-angle-right"></i> Design</a>
-            <span class="badge badge-theme pull-right">1</span>
+            <!--<span class="badge badge-theme pull-right">1</span>-->
         </p>
     
         <p>
             <a href="/category/#Engeeniring"><i class="fa fa-angle-right"></i> Engeeniring</a>
-            <span class="badge badge-theme pull-right">1</span>
+            <!--<span class="badge badge-theme pull-right">1</span>-->
         </p>
     
 
     <div class="spacing"></div>
-<!--
-    <h4>Recent Posts</h4>
-    <div class="hline"></div>
-        <ul class="popular-posts">
-            
-                <li>
-                    <a href="/engeeniring/2020/01/21/test.html"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a>
-                    <p><a href="/engeeniring/2020/01/21/test.html">Serverless한 회사 내부 서비스 만들기</a></p>
-                <em>Posted on 21 Jan 2020</em>
-            </li>
-            
-                <li>
-                    <a href="/design/2020/01/20/test2.html"><img src="/assets/img/blog/thumbs/thumb02.jpg" alt="Popular Post"></a>
-                    <p><a href="/design/2020/01/20/test2.html">Squarelab에서 디자인 하는 방법</a></p>
-                <em>Posted on 20 Jan 2020</em>
-            </li>
-            
-                <li>
-                    <a href="/kyte/2020/01/18/test3.html"><img src="/assets/img/blog/thumbs/thumb01.jpg" alt="Popular Post"></a>
-                    <p><a href="/kyte/2020/01/18/test3.html">Kyte - 여행을 떠나는 가장 쉬운 방법</a></p>
-                <em>Posted on 18 Jan 2020</em>
-            </li>
-            
-                <li>
-                    <a href="/playwings/2020/01/10/test4.html"><img src="/assets/img/blog/thumbs/thumb01.jpg" alt="Popular Post"></a>
-                    <p><a href="/playwings/2020/01/10/test4.html">Playwings 리뉴얼 과정</a></p>
-                <em>Posted on 10 Jan 2020</em>
-            </li>
-            
-        </ul>
-
-    <div class="spacing"></div>
-
-    <h4>Popular Tags</h4>
-    <div class="hline"></div>
-    <p>
-    
-            <a class="btn btn-theme" href="/category/#Playwings" role="button">Playwings (1)</a>
-        
-            <a class="btn btn-theme" href="/category/#Kyte" role="button">Kyte (1)</a>
-        
-            <a class="btn btn-theme" href="/category/#Design" role="button">Design (1)</a>
-        
-            <a class="btn btn-theme" href="/category/#Engeeniring" role="button">Engeeniring (1)</a>
-        
-    </p> -->
 </div>
+
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+            <div>
+                <p>
+                    <a href="/blog"><i class="fa fa-angle-right"></i> 전체보기</a>
+                    <!-- <span class="badge badge-theme pull-right"></span>-->
+                </p>
+                
+                <p>
+                    <a href="/category/#Playwings"><i class="fa fa-angle-right"></i> Playwings</a>
+                    <!--<span class="badge badge-theme pull-right">1</span>-->
+                </p>
+                
+                <p>
+                    <a href="/category/#Kyte"><i class="fa fa-angle-right"></i> Kyte</a>
+                    <!--<span class="badge badge-theme pull-right">1</span>-->
+                </p>
+                
+                <p>
+                    <a href="/category/#Design"><i class="fa fa-angle-right"></i> Design</a>
+                    <!--<span class="badge badge-theme pull-right">1</span>-->
+                </p>
+                
+                <p>
+                    <a href="/category/#Engeeniring"><i class="fa fa-angle-right"></i> Engeeniring</a>
+                    <!--<span class="badge badge-theme pull-right">1</span>-->
+                </p>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
     </div><! --/row -->
 </div><! --/container -->
+
+
+
+
+
       <!-- Footer -->
 <footer id="footer">
   <div class="inner">

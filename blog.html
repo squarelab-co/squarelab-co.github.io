@@ -3,7 +3,7 @@ layout: blog
 title: Blog
 permalink: /blog
 ---
-<div class="blog-container">
+<div class="blog-container" id="blog-main">
     <div class="blog-top">
     </div>
     <div class="blog-row">
@@ -13,9 +13,12 @@ permalink: /blog
                 <div class="post-txt">
                     <span class="category">{{ post.categories }}</span>
                     <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
-                    <p><csmall class="csmall-list">{{ post.date | date: "%b %-d, %Y" }}. | By: {{ post.author }}</csmall></p>
-                    {{ post.excerpt | truncatewords: 30, '...' }}
-                    <a href="{{ post.url | prepend: site.baseurl }}"><i class="ri-add-line road-more"></i></a>
+                    <div class="author">
+                        <img class="img-author" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img-author }}">
+                        <csmall class="csmall-list">{{ post.author }} |  {{ post.date | date: "%b %-d, %Y" }}.</csmall>
+                    </div>
+                    <div class="excerpt"> {{ post.excerpt | truncatewords: 18, '...' }} </div>
+                    <a href="{{ post.url | prepend: site.baseurl }}"><i class="ri-arrow-right-line"></i></a>
                 </div>
                 <div class="post-img">
                     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -35,3 +38,4 @@ permalink: /blog
         {% include sidebar.html %}
     </div>
 </div>
+

@@ -7,7 +7,10 @@ layout: blog
     <div class="post-top">
         <div class="title-container">
             <h2 class="ctitle-top">{{ page.title }}</h2>
-            <p><csmall class="csmall-top">{{ page.date | date: "%b %-d, %Y" }}. | By: {{ page.author }}</csmall></p>
+            <div class="author">
+                <img class="img-author-2" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img-author }}">
+                <csmall class="csmall-top">{{ page.author }} |  {{ page.date | date: "%b %-d, %Y" }}.</csmall>
+            </div>
         </div>
         <div class="overlay"></div>
         <img class="img-responsive-2" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img }}">
@@ -28,3 +31,7 @@ layout: blog
 
     </div><! --/row -->
 </div><! --/container -->
+
+
+
+
