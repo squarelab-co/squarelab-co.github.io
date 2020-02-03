@@ -53,6 +53,7 @@
     display: flex;
     justify-content: center;
 
+
 }
 
 .author{
@@ -116,7 +117,7 @@
 
 .ctitle-top{
     color: #ffffff;
-
+    margin: 0 0 8px 0;
 
 }
 
@@ -153,6 +154,8 @@
     width: 30%;
     padding-left: 54px;
 }
+
+
 
 .sidenav{
     display: none;
@@ -214,6 +217,10 @@
 }
 
 
+.menu-wrap {
+    visibility: hidden;
+}
+
 
 /* Footer */
 #footer {
@@ -265,5 +272,21 @@
 .copyright li:first-child {
     margin-right: 80px;
     font-size: 16px;
+}
+
+pre, code {
+    border-radius: 4px;
+    background: #f5f5f5;
+
+}
+
+pre {
+    padding: 16px;
+    border: 1px solid #ddd;
+}
+
+code {
+    padding: 4px;
+
 }
 
