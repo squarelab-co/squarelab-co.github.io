@@ -38,7 +38,7 @@
     .title-container{
         width: 100%;
         padding: 0 24px;
-        top: 180px;
+        top: 200px;
     }
 
 
@@ -52,6 +52,7 @@
         flex-direction: column-reverse;
         align-items: center;
         margin-top: 24px;
+        margin-bottom: 40px;
     }
 
     .post-top{
@@ -97,6 +98,7 @@
 
     .author {
         margin-top: 8px;
+        margin-bottom: 8px;
     }
 
     /* Side-bar */
