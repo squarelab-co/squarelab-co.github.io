@@ -9,16 +9,16 @@ permalink: /blog
     <div class="blog-row">
         <div class="post">
             {% for post in site.posts %}
-            <div class="post-wrap">
+            <div class="post-wrap" id="{{ category | first }}">
                 <div class="post-txt">
-                    <span class="category">{{ post.categories }}</span>
+                    <span class="category" style="color: {{ post.color }};">{{ post.categories }}</span>
                     <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                     <div class="author">
                         <img class="img-author" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img-author }}">
                         <csmall class="csmall-list">{{ post.author }} |  {{ post.date | date: "%b %-d, %Y" }}.</csmall>
                     </div>
-                    <div class="excerpt"> {{ post.excerpt | truncatewords: 18, '...' }} </div>
-                    <a href="{{ post.url | prepend: site.baseurl }}"><i class="ri-arrow-right-line"></i></a>
+                    <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }} </div>
+                    <!--<a href="{{ post.url | prepend: site.baseurl }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
                 </div>
                 <div class="post-img">
                     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -35,7 +35,7 @@ permalink: /blog
 
         </div>
 
-        {% include sidebar.html %}
+      <!--  {% include sidebar.html %} -->
     </div>
 </div>
 

@@ -13,10 +13,6 @@
         transform: scale3d(0.8, 0.8, 1);
     }
 
-    .recruit-bg{
-        background-image: url("../images/recruit-bg-m.jpg");
-        background-size: cover;
-    }
 
 
 }
@@ -57,15 +53,13 @@
         height: 66px;
     }
 
-    #recruit {
-    }
 
-    .recruit-bg {
+    .recruit-bg, .blog-bg {
         height: 400px;
         background-size: cover;
     }
 
-    .recruit-wrapper {
+    .recruit-wrapper, .blog-wrapper {
         transform: scale3d(0.8, 0.8, 1);
     }
 
@@ -328,16 +322,14 @@
 
 
     /* Section 3 - Recruit */
-    #recruit {
 
-    }
 
-    .recruit-wrapper {
+    .recruit-wrapper, .blog-wrapper {
         padding: 0 32px;
         transform: scale3d(1, 1, 1)
     }
 
-    .recruit-wrapper p{
+    .recruit-wrapper p, .blog-wrapper p{
         white-space: normal;
         word-break: keep-all;
         font-size: 16px;
@@ -351,13 +343,15 @@
 
     }
 
-    .recruit-bg {
+    .recruit-bg, .blog-bg {
         height: 543px;
         max-height: 736px;
-        background-image: url("../images/recruit-bg-s.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
+
+    }
+
+    .blog-bg {
+        background-image: url("../images/blog-bg-s.jpg");
+
     }
 
 
@@ -401,6 +395,5 @@
 }
 
 @media screen and (max-width: 480px) {
-    .content--layout {
-    }
+
 }

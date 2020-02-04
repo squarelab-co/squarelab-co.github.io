@@ -1,15 +1,14 @@
-<div class="side-bar">
+<!--<div class="side-bar">
     <div class="spacing"></div>
-    <h4>Categories</h4>
-    <div class="hline-bold"></div>
+    <h5 class="title-category">CATEGORIES</h5>
         <p>
-            <a href="/blog"><i class="fa fa-angle-right"></i> 전체보기</a>
-           <!-- <span class="badge badge-theme pull-right">{{ paginator.total_posts }}</span>-->
+            <a href="/blog"> ALL</a>
+            <span class="badge badge-theme pull-right">{{ paginator.total_posts }}</span>
         </p>
        {% for category in site.categories %}
         <p>
-            <a href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
-            <!--<span class="badge badge-theme pull-right">{{ category | last | size }}</span>-->
+            <a href="/blog/#{{ category | first }}"> {{ category | first | capitalize }}</a>
+         <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
         </p>
     {% endfor %}
 
@@ -22,19 +21,22 @@
     <div class="menu">
         <div>
             <div>
+                <a href="{{ site.baseurl }}/index.html"><img src="/assets/images/squarelab-bi-rec.png" width="32px" height="32px" class="menu-logo"></a>
                 <p>
-                    <a href="/blog"><i class="fa fa-angle-right"></i> 전체보기</a>
-                    <!-- <span class="badge badge-theme pull-right">{{ paginator.total_posts }}</span>-->
+                    <a href="/blog">ALL</a>
+                   <span class="badge badge-theme pull-right">{{ paginator.total_posts }}</span>
                 </p>
                 {% for category in site.categories %}
                 <p>
-                    <a href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
-                    <!--<span class="badge badge-theme pull-right">{{ category | last | size }}</span>-->
+                    <a href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}"> {{ category | first | capitalize }}</a>
+                  <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
                 </p>
+                
                 {% endfor %}
+                
 
             </div>
         </div>
     </div>
-</div>
+</div> 
 

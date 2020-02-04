@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Feb 2020 19:25:50 +0900</pubDate>
-    <lastBuildDate>Mon, 03 Feb 2020 19:25:50 +0900</lastBuildDate>
+    <pubDate>Tue, 04 Feb 2020 15:59:37 +0900</pubDate>
+    <lastBuildDate>Tue, 04 Feb 2020 15:59:37 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -1177,11 +1177,11 @@ functions:
 &lt;p&gt;권영재, Youngjae Kwon (yjiq150@squarelab.co)&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Jan 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/kyte/2020/01/18/test3.html</link>
-        <guid isPermaLink="true">http://localhost:4000/kyte/2020/01/18/test3.html</guid>
+        <link>http://localhost:4000/design/2020/01/18/test3.html</link>
+        <guid isPermaLink="true">http://localhost:4000/design/2020/01/18/test3.html</guid>
         
         
-        <category>Kyte</category>
+        <category>Design</category>
         
       </item>
     
@@ -1570,11 +1570,11 @@ functions:
 &lt;p&gt;권영재, Youngjae Kwon (yjiq150@squarelab.co)&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Jan 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/playwings/2020/01/10/test4.html</link>
-        <guid isPermaLink="true">http://localhost:4000/playwings/2020/01/10/test4.html</guid>
+        <link>http://localhost:4000/engeeniring/2020/01/10/test4.html</link>
+        <guid isPermaLink="true">http://localhost:4000/engeeniring/2020/01/10/test4.html</guid>
         
         
-        <category>Playwings</category>
+        <category>Engeeniring</category>
         
       </item>
     

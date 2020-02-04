@@ -464,17 +464,16 @@ i {
 .recruit-bg {
     background-image: url("../images/recruit-bg.jpg");
     background-size: cover;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .blog-bg{
-    background-image: url("../images/blog-bg.png");
+    background-image: url("../images/blog-bg.jpg");
     background-size: cover;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
 .recruit-wrapper,.blog-wrapper {
@@ -490,19 +489,17 @@ i {
 
 }
 
-.recruit-wrapper {
+.recruit-wrapper, .blog-wrapper {
     color: #ffffff;
 }
 
-.blog-wrapper {
-    color: rgba(0, 0, 0, .87);
-}
 
 
 .recruit-h2 {
     white-space: normal;
     margin: 0 0 16px 0;
     min-width: 600px;
+
 }
 
 .recruit-wrapper p{

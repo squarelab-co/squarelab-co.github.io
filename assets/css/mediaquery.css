@@ -204,7 +204,7 @@
     }
 
     .menu-wrap .menu > div {
-        background: rgba(255,255,255,0.87);
+        background: #ffffff;
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -221,6 +221,14 @@
         max-height: 90vh;
         opacity: 0;
         transition: opacity 0.4s ease;
+        font-weight: 600;
+        font-size: 24px;
+
+    }
+
+    .menu-logo{
+        margin-bottom: 16px;
+
     }
 
 
