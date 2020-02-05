@@ -10,7 +10,6 @@ permalink: /blog
             <h1>How to make travel</h1>
             <p>스퀘어랩 블로그</p>
         </div>
-        
     </div>
     <div class="blog-row">
         <div class="post">
@@ -21,7 +20,7 @@ permalink: /blog
                     <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                     <div class="author">
                         <img class="img-author" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img-author }}">
-                        <csmall class="csmall-list">{{ post.author }} |  {{ post.date | date: "%b %-d, %Y" }}.</csmall>
+                        <small >{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
                     </div>
                     <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }} </div>
                     <!--<a href="{{ post.url | prepend: site.baseurl }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
@@ -33,15 +32,12 @@ permalink: /blog
                 </div>
             </div>
             <div class="spacing-24"></div>
-
             <!--   <div class="hline"></div> -->
-
             <div class="spacing-86"></div>
             {% endfor %}
-
         </div>
-
       <!--  {% include sidebar.html %} -->
     </div>
 </div>
+<script src="/js/locale-date.js"></script>
 
