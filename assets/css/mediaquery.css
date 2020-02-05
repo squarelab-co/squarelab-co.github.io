@@ -22,9 +22,28 @@
 
     /* Blog */
 
-    .blog-top{
-       height: 400px;
+    .blog-container{
+        top: 66px;
+        display: block;
     }
+
+    .blog-top{
+       height: 300px;
+       background: linear-gradient(135deg, #bb18ec , #5f2fff);
+    }
+
+    .blog-top-txt{
+        width: 100%;
+        padding: 0 24px;
+        margin-top: 33px;
+        z-index: 100;
+    }
+    
+    .blog-top-txt > h1 {
+        font-size: 40px;
+    }
+
+
 
     .blog-row{
         width: 100%;
@@ -38,7 +57,8 @@
     .title-container{
         width: 100%;
         padding: 0 24px;
-        top: 200px;
+        top: 180px;
+        
     }
 
 
@@ -56,13 +76,21 @@
     }
 
     .post-top{
-        height: 400px;
-
+        height: 300px;
+        align-items: center;
+        background-color: red;
     }
 
     .overlay{
-        height: 400px;
+        height: 300px;
 
+    }
+
+    .overlay-s{
+        background-color: rgba(0,0,0,.3);
+        width: 100vw;
+        height: 300px;
+        position: absolute;
     }
 
 
@@ -82,6 +110,10 @@
     .ctitle{
         margin-top: 8px;
         margin-bottom: 0;
+        font-size: 24px;
+    }
+    
+    .ctitle-top{
         font-size: 24px;
     }
 
@@ -238,7 +270,7 @@
     /* Footer */
     #footer {
         background-color: #ffffff;
-        position: relative;
+        width: 100vw;
     }
 
     .inner {

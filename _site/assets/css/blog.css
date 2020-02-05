@@ -39,11 +39,33 @@
 .blog-top{
    width: 100vw;
    height: 700px;
-   background-image: url("/assets/images/blog-bg3.jpg");
+   background-image: url("/assets/images/blog-bg.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center top;
+   display: flex;
+   align-items: center;
 }
+
+.blog-top-txt{
+    color: #ffffff;
+    width: 860px;
+    margin: 0 auto;
+}
+
+.blog-top-txt > h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+  /*  text-transform: uppercase;*/
+    
+}
+
+.blog-top-txt > p {
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+
 
 .post-top{
     width: 100vw;
