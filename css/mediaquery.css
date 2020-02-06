@@ -336,22 +336,21 @@
         line-height: 24px;
     }
 
-
     .recruit-h2 {
         white-space: pre-line;
         min-width: 100%;
-
     }
 
-    .recruit-bg, .blog-bg {
+    .recruit-bg {
         height: 543px;
         max-height: 736px;
-
+        background-image: url("../images/recruit-bg-s.jpg");
     }
 
     .blog-bg {
+        height: 543px;
+        max-height: 736px;
         background-image: url("../images/blog-bg-s.jpg");
-
     }
 
 
