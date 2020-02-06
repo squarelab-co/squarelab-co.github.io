@@ -2,7 +2,7 @@
 layout: blog
 ---
 <div class="blog-container">
-    <div class="post-top">
+    <div class="blog-top" style="background-image:url('{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img }}')">
         <div class="overlay">
             <div class="title-container">
                 <h1 class="ctitle-top">{{ page.title }}</h1>
@@ -12,7 +12,7 @@ layout: blog
                 </div>
             </div>
         </div>
-        <img class="img-responsive-2" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img }}">
+        <img class="img-responsive-2" src="">
     </div>
     <div class="blog-row">
         {{ content }}

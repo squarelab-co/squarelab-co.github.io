@@ -41,14 +41,13 @@
     </div>
 </header>
       <div class="blog-container">
-    <div class="blog-top">
+    <div id="hero" class="blog-top">
         <div class="overlay">
             <div class="title-container">
                 <h1 class="ctitle-top">스퀘어랩 기술 블로그</h1>
                 <small>여행과 기술을 연결해 가는 스퀘어랩의 노하우를 공유합니다.</small>
             </div>
         </div>
-        <img id="hero" class="img-responsive-2">
     </div>
     <div class="blog-row">
         
@@ -120,9 +119,9 @@
 <script type="text/javascript">
     const images = ['/assets/images/hero-0.jpg',
                     '/assets/images/hero-1.jpg',
-                    '/assets/images/hero-2.jpg'];
-    const here = document.getElementById("hero");
-    here.src = images[Math.floor(Math.random() * images.length)];
+                    '/assets/images/hero-2.jpg',
+                    '/assets/images/hero-3.jpg'];
+    document.getElementById("hero").style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
 </script>
 <script src="/js/locale-date.js"></script>
       <!-- Footer -->

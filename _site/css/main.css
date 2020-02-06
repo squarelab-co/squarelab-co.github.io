@@ -470,11 +470,17 @@ i {
 }
 
 .blog-bg{
-    background-image: url("../images/blog-bg.jpg");
+    background-image: url("../assets/images/hero-0.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
 
+.overlay {
+    background-color: rgba(0,0,0,.6);
+    width: 100%;
+    height: inherit;
+    position: absolute;
 }
 
 .recruit-wrapper,.blog-wrapper {
