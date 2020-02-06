@@ -1,15 +1,19 @@
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0;" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="msapplication-TileColor" content="#782bde">
   <meta name="theme-color" content="#ffffff">
   <meta name="google-site-verification" content="-kdxteMBSgKizw-6qHNm1-5nfxb7H6947J64jmjbBEg" />
 
+  <meta property="og:site_name" content="Square Lab">
+  <meta property="og:title" content="Square Lab - A Light journey to see the world">
+  <meta property="og:description" content="Hello, we are Square Lab! 우리는 새로운 시각으로 여행을 만드는 사람들입니다. 스퀘어랩과 함께 더 넓은 세상을 만나보세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.squarelab.co">
+  <meta property="og:image" content="https://www.squarelab.co/images/social.png">
+
   <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/mediaquery.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
   <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
@@ -23,6 +27,4 @@
     gtag('js', new Date());
     gtag('config', 'UA-157710299-1');
   </script>
-
-
 </head>
