@@ -156,6 +156,9 @@ small {
     height: 540px;
     display: flex;
     background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
