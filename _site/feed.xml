@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 06 Feb 2020 18:31:11 +0900</pubDate>
-    <lastBuildDate>Thu, 06 Feb 2020 18:31:11 +0900</lastBuildDate>
+    <pubDate>Thu, 06 Feb 2020 18:34:39 +0900</pubDate>
+    <lastBuildDate>Thu, 06 Feb 2020 18:34:39 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -25,7 +25,7 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/sofa_cat.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;원본은 3940x2540 사이즈의 고화질 이미지이고 용량은 1.6MB입니다. 보통의 웹이나 앱 서비스에서 이런 고화질 이미지를 사용하는 경우는 거의 없습니다. 그래서 상황에 맞게 디자이너들이 직접 이미지를 리사이징하거나 CDN에서 API를 제공하는 경우 API를 통해 동적으로 리사이징해 사용합니다.&lt;/p&gt;
+&lt;p&gt;원본은 3940x2540 사이즈의 고화질 이미지이고 용량은 1.6MB입니다. 일반적인 웹이나 앱 서비스에서 이런 고화질 이미지를 사용하는 경우는 거의 없습니다. 그래서 상황에 맞게 디자이너들이 직접 이미지를 리사이징하거나 CDN에서 API를 제공하는 경우 API를 통해 동적으로 리사이징해 사용합니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;이미지-리사이징&quot;&gt;이미지 리사이징&lt;/h3&gt;
 &lt;p&gt;Cloudinary에서는 URL 파라미터를 통해 쉽게 이미지를 리사이징 할 수 있습니다. 바로 예제를 살펴볼까요.
@@ -34,7 +34,7 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400/sofa_cat.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;400x258 사이즈에 용량은 25KB로 줄어든 이미지를 확인할 수 있습니다. URL에서 어떤 부분이 달라졌는지 눈치 채셨나요? &lt;code class=&quot;highlighter-rouge&quot;&gt;sofa_cat.jpg&lt;/code&gt; 앞에 &lt;code class=&quot;highlighter-rouge&quot;&gt;width=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;w_400&lt;/code&gt; 파라미터를 붙여 원본을 기준으로 비율에 맞게 가로 400px로 줄어든 이미지를 얻을 수 있습니다. CSS나 다른 방식으로 이미지를 줄여서 표시한게 아니라 jpg 파일 자체의 사이즈와 용량이 줄어들었다는 점이 중요하니다.&lt;/p&gt;
+&lt;p&gt;크고 무거웠던 원본 이미지에서 400x258 사이즈에 용량은 25KB로 줄어든 이미지를 확인할 수 있습니다. URL에서 어떤 부분이 달라졌는지 눈치 채셨나요? &lt;code class=&quot;highlighter-rouge&quot;&gt;sofa_cat.jpg&lt;/code&gt; 앞에 &lt;code class=&quot;highlighter-rouge&quot;&gt;width=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;w_400&lt;/code&gt; 파라미터를 붙여 원본을 기준으로 비율에 맞게 가로 400px로 줄어든 이미지를 얻을 수 있습니다. CSS나 다른 방식으로 이미지를 줄여서 표시한게 아니라 jpg 파일 자체의 사이즈와 용량이 줄어들었다는 점이 중요하니다.&lt;/p&gt;
 
 &lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
 
