@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="description" content="사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 ...">
+  <meta name="description" content="사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기 때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이...">
   <meta name="msapplication-TileColor" content="#782bde">
   <meta name="theme-color" content="#ffffff">
   <meta name="google-site-verification" content="-kdxteMBSgKizw-6qHNm1-5nfxb7H6947J64jmjbBEg" />
@@ -46,7 +46,7 @@
             <div class="title-container">
                 <h1 class="ctitle-top">Serverless한 회사 내부 서비스 만들기</h1>
                 <div class="author">
-                    <img class="img-author-2" src="/assets/images/blog/author-youngjea.jpeg">
+                    <img class="img-author-2" src="/assets/images/blog/yjiq150.jpg">
                     <small class="small-top" >권영재</small><small>|</small><small name="locale-date">Feb 4, 2020</small>
                 </div>
             </div>
@@ -54,7 +54,8 @@
         <img class="img-responsive-2" src="">
     </div>
     <div class="blog-row">
-        <p>사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는것 정도는 큰 문제가 아니다.</p>
+        <div class="post">
+            <p>사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기 때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는것 정도는 큰 문제가 아니다.</p>
 
 <p>그렇다면 이제 실제로 serverless 형태로 회사 내부 서비스를 만드려면 어떻게 해야하는지 좀더 깊은 고민을 해보도록 하자.</p>
 
@@ -433,6 +434,7 @@ functions:
 <p>참고로 <a href="https://yaml.org/faq.html">YAML 공식 웹사이트</a>에는 <code class="highlighter-rouge">.yaml</code> 확장자를 추천하고 있지만, 전통적으로 확장자는 3글자를 사용해왔던 컨벤션 때문에 프로젝트에따라 <code class="highlighter-rouge">.yml</code> 도 많이 사용되고있다. 예를들어 쿠버네티스 설정파일의 경우 <code class="highlighter-rouge">.yaml</code> 사용하지만, serverless framework의 경우에는 <code class="highlighter-rouge">.yml</code>을 사용하는 것에 주의하자.</p>
 
 
+        </div>
         <div class="spacing-40"></div>
         <div class="fb-comments" data-href="https://squarelab.co/blog/developing-internal-service-with-serverless-aws" data-num-posts="4" data-width="100%"></div>
         <!--   <!--<div class="side-bar">
@@ -445,6 +447,11 @@ functions:
        
         <p>
             <a href="/blog/#Engeeniring"> Engeeniring</a>
+         <span class="badge badge-theme pull-right">1</span>
+        </p>
+    
+        <p>
+            <a href="/blog/#Design"> Design</a>
          <span class="badge badge-theme pull-right">1</span>
         </p>
     
@@ -466,6 +473,12 @@ functions:
                 
                 <p>
                     <a href="/category/#Engeeniring"> Engeeniring</a>
+                  <span class="badge badge-theme pull-right">1</span>
+                </p>
+                
+                
+                <p>
+                    <a href="/category/#Design"> Design</a>
                   <span class="badge badge-theme pull-right">1</span>
                 </p>
                 

@@ -5,13 +5,110 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 06 Feb 2020 14:59:10 +0900</pubDate>
-    <lastBuildDate>Thu, 06 Feb 2020 14:59:10 +0900</lastBuildDate>
+    <pubDate>Thu, 06 Feb 2020 18:31:11 +0900</pubDate>
+    <lastBuildDate>Thu, 06 Feb 2020 18:31:11 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
+        <title>Cloudinary를 활용한 이미지 컨텐츠 관리</title>
+        <description>&lt;p&gt;새로운 서비스를 만들때 이미지 컨텐츠를 관리하는 것은 디자이너에게 매우 중요한 문제입니다. 디자인이 아무리 잘되어 있어도 컨텐츠가 적절한 퀄리티로 노출되지 않으면 디자인의 품질이 떨어져 보이고 사용자에게도 신뢰감을 주기 어렵기 때문입니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다고 모든 이미지 컨텐츠를 디자이너가 직접 관리하기에는 리소스가 너무 많이 들지요. 이 포스트에서는 스퀘어랩이 Cloudinary를 활용해 어떻게 이미지 컨텐츠를 관리하고 있는지 공유합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;cloudinary-소개&quot;&gt;Cloudinary 소개&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://cloudinary.com/&quot;&gt;Cloudinary&lt;/a&gt;는 클라우드 기반의 이미지 및 비디오 관리 서비스입니다. 강력하면서 쉬운 API를 제공하고 있어 조금만 익숙해지면 컨텐츠를 매우 효율적으로 관리할 수 있습니다. 그리고 무엇보다 무료로 시작할 수 있어 스타트업에서 도입하기에 부담이 적습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;데모-이미지&quot;&gt;데모 이미지&lt;/h3&gt;
+&lt;p&gt;Cloudinary에 가입하고 이미지를 업로드 하는 것은 어렵지 않습니다. 일반적인 CDN이나 웹서버의 사용법과 유사하죠. 이미지를 업로드하면 고유한 URL을 얻을 수 있는데, 예제로 사용하기 위해 Cloudinary에서 데모로 제공하고 있는 이미지 중에 고양이 사진을 하나 골라봤습니다. 고양이는 언제나 옳으니까요.
+&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;원본은 3940x2540 사이즈의 고화질 이미지이고 용량은 1.6MB입니다. 보통의 웹이나 앱 서비스에서 이런 고화질 이미지를 사용하는 경우는 거의 없습니다. 그래서 상황에 맞게 디자이너들이 직접 이미지를 리사이징하거나 CDN에서 API를 제공하는 경우 API를 통해 동적으로 리사이징해 사용합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;이미지-리사이징&quot;&gt;이미지 리사이징&lt;/h3&gt;
+&lt;p&gt;Cloudinary에서는 URL 파라미터를 통해 쉽게 이미지를 리사이징 할 수 있습니다. 바로 예제를 살펴볼까요.
+&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;400x258 사이즈에 용량은 25KB로 줄어든 이미지를 확인할 수 있습니다. URL에서 어떤 부분이 달라졌는지 눈치 채셨나요? &lt;code class=&quot;highlighter-rouge&quot;&gt;sofa_cat.jpg&lt;/code&gt; 앞에 &lt;code class=&quot;highlighter-rouge&quot;&gt;width=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;w_400&lt;/code&gt; 파라미터를 붙여 원본을 기준으로 비율에 맞게 가로 400px로 줄어든 이미지를 얻을 수 있습니다. CSS나 다른 방식으로 이미지를 줄여서 표시한게 아니라 jpg 파일 자체의 사이즈와 용량이 줄어들었다는 점이 중요하니다.&lt;/p&gt;
+
+&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400,h_400/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400,h_400/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;물론 가로 사이즈도 원하는 대로 추가할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;height=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;h_400&lt;/code&gt; 파라미터를 추가하면 위와 같이 이미지가 표시됩니다. 비율에 맞지 않는 사이즈를 입력했기 떄문에 이미지가 강제로 늘어나 고양이가 좀 놀란 것 같습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;이미지-크롭핑&quot;&gt;이미지 크롭핑&lt;/h3&gt;
+&lt;p&gt;원본 비율과 다른 사이즈가 필요할 때는 이미지가 왜곡되어 보이지 않도록 이미지를 크롭해야 합니다. Cloudinary에서는 리사이징과 마찬가지로 URL 파라미터를 통해 쉽게 이미지를 크롭할 수 있습니다.
+&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;crop to fill&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;c_fill&lt;/code&gt;이 추가되었습니다. 이제 이미지 왜곡없이 400x400으로 이미지를 표시할 수 있게 되었습니다.&lt;/p&gt;
+
+&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400,ar_1:1,c_fill/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400,ar_1:1,c_fill/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;height=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;h_400&lt;/code&gt; 대신 비율을 직접 입력할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;aspect ratio=1:1&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;ar_1:1&lt;/code&gt;을 사용해도 동일한 결과를 얻을 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;16:9&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;4:3&lt;/code&gt;등 원하는 비율대로 표시할 수 있져.&lt;/p&gt;
+
+&lt;h3 id=&quot;오브젝트-중심의-이미지-크롭핑&quot;&gt;오브젝트 중심의 이미지 크롭핑&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이번에 추가된 파라미터는 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;auto&lt;/code&gt;로 적용하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt;입니다. 직역하자면 &lt;code class=&quot;highlighter-rouge&quot;&gt;중력 자동 적용&lt;/code&gt; 정도로 해석할 수 있는데요. Cloudinary에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt; 파라미터를 통해 이미지에 포함된 얼굴이나 사물을 자동으로 인식해 오브젝트를 안정적으로 표시할 수 있는 기능을 제공하고 있습니다. 오브젝트가 많이 포함된 이미지가 아니라면 인식률도 높아서 사용하는데 무리가 없습니다.&lt;/p&gt;
+
+&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;한쪽으로 긴 사이즈의 이미지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt; 성능을 확인해 볼까요? 위 이미지 처럼 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt; 파라미터가 없으면 이미지의 가운데를 기준으로 크롭핑되어 고양이의 얼굴을 볼 수 없습니다.&lt;/p&gt;
+
+&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;하지만 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt; 파라미터를 넣어주면 가로나 세로로 긴 사이즈의 이미지를 요청하더라도 오브젝트를 기준으로 크롭핑 되어 고양이의 얼굴을 볼 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;맺음말&quot;&gt;맺음말&lt;/h3&gt;
+&lt;p&gt;지금까지 Cloudinary를 활용법을 간단하게 살펴보았습니다. 스퀘어랩에서는 실제로 실무에서 사용하고 있으며, 이를 통해 디자이너들은 이미지를 리사이징하는 반복작업에서 벗어나 더 창조적인 작업에 집중할 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;Cloudinary에는 위에 언급 된 내용보다 더 많은 기능이 있으니 자세한 내용은 &lt;a href=&quot;https://cloudinary.com/documentation/image_transformations&quot;&gt;여기&lt;/a&gt;를 참고하세요.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Feb 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/blog/get-started-with-cloudinary</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/get-started-with-cloudinary</guid>
+        
+        
+        <category>Design</category>
+        
+      </item>
+    
+      <item>
         <title>Serverless한 회사 내부 서비스 만들기</title>
-        <description>&lt;p&gt;사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는것 정도는 큰 문제가 아니다.&lt;/p&gt;
+        <description>&lt;p&gt;사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기 때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는것 정도는 큰 문제가 아니다.&lt;/p&gt;
 
 &lt;p&gt;그렇다면 이제 실제로 serverless 형태로 회사 내부 서비스를 만드려면 어떻게 해야하는지 좀더 깊은 고민을 해보도록 하자.&lt;/p&gt;
 

@@ -80,8 +80,8 @@ pre {
     border: 1px solid rgba(0, 0, 0, .08);
     border-radius: 4px;
     display: inline-block;
-    padding: 16px;
-    margin: 8px 0;
+    padding: 8px 16px;
+    margin: 0;
     overflow-x: scroll;
     width: 100%;
 }
@@ -91,10 +91,10 @@ pre code {
 }
 
 code {
-
     background: #F5F5F5;
     border-radius: 4px;
     font-family: monospace, 'Spoqa Han Sans', 'Malgun Gothic', sans-serif !important;
+    font-size: 14px;
     padding: 4px;
 }
 
@@ -239,6 +239,12 @@ small {
     margin-top: 40px;
 }
 
+.post img {
+    display: block;
+    max-width: 100%;
+    margin: 8px 0 0 0;
+}
+
 .post-wrap{
     display: inline-flex;
     margin-bottom: 32px;
@@ -254,7 +260,7 @@ small {
     margin-right: 8px;
 }
 
-.post-img{
+.post-img {
     margin-left: 32px;
 }
 
