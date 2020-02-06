@@ -3,41 +3,46 @@ layout: blog
 title: Blog
 permalink: /blog
 ---
-<div class="blog-container" id="blog-main">
+<div class="blog-container">
     <div class="blog-top">
-        <div class="overlay-s"></div>
-        <div class="blog-top-txt">
-            <h1>How to make travel</h1>
-            <p>스퀘어랩 블로그</p>
+        <div class="overlay">
+            <div class="title-container">
+                <h1 class="ctitle-top">스퀘어랩 기술 블로그</h1>
+                <small>여행과 기술을 연결해 가는 스퀘어랩의 노하우를 공유합니다.</small>
+            </div>
         </div>
+        <img id="hero" class="img-responsive-2">
     </div>
     <div class="blog-row">
-        <div class="post">
-            {% for post in site.posts %}
-            <div class="post-wrap" id="{{ category | first }}">
-                <div class="post-txt">
-                    <span class="category" style="color: {{ post.color }};">{{ post.categories }}</span>
-                    <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
-                    <div class="author">
-                        <img class="img-author" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img-author }}">
-                        <small >{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
-                    </div>
-                    <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }} </div>
-                    <!--<a href="{{ post.url | prepend: site.baseurl }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
+        {% for post in site.posts %}
+        <div class="post-wrap" id="{{ category | first }}">
+            <div class="post-txt">
+                <span class="category" style="color: {{ post.color }};">{{ post.categories }}</span>
+                <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
+                <div class="author">
+                    <img class="img-author" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img-author }}">
+                    <small >{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
                 </div>
-                <div class="post-img">
-                    <a href="{{ post.url | prepend: site.baseurl }}">
-                        <img class="img-responsive" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img }}">
-                    </a>
-                </div>
+                <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }} </div>
+                <!--<a href="{{ post.url | prepend: site.baseurl }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
             </div>
-            <div class="spacing-24"></div>
-            <!--   <div class="hline"></div> -->
-            <div class="spacing-86"></div>
-            {% endfor %}
+            <div>
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <img class="img-responsive" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img }}">
+                </a>
+            </div>
         </div>
+        <div class="spacing-24"></div>
+        {% endfor %}
+        <div class="hline"></div>
       <!--  {% include sidebar.html %} -->
     </div>
 </div>
+<script type="text/javascript">
+    const images = ['/assets/images/hero-0.jpg',
+                    '/assets/images/hero-1.jpg',
+                    '/assets/images/hero-2.jpg'];
+    const here = document.getElementById("hero");
+    here.src = images[Math.floor(Math.random() * images.length)];
+</script>
 <script src="/js/locale-date.js"></script>
-
