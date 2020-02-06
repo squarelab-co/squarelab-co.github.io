@@ -1,4 +1,60 @@
-I"s<p>사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는것 정도는 큰 문제가 아니다.</p>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 ...">
+  <meta name="msapplication-TileColor" content="#782bde">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="google-site-verification" content="-kdxteMBSgKizw-6qHNm1-5nfxb7H6947J64jmjbBEg" />
+
+  <meta property="og:site_name" content="Square Lab">
+  <meta property="og:title" content="Square Lab - A Light journey to see the world">
+  <meta property="og:description" content="Hello, we are Square Lab! 우리는 새로운 시각으로 여행을 만드는 사람들입니다. 스퀘어랩과 함께 더 넓은 세상을 만나보세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.squarelab.co">
+  <meta property="og:image" content="https://www.squarelab.co/images/social.png">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157710299-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-157710299-1');
+  </script>
+</head>
+  <body>
+    <div class="blog-layout">
+      <header id="blog-header" class="header">
+    <div class="blog-header-container">
+        <a href="/index.html">
+          <img src="/assets/images/squarelab-bi-black.png" width="140" class="bi-blog" alt="스퀘어랩 로고">
+        </a>
+        <a href="/blog" class="blog-header-title">기술 블로그</a>
+    </div>
+</header>
+      <div class="blog-container">
+    <div class="post-top">
+        <div class="overlay">
+            <div class="title-container">
+                <h2 class="ctitle-top">Serverless한 회사 내부 서비스 만들기</h2>
+                <div class="author">
+                    <img class="img-author-2" src="/assets/images/blog/author-youngjea.jpeg">
+                    <small class="small-top" >권영재</small><small>|</small><small name="locale-date">Feb 4, 2020</small>
+                </div>
+            </div>
+        </div>
+        <img class="img-responsive-2" src="/assets/images/blog/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg">
+    </div>
+    <div class="blog-row">
+        <p>사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는것 정도는 큰 문제가 아니다.</p>
 
 <p>그렇다면 이제 실제로 serverless 형태로 회사 내부 서비스를 만드려면 어떻게 해야하는지 좀더 깊은 고민을 해보도록 하자.</p>
 
@@ -376,7 +432,84 @@ functions:
 
 <p>참고로 <a href="https://yaml.org/faq.html">YAML 공식 웹사이트</a>에는 <code class="highlighter-rouge">.yaml</code> 확장자를 추천하고 있지만, 전통적으로 확장자는 3글자를 사용해왔던 컨벤션 때문에 프로젝트에따라 <code class="highlighter-rouge">.yml</code> 도 많이 사용되고있다. 예를들어 쿠버네티스 설정파일의 경우 <code class="highlighter-rouge">.yaml</code> 사용하지만, serverless framework의 경우에는 <code class="highlighter-rouge">.yml</code>을 사용하는 것에 주의하자.</p>
 
-<h2 id="author">Author</h2>
 
-<p>권영재, Youngjae Kwon (yjiq150@squarelab.co)</p>
-:ET
+        <div class="spacing-40"></div>
+        <div class="fb-comments" data-href="https://squarelab.co/blog/developing-internal-service-with-serverless-aws" data-num-posts="4" data-width="100%"></div>
+        <!--   <!--<div class="side-bar">
+    <div class="spacing"></div>
+    <h5 class="title-category">CATEGORIES</h5>
+        <p>
+            <a href="/blog"> ALL</a>
+            <span class="badge badge-theme pull-right"></span>
+        </p>
+       
+        <p>
+            <a href="/blog/#Engeeniring"> Engeeniring</a>
+         <span class="badge badge-theme pull-right">1</span>
+        </p>
+    
+
+    <div class="spacing"></div>
+</div>
+
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+            <div>
+                <a href="/index.html"><img src="/assets/images/squarelab-bi-rec.png" width="32px" height="32px" class="menu-logo"></a>
+                <p>
+                    <a href="/blog">ALL</a>
+                   <span class="badge badge-theme pull-right"></span>
+                </p>
+                
+                <p>
+                    <a href="/category/#Engeeniring"> Engeeniring</a>
+                  <span class="badge badge-theme pull-right">1</span>
+                </p>
+                
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div> 
+
+  -->
+    </div>
+</div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.5&appId=1052544885096271";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="/js/locale-date.js"></script>
+      <!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <ul class="copyright">
+      <li>&copy;
+      Square Lab
+      </li>
+      <li>
+      (주)스퀘어랩<br>
+      04542 서울특별시 중구 청계천로 100 시그니쳐타워 서관 10층<br>
+      사업자등록번호 151-87-00987 | 통신판매업신고번호 2018-서울중구-1626<br>
+      대표번호 1833-5861 | 이메일 contact@squarelab.co<br>
+      대표자 KIM DOYON
+      </li>
+    </ul>
+    <div class="icons">
+    <div class="icon insta"><a href="https://www.instagram.com/squarelab.co/" target="_blank"><i class="ri-instagram-line social"></i></a></div>
+    <div class="icon"><a href="https://www.facebook.com/squarelab.co/" target="_blank"><i class="ri-facebook-fill social"></i></a></div>
+  </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

@@ -17,6 +17,7 @@ body {
     color: #fff;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    margin: 0;
 }
 
 #page-wrapper{
@@ -538,7 +539,6 @@ i {
 
 
 /* Footer */
-
 #footer {
     background-color: #ffffff;
     padding: 6em 0 6em 0;
