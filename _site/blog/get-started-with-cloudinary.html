@@ -105,7 +105,7 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://res.cloudinary.com/demo/image/upload/w_400,ar_1:1,c_fill/sofa_cat.jpg
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">height=400</code>을 의미하는 <code class="highlighter-rouge">h_400</code> 대신 비율을 직접 입력할 수 있습니다. <code class="highlighter-rouge">aspect ratio=1:1</code>을 의미하는 <code class="highlighter-rouge">ar_1:1</code>을 사용해도 동일한 결과를 얻을 수 있습니다. <code class="highlighter-rouge">16:9</code>, <code class="highlighter-rouge">4:3</code>등 원하는 비율대로 표시할 수 있져.</p>
+<p><code class="highlighter-rouge">height=400</code>을 의미하는 <code class="highlighter-rouge">h_400</code> 대신 비율을 직접 입력할 수 있습니다. <code class="highlighter-rouge">aspect ratio=1:1</code>을 의미하는 <code class="highlighter-rouge">ar_1:1</code>을 사용하면 동일한 결과를 얻을 수 있습니다. <code class="highlighter-rouge">16:9</code>, <code class="highlighter-rouge">4:3</code>등 원하는 비율대로 표시할 수 있죠.</p>
 
 <h3 id="오브젝트-중심의-이미지-크롭핑">오브젝트 중심의 이미지 크롭핑</h3>
 
@@ -114,9 +114,9 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg
 </code></pre></div></div>
 
-<p>하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.</p>
+<p>하지만 왼쪽으로 쏠려있는 고양이가 계속 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.</p>
 
-<p>이번에 추가된 파라미터는 <code class="highlighter-rouge">grtavity</code>를 <code class="highlighter-rouge">auto</code>로 적용하는 <code class="highlighter-rouge">g_auto</code>입니다. 직역하자면 <code class="highlighter-rouge">중력 자동 적용</code> 정도로 해석할 수 있는데요. Cloudinary에서는 <code class="highlighter-rouge">grtavity</code> 파라미터를 통해 이미지에 포함된 얼굴이나 사물을 자동으로 인식해 오브젝트를 안정적으로 표시할 수 있는 기능을 제공하고 있습니다. 오브젝트가 많이 포함된 이미지가 아니라면 인식률도 높아서 사용하는데 무리가 없습니다.</p>
+<p>이번에 추가된 파라미터는 <code class="highlighter-rouge">grtavity</code>를 <code class="highlighter-rouge">auto</code>로 적용하는 <code class="highlighter-rouge">g_auto</code>입니다. 직역하자면 <code class="highlighter-rouge">중력 자동 적용</code> 정도로 해석할 수 있는데요. Cloudinary는 이미지에 포함된 얼굴이나 사물을 자동으로 인식해 오브젝트를 안정적으로 표시할 수 있는 기능을 <code class="highlighter-rouge">grtavity</code>하는 이름으로 제공하고 있습니다. 오브젝트가 많이 포함된 이미지가 아니라면 인식률도 높아서 사용하는데 무리가 없습니다.</p>
 
 <div class="spacing-40"></div>
 

@@ -3,10 +3,10 @@
   <channel>
     <title>Square Lab</title>
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 06 Feb 2020 18:35:43 +0900</pubDate>
-    <lastBuildDate>Thu, 06 Feb 2020 18:35:43 +0900</lastBuildDate>
+    <link>http://0.0.0.0:4000/</link>
+    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 07 Feb 2020 09:32:18 +0900</pubDate>
+    <lastBuildDate>Fri, 07 Feb 2020 09:32:18 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -61,7 +61,7 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400,ar_1:1,c_fill/sofa_cat.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;height=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;h_400&lt;/code&gt; 대신 비율을 직접 입력할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;aspect ratio=1:1&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;ar_1:1&lt;/code&gt;을 사용해도 동일한 결과를 얻을 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;16:9&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;4:3&lt;/code&gt;등 원하는 비율대로 표시할 수 있져.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;height=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;h_400&lt;/code&gt; 대신 비율을 직접 입력할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;aspect ratio=1:1&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;ar_1:1&lt;/code&gt;을 사용하면 동일한 결과를 얻을 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;16:9&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;4:3&lt;/code&gt;등 원하는 비율대로 표시할 수 있죠.&lt;/p&gt;
 
 &lt;h3 id=&quot;오브젝트-중심의-이미지-크롭핑&quot;&gt;오브젝트 중심의 이미지 크롭핑&lt;/h3&gt;
 
@@ -70,9 +70,9 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;하지만 왼쪽으로 쏠려있는 고양이가 계속 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;이번에 추가된 파라미터는 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;auto&lt;/code&gt;로 적용하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt;입니다. 직역하자면 &lt;code class=&quot;highlighter-rouge&quot;&gt;중력 자동 적용&lt;/code&gt; 정도로 해석할 수 있는데요. Cloudinary에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt; 파라미터를 통해 이미지에 포함된 얼굴이나 사물을 자동으로 인식해 오브젝트를 안정적으로 표시할 수 있는 기능을 제공하고 있습니다. 오브젝트가 많이 포함된 이미지가 아니라면 인식률도 높아서 사용하는데 무리가 없습니다.&lt;/p&gt;
+&lt;p&gt;이번에 추가된 파라미터는 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;auto&lt;/code&gt;로 적용하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt;입니다. 직역하자면 &lt;code class=&quot;highlighter-rouge&quot;&gt;중력 자동 적용&lt;/code&gt; 정도로 해석할 수 있는데요. Cloudinary는 이미지에 포함된 얼굴이나 사물을 자동으로 인식해 오브젝트를 안정적으로 표시할 수 있는 기능을 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt;하는 이름으로 제공하고 있습니다. 오브젝트가 많이 포함된 이미지가 아니라면 인식률도 높아서 사용하는데 무리가 없습니다.&lt;/p&gt;
 
 &lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
 
@@ -98,8 +98,8 @@
 &lt;p&gt;Cloudinary에는 위에 언급 된 내용보다 더 많은 기능이 있으니 자세한 내용은 &lt;a href=&quot;https://cloudinary.com/documentation/image_transformations&quot;&gt;여기&lt;/a&gt;를 참고하세요.&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Feb 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/get-started-with-cloudinary</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/get-started-with-cloudinary</guid>
+        <link>http://0.0.0.0:4000/blog/get-started-with-cloudinary</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/blog/get-started-with-cloudinary</guid>
         
         
         <category>Design</category>
@@ -488,8 +488,8 @@ functions:
 
 </description>
         <pubDate>Tue, 04 Feb 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/blog/developing-internal-service-with-serverless-aws</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/developing-internal-service-with-serverless-aws</guid>
+        <link>http://0.0.0.0:4000/blog/developing-internal-service-with-serverless-aws</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/blog/developing-internal-service-with-serverless-aws</guid>
         
         
         <category>Engeeniring</category>
