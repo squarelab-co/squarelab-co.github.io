@@ -127,6 +127,7 @@ small {
     z-index: 300;
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
 }
 
 .blog-header-container{
@@ -226,6 +227,7 @@ small {
     max-width:900px;
     margin-top: 40px;
     padding: 0 24px;
+    word-break: keep-all;
 }
 
 .post img {
@@ -389,11 +391,10 @@ small {
 }
 
 @media screen and (max-width: 768px) {
-
     .fb-comments, .fb-comments iframe[style], .fb-comments span[style]{
         width: 100% !important;
     }
-    /* Blog-header */
+
     #blog-header{
         height: 66px;
     }
@@ -401,7 +402,6 @@ small {
     .blog-header-container{
         width: 100%;
         max-width: 736px;
-        
     }
 
     .bi-blog{

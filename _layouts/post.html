@@ -2,12 +2,12 @@
 layout: blog
 ---
 <div class="blog-container">
-    <div class="blog-top" style="background-image:url({{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img }}); background-size: cover;" >
+    <div class="blog-top" style="background-image:url({{ "/images/post/" | prepend: site.url }}{{ page.img }}); background-size: cover;" >
         <div class="overlay">
             <div class="title-container">
                 <h1 class="ctitle-top">{{ page.title }}</h1>
                 <div class="author">
-                    <img class="img-author-2" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img-author }}">
+                    <img class="img-author-2" src="{{ "/images/post/" | prepend: site.url }}{{ page.img-author }}">
                     <small class="small-top" >{{ page.author }}</small><small>|</small><small name="locale-date">{{ page.date | date: "%b %-d, %Y" }}</small>
                 </div>
             </div>
