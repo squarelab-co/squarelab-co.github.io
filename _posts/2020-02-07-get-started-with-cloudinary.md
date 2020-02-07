@@ -73,7 +73,7 @@ Cloudinary에서는 URL 파라미터를 통해 쉽게 이미지를 리사이징 
 
     https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill/sofa_cat.jpg
     
-한쪽으로 긴 사이즈의 이미지로 `grtavity` 성능을 확인해 볼까요? 위 이미지 처럼 `g_auto` 파라미터가 없으면 이미지의 가운데를 기준으로 크롭핑되어 언제나 고양이의 얼굴을 확인할 수 있지요.   
+한쪽으로 긴 사이즈의 이미지로 `grtavity` 성능을 확인해 볼까요? 위 이미지 처럼 `g_auto` 파라미터가 없으면 이미지의 가운데를 기준으로 크롭핑되어 고양이의 얼굴이 이미지 밖으로 벗어나고 맙니다.   
 
 <div class="spacing-40"></div>
 
