@@ -10,11 +10,11 @@
 
   <meta property="og:site_name" content="Square Lab 기술 블로그">
   <meta property="og:title" content="Serverless한 회사 내부 서비스 만들기">
-  <meta property="og:description" content="<p>사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기 때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는것 정도는 큰 문제가 아니다.</p>
+  <meta property="og:description" content="사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분이다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기 때문에 안정적이고 편리하다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는것 정도는 큰 문제가 아니다.
 ">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://squarelab.co/blog/developing-internal-service-with-serverless-aws">
-  <meta property="og:image" content="http://0.0.0.0:4000/images/post/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg">
+  <meta property="og:image" content="https://squarelab.co/images/post/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg">
 
   <title>Square Lab 기술 블로그</title>
 
@@ -37,20 +37,20 @@
     <div class="blog-layout">
       <header id="blog-header" class="header">
     <div class="blog-header-container">
-        <a href="http://0.0.0.0:4000/index.html">
+        <a href="/">
           <img src="/images/squarelab-bi-black.png" width="140" class="bi-blog" alt="스퀘어랩 로고">
         </a>
-        <a href="http://0.0.0.0:4000/blog" class="blog-header-title">기술 블로그</a>
+        <a href="/blog" class="blog-header-title">기술 블로그</a>
     </div>
 </header>
       <div class="blog-container">
-    <div class="blog-top" style="background-image:url(http://0.0.0.0:4000/images/post/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg); background-size: cover;" >
+    <div class="blog-top" style="background-image:url(/images/post/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg); background-size: cover;" >
         <div class="overlay">
             <div class="title-container">
                 <h1 class="ctitle-top">Serverless한 회사 내부 서비스 만들기</h1>
                 <div class="author">
-                    <img class="img-author-2" src="http://0.0.0.0:4000/images/post/yjiq150.jpg">
-                    <small class="small-top" >권영재</small><small>|</small><small name="locale-date">Feb 4, 2020</small>
+                    <img class="img-author-2" src="/images/post/yjiq150.jpg">
+                    <small class="small-top" >권영재</small><small>|</small><small name="locale-date">Feb 6, 2020</small>
                 </div>
             </div>
         </div>
@@ -437,7 +437,9 @@ functions:
 
 
         </div>
-        <div class="spacing-40"></div>
+        <div class="back-button">
+            <a href="/blog">목록으로</a>
+        </div>
         <div class="fb-comments" data-href="https://squarelab.co/blog/developing-internal-service-with-serverless-aws" data-num-posts="4" data-width="100%"></div>
         <!--   <!--<div class="side-bar">
     <div class="spacing"></div>
@@ -474,13 +476,13 @@ functions:
                 </p>
                 
                 <p>
-                    <a href="http://0.0.0.0:4000/category/#Engeeniring"> Engeeniring</a>
+                    <a href="/category/#Engeeniring"> Engeeniring</a>
                   <span class="badge badge-theme pull-right">1</span>
                 </p>
                 
                 
                 <p>
-                    <a href="http://0.0.0.0:4000/category/#Design"> Design</a>
+                    <a href="/category/#Design"> Design</a>
                   <span class="badge badge-theme pull-right">1</span>
                 </p>
                 
@@ -493,9 +495,6 @@ functions:
 </div> 
 
   -->
-    </div>
-    <div>
-        
     </div>
 </div>
 <script>(function(d, s, id) {

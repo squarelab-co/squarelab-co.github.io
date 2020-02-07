@@ -17,17 +17,17 @@ permalink: /blog
         <div class="post-wrap" id="{{ category | first }}">
             <div class="post-txt">
                 <span class="category" style="color: {{ post.color }};">{{ post.categories }}</span>
-                <a href="{{ post.url | prepend: site.url }}"><h3 class="ctitle">{{ post.title }}</h3></a>
+                <a href="{{ post.url }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                 <div class="author">
-                    <img class="img-author" src="{{ "/images/post/" | prepend: site.url }}{{ post.img-author }}">
+                    <img class="img-author" src="{{ "/images/post/"}}{{ post.img-author }}">
                     <small>{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
                 </div>
                 <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }} </div>
-                <!--<a href="{{ post.url | prepend: site.url }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
+                <!--<a href="{{ post.url }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
             </div>
             <div>
-                <a href="{{ post.url | prepend: site.url }}">
-                    <img class="img-responsive" src="{{ "/images/post/" | prepend: site.url }}{{ post.img }}">
+                <a href="{{ post.url }}">
+                    <img class="img-responsive" src="{{ "/images/post/"}}{{ post.img }}">
                 </a>
             </div>
         </div>

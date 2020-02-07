@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cloudinary를 활용한 이미지 컨텐츠 관리
-date: 2020-02-04
+date: 2020-02-07
 author: 추호연
 categories: 
 - Design

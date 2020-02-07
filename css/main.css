@@ -396,7 +396,7 @@ button {
     color: #ffffff;
     cursor: pointer;
     font-size: 14px;
-    height: 45px;
+    height: 44px;
     width: 160px;
     text-align: center;
     text-decoration: none;
@@ -429,9 +429,9 @@ i {
 .social {
     font-size: 24px;
     display: inline-block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
     text-align: center;
 }
 

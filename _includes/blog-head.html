@@ -8,10 +8,10 @@
 
   <meta property="og:site_name" content="Square Lab 기술 블로그">
   <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:description" content="{{ page.excerpt }}">
+  <meta property="og:description" content="{{ page.excerpt | replace:'<p>','' | replace:'</p>','' }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://squarelab.co{{ page.url }}">
-  {% if page.img %}<meta property="og:image" content="{{ "/images/post/" | prepend: site.url }}{{ page.img }}">{% else %}<meta property="og:image" content="https://squarelab.co/images/blog.jpg">{% endif %}
+  <meta property="og:image" content="https://squarelab.co/images/{% if page.img %}post/{{ page.img }}{% else %}blog.jpg{% endif %}">
 
   <title>Square Lab 기술 블로그</title>
 

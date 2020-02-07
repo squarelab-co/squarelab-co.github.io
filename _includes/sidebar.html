@@ -28,7 +28,7 @@
                 </p>
                 {% for category in site.categories %}
                 <p>
-                    <a href="{{ '/category/#'  | prepend: site.url  }}{{ category | first }}"> {{ category | first | capitalize }}</a>
+                    <a href="{{ '/category/#'   }}{{ category | first }}"> {{ category | first | capitalize }}</a>
                   <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
                 </p>
                 

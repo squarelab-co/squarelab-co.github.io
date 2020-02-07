@@ -215,7 +215,7 @@ small {
 .blog-header-title{
     color: rgba(0,0,0,.87);
     margin-left: 12px;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .ctitle-top {
@@ -239,6 +239,19 @@ small {
 .post-wrap{
     display: inline-flex;
     margin-bottom: 32px;
+}
+
+.back-button {
+    margin: 64px auto;
+    text-align: center;
+}
+
+.back-button a {
+    padding: 8px 64px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, .6);
+    border-radius: 2px;
+    color: #4d5256;
 }
 
 .excerpt>p{
