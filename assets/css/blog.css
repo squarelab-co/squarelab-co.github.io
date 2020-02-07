@@ -130,7 +130,8 @@ small {
 }
 
 .blog-header-container{
-    width: 860px;
+    width: 900px;
+    padding: 0 24px;
     height: 72px;
     display: inline-flex;
     align-items: center;
@@ -155,29 +156,10 @@ small {
     width: 100%;
     height: 540px;
     display: flex;
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: no-repeat center center;
     background-size: cover;
 }
 
-.blog-top-txt{
-    color: #ffffff;
-    width: 860px;
-    margin: 0 auto;
-    z-index: 100;
-}
-
-.blog-top-txt > h1 {
-    font-size: 48px;
-    margin-bottom: 0;
-}
-
-.blog-top-txt > p {
-    color: #ffffff;
-    margin-top: 8px;
-}
 
 .excerpt {
     width: 90%;
@@ -214,8 +196,11 @@ small {
     position: absolute;
 }
 
+
+
 .title-container{
-    width: 860px;
+    max-width: 900px;
+    padding: 0 24px;
     position: relative;
     z-index: 100;
     display: flex;
@@ -238,8 +223,9 @@ small {
 }
 
 .blog-row {
-    width:860px;
+    max-width:900px;
     margin-top: 40px;
+    padding: 0 24px;
 }
 
 .post img {
@@ -350,6 +336,8 @@ small {
     visibility: hidden;
 }
 
+
+
 /* Footer */
 #footer {
     background-color: #ffffff;
@@ -358,7 +346,8 @@ small {
 }
 
 .inner {
-    width: 860px;
+    max-width: 860px;
+    padding: 0 24px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -400,6 +389,10 @@ small {
 }
 
 @media screen and (max-width: 768px) {
+
+    .fb-comments, .fb-comments iframe[style], .fb-comments span[style]{
+        width: 100% !important;
+    }
     /* Blog-header */
     #blog-header{
         height: 66px;
@@ -408,7 +401,7 @@ small {
     .blog-header-container{
         width: 100%;
         max-width: 736px;
-        margin-left: 24px;
+        
     }
 
     .bi-blog{
@@ -470,8 +463,8 @@ small {
     }
 
     .ctitle-top{
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 32px;
+        line-height: 40px;
     }
 
     .title-container small {
@@ -483,6 +476,10 @@ small {
     }
 
     .post-txt{
+        width: 100%;
+    }
+
+    .excerpt {
         width: 100%;
     }
 

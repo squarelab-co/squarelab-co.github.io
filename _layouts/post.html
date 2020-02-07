@@ -2,7 +2,7 @@
 layout: blog
 ---
 <div class="blog-container">
-    <div class="blog-top" style="background-image:url('{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img }}')">
+    <div class="blog-top" style="background-image:url({{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img }}); background-size: cover;" >
         <div class="overlay">
             <div class="title-container">
                 <h1 class="ctitle-top">{{ page.title }}</h1>
@@ -12,7 +12,6 @@ layout: blog
                 </div>
             </div>
         </div>
-        <img class="img-responsive-2" src="">
     </div>
     <div class="blog-row">
         <div class="post">
@@ -21,6 +20,9 @@ layout: blog
         <div class="spacing-40"></div>
         <div class="fb-comments" data-href="https://squarelab.co{{ page.url }}" data-num-posts="4" data-width="100%"></div>
         <!--   {% include sidebar.html %}  -->
+    </div>
+    <div>
+        {{ post.previous }}
     </div>
 </div>
 <script>(function(d, s, id) {
