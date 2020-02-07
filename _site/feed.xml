@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>http://0.0.0.0:4000http://0.0.0.0:4000/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Feb 2020 16:13:53 +0900</pubDate>
-    <lastBuildDate>Fri, 07 Feb 2020 16:13:53 +0900</lastBuildDate>
+    <pubDate>Fri, 07 Feb 2020 17:54:26 +0900</pubDate>
+    <lastBuildDate>Fri, 07 Feb 2020 17:54:26 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -81,7 +81,7 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill/sofa_cat.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;한쪽으로 긴 사이즈의 이미지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt; 성능을 확인해 볼까요? 위 이미지 처럼 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt; 파라미터가 없으면 이미지의 가운데를 기준으로 크롭핑되어 언제나 고양이의 얼굴을 확인할 수 있지요.&lt;/p&gt;
+&lt;p&gt;한쪽으로 긴 사이즈의 이미지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt; 성능을 확인해 볼까요? 위 이미지 처럼 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt; 파라미터가 없으면 이미지의 가운데를 기준으로 크롭핑되어 고양이의 얼굴이 이미지 밖으로 벗어나고 맙니다.&lt;/p&gt;
 
 &lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
 
@@ -494,7 +494,7 @@ functions:
         <guid isPermaLink="true">/blog/developing-internal-service-with-serverless-aws</guid>
         
         
-        <category>Engeeniring</category>
+        <category>Engineering</category>
         
       </item>
     

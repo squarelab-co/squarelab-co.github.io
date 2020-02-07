@@ -20,7 +20,7 @@ body {
     margin: 0;
 }
 
-#page-wrapper{
+#page-wrapper {
     background-color: #ffffff;
 }
 
@@ -55,7 +55,7 @@ h3 {
     margin: 48px 0 8px 0;
 }
 
-h4{
+h4 {
     font-size: 18px;
     margin: 40px 0 8px 0;
 }
@@ -117,7 +117,7 @@ small {
     font-size: 16px;
 }
 
-#blog-header{
+#blog-header {
     background-color: #ffffff;
     height: 72px;
     left: 0;
@@ -130,7 +130,7 @@ small {
     border-bottom: 1px solid rgba(0, 0, 0, .12);
 }
 
-.blog-header-container{
+.blog-header-container {
     width: 900px;
     padding: 0 24px;
     height: 72px;
@@ -139,13 +139,13 @@ small {
     line-height: 0em;
 }
 
-.blog-header-container>p{
+.blog-header-container>p {
     color: rgba(0,0,0,.6);
     font-weight: 600;
     margin-left: 16px;
 }
 
-.blog-container{
+.blog-container {
     color: rgba(0,0,0,.87);
     display: flex;
     justify-content: center;
@@ -163,17 +163,17 @@ small {
 
 
 .excerpt {
-    width: 90%;
+    width: 96%;
 }
 
-.author{
+.author {
     display: flex;
     align-items: center;
     margin-top: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
-.img-author{
+.img-author {
     width: 24px;
     height: 24px;
     border-radius: 16px;
@@ -181,7 +181,7 @@ small {
     margin-right: 8px;
 }
 
-.img-author-2{
+.img-author-2 {
     width: 32px;
     height: 32px;
     border-radius: 20px;
@@ -199,7 +199,7 @@ small {
 
 
 
-.title-container{
+.title-container {
     max-width: 900px;
     padding: 0 24px;
     position: relative;
@@ -212,7 +212,7 @@ small {
     color: #ffffff !important;
 }
 
-.blog-header-title{
+.blog-header-title {
     color: rgba(0,0,0,.87);
     margin-left: 12px;
     transform: translateY(-2px);
@@ -236,9 +236,9 @@ small {
     margin: 8px 0 0 0;
 }
 
-.post-wrap{
+.post-wrap {
     display: inline-flex;
-    margin-bottom: 32px;
+    margin-bottom: 64px;
 }
 
 .back-button {
@@ -254,11 +254,11 @@ small {
     color: #4d5256;
 }
 
-.excerpt>p{
+.excerpt>p {
     margin-block-end: 8px;
 }
 
-.ri-arrow-right-line{
+.ri-arrow-right-line {
     font-size: 24px;
     font-weight: 300;
     margin-right: 8px;
@@ -268,61 +268,56 @@ small {
     margin-left: 32px;
 }
 
-/*.side-bar{
+/*.side-bar {
     width: 18%;
     padding-left: 54px;
     font-weight: 600;
     font-size: 16px;
 }
 
-.side-bar > p{
+.side-bar > p {
     margin-block-end: 0;
     margin-block-start: 0;
     
 
 }
 
-.title-category{
+.title-category {
     margin-top: 0;
     font-size: 12px;
 
 }
 
-.sidenav{
+.sidenav {
     display: none;
 }
 
-.side-bar>h4{
+.side-bar>h4 {
     margin-block-start: 0;
 }
 */
 
-.spacing-40{
+.spacing-40 {
     margin-top: 40px;
 }
 
-.spacing-24{
-    margin-top: 24px;
-}
-
-.hline{
+.hline {
     border: 0.5px solid rgba(0,0,0,.12);
 }
 
-.hline-bold{
+.hline-bold {
     border: 1.5px solid rgba(0,0,0,.87);
 }
 
-.img-responsive{
-    width:200px;
-    height: 200px;
+.img-responsive {
+    width: 168px;
+    height: 168px;
     border-radius: 8px;
-    margin-bottom: 24px;
     object-fit: cover;
-
+    margin-top: 24px;
 }
 
-.read-post{
+.read-post {
     display: flex;
     align-items: center;
     font-weight: 600;
@@ -330,19 +325,19 @@ small {
     letter-spacing: 0.2em;
 }
 
-.category{
+.category {
     font-size: 13px;
     font-weight: 500;
 }
 
-.ctitle{
+.ctitle {
     margin-top: 8px;
     font-size: 24px;
     line-height: 32px;
     margin-block-end: 8px;
 }
 
-.road-more{
+.road-more {
     font-size: 20px;
     display: block;
 }
@@ -404,24 +399,24 @@ small {
 }
 
 @media screen and (max-width: 768px) {
-    .fb-comments, .fb-comments iframe[style], .fb-comments span[style]{
+    .fb-comments, .fb-comments iframe[style], .fb-comments span[style] {
         width: 100% !important;
     }
 
-    #blog-header{
+    #blog-header {
         height: 66px;
     }
 
-    .blog-header-container{
+    .blog-header-container {
         width: 100%;
         max-width: 736px;
     }
 
-    .bi-blog{
+    .bi-blog {
         width: 120px;
     }
 
-    .blog-container{
+    .blog-container {
         top: 66px;
         display: block;
     }
@@ -437,7 +432,7 @@ small {
         font-size: 40px;
     }
 
-    .blog-row{
+    .blog-row {
         width: 100%;
         max-width: 736px;
         flex-direction: column-reverse;
@@ -445,37 +440,37 @@ small {
         padding: 0 24px;
     }
 
-    .title-container{
+    .title-container {
         width: 100%;
         padding: 0 24px;
     }
 
-    .post-wrap{
+    .post-wrap {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         margin-top: 24px;
-        margin-bottom: 40px;
     }
 
-    .post-img{
+    .post-img {
         margin-left: 0px;
     }
 
-    .img-responsive{
+    .img-responsive {
         width:100%;
         height: 200px;
         border-radius: 8px;
+        margin-top: 0;
         margin-bottom: 8px;
     }
 
-    .ctitle{
+    .ctitle {
         margin-top: 8px;
         margin-bottom: 0;
         font-size: 24px;
     }
 
-    .ctitle-top{
+    .ctitle-top {
         font-size: 32px;
         line-height: 40px;
     }
@@ -484,11 +479,11 @@ small {
         font-size: 14px;
     }
 
-    .ri-arrow-right-line{
+    .ri-arrow-right-line {
         display: none;
     }
 
-    .post-txt{
+    .post-txt {
         width: 100%;
     }
 
@@ -497,11 +492,11 @@ small {
     }
 
     /* Side-bar */
-    .side-bar{
+    .side-bar {
         display: none;
     }
 
-    .menu-wrap{
+    .menu-wrap {
         position: fixed;
         top: 0;
         right: 0;
@@ -509,7 +504,7 @@ small {
         visibility: visible;
     }
 
-    .menu-wrap .toggler{
+    .menu-wrap .toggler {
         position: absolute;
         top: 0;
         right: 0;
@@ -520,7 +515,7 @@ small {
         opacity: 0;
     }
 
-    .menu-wrap .hamburger{
+    .menu-wrap .hamburger {
         position: absolute;
         top:0;
         right:0;
@@ -570,7 +565,7 @@ small {
         transform: rotate(90deg);
     }
 
-    .menu-wrap .toggler:checked ~ .menu{
+    .menu-wrap .toggler:checked ~ .menu {
         visibility: visible;
     }
 
@@ -584,7 +579,7 @@ small {
         transition: opacity 0.4s ease 0.2s;
     }
 
-    .menu-wrap .menu{
+    .menu-wrap .menu {
         position: fixed;
         top: 0;
         right: 0;
