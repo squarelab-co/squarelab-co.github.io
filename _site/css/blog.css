@@ -61,8 +61,8 @@ h4 {
 }
 
 p, li {
-    font-size: 1em;
-    line-height: 1.9em;
+    font-size: 16px;
+    line-height: 26px;
     color: rgba(0,0,0,.6);
 }
 
@@ -169,8 +169,7 @@ small {
 .author {
     display: flex;
     align-items: center;
-    margin-top: 8px;
-    margin-bottom: 16px;
+    margin: 8px 0;
 }
 
 .img-author {
@@ -196,8 +195,6 @@ small {
     height: inherit;
     position: absolute;
 }
-
-
 
 .title-container {
     max-width: 900px;
@@ -254,8 +251,8 @@ small {
     color: #4d5256;
 }
 
-.excerpt>p {
-    margin-block-end: 8px;
+.excerpt > p {
+    margin: 8px 0;
 }
 
 .ri-arrow-right-line {
@@ -331,7 +328,7 @@ small {
 }
 
 .ctitle {
-    margin-top: 8px;
+    margin-top: 4px;
     font-size: 24px;
     line-height: 32px;
     margin-block-end: 8px;
@@ -345,8 +342,6 @@ small {
 .menu-wrap {
     visibility: hidden;
 }
-
-
 
 /* Footer */
 #footer {
@@ -465,7 +460,6 @@ small {
     }
 
     .ctitle {
-        margin-top: 8px;
         margin-bottom: 0;
         font-size: 24px;
     }
