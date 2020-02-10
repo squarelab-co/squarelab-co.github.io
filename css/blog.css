@@ -20,10 +20,6 @@ body {
     margin: 0;
 }
 
-#page-wrapper {
-    background-color: #ffffff;
-}
-
 a {
     text-decoration: none;
     outline: none;
@@ -63,11 +59,11 @@ h4 {
 p {
     font-size: 16px;
     line-height: 26px;
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0,.6);
 }
 
 li {
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0,.6);
 }
 
 ol, ul {
@@ -112,7 +108,7 @@ blockquote {
 }
 
 small {
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0,.6);
     margin-right: 8px;
 }
 
@@ -162,13 +158,13 @@ i {
 }
 
 .blog-header-container>p {
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0,.6);
     font-weight: 600;
     margin-left: 16px;
 }
 
 .blog-container {
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0,.87);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -210,7 +206,7 @@ i {
 }
 
 .overlay {
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0,.6);
     width: 100%;
     height: inherit;
     position: absolute;
@@ -230,7 +226,7 @@ i {
 }
 
 .blog-header-title {
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0,.87);
     margin-left: 12px;
     transform: translateY(-2px);
 }
@@ -291,14 +287,11 @@ i {
 .side-bar > p {
     margin-block-end: 0;
     margin-block-start: 0;
-    
-
 }
 
 .title-category {
     margin-top: 0;
     font-size: 12px;
-
 }
 
 .sidenav {
@@ -315,11 +308,11 @@ i {
 }
 
 .hline {
-    border: 0.5px solid rgba(0,0,0,.12);
+    border: 0.5px solid rgba(0, 0, 0,.12);
 }
 
 .hline-bold {
-    border: 1.5px solid rgba(0,0,0,.87);
+    border: 1.5px solid rgba(0, 0, 0,.87);
 }
 
 .img-responsive {
