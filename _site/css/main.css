@@ -151,7 +151,6 @@ p {
     height: 100vh;
     min-height: 600px;
     pointer-events: none;
-
 }
 
 .content {
@@ -173,7 +172,6 @@ p {
     grid-row: 1 / 3;
     opacity: 1;
 }
-
 
 .plane_small {
     opacity: 0;
@@ -294,8 +292,6 @@ video {
     transform: translate(0, 0);
 }
 
-
-/* Section */
 .section-wrapper {
     width: 100%;
     height: 100vh;
@@ -361,7 +357,6 @@ video {
     word-break: keep-all;
 }
 
-/* Button */
 .info-button {
     margin-top: 64px;
     display: inline-flex;

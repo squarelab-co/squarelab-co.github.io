@@ -116,6 +116,24 @@ small {
     margin-right: 8px;
 }
 
+i {
+    margin-right: 6px;
+    align-self: center;
+}
+
+.social-box:first-child {
+    margin-right: 24px;
+}
+
+.social {
+    font-size: 24px;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+
 .title-container small {
     color: #ffffff;
     font-size: 16px;
@@ -135,7 +153,7 @@ small {
 }
 
 .blog-header-container {
-    width: 900px;
+    width: 960px;
     padding: 0 24px;
     height: 72px;
     display: inline-flex;
@@ -193,14 +211,13 @@ small {
 
 .overlay {
     background-color: rgba(0,0,0,.6);
-    /*background-image: linear-gradient(-135deg, rgba(132,31, 229, .4), rgba(95,47,255, .8));*/
     width: 100%;
     height: inherit;
     position: absolute;
 }
 
 .title-container {
-    max-width: 900px;
+    max-width: 960px;
     padding: 0 24px;
     position: relative;
     z-index: 100;
@@ -224,7 +241,7 @@ small {
 }
 
 .blog-row {
-    max-width:900px;
+    max-width: 960px;
     margin-top: 40px;
     padding: 0 24px;
     word-break: keep-all;
@@ -343,7 +360,7 @@ small {
 }
 
 .inner {
-    width: 900px !important;
+    width: 960px !important;
 }
 
 @media screen and (max-width: 768px) {
