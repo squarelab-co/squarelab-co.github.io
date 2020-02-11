@@ -344,7 +344,6 @@ video {
     transition: all 0.5s ease-out;
     opacity: 0.5;
     transform: translateY(300px);
-    transition: all 1s ease-out;
 }
 
 .second-img {

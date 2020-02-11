@@ -341,14 +341,9 @@ video {
     width: 300px;
     height: auto;
     filter: drop-shadow(0 32px 32px rgba(0, 0, 0, 0.3));
-<<<<<<< HEAD
     transition: all 0.5s ease-out;
     opacity: 0.5;
     transform: translateY(300px);
-
-=======
-    transition: all 1s ease-out;
->>>>>>> ed090fba8578b7a7597e6ee57a94faa9bb5a0ba9
 }
 
 .second-img {
@@ -356,7 +351,6 @@ video {
     width: 300px;
     right: 60px;
     filter: drop-shadow(0 24px 24px rgba(0, 0, 0, 0.3));
-<<<<<<< HEAD
     transition: all 0.5s ease-out;
     opacity: 0;
     transform: translateY(300px);
@@ -371,10 +365,6 @@ video {
 .fade-in-2{
     opacity: 1;
     transform: translateY(0);
-
-=======
-    transition: all 1s ease-out;
->>>>>>> ed090fba8578b7a7597e6ee57a94faa9bb5a0ba9
 }
 
 .opacity60 {
