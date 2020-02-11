@@ -56,7 +56,6 @@ window.onload = function () { // 윈도우 로드를 기다리는 구문
             triggerHook: 0.7
         })
             .setClassToggle(this.children[1], 'fade-in')
-            .addIndicators()
             .addTo(controller);
     });
 
@@ -67,7 +66,6 @@ window.onload = function () { // 윈도우 로드를 기다리는 구문
             triggerHook: 0.5
         })
             .setClassToggle(this.children[0], 'fade-in-2')
-            .addIndicators()
             .addTo(controller);
     });
 
