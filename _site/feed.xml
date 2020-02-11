@@ -3,10 +3,10 @@
   <channel>
     <title>Square Lab</title>
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
-    <link>http://0.0.0.0:4000/</link>
-    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Feb 2020 12:14:45 +0900</pubDate>
-    <lastBuildDate>Fri, 07 Feb 2020 12:14:45 +0900</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 11 Feb 2020 14:30:32 +0900</pubDate>
+    <lastBuildDate>Tue, 11 Feb 2020 14:30:32 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -98,8 +98,8 @@
 &lt;p&gt;Cloudinary에는 위에 언급 된 내용보다 더 많은 기능이 있으니 자세한 내용은 &lt;a href=&quot;https://cloudinary.com/documentation/image_transformations&quot;&gt;여기&lt;/a&gt;를 참고하세요.&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Feb 2020 00:00:00 +0900</pubDate>
-        <link>http://0.0.0.0:4000/blog/get-started-with-cloudinary</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/blog/get-started-with-cloudinary</guid>
+        <link>http://localhost:4000/blog/get-started-with-cloudinary</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/get-started-with-cloudinary</guid>
         
         
         <category>Design</category>
@@ -488,8 +488,8 @@ functions:
 
 </description>
         <pubDate>Tue, 04 Feb 2020 00:00:00 +0900</pubDate>
-        <link>http://0.0.0.0:4000/blog/developing-internal-service-with-serverless-aws</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/blog/developing-internal-service-with-serverless-aws</guid>
+        <link>http://localhost:4000/blog/developing-internal-service-with-serverless-aws</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/developing-internal-service-with-serverless-aws</guid>
         
         
         <category>Engeeniring</category>

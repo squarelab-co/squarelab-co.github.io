@@ -1,4 +1,4 @@
-new WOW().init();
+
 
 document.documentElement.className = 'js';
 let supportsCssVars = function () {
@@ -45,6 +45,33 @@ window.onload = function () { // 윈도우 로드를 기다리는 구문
     })
         .setTween(TweenMax.to('#hiring', 0.2, {autoAlpha:0}))
         .addTo(controller);
+
+    // Image Fade In Up
+   
+
+    $('.info-img').each(function(){
+
+        new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: 0.7
+        })
+            .setClassToggle(this.children[1], 'fade-in')
+            .addIndicators()
+            .addTo(controller);
+    });
+
+    $('.info-img').each(function(){
+
+        new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: 0.5
+        })
+            .setClassToggle(this.children[0], 'fade-in-2')
+            .addIndicators()
+            .addTo(controller);
+    });
+
+    
 
 
     imagesLoaded(document.body, () => {
