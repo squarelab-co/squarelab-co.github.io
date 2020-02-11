@@ -2,12 +2,12 @@
 layout: blog
 ---
 <div class="blog-container">
-    <div class="blog-top" style="background-image:url({{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img }}); background-size: cover;" >
+    <div class="blog-top" style="background-image:url({{ "/images/post/" }}{{ page.img }}); background-size: cover;" >
         <div class="overlay">
             <div class="title-container">
                 <h1 class="ctitle-top">{{ page.title }}</h1>
                 <div class="author">
-                    <img class="img-author-2" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ page.img-author }}">
+                    <img class="img-author-2" src="{{ "/images/post/" }}{{ page.img-author }}">
                     <small class="small-top" >{{ page.author }}</small><small>|</small><small name="locale-date">{{ page.date | date: "%b %-d, %Y" }}</small>
                 </div>
             </div>
@@ -17,12 +17,11 @@ layout: blog
         <div class="post">
             {{ content }}
         </div>
-        <div class="spacing-40"></div>
+        <div class="back-button">
+            <a href="/blog">목록으로</a>
+        </div>
         <div class="fb-comments" data-href="https://squarelab.co{{ page.url }}" data-num-posts="4" data-width="100%"></div>
         <!--   {% include sidebar.html %}  -->
-    </div>
-    <div>
-        {{ post.previous }}
     </div>
 </div>
 <script>(function(d, s, id) {

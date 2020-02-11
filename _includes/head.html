@@ -11,24 +11,27 @@
   <meta property="og:description" content="Hello, we are Square Lab! 우리는 새로운 시각으로 여행을 만드는 사람들입니다. 스퀘어랩과 함께 더 넓은 세상을 만나보세요.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://www.squarelab.co">
-  <meta property="og:image" content="https://www.squarelab.co/images/social.png">
+  <meta property="og:image" content="https://squarelab.co/images/social.png">
   
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   
-  <!--[if lte IE 8]><script src="{{ "/js/ie/html5shiv.js" | prepend: site.baseurl }}"></script><![endif]-->
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
-  <!--[if lte IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" | prepend: site.baseurl }}" /><![endif]-->
-  <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.baseurl }}" /><![endif]-->
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <!--[if lte IE 8]><script src="{{ "/js/ie/html5shiv.js" }}"></script><![endif]-->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' }}">
+  <!--[if lte IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" }}" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" }}" /><![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" }}">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#782bde">
-  <link rel="stylesheet" type="text/css" href="css/main.css"/>
-  <link rel="stylesheet" type="text/css" href="css/mediaquery.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/animate.css">
   <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
   <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
   

@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Blog
+title: Square Lab 기술 블로그
 permalink: /blog
 ---
 <div class="blog-container">
@@ -17,31 +17,30 @@ permalink: /blog
         <div class="post-wrap" id="{{ category | first }}">
             <div class="post-txt">
                 <span class="category" style="color: {{ post.color }};">{{ post.categories }}</span>
-                <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
+                <a href="{{ post.url }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                 <div class="author">
-                    <img class="img-author" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img-author }}">
+                    <img class="img-author" src="{{ "/images/post/"}}{{ post.img-author }}">
                     <small>{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
                 </div>
                 <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }} </div>
-                <!--<a href="{{ post.url | prepend: site.baseurl }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
+                <!--<a href="{{ post.url }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
             </div>
             <div>
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                    <img class="img-responsive" src="{{ "/assets/images/blog/" | prepend: site.baseurl }}{{ post.img }}">
+                <a href="{{ post.url }}">
+                    <img class="img-responsive" src="{{ "/images/post/"}}{{ post.img }}">
                 </a>
             </div>
         </div>
-        <div class="spacing-24"></div>
         {% endfor %}
         <div class="hline"></div>
       <!--  {% include sidebar.html %} -->
     </div>
 </div>
 <script type="text/javascript">
-    const images = ['/assets/images/hero-0.jpg',
-                    '/assets/images/hero-1.jpg',
-                    '/assets/images/hero-2.jpg',
-                    '/assets/images/hero-3.jpg'];
+    const images = ['/images/hero-0.jpg',
+                    '/images/hero-1.jpg',
+                    '/images/hero-2.jpg',
+                    '/images/hero-3.jpg'];
     document.getElementById("hero").style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
 </script>
 <script src="/js/locale-date.js"></script>

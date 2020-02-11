@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Serverless한 회사 내부 서비스 만들기
-date: 2020-02-04
+date: 2020-02-06
 author: 권영재
 categories: 
-- Engeeniring
+- Engineering
 img: krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg
 img-author: yjiq150.jpg
 color: "#2175FF"
