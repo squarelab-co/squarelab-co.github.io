@@ -83,6 +83,23 @@ Cloudinary에서는 URL 파라미터를 통해 쉽게 이미지를 리사이징 
 
 다시 `g_auto` 파라미터를 넣어주면 가로나 세로로 긴 사이즈의 이미지를 요청하더라도 오브젝트를 기준으로 크롭핑 되어 반가운 고양이의 얼굴을 볼 수 있습니다.
 
+### 이미지 최적화
+
+![sofa_cat.jpg](https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto,q_auto/sofa_cat.jpg) 
+
+    https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto,q_auto/sofa_cat.jpg
+    
+마지막으로 추가한 파라미터는 다시 `quality=auto`를 `q_auto`입니다. Cloudinary의 설명에 따르면 이미지 용량과 비주얼 퀄리티 사이에서 최적의 밸런스를 찾아준다고 합니다.
+`q_auto`를 추가하기 전 이미지의 용량은 19KB였지만 추가한 후에는 7KB로 크게 줄었습니다. 매의 눈을 가진 분이라면 줄어든 용량 만큼 퀄리티가 조금 떨어진 것을 발견했겠지만 앞서의 설명대로 그렇게 크게 차이 나지는 않습니다.
+
+![sofa_cat.jpg](https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto,q_auto:best/sofa_cat.jpg) 
+
+    https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto,q_auto:best/sofa_cat.jpg
+    
+그럼에도 불구하고 더 나은 퀄리티를 사용하고 싶다면 `q_auto:best` 옵션을 추가해 가장 좋은 퀄리티로 최적화를 할 수 있습니다. 용량은 10KB로 늘어났지만 조금 더 나아진 퀄리티를 확인할 수 있습니다.       
+
+<div class="spacing-40"></div>
+
 ### 맺음말
 지금까지 예제와 함께 Cloudinary를 활용한 이미지 컨텐츠 관리에 대해 살펴보았습니다.
 

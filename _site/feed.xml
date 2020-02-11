@@ -3,10 +3,10 @@
   <channel>
     <title>Square Lab</title>
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
-    <link>http://localhost:4000http://localhost:4000/</link>
+    <link>http://0.0.0.0:4000http://0.0.0.0:4000/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Feb 2020 14:57:17 +0900</pubDate>
-    <lastBuildDate>Tue, 11 Feb 2020 14:57:17 +0900</lastBuildDate>
+    <pubDate>Tue, 11 Feb 2020 16:01:19 +0900</pubDate>
+    <lastBuildDate>Tue, 11 Feb 2020 16:01:19 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -91,6 +91,25 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;다시 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt; 파라미터를 넣어주면 가로나 세로로 긴 사이즈의 이미지를 요청하더라도 오브젝트를 기준으로 크롭핑 되어 반가운 고양이의 얼굴을 볼 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;이미지-최적화&quot;&gt;이미지 최적화&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto,q_auto/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto,q_auto/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;마지막으로 추가한 파라미터는 다시 &lt;code class=&quot;highlighter-rouge&quot;&gt;quality=auto&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;q_auto&lt;/code&gt;입니다. Cloudinary의 설명에 따르면 이미지 용량과 비주얼 퀄리티 사이에서 최적의 밸런스를 찾아준다고 합니다.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;q_auto&lt;/code&gt;를 추가하기 전 이미지의 용량은 19KB였지만 추가한 후에는 7KB로 크게 줄었습니다. 매의 눈을 가진 분이라면 줄어든 용량 만큼 퀄리티가 조금 떨어진 것을 발견했겠지만 앞서의 설명대로 그렇게 크게 차이 나지는 않습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto,q_auto:best/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto,q_auto:best/sofa_cat.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그럼에도 불구하고 더 나은 퀄리티를 사용하고 싶다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;q_auto:best&lt;/code&gt; 옵션을 추가해 가장 좋은 퀄리티로 최적화를 할 수 있습니다. 용량은 10KB로 늘어났지만 조금 더 나아진 퀄리티를 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;맺음말&quot;&gt;맺음말&lt;/h3&gt;
 &lt;p&gt;지금까지 예제와 함께 Cloudinary를 활용한 이미지 컨텐츠 관리에 대해 살펴보았습니다.&lt;/p&gt;
