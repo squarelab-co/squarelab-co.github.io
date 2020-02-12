@@ -1,4 +1,5 @@
 #!/bin/bash
+cp _site/blog.html _site/blog/index.html
 
 echo "Deploying to PRD"
 DEPLOY_URL=s3://squarelab.co

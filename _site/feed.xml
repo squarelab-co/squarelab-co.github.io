@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>http://0.0.0.0:4000http://0.0.0.0:4000/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Feb 2020 12:29:31 +0900</pubDate>
-    <lastBuildDate>Wed, 12 Feb 2020 12:29:31 +0900</lastBuildDate>
+    <pubDate>Wed, 12 Feb 2020 15:28:10 +0900</pubDate>
+    <lastBuildDate>Wed, 12 Feb 2020 15:28:10 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -119,8 +119,8 @@
 &lt;p&gt;Cloudinary에는 위에 언급 된 내용보다 더 많은 기능이 있으니 자세한 내용은 &lt;a href=&quot;https://cloudinary.com/documentation/image_transformations&quot;&gt;Get Started with Cloudinary&lt;/a&gt;를 참고하세요.&lt;/p&gt;
 </description>
         <pubDate>Wed, 12 Feb 2020 00:00:00 +0900</pubDate>
-        <link>/blog/get-started-with-cloudinary</link>
-        <guid isPermaLink="true">/blog/get-started-with-cloudinary</guid>
+        <link>/blog/get-started-with-cloudinary/</link>
+        <guid isPermaLink="true">/blog/get-started-with-cloudinary/</guid>
         
         
         <category>Design</category>
@@ -507,8 +507,8 @@ functions:
 &lt;p&gt;참고로 &lt;a href=&quot;https://yaml.org/faq.html&quot;&gt;YAML 공식 웹사이트&lt;/a&gt;에는 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yaml&lt;/code&gt; 확장자를 추천하고 있지만, 전통적으로 확장자는 3글자를 사용해왔던 컨벤션 때문에 프로젝트에따라 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yml&lt;/code&gt; 도 많이 사용되고 있습니다. 예를들어 쿠버네티스 설정파일의 경우 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yaml&lt;/code&gt;을 사용하지만, serverless framework의 경우에는 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yml&lt;/code&gt;을 사용하는 것에 주의하세요.&lt;/p&gt;
 </description>
         <pubDate>Mon, 10 Feb 2020 00:00:00 +0900</pubDate>
-        <link>/blog/developing-internal-service-with-serverless-aws</link>
-        <guid isPermaLink="true">/blog/developing-internal-service-with-serverless-aws</guid>
+        <link>/blog/developing-internal-service-with-serverless-aws/</link>
+        <guid isPermaLink="true">/blog/developing-internal-service-with-serverless-aws/</guid>
         
         
         <category>Engineering</category>
