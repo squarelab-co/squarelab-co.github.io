@@ -151,16 +151,19 @@ i {
 .blog-header-container {
     width: 960px;
     padding: 0 24px;
-    height: 72px;
     display: inline-flex;
     align-items: center;
     line-height: 0em;
+    justify-content: space-between;
 }
 
-.blog-header-container>p {
-    color: rgba(0, 0, 0,.6);
-    font-weight: 600;
-    margin-left: 16px;
+.blog-header-container > a {
+    transform: translateY(2px);
+}
+
+.blog-header-container > a > i{
+    color: rgba(0,0,0,.6);
+    font-size: 24px;
 }
 
 .blog-container {
@@ -371,7 +374,7 @@ i {
     }
 
     .bi-blog {
-        width: 120px;
+        width: 160px;
     }
 
     .blog-container {
