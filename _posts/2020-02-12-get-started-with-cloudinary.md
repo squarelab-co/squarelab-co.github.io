@@ -5,6 +5,7 @@ date: 2020-02-12
 author: 추호연
 categories: 
 - Design
+og-img: sofa_cat.jpg
 img: sofa_cat.jpg
 img-author: jamie.jpg
 color: "#8748F8"
