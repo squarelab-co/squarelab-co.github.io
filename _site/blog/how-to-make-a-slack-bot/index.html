@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="여행과 기술을 연결하고, 사용자와 여행을 이어주는 스퀘어랩만의 노하우를 확인해 보세요.">
+  <meta name="msapplication-TileColor" content="#782bde">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="google-site-verification" content="-kdxteMBSgKizw-6qHNm1-5nfxb7H6947J64jmjbBEg" />
+
+  <meta property="og:site_name" content="Square Lab 기술 블로그">
+  <meta property="og:title" content="Google Apps Script를 활용한 Slack Bot 만들기">
+  <meta property="og:description" content="G Suite과 Slack은 스타트업에서 필수로 사용하는 서비스라 해도 과언이 아닙니다. G Suite의 다양한 기능과 쉽게 연동이 가능한 Google Apps Script로 Slack Bot을 만들면 반복작업을...">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://squarelab.co/blog/how-to-make-a-slack-bot/">
+  <meta property="og:image" content="https://squarelab.co/images/post//images/post/how-to-make-a-slack-bot/cover.png">
+
+  <title>Square Lab 기술 블로그</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/blog.css">
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157710299-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-157710299-1');
+  </script>
+</head>
+  <body>
+  <header id="blog-header" class="header">
+    <div class="blog-header-container">
+        <a href="/blog">
+          <img src="/images/squarelab-bi-blog.png" width="200" class="bi-blog" alt="스퀘어랩 기술블로그 로고">
+        </a>
+        <a href="/"><i class="ri-home-4-line"></i></a>
+    </div>
+</header>
+  <div class="blog-container">
+    <div class="blog-top" style="background-image:url(/images/post/how-to-make-a-slack-bot/cover.png); background-size: cover;" >
+        <div class="overlay">
+            <div class="title-container">
+                <span class="category">Engineering</span>
+                <h1 class="ctitle-top">Google Apps Script를 활용한 Slack Bot 만들기</h1>
+                <div class="author">
+                    <img class="img-author-2" src="/images/post/jamie.jpg">
+                    <small class="small-top" >추호연</small><small>|</small><small name="locale-date">Mar 5, 2020</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog-row">
+        <div class="post">
+            <p>G Suite과 Slack은 스타트업에서 필수로 사용하는 서비스라 해도 과언이 아닙니다. G Suite의 다양한 기능과 쉽게 연동이 가능한 Google Apps Script로 Slack Bot을 만들면 반복작업을 자동화하고 업무효율을 높일 수 있습니다.
+오늘은 Apps Script를 활용해 Slack Bot을 만드는 기본적인 내용을 공유하고자 합니다.</p>
+
+<h3 id="google-apps-script">Google Apps Script</h3>
+<p>우선 새로운 Apps Script 프로젝트를 만들어야 합니다. G suite 계정의 Google Drive에서 좌측 상단의 New(새로 만들기) 버튼으로 시작하세요.
+<img src="/images/post/how-to-make-a-slack-bot/google-drive-new.png" alt="google-drive-new.png" /></p>
+
+<hr />
+
+<p>Apps Script가 만들어지면 아래 코드를 복사해 붙여넣기 합니다. Slack에서 인증을 받기 위한 내용인데 코드에 대한 설명은 Slack App 부분에서 하겠습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function doPost(e) {
+    return ContentService.createTextOutput(JSON.parse(e.postData.contents).challenge);
+}
+</code></pre></div></div>
+
+<p><img src="/images/post/how-to-make-a-slack-bot/google-apps-script-new.png" alt="google-apps-script-new.png" /></p>
+
+<hr />
+
+<p>코드를 붙여넣기 했으면 메뉴 &gt; Publish &gt; Deploy as web app을 선택합니다. 이때 Slack이 Apps Script에 접근할 수 있도록 팝업 하단의 <code class="highlighter-rouge">Who has access to the app</code>의 값을 <code class="highlighter-rouge">Anyone, even anonymous</code>를 선택하고 Deploy합니다.
+<img src="/images/post/how-to-make-a-slack-bot/google-apps-script-deploy.png" alt="google-apps-script-deploy.png" /></p>
+
+<hr />
+
+<p>Deploy가 완료되면 <code class="highlighter-rouge">Current web app URL</code>이 표시됩니다. 곧 필요할테니 미리 복사해두세요.
+<img src="/images/post/how-to-make-a-slack-bot/google-apps-script-deployed.png" alt="google-apps-script-deployed.png" /></p>
+
+<h3 id="slack-app">Slack App</h3>
+<p>이제 Slack App을 만들 차례입니다. Slack API 사이트의 <a href="https://api.slack.com/apps">Your Apps</a> 페이지에서 Create New App 버튼을 클릭하면 아래와 같은 팝업이 열립니다.
+App에게 적당한 이름을 지어주고 연결할 Workspace를 선택하세요. App과 Bot의 용어가 혼란스러울 수 있는데 App의 기능 중 하나가 Bot이라고 이해하시면 됩니다.
+<img src="/images/post/how-to-make-a-slack-bot/slack-api-create-new-app.png" alt="slack-api-create-new-app.png" /></p>
+
+<hr />
+
+<p>Slack App이 만들어지면 Basic Information 페이지로 이동됩니다. 이제 Slcak App과 Apps Script를 연결할 차례입니다. Add features and functionality 섹션의 Event Subscriptions 버튼을 클릭하세요.
+<img src="/images/post/how-to-make-a-slack-bot/slack-api-basic-information.png" alt="slack-api-basic-information.png" /></p>
+
+<hr />
+
+<p>Enable Events 스위치를 <code class="highlighter-rouge">On</code>하면 <code class="highlighter-rouge">Request URL</code>이 표시되는데 여기에 Apps Script에서 복사해두었던 <code class="highlighter-rouge">Current web app URL</code>을 붙여넣기 하세요. 이제 눈치채셨겠지만 아까 작성한 코드는 Slack이 보내준 <code class="highlighter-rouge">challenge</code> parameter를 다시 return해 인증을 받는 내용이었습니다.</p>
+
+<p>코드에 문제가 없고 Deploy도 정상적으로 되었다면 <code class="highlighter-rouge">Verified</code>가 표시될 겁니다. 이제 Slack App이 추가된 채널에 메시지가 포스팅되면 Event를 수신할 수 있도록 Subscribe to bot events에 <code class="highlighter-rouge">message.channels</code>를 추가하세요. 
+<img src="/images/post/how-to-make-a-slack-bot/slack-app-event-subscriptions.png" alt="slack-app-event-subscriptions.png" /></p>
+
+<hr />
+
+<p>Basic Information으로 돌아와서 이번에는 Add features and functionality 섹션의 Permissions를 선택합니다.
+<img src="/images/post/how-to-make-a-slack-bot/slack-api-basic-information2.png" alt="slack-api-basic-information2.png" /></p>
+
+<hr />
+
+<p>이제 Slack App에게 적절한 권한을 주어야 할 차례입니다. OAuth &amp; Permissions에서 스크롤을 내리면 Scopes 섹션을 찾을 수 있습니다. <code class="highlighter-rouge">channels:history</code>는 먼저 등록한 Event 수신을 위해 필수로 필요한 권한이라 이미 추가되어 있습니다.</p>
+
+<p>여러분이 만들 Bot 따라 다양한 권한이 필요하겠지만 일단 여기서는 제대로 동작하는지 확인할 용도로 <code class="highlighter-rouge">reactions:write</code>만 추가했습니다.
+<img src="/images/post/how-to-make-a-slack-bot/slack-api-scopes.png" alt="slack-api-scopes.png" /></p>
+
+<hr />
+
+<p>다시 스크롤을 올려 Workspace에 App을 설치해야 합니다. Install App to Workspace 버튼을 클릭하면 Workspace에 App이 설치되고 Bot User OAuth Access Token을 얻게 됩니다. 곧 필요해질테니 일단 복사해두세요.
+<img src="/images/post/how-to-make-a-slack-bot/slack-api-install-app.png" alt="slack-api-install-app.png" /></p>
+
+<h3 id="apps-script-업데이트-하기">Apps Script 업데이트 하기</h3>
+<p>이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 아직 포기하지 마세요. 거의 다 끝났답니다. 다시 Apps Script로 돌아가 코드를 수정할게요. <code class="highlighter-rouge">challenge</code> parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function doPost(e) {
+  var token = "xxxx-xxxxxxxxx-xxxx";
+  var contents = JSON.parse(e.postData.contents);
+  var option = {
+    'method' : 'post',
+    'payload' : {
+      'token': token,
+      'channel': contents.event.channel,
+      'timestamp': contents.event.ts,
+      'name': "heavy_check_mark"
+    }
+  };
+  UrlFetchApp.fetch("https://slack.com/api/reactions.add", option);
+}
+</code></pre></div></div>
+
+<p>Slack에서 <code class="highlighter-rouge">message.channels</code> Event가 수신되면 <a href="https://api.slack.com/events/message.channels">예제</a>와 같이 데이터를 전달 받습니다.
+Slack으로부터 받은 데이터에서 <code class="highlighter-rouge">channel</code>과 <code class="highlighter-rouge">timestamp</code>를 사용해 해당 메시지에 체크 이모지를 달아주는 코드입니다. <code class="highlighter-rouge">token</code>에는 앞서 복사해두었던 <code class="highlighter-rouge">Bot User OAuth Access Token</code> 값을 넣어주세요.</p>
+
+<hr />
+
+<p>모두 적용했으면 다시 Deplay 해야합니다. 팝업에서 <code class="highlighter-rouge">Project version</code>을 <code class="highlighter-rouge">New</code>로 선택하고 Update 버튼을 클릭합니다. <code class="highlighter-rouge">UrlFetchApp</code>을 사용했기 때문에 권한을 요청하는 팝업이 열릴텐데 흔쾌히 허용해주세요.
+<img src="/images/post/how-to-make-a-slack-bot/google-apps-script-update.png" alt="google-apps-script-update.png" /></p>
+
+<h3 id="채널에-slack-app-추가하기">채널에 Slack App 추가하기</h3>
+<p>드디어 Slack Bot이 잘 동작하는지 확인할 차례입니다. 슬랙으로 넘어와 방금 만든 App을 채널에 추가해 보겠습니다. 테스트 채널을 하나 만들고 우측의 Add App 버튼으로 방금 만든 App을 검색해 추가합니다.
+<img src="/images/post/how-to-make-a-slack-bot/slack-add-app.png" alt="slack-add-app.png" /></p>
+
+<hr />
+
+<p>자, 이제 테스트 채널에 메시지를 보내보세요. Slack Bot이 메시지를 확인하면 바로 체크 이모지를 붙여줄겁니다!
+<img src="/images/post/how-to-make-a-slack-bot/slack-add-reaction.png" alt="slack-add-reaction.png" /></p>
+
+<h2 id="맺음말">맺음말</h2>
+<p>Apps Script를 활용해 Slack Bot을 만드는 기본적인 내용은 여기까지입니다. 이제 여러분이 직접 필요한 Bot을 만들어 나가면 됩니다. 채널에 올라온 메시지의 내용은 <code class="highlighter-rouge">contents.event.text</code>에 있으니 적절히 파싱해 필요한 작업을 수행하게 하세요.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function doPost(e) {
+  var token = "xxxx-xxxxxxxxx-xxxx";
+  var contents = JSON.parse(e.postData.contents);
+  
+  if (contents.event.text == "something")
+  {
+     //Do something!
+  }
+  
+  var option = {
+    'method' : 'post',
+    'payload' : {
+      'token': token,
+      'channel': contents.event.channel,
+      'timestamp': contents.event.ts,
+      'name': "heavy_check_mark"
+    }
+  };
+  UrlFetchApp.fetch("https://slack.com/api/reactions.add", option);
+}
+</code></pre></div></div>
+
+<p>스퀘어랩에서도 여러 Slack Bot을 만들어 활용하고 있는데요. 휴가와 리모트 근무를 알리는 leave 채널에서는 Calendar Bot이 메시지를 파싱해 캘린더에 자동으로 일정을 추가해주고, jukebox 채널의 Music Bot은 사무실의 DJ로 활약하고 있습니다.</p>
+
+<p>Slack Bot을 직접 만들지 않더라도 <a href="https://ifttt.com/">IFTTT</a>나 <a href="https://zapier.com/home">Zapier</a>을 사용하는 방법도 있는데요. 이런 서비스들을 쓰는 것 보다 직접 만들었을 때의 장점은 자유도가 높고 고도화가 가능하다는 점입니다.
+<a href="https://developers.google.com/apps-script/api">Apps Script API</a>와 <a href="https://api.slack.com/">Slack API</a>에서 어떤 것들이 가능한지 살펴보세요.</p>
+
+        </div>
+        <div class="back-button">
+            <a href="/blog">목록으로</a>
+        </div>
+        <div class="fb-comments" data-href="https://squarelab.co/blog/how-to-make-a-slack-bot/" data-num-posts="4" data-width="100%"></div>
+        <!--   <!--<div class="side-bar">
+    <div class="spacing"></div>
+    <h5 class="title-category">CATEGORIES</h5>
+        <p>
+            <a href="/blog"> ALL</a>
+            <span class="badge badge-theme pull-right"></span>
+        </p>
+       
+        <p>
+            <a href="/blog/#Engineering"> Engineering</a>
+         <span class="badge badge-theme pull-right">2</span>
+        </p>
+    
+        <p>
+            <a href="/blog/#Design"> Design</a>
+         <span class="badge badge-theme pull-right">2</span>
+        </p>
+    
+
+    <div class="spacing"></div>
+</div>
+
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+            <div>
+                <a href="/index.html"><img src="/images/squarelab-bi-rec.png" width="32px" height="32px" class="menu-logo"></a>
+                <p>
+                    <a href="/blog">ALL</a>
+                   <span class="badge badge-theme pull-right"></span>
+                </p>
+                
+                <p>
+                    <a href="/category/#Engineering"> Engineering</a>
+                  <span class="badge badge-theme pull-right">2</span>
+                </p>
+                
+                
+                <p>
+                    <a href="/category/#Design"> Design</a>
+                  <span class="badge badge-theme pull-right">2</span>
+                </p>
+                
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div> 
+
+  -->
+    </div>
+</div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.5&appId=1052544885096271";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="/js/locale-date.js"></script>
+  <!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <ul class="copyright">
+      <li>&copy;
+      Square Lab
+      </li>
+      <li>
+      (주)스퀘어랩<br>
+      04542 서울특별시 중구 청계천로 100 시그니쳐타워 서관 10층<br>
+      사업자등록번호 151-87-00987 | 통신판매업신고번호 2018-서울중구-1626<br>
+      대표번호 1833-5861 | 이메일 contact@squarelab.co<br>
+      대표자 KIM DOYON
+      </li>
+    </ul>
+    <div class="icons">
+    <div class="icon insta"><a href="https://www.instagram.com/squarelab.co/" target="_blank"><i class="ri-instagram-line social"></i></a></div>
+    <div class="icon"><a href="https://www.facebook.com/squarelab.co/" target="_blank"><i class="ri-facebook-fill social"></i></a></div>
+  </div>
+  </div>
+</footer>
+
+  </body>
+</html>

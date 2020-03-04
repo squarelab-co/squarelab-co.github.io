@@ -5,13 +5,152 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 Mar 2020 17:08:51 +0900</pubDate>
-    <lastBuildDate>Tue, 03 Mar 2020 17:08:51 +0900</lastBuildDate>
+    <pubDate>Thu, 05 Mar 2020 08:48:13 +0900</pubDate>
+    <lastBuildDate>Thu, 05 Mar 2020 08:48:13 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
+        <title>Google Apps Script를 활용한 Slack Bot 만들기</title>
+        <description>&lt;p&gt;G Suite과 Slack은 스타트업에서 필수로 사용하는 서비스라 해도 과언이 아닙니다. G Suite의 다양한 기능과 쉽게 연동이 가능한 Google Apps Script로 Slack Bot을 만들면 반복작업을 자동화하고 업무효율을 높일 수 있습니다.
+오늘은 Apps Script를 활용해 Slack Bot을 만드는 기본적인 내용을 공유하고자 합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;google-apps-script&quot;&gt;Google Apps Script&lt;/h3&gt;
+&lt;p&gt;우선 새로운 Apps Script 프로젝트를 만들어야 합니다. G suite 계정의 Google Drive에서 좌측 상단의 New(새로 만들기) 버튼으로 시작하세요.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/google-drive-new.png&quot; alt=&quot;google-drive-new.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Apps Script가 만들어지면 아래 코드를 복사해 붙여넣기 합니다. Slack에서 인증을 받기 위한 내용인데 코드에 대한 설명은 Slack App 부분에서 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function doPost(e) {
+    return ContentService.createTextOutput(JSON.parse(e.postData.contents).challenge);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/google-apps-script-new.png&quot; alt=&quot;google-apps-script-new.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;코드를 붙여넣기 했으면 메뉴 &amp;gt; Publish &amp;gt; Deploy as web app을 선택합니다. 이때 Slack이 Apps Script에 접근할 수 있도록 팝업 하단의 &lt;code class=&quot;highlighter-rouge&quot;&gt;Who has access to the app&lt;/code&gt;의 값을 &lt;code class=&quot;highlighter-rouge&quot;&gt;Anyone, even anonymous&lt;/code&gt;를 선택하고 Deploy합니다.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/google-apps-script-deploy.png&quot; alt=&quot;google-apps-script-deploy.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Deploy가 완료되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;Current web app URL&lt;/code&gt;이 표시됩니다. 곧 필요할테니 미리 복사해두세요.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/google-apps-script-deployed.png&quot; alt=&quot;google-apps-script-deployed.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;slack-app&quot;&gt;Slack App&lt;/h3&gt;
+&lt;p&gt;이제 Slack App을 만들 차례입니다. Slack API 사이트의 &lt;a href=&quot;https://api.slack.com/apps&quot;&gt;Your Apps&lt;/a&gt; 페이지에서 Create New App 버튼을 클릭하면 아래와 같은 팝업이 열립니다.
+App에게 적당한 이름을 지어주고 연결할 Workspace를 선택하세요. App과 Bot의 용어가 혼란스러울 수 있는데 App의 기능 중 하나가 Bot이라고 이해하시면 됩니다.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-create-new-app.png&quot; alt=&quot;slack-api-create-new-app.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Slack App이 만들어지면 Basic Information 페이지로 이동됩니다. 이제 Slcak App과 Apps Script를 연결할 차례입니다. Add features and functionality 섹션의 Event Subscriptions 버튼을 클릭하세요.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-basic-information.png&quot; alt=&quot;slack-api-basic-information.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Enable Events 스위치를 &lt;code class=&quot;highlighter-rouge&quot;&gt;On&lt;/code&gt;하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;Request URL&lt;/code&gt;이 표시되는데 여기에 Apps Script에서 복사해두었던 &lt;code class=&quot;highlighter-rouge&quot;&gt;Current web app URL&lt;/code&gt;을 붙여넣기 하세요. 이제 눈치채셨겠지만 아까 작성한 코드는 Slack이 보내준 &lt;code class=&quot;highlighter-rouge&quot;&gt;challenge&lt;/code&gt; parameter를 다시 return해 인증을 받는 내용이었습니다.&lt;/p&gt;
+
+&lt;p&gt;코드에 문제가 없고 Deploy도 정상적으로 되었다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;Verified&lt;/code&gt;가 표시될 겁니다. 이제 Slack App이 추가된 채널에 메시지가 포스팅되면 Event를 수신할 수 있도록 Subscribe to bot events에 &lt;code class=&quot;highlighter-rouge&quot;&gt;message.channels&lt;/code&gt;를 추가하세요. 
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-app-event-subscriptions.png&quot; alt=&quot;slack-app-event-subscriptions.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Basic Information으로 돌아와서 이번에는 Add features and functionality 섹션의 Permissions를 선택합니다.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-basic-information2.png&quot; alt=&quot;slack-api-basic-information2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이제 Slack App에게 적절한 권한을 주어야 할 차례입니다. OAuth &amp;amp; Permissions에서 스크롤을 내리면 Scopes 섹션을 찾을 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;channels:history&lt;/code&gt;는 먼저 등록한 Event 수신을 위해 필수로 필요한 권한이라 이미 추가되어 있습니다.&lt;/p&gt;
+
+&lt;p&gt;여러분이 만들 Bot 따라 다양한 권한이 필요하겠지만 일단 여기서는 제대로 동작하는지 확인할 용도로 &lt;code class=&quot;highlighter-rouge&quot;&gt;reactions:write&lt;/code&gt;만 추가했습니다.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-scopes.png&quot; alt=&quot;slack-api-scopes.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;다시 스크롤을 올려 Workspace에 App을 설치해야 합니다. Install App to Workspace 버튼을 클릭하면 Workspace에 App이 설치되고 Bot User OAuth Access Token을 얻게 됩니다. 곧 필요해질테니 일단 복사해두세요.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-install-app.png&quot; alt=&quot;slack-api-install-app.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;apps-script-업데이트-하기&quot;&gt;Apps Script 업데이트 하기&lt;/h3&gt;
+&lt;p&gt;이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 아직 포기하지 마세요. 거의 다 끝났답니다. 다시 Apps Script로 돌아가 코드를 수정할게요. &lt;code class=&quot;highlighter-rouge&quot;&gt;challenge&lt;/code&gt; parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function doPost(e) {
+  var token = &quot;xxxx-xxxxxxxxx-xxxx&quot;;
+  var contents = JSON.parse(e.postData.contents);
+  var option = {
+    'method' : 'post',
+    'payload' : {
+      'token': token,
+      'channel': contents.event.channel,
+      'timestamp': contents.event.ts,
+      'name': &quot;heavy_check_mark&quot;
+    }
+  };
+  UrlFetchApp.fetch(&quot;https://slack.com/api/reactions.add&quot;, option);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Slack에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;message.channels&lt;/code&gt; Event가 수신되면 &lt;a href=&quot;https://api.slack.com/events/message.channels&quot;&gt;예제&lt;/a&gt;와 같이 데이터를 전달 받습니다.
+Slack으로부터 받은 데이터에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;channel&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;timestamp&lt;/code&gt;를 사용해 해당 메시지에 체크 이모지를 달아주는 코드입니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;token&lt;/code&gt;에는 앞서 복사해두었던 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bot User OAuth Access Token&lt;/code&gt; 값을 넣어주세요.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;모두 적용했으면 다시 Deplay 해야합니다. 팝업에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Project version&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;New&lt;/code&gt;로 선택하고 Update 버튼을 클릭합니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;UrlFetchApp&lt;/code&gt;을 사용했기 때문에 권한을 요청하는 팝업이 열릴텐데 흔쾌히 허용해주세요.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/google-apps-script-update.png&quot; alt=&quot;google-apps-script-update.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;채널에-slack-app-추가하기&quot;&gt;채널에 Slack App 추가하기&lt;/h3&gt;
+&lt;p&gt;드디어 Slack Bot이 잘 동작하는지 확인할 차례입니다. 슬랙으로 넘어와 방금 만든 App을 채널에 추가해 보겠습니다. 테스트 채널을 하나 만들고 우측의 Add App 버튼으로 방금 만든 App을 검색해 추가합니다.
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-add-app.png&quot; alt=&quot;slack-add-app.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;자, 이제 테스트 채널에 메시지를 보내보세요. Slack Bot이 메시지를 확인하면 바로 체크 이모지를 붙여줄겁니다!
+&lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-add-reaction.png&quot; alt=&quot;slack-add-reaction.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;맺음말&quot;&gt;맺음말&lt;/h2&gt;
+&lt;p&gt;Apps Script를 활용해 Slack Bot을 만드는 기본적인 내용은 여기까지입니다. 이제 여러분이 직접 필요한 Bot을 만들어 나가면 됩니다. 채널에 올라온 메시지의 내용은 &lt;code class=&quot;highlighter-rouge&quot;&gt;contents.event.text&lt;/code&gt;에 있으니 적절히 파싱해 필요한 작업을 수행하게 하세요.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function doPost(e) {
+  var token = &quot;xxxx-xxxxxxxxx-xxxx&quot;;
+  var contents = JSON.parse(e.postData.contents);
+  
+  if (contents.event.text == &quot;something&quot;)
+  {
+     //Do something!
+  }
+  
+  var option = {
+    'method' : 'post',
+    'payload' : {
+      'token': token,
+      'channel': contents.event.channel,
+      'timestamp': contents.event.ts,
+      'name': &quot;heavy_check_mark&quot;
+    }
+  };
+  UrlFetchApp.fetch(&quot;https://slack.com/api/reactions.add&quot;, option);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;스퀘어랩에서도 여러 Slack Bot을 만들어 활용하고 있는데요. 휴가와 리모트 근무를 알리는 leave 채널에서는 Calendar Bot이 메시지를 파싱해 캘린더에 자동으로 일정을 추가해주고, jukebox 채널의 Music Bot은 사무실의 DJ로 활약하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;Slack Bot을 직접 만들지 않더라도 &lt;a href=&quot;https://ifttt.com/&quot;&gt;IFTTT&lt;/a&gt;나 &lt;a href=&quot;https://zapier.com/home&quot;&gt;Zapier&lt;/a&gt;을 사용하는 방법도 있는데요. 이런 서비스들을 쓰는 것 보다 직접 만들었을 때의 장점은 자유도가 높고 고도화가 가능하다는 점입니다.
+&lt;a href=&quot;https://developers.google.com/apps-script/api&quot;&gt;Apps Script API&lt;/a&gt;와 &lt;a href=&quot;https://api.slack.com/&quot;&gt;Slack API&lt;/a&gt;에서 어떤 것들이 가능한지 살펴보세요.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 05 Mar 2020 00:00:00 +0900</pubDate>
+        <link>/blog/how-to-make-a-slack-bot/</link>
+        <guid isPermaLink="true">/blog/how-to-make-a-slack-bot/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
+    
+      <item>
         <title>Square Lab 브랜딩 프로젝트</title>
-        <description>&lt;p&gt;젊고, 트렌디한 여행 서비스, 플레이윙즈와 카이트를 운영하는 스퀘어랩은 우리만의 브랜드 아이덴티티가 필요했고 그 목표를 위한 브랜딩 작업을 진행했습니다. 단순한 로고 제작이 아닌 회사의 컬러를 만들어갔던 브랜딩 경험을 공유합니다.&lt;/p&gt;
+        <description>&lt;p&gt;젊고, 트렌디한 여행 서비스, &lt;a href=&quot;https://www.playwings.co.kr/about&quot;&gt;플레이윙즈&lt;/a&gt;와 &lt;a href=&quot;https://kyte.travel/&quot;&gt;카이트&lt;/a&gt;를 운영하는 스퀘어랩은 우리만의 브랜드 아이덴티티가 필요했고 그 목표를 위한 브랜딩 작업을 진행했습니다. 단순한 로고 제작이 아닌 회사의 컬러를 만들어갔던 브랜딩 경험을 공유합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;스퀘어랩-정의하기&quot;&gt;스퀘어랩 정의하기&lt;/h2&gt;
 
@@ -19,7 +158,7 @@
 
 &lt;h3 id=&quot;여행을-가볍게-하는-사람들&quot;&gt;여행을 가볍게 하는 사람들&lt;/h3&gt;
 
-&lt;p&gt;스퀘어랩이 운영하는 서비스 &lt;strong&gt;플레이윙즈&lt;/strong&gt; 와 &lt;strong&gt;카이트&lt;/strong&gt; 는 사용자에게 항공가 특가알림서비스, 일정에 맞는 여행지 추천 등으로 가볍게 떠날 수 있는 여행을 제공하고 있습니다. 우리의 서비스에 맞춰 스퀘어랩은 여행에 최적화된 기술로 여행을 준비하고 떠나는 모든 과정이 즐겁도록 여행을 동기 부여하고 사용자에게 여행에 대한 시각과 경험을 확장하는 역할을 한다고 정의했습니다.
+&lt;p&gt;스퀘어랩이 운영하는 서비스 플레이윙즈와 카이트는 사용자에게 항공가 특가알림서비스, 일정에 맞는 여행지 추천 등으로 가볍게 떠날 수 있는 여행을 제공하고 있습니다. 우리의 서비스에 맞춰 스퀘어랩은 여행에 최적화된 기술로 여행을 준비하고 떠나는 모든 과정이 즐겁도록 여행을 동기 부여하고 사용자에게 여행에 대한 시각과 경험을 확장하는 역할을 한다고 정의했습니다.
 &lt;img src=&quot;/images/post/square-lab-branding/post1_inspire.gif&quot; alt=&quot;post1_inspire.gif&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;스퀘어랩에는-어떤-사람들이-일하고-있을까&quot;&gt;스퀘어랩에는 어떤 사람들이 일하고 있을까?&lt;/h3&gt;
@@ -45,7 +184,7 @@
 &lt;p&gt;우리 아이덴티티도 정하고 이름도 만들었으니 구체적인 스퀘어랩 형태를 만드는 인고의 시간(?)이 시작됐습니다. 모든 브랜딩 작업이 그러하듯 브랜딩 TFT는 스퀘어랩 BI 시안을 만들고, 또 만들고, 계속 만들었습니다. 스퀘어랩이 어떤 형태면 좋을지에 대한 설문과 내부 피드백을 통해 Logo Shape과 Typeface, Color를 정하고 발전시켜 스퀘어랩의 BI를 만들어 갔습니다.
 &lt;img src=&quot;/images/post/square-lab-branding/post4_prototype.png&quot; alt=&quot;post4_prototype.png&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;여러 과정을 걸쳐 최종으로 완성된 BI는 아래와 같은 모습입니다. (만들어졌던 모든 시안에 안녕과 감사를…)이 안에 들어와 있는 요소들은 어떤 의도와 의미가 있는지 하나하나 뜯어보겠습니다.
 &lt;img src=&quot;/images/post/square-lab-branding/post5_bi_Final.png&quot; alt=&quot;post5_bi_Final.png&quot; /&gt;&lt;/p&gt;
@@ -56,8 +195,8 @@
 &lt;img src=&quot;/images/post/square-lab-branding/post6_logo_shape.gif&quot; alt=&quot;post6_logo_shape.gif&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2-typeface&quot;&gt;2. Typeface&lt;/h3&gt;
-
-&lt;p&gt;스퀘어랩에 브랜딩 아이덴티티 안에 ‘Square Lab’이라는 문자는 명확하고 직관적일 필요가 있었습니다. 이를 위해 다양한 Typeface들을 테스트했지만 조금씩 부족한 어떤 것을 채울 수가 없어 직선과 정원으로 조형된 ‘Square Sans’를 제작했습니다. Square와 Lab 두 단어 사이에 볼륨을 다르게 구성해, 로고 형태에 조형미를 높였습니다.
+&lt;p&gt;스퀘어랩이라는 브랜드가 그 안에 있는 우리들과 닮아가고 있다 생각이 드네요. 스퀘어랩에 브랜딩 과정은 이걸로 마치는 게 아니라 지금도 우리가 만들어가는 과정 같습니다. 새롭거나 재미있게 만들어질 스퀘어랩을 계속 기대해주시면 좋겠습니다. 감사합니다.
+스퀘어랩에 브랜딩 아이덴티티 안에 ‘Square Lab’이라는 문자는 명확하고 직관적일 필요가 있었습니다. 이를 위해 다양한 Typeface들을 테스트했지만 조금씩 부족한 어떤 것을 채울 수가 없어 직선과 정원으로 조형된 ‘Square Sans’를 제작했습니다. Square와 Lab 두 단어 사이에 볼륨을 다르게 구성해, 로고 형태에 조형미를 높였습니다.
 &lt;img src=&quot;/images/post/square-lab-branding/post7_typeface.png&quot; alt=&quot;post7_typeface.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;3-color&quot;&gt;3. Color&lt;/h3&gt;
@@ -70,9 +209,9 @@
 &lt;p&gt;스퀘어랩의 철학적 의미와 브랜드 컬러가 담긴 BI는 이렇게 탄생했습니다. BI를 통해 만들어진 Shape, Typeface, Color들이 단순히 BI를 위한 것이 아니라 스퀘어랩 브랜드 경험을 유기적으로 확장하는 메타포로 굿즈와 이미지들에 활용하고 있습니다. 여러 가지로 확장한 케이스들을 다음 포스팅에서 공유하도록 하겠습니다.
 &lt;img src=&quot;/images/post/square-lab-branding/post9_goods.png&quot; alt=&quot;post9_goods.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;브랜딩 과정을 마치고 정식적으로 다양한 상황과 형태로 활용되는 것을 보고 나니 제법 스퀘어랩이라는 브랜드가 그 안에 있는 우리들과 닮아가고 있다 생각이 드네요. 스퀘어랩에 브랜딩 과정은 이걸로 마치는 게 아니라 지금도 우리가 만들어가는 과정 같습니다. 새롭거나 재미있게 만들어질 스퀘어랩을 계속 기대해주시면 좋겠습니다. 감사합니다.&lt;/p&gt;
+&lt;p&gt;브랜딩 과정을 마치고 정식적으로 다양한 상황과 형태로 활용되는 것을 보고 나니 제법 스퀘어랩이라는 브랜드가 그 안에 있는 우리들과 닮아가고 있다 생각이 드네요. 스퀘어랩에 브랜딩 과정은 이걸로 마치는 게 아니라 지금도 우리가 만들어가는 과정 같습니다. 새롭거나 재미있게 만들어질 스퀘어랩을 계속 기대해주세요.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 03 Mar 2020 00:00:00 +0900</pubDate>
+        <pubDate>Mon, 02 Mar 2020 00:00:00 +0900</pubDate>
         <link>/blog/square-lab-branding/</link>
         <guid isPermaLink="true">/blog/square-lab-branding/</guid>
         
@@ -108,14 +247,14 @@
 
 &lt;p&gt;크고 무거웠던 원본 이미지에서 400x258 사이즈에 용량은 25KB로 줄어든 이미지를 확인할 수 있습니다. URL에서 어떤 부분이 달라졌는지 눈치 채셨나요? &lt;code class=&quot;highlighter-rouge&quot;&gt;sofa_cat.jpg&lt;/code&gt; 앞에 &lt;code class=&quot;highlighter-rouge&quot;&gt;width=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;w_400&lt;/code&gt; 파라미터를 붙여 원본을 기준으로 비율에 맞게 가로 400px로 줄어든 이미지를 얻을 수 있습니다. CSS로 원본 이미지를 줄여서 표시한게 아니라 jpg 파일 자체의 사이즈와 용량이 줄어들었다는 점이 중요합니다.&lt;/p&gt;
 
-&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400,h_400/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400,h_400/sofa_cat.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;물론 세로 사이즈도 원하는 대로 지정할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;height=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;h_400&lt;/code&gt; 파라미터를 추가하면 위와 같이 이미지가 표시됩니다. 비율에 맞지 않는 사이즈를 입력했기 떄문에 이미지가 강제로 늘어나 고양이가 좀 놀란 것 같네요.&lt;/p&gt;
+&lt;p&gt;물론 세로 사이즈도 원하는 대로 지정할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;height=400&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;h_400&lt;/code&gt; 파라미터를 추가하면 위와 같이 이미지가 표시됩니다. 비율에 맞지 않는 사이즈를 입력했기 떄문에 이미지가 강제로 줄어들어 고양이가 좀 놀란 것 같네요.&lt;/p&gt;
 
 &lt;h3 id=&quot;이미지-크롭핑&quot;&gt;이미지 크롭핑&lt;/h3&gt;
 &lt;p&gt;원본 비율과 다른 사이즈가 필요할 때는 이미지가 왜곡되어 보이지 않도록 이미지를 크롭해야 합니다. Cloudinary에서는 리사이징과 마찬가지로 URL 파라미터를 통해 쉽게 이미지를 크롭할 수 있습니다.
@@ -126,7 +265,7 @@
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;crop to fill&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;c_fill&lt;/code&gt;이 추가되었습니다. 이제 이미지 왜곡없이 400x400으로 이미지를 표시할 수 있게 되었습니다.&lt;/p&gt;
 
-&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400,ar_1:1,c_fill/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -136,17 +275,15 @@
 &lt;p&gt;세로 길이를 지정하는 대신 비율을 직접 입력할 수도 있습니다. 1:1 비율로 표시하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;h_400&lt;/code&gt; 대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;aspect ratio=1:1&lt;/code&gt;을 의미하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;ar_1:1&lt;/code&gt;을 사용해 볼까요? &lt;code class=&quot;highlighter-rouge&quot;&gt;h_400&lt;/code&gt;를 추가했을 때와 동일한 결과를 확인할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;16:9&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;4:3&lt;/code&gt;등 원하는 비율대로 표시할 수 있지요.&lt;/p&gt;
 
 &lt;h3 id=&quot;오브젝트-중심의-이미지-크롭핑&quot;&gt;오브젝트 중심의 이미지 크롭핑&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.
+&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.&lt;/p&gt;
-
 &lt;p&gt;이번에 추가된 파라미터는 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;auto&lt;/code&gt;로 적용하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt;입니다. 직역하자면 &lt;code class=&quot;highlighter-rouge&quot;&gt;중력 자동 적용&lt;/code&gt; 정도로 해석할 수 있는데요. Cloudinary에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt; 파라미터로 이미지에 포함된 얼굴이나 사물을 자동으로 인식해 오브젝트를 안정적으로 표시할 수 있는 기능을 제공하고 있습니다. 다양한 오브젝트가 포함된 이미지가 아니라면 인식률도 높아서 사용하는데 무리가 없습니다.&lt;/p&gt;
 
-&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -154,8 +291,6 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;한쪽으로 긴 사이즈의 이미지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;grtavity&lt;/code&gt; 성능을 확인해 볼까요? 위 이미지 처럼 &lt;code class=&quot;highlighter-rouge&quot;&gt;g_auto&lt;/code&gt; 파라미터가 없으면 이미지의 가운데를 기준으로 크롭핑되어 고양이의 얼굴이 이미지 밖으로 벗어나고 맙니다.&lt;/p&gt;
-
-&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto/sofa_cat.jpg&quot; alt=&quot;sofa_cat.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -181,7 +316,7 @@
 
 &lt;p&gt;그럼에도 불구하고 더 나은 퀄리티를 원한다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;q_auto&lt;/code&gt;에 &lt;code class=&quot;highlighter-rouge&quot;&gt;best&lt;/code&gt; 옵션을 추가해 가장 좋은 퀄리티로 최적화할 수 있습니다. 용량은 10KB로 늘어났지만 조금 더 나아진 퀄리티를 확인할 수 있습니다.&lt;/p&gt;
 
-&lt;div class=&quot;spacing-40&quot;&gt;&lt;/div&gt;
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;맺음말&quot;&gt;맺음말&lt;/h3&gt;
 &lt;p&gt;지금까지 예제와 함께 Cloudinary를 활용한 이미지 컨텐츠 관리에 대해 살펴보았습니다.&lt;/p&gt;
@@ -207,7 +342,7 @@
 
 &lt;h2 id=&quot;serverless-framework-소개&quot;&gt;Serverless framework 소개&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/post/serverless-framework.jpg&quot; alt=&quot;serverless-framework.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/developing-internal-service-with-serverless-aws/serverless-framework.jpg&quot; alt=&quot;serverless-framework.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;AWS Lambda + AWS API Gateway를 이용하여 직접 서버 인스턴스를 띄우지 않고서도 서버 기능을 할 수 있다는 사실은 많이 알려져 있습니다. 하지만 막상 이걸 직접 설정 해보려고 하면 해야할 일이 산더미 같습니다. 실제 코드를 작성해서 Lambda에 업로드해야하고, Lambda를 누가 실행 할 수 있는지 적당한 권한을 설정해줘야 하며, API Gateway와 Lambda를 연결해줘야하고, 사용자 지정 도메인도 연결해줘야하며, CloudWatch 로그 설정도 … (중략). 슬슬 오히려 EC2 인스턴스를 그냥 띄워서 하던대로 하는게 낫지 않을까 생각이 들기 시작하네요.&lt;/p&gt;
 

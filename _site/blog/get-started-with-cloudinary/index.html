@@ -13,7 +13,7 @@
   <meta property="og:description" content="새로운 서비스를 만들때 이미지 컨텐츠를 관리하는 것은 디자이너에게 매우 중요한 문제입니다. 디자인이 아무리 잘되어 있어도 컨텐츠가 적절한 퀄리티로 노출되지 않으면 디자인의 품질이 떨어져 보이고...">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://squarelab.co/blog/get-started-with-cloudinary/">
-  <meta property="og:image" content="https://squarelab.co/images/post/sofa_cat.jpg">
+  <meta property="og:image" content="https://squarelab.co/images/post//images/post/get-started-with-cloudinary/cover.jpg">
 
   <title>Square Lab 기술 블로그</title>
 
@@ -42,9 +42,10 @@
     </div>
 </header>
   <div class="blog-container">
-    <div class="blog-top" style="background-image:url(/images/post/sofa_cat.jpg); background-size: cover;" >
+    <div class="blog-top" style="background-image:url(/images/post/get-started-with-cloudinary/cover.jpg); background-size: cover;" >
         <div class="overlay">
             <div class="title-container">
+                <span class="category">Design</span>
                 <h1 class="ctitle-top">Cloudinary를 활용한 이미지 컨텐츠 관리</h1>
                 <div class="author">
                     <img class="img-author-2" src="/images/post/jamie.jpg">
@@ -80,14 +81,14 @@
 
 <p>크고 무거웠던 원본 이미지에서 400x258 사이즈에 용량은 25KB로 줄어든 이미지를 확인할 수 있습니다. URL에서 어떤 부분이 달라졌는지 눈치 채셨나요? <code class="highlighter-rouge">sofa_cat.jpg</code> 앞에 <code class="highlighter-rouge">width=400</code>을 의미하는 <code class="highlighter-rouge">w_400</code> 파라미터를 붙여 원본을 기준으로 비율에 맞게 가로 400px로 줄어든 이미지를 얻을 수 있습니다. CSS로 원본 이미지를 줄여서 표시한게 아니라 jpg 파일 자체의 사이즈와 용량이 줄어들었다는 점이 중요합니다.</p>
 
-<div class="spacing-40"></div>
+<hr />
 
 <p><img src="https://res.cloudinary.com/demo/image/upload/w_400,h_400/sofa_cat.jpg" alt="sofa_cat.jpg" /></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://res.cloudinary.com/demo/image/upload/w_400,h_400/sofa_cat.jpg
 </code></pre></div></div>
 
-<p>물론 세로 사이즈도 원하는 대로 지정할 수 있습니다. <code class="highlighter-rouge">height=400</code>을 의미하는 <code class="highlighter-rouge">h_400</code> 파라미터를 추가하면 위와 같이 이미지가 표시됩니다. 비율에 맞지 않는 사이즈를 입력했기 떄문에 이미지가 강제로 늘어나 고양이가 좀 놀란 것 같네요.</p>
+<p>물론 세로 사이즈도 원하는 대로 지정할 수 있습니다. <code class="highlighter-rouge">height=400</code>을 의미하는 <code class="highlighter-rouge">h_400</code> 파라미터를 추가하면 위와 같이 이미지가 표시됩니다. 비율에 맞지 않는 사이즈를 입력했기 떄문에 이미지가 강제로 줄어들어 고양이가 좀 놀란 것 같네요.</p>
 
 <h3 id="이미지-크롭핑">이미지 크롭핑</h3>
 <p>원본 비율과 다른 사이즈가 필요할 때는 이미지가 왜곡되어 보이지 않도록 이미지를 크롭해야 합니다. Cloudinary에서는 리사이징과 마찬가지로 URL 파라미터를 통해 쉽게 이미지를 크롭할 수 있습니다.
@@ -98,7 +99,7 @@
 
 <p><code class="highlighter-rouge">crop to fill</code>을 의미하는 <code class="highlighter-rouge">c_fill</code>이 추가되었습니다. 이제 이미지 왜곡없이 400x400으로 이미지를 표시할 수 있게 되었습니다.</p>
 
-<div class="spacing-40"></div>
+<hr />
 
 <p><img src="https://res.cloudinary.com/demo/image/upload/w_400,ar_1:1,c_fill/sofa_cat.jpg" alt="sofa_cat.jpg" /></p>
 
@@ -108,17 +109,15 @@
 <p>세로 길이를 지정하는 대신 비율을 직접 입력할 수도 있습니다. 1:1 비율로 표시하기 위해 <code class="highlighter-rouge">h_400</code> 대신 <code class="highlighter-rouge">aspect ratio=1:1</code>을 의미하는 <code class="highlighter-rouge">ar_1:1</code>을 사용해 볼까요? <code class="highlighter-rouge">h_400</code>를 추가했을 때와 동일한 결과를 확인할 수 있습니다. <code class="highlighter-rouge">16:9</code>, <code class="highlighter-rouge">4:3</code>등 원하는 비율대로 표시할 수 있지요.</p>
 
 <h3 id="오브젝트-중심의-이미지-크롭핑">오브젝트 중심의 이미지 크롭핑</h3>
-
-<p><img src="https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg" alt="sofa_cat.jpg" /></p>
+<p>하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.
+<img src="https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg" alt="sofa_cat.jpg" /></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg
 </code></pre></div></div>
 
-<p>하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.</p>
-
 <p>이번에 추가된 파라미터는 <code class="highlighter-rouge">grtavity</code>를 <code class="highlighter-rouge">auto</code>로 적용하는 <code class="highlighter-rouge">g_auto</code>입니다. 직역하자면 <code class="highlighter-rouge">중력 자동 적용</code> 정도로 해석할 수 있는데요. Cloudinary에서는 <code class="highlighter-rouge">grtavity</code> 파라미터로 이미지에 포함된 얼굴이나 사물을 자동으로 인식해 오브젝트를 안정적으로 표시할 수 있는 기능을 제공하고 있습니다. 다양한 오브젝트가 포함된 이미지가 아니라면 인식률도 높아서 사용하는데 무리가 없습니다.</p>
 
-<div class="spacing-40"></div>
+<hr />
 
 <p><img src="https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill/sofa_cat.jpg" alt="sofa_cat.jpg" /></p>
 
@@ -126,8 +125,6 @@
 </code></pre></div></div>
 
 <p>한쪽으로 긴 사이즈의 이미지로 <code class="highlighter-rouge">grtavity</code> 성능을 확인해 볼까요? 위 이미지 처럼 <code class="highlighter-rouge">g_auto</code> 파라미터가 없으면 이미지의 가운데를 기준으로 크롭핑되어 고양이의 얼굴이 이미지 밖으로 벗어나고 맙니다.</p>
-
-<div class="spacing-40"></div>
 
 <p><img src="https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto/sofa_cat.jpg" alt="sofa_cat.jpg" /></p>
 
@@ -153,7 +150,7 @@
 
 <p>그럼에도 불구하고 더 나은 퀄리티를 원한다면 <code class="highlighter-rouge">q_auto</code>에 <code class="highlighter-rouge">best</code> 옵션을 추가해 가장 좋은 퀄리티로 최적화할 수 있습니다. 용량은 10KB로 늘어났지만 조금 더 나아진 퀄리티를 확인할 수 있습니다.</p>
 
-<div class="spacing-40"></div>
+<hr />
 
 <h3 id="맺음말">맺음말</h3>
 <p>지금까지 예제와 함께 Cloudinary를 활용한 이미지 컨텐츠 관리에 대해 살펴보았습니다.</p>
@@ -177,7 +174,7 @@
        
         <p>
             <a href="/blog/#Engineering"> Engineering</a>
-         <span class="badge badge-theme pull-right">1</span>
+         <span class="badge badge-theme pull-right">2</span>
         </p>
     
         <p>
@@ -203,7 +200,7 @@
                 
                 <p>
                     <a href="/category/#Engineering"> Engineering</a>
-                  <span class="badge badge-theme pull-right">1</span>
+                  <span class="badge badge-theme pull-right">2</span>
                 </p>
                 
                 

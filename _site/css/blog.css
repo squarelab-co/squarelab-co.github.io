@@ -75,6 +75,11 @@ p a {
     color: #642AB2;
 }
 
+hr {
+    border-top: 1px dashed rgba(0,0,0,.12);
+    margin: 32px 0;
+}
+
 pre {
     background: #F5F5F5;
     border: 1px solid rgba(0, 0, 0, .08);
@@ -223,7 +228,7 @@ i {
     display: flex;
     flex-direction: column;
     align-content: center;
-    top: 50%;
+    top: 42%;
     margin: 0 auto;
     color: #ffffff !important;
 }
@@ -336,11 +341,11 @@ i {
 
 .category {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .ctitle {
-    margin-top: 4px;
+    margin-top: 2px;
     font-size: 24px;
     line-height: 32px;
     margin-block-end: 8px;

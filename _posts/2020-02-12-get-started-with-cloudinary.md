@@ -5,10 +5,9 @@ date: 2020-02-12
 author: 추호연
 categories: 
 - Design
-og-img: sofa_cat.jpg
-img: sofa_cat.jpg
+og-img: /images/post/get-started-with-cloudinary/cover.jpg
+img: /images/post/get-started-with-cloudinary/cover.jpg
 img-author: jamie.jpg
-color: "#8748F8"
 ---
 새로운 서비스를 만들때 이미지 컨텐츠를 관리하는 것은 디자이너에게 매우 중요한 문제입니다. 디자인이 아무리 잘되어 있어도 컨텐츠가 적절한 퀄리티로 노출되지 않으면 디자인의 품질이 떨어져 보이고 사용자에게 신뢰감을 주기 어렵기 때문입니다.
 
@@ -33,13 +32,13 @@ Cloudinary에서는 URL 파라미터를 통해 쉽게 이미지를 리사이징 
     
 크고 무거웠던 원본 이미지에서 400x258 사이즈에 용량은 25KB로 줄어든 이미지를 확인할 수 있습니다. URL에서 어떤 부분이 달라졌는지 눈치 채셨나요? `sofa_cat.jpg` 앞에 `width=400`을 의미하는 `w_400` 파라미터를 붙여 원본을 기준으로 비율에 맞게 가로 400px로 줄어든 이미지를 얻을 수 있습니다. CSS로 원본 이미지를 줄여서 표시한게 아니라 jpg 파일 자체의 사이즈와 용량이 줄어들었다는 점이 중요합니다. 
 
-<div class="spacing-40"></div>
+---
 
 ![sofa_cat.jpg](https://res.cloudinary.com/demo/image/upload/w_400,h_400/sofa_cat.jpg) 
 
     https://res.cloudinary.com/demo/image/upload/w_400,h_400/sofa_cat.jpg
     
-물론 세로 사이즈도 원하는 대로 지정할 수 있습니다. `height=400`을 의미하는 `h_400` 파라미터를 추가하면 위와 같이 이미지가 표시됩니다. 비율에 맞지 않는 사이즈를 입력했기 떄문에 이미지가 강제로 늘어나 고양이가 좀 놀란 것 같네요.
+물론 세로 사이즈도 원하는 대로 지정할 수 있습니다. `height=400`을 의미하는 `h_400` 파라미터를 추가하면 위와 같이 이미지가 표시됩니다. 비율에 맞지 않는 사이즈를 입력했기 떄문에 이미지가 강제로 줄어들어 고양이가 좀 놀란 것 같네요.
 
 ### 이미지 크롭핑
 원본 비율과 다른 사이즈가 필요할 때는 이미지가 왜곡되어 보이지 않도록 이미지를 크롭해야 합니다. Cloudinary에서는 리사이징과 마찬가지로 URL 파라미터를 통해 쉽게 이미지를 크롭할 수 있습니다.
@@ -49,7 +48,7 @@ Cloudinary에서는 URL 파라미터를 통해 쉽게 이미지를 리사이징 
 
 `crop to fill`을 의미하는 `c_fill`이 추가되었습니다. 이제 이미지 왜곡없이 400x400으로 이미지를 표시할 수 있게 되었습니다.
 
-<div class="spacing-40"></div>
+---
 
 ![sofa_cat.jpg](https://res.cloudinary.com/demo/image/upload/w_400,ar_1:1,c_fill/sofa_cat.jpg) 
 
@@ -59,24 +58,20 @@ Cloudinary에서는 URL 파라미터를 통해 쉽게 이미지를 리사이징 
 
 
 ### 오브젝트 중심의 이미지 크롭핑
-
+하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.
 ![sofa_cat.jpg](https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg) 
 
     https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_auto/sofa_cat.jpg
 
-하지만 계속 왼쪽으로 쏠려있는 고양이가 마음 쓰이셨죠? 파라미터를 하나 더 추가해서 이 문제를 해결할 수 있습니다.
-
 이번에 추가된 파라미터는 `grtavity`를 `auto`로 적용하는 `g_auto`입니다. 직역하자면 `중력 자동 적용` 정도로 해석할 수 있는데요. Cloudinary에서는 `grtavity` 파라미터로 이미지에 포함된 얼굴이나 사물을 자동으로 인식해 오브젝트를 안정적으로 표시할 수 있는 기능을 제공하고 있습니다. 다양한 오브젝트가 포함된 이미지가 아니라면 인식률도 높아서 사용하는데 무리가 없습니다.
 
-<div class="spacing-40"></div>
+---
 
 ![sofa_cat.jpg](https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill/sofa_cat.jpg) 
 
     https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill/sofa_cat.jpg
     
 한쪽으로 긴 사이즈의 이미지로 `grtavity` 성능을 확인해 볼까요? 위 이미지 처럼 `g_auto` 파라미터가 없으면 이미지의 가운데를 기준으로 크롭핑되어 고양이의 얼굴이 이미지 밖으로 벗어나고 맙니다.   
-
-<div class="spacing-40"></div>
 
 ![sofa_cat.jpg](https://res.cloudinary.com/demo/image/upload/w_640,h_144,c_fill,g_auto/sofa_cat.jpg) 
 
@@ -99,7 +94,7 @@ Cloudinary에서는 URL 파라미터를 통해 쉽게 이미지를 리사이징 
     
 그럼에도 불구하고 더 나은 퀄리티를 원한다면 `q_auto`에 `best` 옵션을 추가해 가장 좋은 퀄리티로 최적화할 수 있습니다. 용량은 10KB로 늘어났지만 조금 더 나아진 퀄리티를 확인할 수 있습니다.       
 
-<div class="spacing-40"></div>
+---
 
 ### 맺음말
 지금까지 예제와 함께 Cloudinary를 활용한 이미지 컨텐츠 관리에 대해 살펴보았습니다.

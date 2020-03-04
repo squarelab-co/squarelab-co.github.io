@@ -2,9 +2,10 @@
 layout: blog
 ---
 <div class="blog-container">
-    <div class="blog-top" style="background-image:url({{ "/images/post/" }}{{ page.img }}); background-size: cover;" >
+    <div class="blog-top" style="background-image:url({{ page.img }}); background-size: cover;" >
         <div class="overlay">
             <div class="title-container">
+                <span class="category">{{ page.categories }}</span>
                 <h1 class="ctitle-top">{{ page.title }}</h1>
                 <div class="author">
                     <img class="img-author-2" src="{{ "/images/post/" }}{{ page.img-author }}">
