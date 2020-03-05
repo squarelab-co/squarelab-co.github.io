@@ -1,4 +1,4 @@
-I"I&<p>G Suite과 Slack은 스타트업에서 필수로 사용하는 서비스라 해도 과언이 아닙니다. G Suite의 다양한 기능과 쉽게 연동이 가능한 Google Apps Script로 Slack Bot을 만들면 반복작업을 자동화하고 업무효율을 높일 수 있습니다.
+I"=&<p>G Suite과 Slack은 스타트업에서 필수로 사용하는 서비스라 해도 과언이 아닙니다. G Suite의 다양한 기능과 쉽게 연동이 가능한 Google Apps Script로 Slack Bot을 만들면 반복작업을 자동화하고 업무효율을 높일 수 있습니다.
 오늘은 Apps Script를 활용해 Slack Bot을 만드는 기본적인 내용을 공유하고자 합니다.</p>
 
 <h3 id="google-apps-script">Google Apps Script</h3>
@@ -61,7 +61,7 @@ App에게 적당한 이름을 지어주고 연결할 Workspace를 선택하세�
 <img src="/images/post/how-to-make-a-slack-bot/slack-api-install-app.png" alt="slack-api-install-app.png" /></p>
 
 <h3 id="apps-script-업데이트-하기">Apps Script 업데이트 하기</h3>
-<p>이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 아직 포기하지 마세요. 거의 다 끝났답니다. 다시 Apps Script로 돌아가 코드를 수정할게요. <code class="highlighter-rouge">challenge</code> parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.</p>
+<p>이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 거의 다 끝났으니 포기하지 마세요. 다시 Apps Script로 돌아가 코드를 수정할게요. <code class="highlighter-rouge">challenge</code> parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function doPost(e) {
   var token = "xxxx-xxxxxxxxx-xxxx";
@@ -121,7 +121,7 @@ Slack으로부터 받은 데이터에서 <code class="highlighter-rouge">channel
 }
 </code></pre></div></div>
 
-<p>스퀘어랩에서도 여러 Slack Bot을 만들어 활용하고 있는데요. 휴가와 리모트 근무를 알리는 leave 채널에서는 Calendar Bot이 메시지를 파싱해 캘린더에 자동으로 일정을 추가해주고, jukebox 채널의 Music Bot은 사무실의 DJ로 활약하고 있습니다.</p>
+<p>스퀘어랩에서도 여러 Slack Bot을 만들어 활용하고 있는데요. 휴가와 리모트 근무를 알리는 leave 채널에서는 Calendar Bot이 메시지를 파싱해 캘린더에 자동으로 일정을 추가해주고 jukebox 채널의 Music Bot은 사무실의 DJ로 활약하고 있습니다.</p>
 
 <p>Slack Bot을 직접 만들지 않더라도 <a href="https://ifttt.com/">IFTTT</a>나 <a href="https://zapier.com/home">Zapier</a>을 사용하는 방법도 있는데요. 이런 서비스들을 쓰는 것 보다 직접 만들었을 때의 장점은 자유도가 높고 고도화가 가능하다는 점입니다.
 <a href="https://developers.google.com/apps-script/api">Apps Script API</a>와 <a href="https://api.slack.com/">Slack API</a>에서 어떤 것들이 가능한지 살펴보세요.</p>

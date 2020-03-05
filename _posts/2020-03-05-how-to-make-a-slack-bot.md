@@ -44,7 +44,7 @@ App에게 적당한 이름을 지어주고 연결할 Workspace를 선택하세�
 
 ---
 
-Slack App이 만들어지면 Basic Information 페이지로 이동됩니다. 이제 Slcak App과 Apps Script를 연결할 차례입니다. Add features and functionality 섹션의 Event Subscriptions 버튼을 클릭하세요.
+Slack App이 만들어지면 Basic Information 페이지로 이동됩니다. 이제 Slack App과 Apps Script를 연결할 차례입니다. Add features and functionality 섹션의 Event Subscriptions 버튼을 클릭하세요.
 ![slack-api-basic-information.png](/images/post/how-to-make-a-slack-bot/slack-api-basic-information.png)
 
 ---
@@ -72,7 +72,7 @@ Basic Information으로 돌아와서 이번에는 Add features and functionality
 ![slack-api-install-app.png](/images/post/how-to-make-a-slack-bot/slack-api-install-app.png)
 
 ### Apps Script 업데이트 하기
-이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 아직 포기하지 마세요. 거의 다 끝났답니다. 다시 Apps Script로 돌아가 코드를 수정할게요. `challenge` parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.
+이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 거의 다 끝났으니 포기하지 마세요. 다시 Apps Script로 돌아가 코드를 수정할게요. `challenge` parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.
 
     function doPost(e) {
       var token = "xxxx-xxxxxxxxx-xxxx";
@@ -130,7 +130,7 @@ Apps Script를 활용해 Slack Bot을 만드는 기본적인 내용은 여기까
       UrlFetchApp.fetch("https://slack.com/api/reactions.add", option);
     }
     
-스퀘어랩에서도 여러 Slack Bot을 만들어 활용하고 있는데요. 휴가와 리모트 근무를 알리는 leave 채널에서는 Calendar Bot이 메시지를 파싱해 캘린더에 자동으로 일정을 추가해주고, jukebox 채널의 Music Bot은 사무실의 DJ로 활약하고 있습니다.
+스퀘어랩에서도 여러 Slack Bot을 만들어 활용하고 있는데요. 휴가와 리모트 근무를 알리는 leave 채널에서는 Calendar Bot이 메시지를 파싱해 캘린더에 자동으로 일정을 추가해주고 jukebox 채널의 Music Bot은 사무실의 DJ로 활약하고 있습니다.
 
 Slack Bot을 직접 만들지 않더라도 [IFTTT](https://ifttt.com/)나 [Zapier](https://zapier.com/home)을 사용하는 방법도 있는데요. 이런 서비스들을 쓰는 것 보다 직접 만들었을 때의 장점은 자유도가 높고 고도화가 가능하다는 점입니다.
 [Apps Script API](https://developers.google.com/apps-script/api)와 [Slack API](https://api.slack.com/)에서 어떤 것들이 가능한지 살펴보세요.

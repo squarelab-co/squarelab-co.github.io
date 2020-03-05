@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Mar 2020 08:48:13 +0900</pubDate>
-    <lastBuildDate>Thu, 05 Mar 2020 08:48:13 +0900</lastBuildDate>
+    <pubDate>Thu, 05 Mar 2020 10:23:43 +0900</pubDate>
+    <lastBuildDate>Thu, 05 Mar 2020 10:23:43 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -74,7 +74,7 @@ App에게 적당한 이름을 지어주고 연결할 Workspace를 선택하세�
 &lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-install-app.png&quot; alt=&quot;slack-api-install-app.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;apps-script-업데이트-하기&quot;&gt;Apps Script 업데이트 하기&lt;/h3&gt;
-&lt;p&gt;이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 아직 포기하지 마세요. 거의 다 끝났답니다. 다시 Apps Script로 돌아가 코드를 수정할게요. &lt;code class=&quot;highlighter-rouge&quot;&gt;challenge&lt;/code&gt; parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.&lt;/p&gt;
+&lt;p&gt;이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 거의 다 끝났으니 포기하지 마세요. 다시 Apps Script로 돌아가 코드를 수정할게요. &lt;code class=&quot;highlighter-rouge&quot;&gt;challenge&lt;/code&gt; parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function doPost(e) {
   var token = &quot;xxxx-xxxxxxxxx-xxxx&quot;;
@@ -134,7 +134,7 @@ Slack으로부터 받은 데이터에서 &lt;code class=&quot;highlighter-rouge&
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;스퀘어랩에서도 여러 Slack Bot을 만들어 활용하고 있는데요. 휴가와 리모트 근무를 알리는 leave 채널에서는 Calendar Bot이 메시지를 파싱해 캘린더에 자동으로 일정을 추가해주고, jukebox 채널의 Music Bot은 사무실의 DJ로 활약하고 있습니다.&lt;/p&gt;
+&lt;p&gt;스퀘어랩에서도 여러 Slack Bot을 만들어 활용하고 있는데요. 휴가와 리모트 근무를 알리는 leave 채널에서는 Calendar Bot이 메시지를 파싱해 캘린더에 자동으로 일정을 추가해주고 jukebox 채널의 Music Bot은 사무실의 DJ로 활약하고 있습니다.&lt;/p&gt;
 
 &lt;p&gt;Slack Bot을 직접 만들지 않더라도 &lt;a href=&quot;https://ifttt.com/&quot;&gt;IFTTT&lt;/a&gt;나 &lt;a href=&quot;https://zapier.com/home&quot;&gt;Zapier&lt;/a&gt;을 사용하는 방법도 있는데요. 이런 서비스들을 쓰는 것 보다 직접 만들었을 때의 장점은 자유도가 높고 고도화가 가능하다는 점입니다.
 &lt;a href=&quot;https://developers.google.com/apps-script/api&quot;&gt;Apps Script API&lt;/a&gt;와 &lt;a href=&quot;https://api.slack.com/&quot;&gt;Slack API&lt;/a&gt;에서 어떤 것들이 가능한지 살펴보세요.&lt;/p&gt;
