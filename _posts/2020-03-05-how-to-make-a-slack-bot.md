@@ -29,7 +29,7 @@ Apps Script가 만들어지면 아래 코드를 복사해 붙여넣기 합니다
 
 ---
 
-코드를 붙여넣기 했으면 메뉴 > Publish > Deploy as web app을 선택합니다. 이때 Slack이 Apps Script에 접근할 수 있도록 팝업 하단의 `Who has access to the app`의 값을 `Anyone, even anonymous`를 선택하고 Deploy합니다.
+코드를 붙여넣기 했으면 메뉴 > Publish > Deploy as web app을 선택합니다. 이때 Slack이 Apps Script에 접근할 수 있도록 팝업 하단의 `Who has access to the app`의 값을 `Anyone, even anonymous`로 선택하고 Deploy합니다.
 ![google-apps-script-deploy.png](/images/post/how-to-make-a-slack-bot/google-apps-script-deploy.png)
 
 ---
@@ -61,18 +61,18 @@ Basic Information으로 돌아와서 이번에는 Add features and functionality
 
 ---
 
-이제 Slack App에게 적절한 권한을 주어야 할 차례입니다. OAuth & Permissions에서 스크롤을 내리면 Scopes 섹션을 찾을 수 있습니다. `channels:history`는 먼저 등록한 Event 수신을 위해 필수로 필요한 권한이라 이미 추가되어 있습니다.
+이제 Slack App에게 적절한 권한을 주어야 할 차례입니다. OAuth & Permissions에서 스크롤을 내리면 Scopes 섹션을 찾을 수 있습니다. `channels:history`는 먼저 등록한 Event 수신을 위한 필수 권한이라 이미 추가되어 있습니다.
 
 여러분이 만들 Bot 따라 다양한 권한이 필요하겠지만 일단 여기서는 제대로 동작하는지 확인할 용도로 `reactions:write`만 추가했습니다.
 ![slack-api-scopes.png](/images/post/how-to-make-a-slack-bot/slack-api-scopes.png)
 
 ---
 
-다시 스크롤을 올려 Workspace에 App을 설치해야 합니다. Install App to Workspace 버튼을 클릭하면 Workspace에 App이 설치되고 Bot User OAuth Access Token을 얻게 됩니다. 곧 필요해질테니 일단 복사해두세요.
+다시 스크롤을 올려 Workspace에 App을 설치해야 합니다. Install App to Workspace 버튼을 클릭하면 Workspace에 App이 설치되고 Bot User OAuth Access Token을 얻게 됩니다. 이것도 곧 필요해질테니 일단 복사해두세요.
 ![slack-api-install-app.png](/images/post/how-to-make-a-slack-bot/slack-api-install-app.png)
 
 ### Apps Script 업데이트 하기
-이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 거의 다 끝났으니 포기하지 마세요. 다시 Apps Script로 돌아가 코드를 수정할게요. `challenge` parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.
+이쯤되면 뭔가 귀찮아지고 손가락은 command + W에 올라가 있겠지만 거의 다 끝났으니 포기하지 마세요. 다시 Apps Script로 돌아가 코드를 수정할게요. `challenge` parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.
 
     function doPost(e) {
       var token = "xxxx-xxxxxxxxx-xxxx";
@@ -94,11 +94,11 @@ Slack으로부터 받은 데이터에서 `channel`과 `timestamp`를 사용해 �
  
 ---
     
-모두 적용했으면 다시 Deplay 해야합니다. 팝업에서 `Project version`을 `New`로 선택하고 Update 버튼을 클릭합니다. `UrlFetchApp`을 사용했기 때문에 권한을 요청하는 팝업이 열릴텐데 흔쾌히 허용해주세요.
+모두 적용했으면 다시 Deploy 해야합니다. 팝업에서 `Project version`을 `New`로 선택하고 Update 버튼을 클릭합니다. `UrlFetchApp`을 사용했기 때문에 권한을 요청하는 팝업이 열릴텐데 흔쾌히 허용해주세요.
 ![google-apps-script-update.png](/images/post/how-to-make-a-slack-bot/google-apps-script-update.png)
 
 ### 채널에 Slack App 추가하기
-드디어 Slack Bot이 잘 동작하는지 확인할 차례입니다. 슬랙으로 넘어와 방금 만든 App을 채널에 추가해 보겠습니다. 테스트 채널을 하나 만들고 우측의 Add App 버튼으로 방금 만든 App을 검색해 추가합니다.
+드디어 Slack Bot이 잘 동작하는지 확인할 차례입니다. Slack으로 넘어와 방금 만든 App을 채널에 추가해 보겠습니다. 테스트 채널을 하나 만들고 우측의 Add App 버튼으로 방금 만든 App을 검색해 추가합니다.
 ![slack-add-app.png](/images/post/how-to-make-a-slack-bot/slack-add-app.png)
 
 ---

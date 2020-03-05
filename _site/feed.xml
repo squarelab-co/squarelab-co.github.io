@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Mar 2020 10:41:52 +0900</pubDate>
-    <lastBuildDate>Thu, 05 Mar 2020 10:41:52 +0900</lastBuildDate>
+    <pubDate>Thu, 05 Mar 2020 10:51:41 +0900</pubDate>
+    <lastBuildDate>Thu, 05 Mar 2020 10:51:41 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -31,7 +31,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;코드를 붙여넣기 했으면 메뉴 &amp;gt; Publish &amp;gt; Deploy as web app을 선택합니다. 이때 Slack이 Apps Script에 접근할 수 있도록 팝업 하단의 &lt;code class=&quot;highlighter-rouge&quot;&gt;Who has access to the app&lt;/code&gt;의 값을 &lt;code class=&quot;highlighter-rouge&quot;&gt;Anyone, even anonymous&lt;/code&gt;를 선택하고 Deploy합니다.
+&lt;p&gt;코드를 붙여넣기 했으면 메뉴 &amp;gt; Publish &amp;gt; Deploy as web app을 선택합니다. 이때 Slack이 Apps Script에 접근할 수 있도록 팝업 하단의 &lt;code class=&quot;highlighter-rouge&quot;&gt;Who has access to the app&lt;/code&gt;의 값을 &lt;code class=&quot;highlighter-rouge&quot;&gt;Anyone, even anonymous&lt;/code&gt;로 선택하고 Deploy합니다.
 &lt;img src=&quot;/images/post/how-to-make-a-slack-bot/google-apps-script-deploy.png&quot; alt=&quot;google-apps-script-deploy.png&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -63,18 +63,18 @@ App에게 적당한 이름을 지어주고 연결할 Workspace를 선택하세�
 
 &lt;hr /&gt;
 
-&lt;p&gt;이제 Slack App에게 적절한 권한을 주어야 할 차례입니다. OAuth &amp;amp; Permissions에서 스크롤을 내리면 Scopes 섹션을 찾을 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;channels:history&lt;/code&gt;는 먼저 등록한 Event 수신을 위해 필수로 필요한 권한이라 이미 추가되어 있습니다.&lt;/p&gt;
+&lt;p&gt;이제 Slack App에게 적절한 권한을 주어야 할 차례입니다. OAuth &amp;amp; Permissions에서 스크롤을 내리면 Scopes 섹션을 찾을 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;channels:history&lt;/code&gt;는 먼저 등록한 Event 수신을 위한 필수 권한이라 이미 추가되어 있습니다.&lt;/p&gt;
 
 &lt;p&gt;여러분이 만들 Bot 따라 다양한 권한이 필요하겠지만 일단 여기서는 제대로 동작하는지 확인할 용도로 &lt;code class=&quot;highlighter-rouge&quot;&gt;reactions:write&lt;/code&gt;만 추가했습니다.
 &lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-scopes.png&quot; alt=&quot;slack-api-scopes.png&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;다시 스크롤을 올려 Workspace에 App을 설치해야 합니다. Install App to Workspace 버튼을 클릭하면 Workspace에 App이 설치되고 Bot User OAuth Access Token을 얻게 됩니다. 곧 필요해질테니 일단 복사해두세요.
+&lt;p&gt;다시 스크롤을 올려 Workspace에 App을 설치해야 합니다. Install App to Workspace 버튼을 클릭하면 Workspace에 App이 설치되고 Bot User OAuth Access Token을 얻게 됩니다. 이것도 곧 필요해질테니 일단 복사해두세요.
 &lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-install-app.png&quot; alt=&quot;slack-api-install-app.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;apps-script-업데이트-하기&quot;&gt;Apps Script 업데이트 하기&lt;/h3&gt;
-&lt;p&gt;이쯤되면 모든게 귀찮아지고 손가락은 command + W에 올라가 있겠지만 거의 다 끝났으니 포기하지 마세요. 다시 Apps Script로 돌아가 코드를 수정할게요. &lt;code class=&quot;highlighter-rouge&quot;&gt;challenge&lt;/code&gt; parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.&lt;/p&gt;
+&lt;p&gt;이쯤되면 뭔가 귀찮아지고 손가락은 command + W에 올라가 있겠지만 거의 다 끝났으니 포기하지 마세요. 다시 Apps Script로 돌아가 코드를 수정할게요. &lt;code class=&quot;highlighter-rouge&quot;&gt;challenge&lt;/code&gt; parameter를 return하던 코드는 더이상 필요하지 않으니 삭제하고 아래 내용으로 바꿔줍니다.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function doPost(e) {
   var token = &quot;xxxx-xxxxxxxxx-xxxx&quot;;
@@ -97,11 +97,11 @@ Slack으로부터 받은 데이터에서 &lt;code class=&quot;highlighter-rouge&
 
 &lt;hr /&gt;
 
-&lt;p&gt;모두 적용했으면 다시 Deplay 해야합니다. 팝업에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Project version&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;New&lt;/code&gt;로 선택하고 Update 버튼을 클릭합니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;UrlFetchApp&lt;/code&gt;을 사용했기 때문에 권한을 요청하는 팝업이 열릴텐데 흔쾌히 허용해주세요.
+&lt;p&gt;모두 적용했으면 다시 Deploy 해야합니다. 팝업에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Project version&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;New&lt;/code&gt;로 선택하고 Update 버튼을 클릭합니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;UrlFetchApp&lt;/code&gt;을 사용했기 때문에 권한을 요청하는 팝업이 열릴텐데 흔쾌히 허용해주세요.
 &lt;img src=&quot;/images/post/how-to-make-a-slack-bot/google-apps-script-update.png&quot; alt=&quot;google-apps-script-update.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;채널에-slack-app-추가하기&quot;&gt;채널에 Slack App 추가하기&lt;/h3&gt;
-&lt;p&gt;드디어 Slack Bot이 잘 동작하는지 확인할 차례입니다. 슬랙으로 넘어와 방금 만든 App을 채널에 추가해 보겠습니다. 테스트 채널을 하나 만들고 우측의 Add App 버튼으로 방금 만든 App을 검색해 추가합니다.
+&lt;p&gt;드디어 Slack Bot이 잘 동작하는지 확인할 차례입니다. Slack으로 넘어와 방금 만든 App을 채널에 추가해 보겠습니다. 테스트 채널을 하나 만들고 우측의 Add App 버튼으로 방금 만든 App을 검색해 추가합니다.
 &lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-add-app.png&quot; alt=&quot;slack-add-app.png&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
