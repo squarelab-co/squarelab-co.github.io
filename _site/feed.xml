@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Mar 2020 10:23:43 +0900</pubDate>
-    <lastBuildDate>Thu, 05 Mar 2020 10:23:43 +0900</lastBuildDate>
+    <pubDate>Thu, 05 Mar 2020 10:41:52 +0900</pubDate>
+    <lastBuildDate>Thu, 05 Mar 2020 10:41:52 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -46,7 +46,7 @@ App에게 적당한 이름을 지어주고 연결할 Workspace를 선택하세�
 
 &lt;hr /&gt;
 
-&lt;p&gt;Slack App이 만들어지면 Basic Information 페이지로 이동됩니다. 이제 Slcak App과 Apps Script를 연결할 차례입니다. Add features and functionality 섹션의 Event Subscriptions 버튼을 클릭하세요.
+&lt;p&gt;Slack App이 만들어지면 Basic Information 페이지로 이동됩니다. 이제 Slack App과 Apps Script를 연결할 차례입니다. Add features and functionality 섹션의 Event Subscriptions 버튼을 클릭하세요.
 &lt;img src=&quot;/images/post/how-to-make-a-slack-bot/slack-api-basic-information.png&quot; alt=&quot;slack-api-basic-information.png&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
