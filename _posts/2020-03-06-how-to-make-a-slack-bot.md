@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Google Apps Script를 활용한 Slack Bot 만들기
-date: 2020-03-05
+date: 2020-03-06
 author: 추호연
 categories: 
 - Engineering
