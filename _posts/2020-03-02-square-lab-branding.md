@@ -9,6 +9,7 @@ og-img: /images/post/square-lab-branding/og_cover.jpg
 img: /images/post/square-lab-branding/cover.jpg
 img-author: taesik.jpg
 ---
+
 트렌디한 여행 서비스 [플레이윙즈](https://www.playwings.co.kr/about)와 [카이트](https://kyte.travel/)를 만드는 ‘스퀘어랩’. 우리만의 브랜드 아이덴티티가 필요했습니다. 단순한 로고 제작이 아닌 회사의 컬러를 만들어 갔던 스퀘어랩의 브랜딩 경험을 공유합니다.
 
 ## 스퀘어랩 정의하기
