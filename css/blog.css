@@ -62,6 +62,10 @@ p {
     color: rgba(0, 0, 0,.6);
 }
 
+strong{
+    color: rgba(0, 0, 0,.87);
+}
+
 li {
     color: rgba(0, 0, 0,.6);
 }
@@ -103,6 +107,7 @@ code {
     padding: 4px;
 }
 
+/*
 blockquote {
     background: #F5F5F5;
     border: 1px solid rgba(0, 0, 0, .08);
@@ -110,6 +115,12 @@ blockquote {
     font-style: italic;
     margin: 0;
     padding: 0 16px;
+}*/
+blockquote{
+    border-left: 3px solid rgba(0,0,0,.12);
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding: 0 0 0 16px;
 }
 
 small {
@@ -364,6 +375,20 @@ i {
     width: 960px !important;
 }
 
+.column-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.column-image{
+    width: calc( 50% - 8px );
+}
+
+.border{
+    border: rgba(0,0,0,.12) solid 1px;
+}
+
+
 @media screen and (max-width: 768px) {
     .fb-comments, .fb-comments iframe[style], .fb-comments span[style] {
         width: 100% !important;
@@ -585,5 +610,13 @@ i {
 
     .inner {
         width: 100% !important;
+    }
+
+    .column-box{
+        flex-direction: column;
+    }
+    
+    .column-image{
+        width: 100%;
     }
 }
