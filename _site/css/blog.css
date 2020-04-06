@@ -392,11 +392,12 @@ i {
     border: rgba(0,0,0,.12) solid 1px;
 }
 
-.dialog{
+.quotes{
     color: rgba(0, 0, 0, .6);
     text-align: center;
     display: flex;
     flex-direction: column;
+    font-style: italic;
 }
 
 .quote{

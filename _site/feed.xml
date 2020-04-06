@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Apr 2020 13:49:52 +0900</pubDate>
-    <lastBuildDate>Mon, 06 Apr 2020 13:49:52 +0900</lastBuildDate>
+    <pubDate>Mon, 06 Apr 2020 13:58:06 +0900</pubDate>
+    <lastBuildDate>Mon, 06 Apr 2020 13:58:06 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -65,7 +65,7 @@
 &lt;p&gt;&lt;br /&gt;
 영재님은 인터뷰 내내 조직을 유연하게 만들고 업무 효율을 높이는 &lt;strong&gt;&lt;span&gt;코드 리뷰 문화&lt;/span&gt;&lt;/strong&gt;를 강조하였습니다.&lt;/p&gt;
 
-&lt;p class=&quot;dialog&quot;&gt;
+&lt;p class=&quot;quotes&quot;&gt;
 &lt;i class=&quot;ri-double-quotes-l quote&quot;&gt;&lt;/i&gt;
 코드 리뷰는 업무에 가장 필요한 의사소통 역량을 습득하는데도 도움이 많이 됩니다. 스퀘어랩에서는 코드 리뷰 시, 지켜야 하는 가이드라인이 있는데요. 어떤 형식으로 어떻게 진행되어야 하는지부터 시작해서 어떤 어투로 진행해야 하는지에 대한 상세 부분까지 모두 정해져 있습니다. 실제 서로의 코드에 대해 리뷰할 때 상대방의 기분을 상하지 않게 하면서, 리뷰의 양도 조절하고 당사자가 이해할 수 있게 하려 노력합니다. 이런 노력은 전체적으로 불필요한 의사소통 공수를 줄이고 업무 외 복잡한 일들을 만들지 않아 더욱 건강한 조직 문화를 만드는데 도움이 되고 있습니다.
 &lt;i class=&quot;ri-double-quotes-r quote&quot;&gt;&lt;/i&gt;
@@ -109,15 +109,9 @@
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;상데이터가 실시간으로 바뀌고 워낙 수집해야 하는 정보의 양 자체가 많아 업무를 병행하며 웹사이트를 관리하기가 굉장히 힘들 것 같은데, 어떻게 시간을 할애하고 계시나요?&lt;/strong&gt;&lt;/p&gt;
+&lt;strong&gt;데이터가 실시간으로 바뀌고 워낙 수집해야 하는 정보의 양 자체가 많아 업무를 병행하며 웹사이트를 관리하기가 굉장히 힘들 것 같은데, 어떻게 시간을 할애하고 계시나요?&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;초반에 프로젝트 셋업이나 서버 구성을 제가 진행하고 아내가 프론트엔드 작업과 데이터 검증하는 업무를 진행했는데요. 철저하게 업무를 나눠 진행하다 보니 효율이 조금씩 더 오르더라고요. 그리고 참 고맙게도 매일 데이터 업데이트는 대부분 아내가 진행하고 있어서 저는 상대적으로 손쉽게 진행할 수 있었습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;데이터가 실시간으로 바뀌고 워낙 수집해야하는 정보의 양 자체가 많아 업무를 병행하며 웹사이트를 관리하기가 굉장히 힘들 것 같은데, 어떻게 시간을 할애하고 계시나요?&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;안녕하세요 권영재입니다. 안녕하세요 권영재입니다. 안녕하세요 권영재입니다. 안녕하세요 권영재입니다. 안녕하세요 권영재입니다. 안녕하세요 권영재입니다. 안녕하세요 권영재입니다. 안녕하세요 권영재입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;
@@ -148,14 +142,14 @@
 &lt;p&gt;&lt;br /&gt;
 영재님은 채용 관련한 인터뷰를 진행하며 스퀘어랩에서 함께 일하게 된다면 이런 부분은 보장한다며 역량 있는 개발자분을 모시기 위한 셀프 PR을 진행하셨습니다.&lt;/p&gt;
 
-&lt;p class=&quot;dialog&quot;&gt;
+&lt;p class=&quot;quotes&quot;&gt;
 &lt;i class=&quot;ri-double-quotes-l quote&quot;&gt;&lt;/i&gt;
 코드 리뷰는 업무에 가장 필요한 의사소통 역량을 습득하는데도 도움이 많이 됩니다. 스퀘어랩에서는 코드 리뷰 시, 지켜야 하는 가이드라인이 있는데요. 어떤 형식으로 어떻게 진행되어야 저희는 배우고자 하는 의지와 갈망이 있는 분들에게 참 좋은 개발 조직입니다. 앞서 말했듯 스퀘어랩은 코드 리뷰 문화가 정착되었는데요. 다른 분들이 지금까지 개발하면서 쌓아 놓은 지식을 누군가에게 공유한다는 게 사실 말처럼 쉬운 일은 아닙니다. 하지만 저희는 이미 기술에 대한 높은 지식과 경험을 습득하신 분들이 꼼꼼하게 챙기고 함께 문제를 해결해 나가는 방식으로 업무를 진행합니다. 다른 회사나 조직보다 개발자가 성장하는 속도가 2배는 빠르다고 확실하게 말할 수 있습니다. 시작해서 어떤 어투로 진행해야 하는지에 대한 상세 부분까지 모두 정해져 있습니다. 실제 서로의 코드에 대해 리뷰할 때 상대방의 기분을 상하지 않게 하면서, 리뷰의 양도 조절하고 당사자가 이해할 수 있게 하려 노력합니다. 이런 노력은 전체적으로 불필요한 의사소통 공수를 줄이고 업무 외 복잡한 일들을 만들지 않아 더욱 건강한 조직 문화를 만드는데 도움이 되고 있습니다. 
 &lt;i class=&quot;ri-double-quotes-r quote&quot;&gt;&lt;/i&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;이제 스퀘어랩 인터뷰 공식 질문을 드리려고 합니다. 영재님에게 &lt;code&gt;500 에러란&lt;/code&gt;?&lt;/strong&gt;&lt;/p&gt;
+&lt;strong&gt;이제 스퀘어랩 인터뷰 공식 질문을 드리려고 합니다. 영재님에게 &lt;code&gt;500 에러&lt;/code&gt;란?&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;아. 빨리 컴퓨터 앞에 앉아서 고쳐야죠. (웃음) 500 에러는 자주 나진 않는데 그래도 종종 나는 편인 것 같습니다. 500에러나 500 에러에 준하는 에러는 제가 아니더라도 누군가는 빨리 확인해서 빨리 문제를 파악해야 합니다. 저희는 서로의 업무를 명확히 파악하고 있기 때문에 누구 한 명을 담당자로 지정하지 않고 문제를 발견한 사람이 먼저 처리하려고 노력하고 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -172,7 +166,7 @@
 
 &lt;p&gt;스퀘어랩 서비스뿐만 아니라 공익을 위해서도 자신의 능력을 가감 없이 발휘하며, 뜨겁고 치열하게 몰두하는 스퀘어랩 서버 개발자 영재님을 만나보았습니다. 영재님 덕분에 앞으로 더 단단하고 알차게 변화될 스퀘어랩 서비스에 거는 기대가 점점 커지는 것 같습니다. 스퀘어랩 멤버 인터뷰는 앞으로도 계속됩니다. 그다음 주인공은 누구일지 많은 기대 부탁드리면서 다음에 더 알찬 인터뷰로 찾아오겠습니다.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 30 Mar 2020 00:00:00 +0900</pubDate>
+        <pubDate>Mon, 06 Apr 2020 00:00:00 +0900</pubDate>
         <link>/blog/interview-youngjeakwon/</link>
         <guid isPermaLink="true">/blog/interview-youngjeakwon/</guid>
         
