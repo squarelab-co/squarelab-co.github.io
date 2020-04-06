@@ -79,6 +79,10 @@ p a {
     color: #642AB2;
 }
 
+.emphasis{
+    color: #642AB2;
+}
+
 hr {
     border-top: 1px dashed rgba(0,0,0,.12);
     margin: 32px 0;
@@ -388,6 +392,18 @@ i {
     border: rgba(0,0,0,.12) solid 1px;
 }
 
+.dialog{
+    color: rgba(0, 0, 0, .6);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote{
+    font-size: 24px;
+    margin: 24px 0;
+    color: rgba(0, 0, 0,.12);
+}
 
 @media screen and (max-width: 768px) {
     .fb-comments, .fb-comments iframe[style], .fb-comments span[style] {
