@@ -2,12 +2,12 @@
 layout: post
 title: 3,446km 밖에서 개발을 하다
 date: 2020-04-06
-author: 박은지
+author: 마케팅팀
 categories: 
 - Interview
-og-img: /images/post/Interview-yongjaekwon/og_cover.jpg
-img: /images/post/Interview-yongjaekwon/cover.jpg
-img-author: kathlyn.jpg
+og-img: /images/post/interview-yongjaekwon/og_cover.jpg
+img: /images/post/interview-yongjaekwon/cover.jpg
+img-author: team_marketing.jpg
 ---
 
 스퀘어랩 사무실이 위치한 을지로와 치앙마이 간의 거리는 3,446km로 서울에서 제주도를 4번 가까이 왕복해야 비슷해질 수 있는 거리입니다. 갑작스러운 치앙마이 얘기에 뜬금없다고 생각하시는 분들이 있을 텐데요, 오늘은 이렇게 먼 치앙마이에서 스퀘어랩 플랫폼을 더욱 단단하고 풍성하게 만들기 위해 여념이 없는 개발자 한 분을 소개하고자 합니다. 스퀘어랩 서버 개발자 ‘영재’님을 만나보겠습니다.
@@ -23,7 +23,7 @@ img-author: kathlyn.jpg
 > 네, 사실 원래 다니던 회사를 그만두고 아내와 같이 여기저기 여행하면서 개인 개발을 하려던 계획이 잡힌 상태에서 스퀘어랩에 조인을 하게 되었습니다. 그래서 입사할 때 부터 장기 리모트와 관련해서 충분한 논의를 진행했고 그 결과 지금까지 장기 리모트를 진행하고 있습니다. 작년 6월부터 미국 서부, 그랜드 캐니언 - 샌프란시스코 다녀왔고 9월엔 제주도에서 3개월, 12월 말에는 치앙마이로 옮겨서 올해 2월 초까지 있었습니다. 
 
 <br>
-<img src="/images/post/Interview-yongjaekwon/interview_YJK_1.jpg" alt="인터뷰 권영재 1">
+<img src="/images/post/interview-yongjaekwon/interview_YJK_1.jpg" alt="인터뷰 권영재 1">
 
 <br>
 **흔히, 원격 근무에 대한 ‘생산성 감소'라는 우려의 목소리도 존재하는데, 직접 경험자로서 어떻게 생각하시는지 궁금합니다.**
@@ -35,8 +35,8 @@ img-author: kathlyn.jpg
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="/images/post/Interview-yongjaekwon/interview_YJK_2.jpg" alt="인터뷰 권영재 2">
-    <img class="column-image" src="/images/post/Interview-yongjaekwon/interview_YJK_3.jpg" alt="인터뷰 권영재 3">
+    <img class="column-image" src="/images/post/interview-yongjaekwon/interview_YJK_2.jpg" alt="인터뷰 권영재 2">
+    <img class="column-image" src="/images/post/interview-yongjaekwon/interview_YJK_3.jpg" alt="인터뷰 권영재 3">
 </div>
 
 <br>
@@ -68,8 +68,8 @@ img-author: kathlyn.jpg
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="/images/post/Interview-yongjaekwon/interview_YJK_4.jpg" alt="인터뷰 권영재 4">
-    <img class="column-image" src="/images/post/Interview-yongjaekwon/interview_YJK_5.jpg" alt="인터뷰 권영재 5">
+    <img class="column-image" src="/images/post/interview-yongjaekwon/interview_YJK_4.jpg" alt="인터뷰 권영재 4">
+    <img class="column-image" src="/images/post/interview-yongjaekwon/interview_YJK_5.jpg" alt="인터뷰 권영재 5">
 </div>
 
 ---
@@ -77,7 +77,7 @@ img-author: kathlyn.jpg
 <br>
 영재님은 업무 외에도 코로나19 관련 실시간 상황을 알려주는 [웹사이트(https://coronaboard.kr/)](https://coronaboard.kr/){: target="_blank"}를 개발하여 많은 이들이 코로나19 확산 상황을 신속하고 정확히 파악할 수 있게 많은 도움을 주고 있습니다.
 
-<img class="border" src="/images/post/Interview-yongjaekwon/interview_YJK_6.jpg" alt="인터뷰 권영재 6">
+<img class="border" src="/images/post/interview-yongjaekwon/interview_YJK_6.jpg" alt="인터뷰 권영재 6">
 
 <br>
 **코로나19 관련하여 직접 개발하신 상황판 웹사이트가 굉장히 화제가 되었습니다. 이 정도로 많은 분이 사용할 거라 예상하셨나요?**
@@ -114,7 +114,8 @@ img-author: kathlyn.jpg
 영재님은 채용 관련한 인터뷰를 진행하며 스퀘어랩에서 함께 일하게 된다면 이런 부분은 보장한다며 역량 있는 개발자분을 모시기 위한 셀프 PR을 진행하셨습니다. 
 
 <p class="quotes">
-<i class="ri-double-quotes-l quote"></i>앞서 말했듯 스퀘어랩은 코드 리뷰 문화가 정착되어있습니다. 다른 분들이 지금까지 개발하면서 쌓아왔던 지식을 시간을 내서 누군가에게 공유한다는 게 사실 말처럼 쉬운 일은 아닙니다. 하지만 코드 리뷰를 통해서 틈틈히 그런 지식들을 서로에게 공유 하고 논의해 볼 수 있게 됩니다. 이 과정에서 시니어 개발자는 주니어 개발자들에게 다양한 조언을 줄 수 있고, 주니어 개발자들은 그 나름대로 새로운 관점이나 방식을 제시할 수 있다보니 반대로 시니어 입장에서 새로운 것들을 깨닫게 되는 경우도 많이 있습니다. 그렇기 때문에 개발자로서의 의지와 노력만 있다면 스퀘어랩에서 다른 회사보다 2배는 더 빠르게 성장할 수 있다고 확실하게 말할 수 있습니다.<i class="ri-double-quotes-r quote"></i>
+<i class="ri-double-quotes-l quote"></i>앞서 말했듯 스퀘어랩은 코드 리뷰 문화가 정착되어있습니다. 다른 분들이 지금까지 개발하면서 쌓아왔던 지식을 시간을 내서 누군가에게 공유한다는 게 사실 말처럼 쉬운 일은 아닙니다. 하지만 코드 리뷰를 통해서 틈틈히 그런 지식들을 서로에게 공유 하고 논의해 볼 수 있게 됩니다. 이 과정에서 시니어 개발자는 주니어 개발자들에게 다양한 조언을 줄 수 있고, 주니어 개발자들은 그 나름대로 새로운 관점이나 방식을 제시할 수 있다보니 반대로 시니어 입장에서 새로운 것들을 깨닫게 되는 경우도 많이 있습니다. 그렇기 때문에 개발자로서의 의지와 노력만 있다면 스퀘어랩에서 다른 회사보다 2배는 더 빠르게 성장할 수 있다고 확실하게 말할 수 있습니다.
+<i class="ri-double-quotes-r quote"></i>
 </p>
 
 <br>
