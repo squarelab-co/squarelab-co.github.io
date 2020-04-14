@@ -83,7 +83,7 @@ img-author: jihyun.jpg
 | 🏠 에어비앤비 (워싱턴) | 168,898원 | - | - |
 | 🏨 호텔 (나이아가라) | 201,885원(취소불가) | - | - |
 | 🚂 암트랙 (뉴욕>워싱턴) | 63,158원 | - | - |
-| **Total** | **2,531,541원** | **<span class="text-red">-10,000원</span>** | **<span class="emphasis">590,800원</span>** |
+| **Total** | **2,531,541원** | **<span class="text-red">-10,000원</span>** | **<span class="emphasis">590,600원</span>** |
 
 <br>
 
@@ -155,14 +155,14 @@ img-author: jihyun.jpg
 
 | **항목** | 지출 | 취소 수수료 | 돌려받은 돈 |
 |-----|-----|-----|-----|
-| <span class="line-through">✈️ 항공권 (인천-뉴욕 / 에어차이나)</span> | <span class="line-through">600,600원</span> | <span class="line-through">-10,000원</span> | <span class="line-through">-590,600원</span> |
+| <span class="line-through">✈️ 항공권 (인천-뉴욕 / 에어차이나)</span> | <span class="line-through">600,600원</span> | -10,000원 | <span class="line-through">-590,600원</span> |
 | ✈️ 항공권 (인천-뉴욕 / 유나이티드항공) | 967,600원 | -10,000원 | 957,600원 |
 | ✈️ 항공권 (워싱턴>버팔로/아메리칸에어)+(버팔로>뉴욕/델타항공) | 285,200원(취소불가)| -285,200원 | 0원 |
 | 🏠 한인민박 (맨해튼) | 844,800원 | -84,480원 (10%) | 760,320원 |
 | 🏠 에어비앤비 (워싱턴) | 168,898원 | 0원 | 168,898원 |
 | 🏨 호텔 (나이아가라) | 201,885원(취소불가) | 0원 | 201,885원 |
 | 🚂 암트랙 (뉴욕>워싱턴) | 63,158원 | -19,958원 | 43,200원 |
-| **Total** | **2,531,541원** | **<span class="text-red">-409,638원</span>** | **<span class="emphasis">2,131,903원</span>** |
+| **Total** | **2,531,541원** | **<span class="text-red">-409,638원</span>** | **<span class="emphasis">2,121,903원</span>** |
 
 <br>
 
