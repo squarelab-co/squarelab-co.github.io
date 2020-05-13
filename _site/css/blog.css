@@ -346,7 +346,7 @@ tbody tr:nth-last-child(2){
     margin-left: 32px;
 }
 
-/*.side-bar {
+.side-bar {
     width: 18%;
     padding-left: 54px;
     font-weight: 600;
@@ -370,7 +370,7 @@ tbody tr:nth-last-child(2){
 .side-bar>h4 {
     margin-block-start: 0;
 }
-*/
+
 
 .spacing-40 {
     margin-top: 40px;
@@ -450,6 +450,25 @@ tbody tr:nth-last-child(2){
     font-size: 24px;
     margin: 24px 0;
     color: rgba(0, 0, 0,.12);
+}
+
+.pagination {
+    margin: auto;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    padding: 40px 16px;
+    color: rgba(0, 0, 0,.87);
+}
+
+.pagination span{
+    padding: 8px;
+}
+
+span.pagination-selected {
+    display: inline-block;
+    color: #642AB2;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,4 +1,15 @@
 title: Square Lab
 description: 새로운 시선으로 여행을 바라보는 사람들
 url: "https://www.squarelab.co"
-permalink: /blog/:slug/
+permalink: /blog/:slug/       
+gems: 
+  - jekyll-paginate-v2
+pagination:
+  enabled: true
+  per_page: 5
+  sort_reverse: true
+  title: ':title'
+  permalink: '/page/:num_'
+  trail: 
+    before: 1
+    after: 1

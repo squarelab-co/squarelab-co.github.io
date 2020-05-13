@@ -2,6 +2,8 @@
 layout: blog
 title: Square Lab 기술 블로그
 permalink: /blog
+pagination:
+  enabled: true
 ---
 <div class="blog-container">
     <div id="hero" class="blog-top">
@@ -14,7 +16,7 @@ permalink: /blog
         </div>
     </div>
     <div class="blog-row">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         <div class="post-wrap" id="{{ category | first }}">
             <div class="post-txt">
                 <span class="category">{{ post.categories }}</span>
@@ -34,7 +36,8 @@ permalink: /blog
         </div>
         {% endfor %}
         <div class="hline"></div>
-      <!--  {% include sidebar.html %} -->
+        <!--{% include sidebar.html %} -->
+        {% include pagination.html %}
     </div>
 </div>
 <script type="text/javascript">
