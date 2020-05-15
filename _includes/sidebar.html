@@ -1,15 +1,15 @@
 <div class="side-bar">
     <div class="spacing"></div>
     <h5 class="title-category">CATEGORIES</h5>
-        <p>
-            <a href="/blog"> ALL</a>
-            <span class="badge badge-theme pull-right">{{ paginator.total_posts }}</span>
-        </p>
-       {% for category in site.categories %}
-        <p>
-            <a href="/blog/#{{ category | first }}"> {{ category | first | capitalize }}</a>
-         <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
-        </p>
+    <p>
+        <a href="/blog"> ALL</a>
+        <span class="badge badge-theme pull-right">{{ paginator.total_posts }}</span>
+    </p>
+    {% for category in site.categories %}
+    <p>
+        <a href="/blog/#{{ category | first }}"> {{ category | first | capitalize }}</a>
+        <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
+    </p>
     {% endfor %}
 
     <div class="spacing"></div>
@@ -17,23 +17,26 @@
 
 <div class="menu-wrap">
     <input type="checkbox" class="toggler">
-    <div class="hamburger"><div></div></div>
+    <div class="hamburger">
+        <div></div>
+    </div>
     <div class="menu">
         <div>
             <div>
-                <a href="/index.html"><img src="/images/squarelab-bi-rec.png" width="32px" height="32px" class="menu-logo"></a>
+                <a href="/index.html"><img src="/images/squarelab-bi-rec.png" width="32px" height="32px"
+                                           class="menu-logo"></a>
                 <p>
                     <a href="/blog">ALL</a>
-                   <span class="badge badge-theme pull-right">{{ paginator.total_posts }}</span>
+                    <span class="badge badge-theme pull-right">{{ paginator.total_posts }}</span>
                 </p>
                 {% for category in site.categories %}
                 <p>
                     <a href="{{ '/category/#'   }}{{ category | first }}"> {{ category | first | capitalize }}</a>
-                  <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
+                    <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
                 </p>
-                
+
                 {% endfor %}
-                
+
 
             </div>
         </div>
