@@ -12,7 +12,7 @@
   <meta property="og:title" content="Square Lab 기술 블로그">
   <meta property="og:description" content="">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://squarelab.co/blog">
+  <meta property="og:url" content="https://squarelab.co/blog/">
   <meta property="og:image" content="https://squarelab.co/images/blog.jpg">
 
   <title>Square Lab 블로그</title>
@@ -239,8 +239,8 @@
     const maxPage = parseInt(numPosts / perPage) + 2;
     for (i = 1; i < maxPage; i++)
     {
-        if (i == page) pagination.innerHTML += '<span><a href="/blog?page=' + i + '" class="selected">' + i + '</a></span>';
-        else pagination.innerHTML += '<span><a href="/blog?page=' + i + '">' + i + '</a></span>';
+        if (i == page) pagination.innerHTML += '<span><a href="/blog/?page=' + i + '" class="selected">' + i + '</a></span>';
+        else pagination.innerHTML += '<span><a href="/blog/?page=' + i + '">' + i + '</a></span>';
     }
 
     function getParameters() {

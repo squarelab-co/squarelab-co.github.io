@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Square Lab 기술 블로그
-permalink: /blog
+permalink: /blog/
 ---
 <div class="blog-container">
     <div id="hero" class="blog-top">
@@ -65,8 +65,8 @@ permalink: /blog
     const maxPage = parseInt(numPosts / perPage) + 2;
     for (i = 1; i < maxPage; i++)
     {
-        if (i == page) pagination.innerHTML += '<span><a href="/blog?page=' + i + '" class="selected">' + i + '</a></span>';
-        else pagination.innerHTML += '<span><a href="/blog?page=' + i + '">' + i + '</a></span>';
+        if (i == page) pagination.innerHTML += '<span><a href="/blog/?page=' + i + '" class="selected">' + i + '</a></span>';
+        else pagination.innerHTML += '<span><a href="/blog/?page=' + i + '">' + i + '</a></span>';
     }
 
     function getParameters() {
