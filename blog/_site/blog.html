@@ -1,8 +1,3 @@
----
-layout: blog
-title: Square Lab 기술 블로그
-permalink: /blog
----
 <div class="blog-container">
     <div id="hero" class="blog-top">
         <div class="overlay">
@@ -14,24 +9,7 @@ permalink: /blog
         </div>
     </div>
     <div class="blog-row">
-        {% for post in site.posts %}
-        <div class="post-wrap" id="{{ category | first }}">
-            <div class="post-txt">
-                <span class="category">{{ post.categories }}</span>
-                <a href="{{ post.url }}"><h3 class="ctitle">{{ post.title }}</h3></a>
-                <div class="author">
-                    <img class="img-author" src="{{ "/images/post/"}}{{ post.img-author }}">
-                    <small>{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
-                </div>
-                <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }}</div>
-            </div>
-            <div>
-                <a href="{{ post.url }}">
-                    <img class="img-responsive" src="{{ post.img }}">
-                </a>
-            </div>
-        </div>
-        {% endfor %}
+        
         <div class="hline"></div>
         <div id="pagination"></div>
     </div>
@@ -55,13 +33,9 @@ permalink: /blog
 
     for (let i = minPostNum; i < numPosts; i++)
     {
-        if (i < maxPostNum)
-        {
-            posts[i].style.display = 'inline-flex';
-        }
+        if (i < maxPostNum) posts[i].style.display = 'inline-flex';
     }
 
-//
     const pagination = document.getElementById('pagination');
     const maxPage = parseInt(numPosts / perPage) + 2;
     for (i = 1; i < maxPage; i++)

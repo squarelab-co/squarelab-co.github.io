@@ -50,7 +50,7 @@ img-author: team_marketing.jpg
 
 ---
 <br>
-도연님은 인터뷰 내내 기술력에 대해 강조하였습니다.
+도연 님은 인터뷰 내내 기술력에 대해 강조하였습니다.
 
 <p class="quotes">
 <i class="ri-double-quotes-l quote"></i>
@@ -115,7 +115,7 @@ img-author: team_marketing.jpg
 
 <br>
 <img src="/images/post/interview-doyon/interview_doyon_6.jpg" alt="을지로 이남장">
-<div class="caption"><span>이남장</span> 운영 된 지 40년이 넘은 을지로 유명 설렁탕 집으로 스퀘어랩 사무실과 아주 가까이 위치해 있다. 도연 님의 최애 식당.</div>
+<div class="caption"><span>이남장</span> 운영된 지 40년이 넘은 을지로 유명 설렁탕 집으로 스퀘어랩 사무실과 아주 가까이 위치해 있다. 도연 님의 최애 식당.</div>
 
 <br>
 **도연 님에게 여행이란?**
