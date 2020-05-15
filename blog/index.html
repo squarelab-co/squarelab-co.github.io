@@ -16,28 +16,36 @@ pagination:
         </div>
     </div>
     <div class="blog-row">
-        {% for post in paginator.posts %}
-        <div class="post-wrap" id="{{ category | first }}">
-            <div class="post-txt">
-                <span class="category">{{ post.categories }}</span>
-                <a href="{{ post.url }}"><h3 class="ctitle">{{ post.title }}</h3></a>
-                <div class="author">
-                    <img class="img-author" src="{{ "/images/post/"}}{{ post.img-author }}">
-                    <small>{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
+
+        {% assign page = 1%}
+        {% for post in site.posts %}
+            {% if forloop.index} < 6  %}
+            <div class="post-wrap" id="{{ category | first }}">
+                <div class="post-txt">
+                    <span class="category">{{ post.categories }}</span>
+                    <a href="{{ post.url }}"><h3 class="ctitle">{{ post.title }}</h3></a>
+                    <div class="author">
+                        <img class="img-author" src="{{ "/images/post/"}}{{ post.img-author }}">
+                        <small>{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
+                    </div>
+                    <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }} </div>
+                    <!--<a href="{{ post.url }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
                 </div>
-                <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }} </div>
-                <!--<a href="{{ post.url }}" class="read-post"><i class="ri-arrow-right-line"></i>READ POST</a>-->
+                <div>
+                    <a href="{{ post.url }}">
+                        <img class="img-responsive" src="{{ post.img }}">
+                    </a>
+                </div>
             </div>
-            <div>
-                <a href="{{ post.url }}">
-                    <img class="img-responsive" src="{{ post.img }}">
-                </a>
-            </div>
-        </div>
+            {%endif %}
         {% endfor %}
         <div class="hline"></div>
         <!--{% include sidebar.html %} -->
-        {% include pagination.html %}
+        <span {% if paginator.page  == trail.num %} class="pagination-selected" {% endif %}>
+            <a href="{{ trail.path | prepend: site.baseurl }}" title="{{ trail.title }}">
+              {{ trail.num }}
+            </a>
+          </span>
     </div>
 </div>
 <script type="text/javascript">
