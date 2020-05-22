@@ -23,7 +23,7 @@ permalink: /blog/
                     <img class="img-author" src="{{ "/images/post/"}}{{ post.img-author }}">
                     <small>{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
                 </div>
-                <div class="excerpt"> {{ post.excerpt | truncatewords: 24, '...' }}</div>
+                <p class="excerpt"> {{ post.excerpt | strip_html | truncatewords: 24, '...' }}</p>
             </div>
             <div>
                 <a href="{{ post.url }}">

@@ -484,6 +484,66 @@ tbody tr:nth-last-child(2) {
     margin-right: 8px;
 }
 
+.photos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+}
+
+.photos p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 14px;
+}
+
+.photos hr{
+    width: 40px;
+    border-top: 1px solid rgba(0, 0, 0, .12);
+    margin-top: 18px;
+}
+
+.photos-info{
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photos-info h4{
+    font-size: 20px;
+    margin: 0 16px;
+}
+
+.photos-info h4:last-child{
+    margin: 0 0 0 16px;
+}
+
+.photos-info h4 span{
+    font-size: 14px;
+    color: rgba(0, 0, 0, .6);
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+.photos-author{
+    color: rgba(0, 0, 0, .6);
+    font-size: 14px;
+    margin-right: 24px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.photos-author span{
+    margin: 0 4px 0 8px;
+    font-weight: bold;
+}
+
+.photos-author .img-author-2{
+    margin: 0;
+}
+
+
+
 @media screen and (max-width: 768px) {
     .fb-comments, .fb-comments iframe[style], .fb-comments span[style] {
         width: 100% !important;
