@@ -515,7 +515,7 @@ tbody tr:nth-last-child(2) {
 }
 
 .photos-info h4:last-child{
-    margin: 0 0 0 16px;
+    margin: 0 0 0 1em;
 }
 
 .photos-info h4 span{
