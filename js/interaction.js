@@ -71,7 +71,7 @@ window.onload = function () { // 윈도우 로드를 기다리는 구문
             }
         });
         imgTl.fromTo(targetImg2, 0.5, {opacity: 0, y: 50}, {opacity: 1, y: 0})
-        imgTl.fromTo(targetImg1, 0.5, {opacity: 0.5, y: 50}, {opacity: 1, y: 0}, '-=0.7')
+        imgTl.fromTo(targetImg1, 0.5, {opacity: 0, y: 50}, {opacity: 1, y: 0}, '-=0.7')
     });
 
 
