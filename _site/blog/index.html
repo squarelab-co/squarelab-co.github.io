@@ -241,7 +241,7 @@
     const perPage = 5;
 
     const posts = document.getElementsByClassName('post-wrap');
-    const numPosts = posts.length;
+    const numPosts = posts.length;//10
     const minPostNum = (page - 1) * perPage;
     const maxPostNum = minPostNum + perPage;
 
@@ -254,7 +254,7 @@
     }
 
     const pagination = document.getElementById('pagination');
-    const maxPage = parseInt(numPosts / perPage) + 2;
+    const maxPage = parseInt(numPosts / perPage + .9) + 1;
     for (i = 1; i < maxPage; i++)
     {
         if (i == page) pagination.innerHTML += '<span><a href="/blog/?page=' + i + '" class="selected">' + i + '</a></span>';
