@@ -731,7 +731,6 @@ i {
 
     .info-text {
         width: 100%;
-        margin-top: 32px;
         margin-right: 0;
     }
 
@@ -766,7 +765,7 @@ i {
 
     .info-img {
         width: 100%;
-        margin-bottom: 24px;
+        padding-bottom: 40px;
         display: inline-block;
     }
 
