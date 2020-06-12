@@ -20,7 +20,7 @@ permalink: /blog/
                 <span class="category">{{ post.categories }}</span>
                 <a href="{{ post.url }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                 <div class="author">
-                    <img class="img-author" src="{{ "/images/post/"}}{{ post.img-author }}">
+                    <img class="img-author" src="{{ post.img-author }}">
                     <small>{{ post.author }}</small><small>|</small><small name="locale-date">{{ post.date | date: "%b %-d, %Y" }}</small>
                 </div>
                 <p class="excerpt"> {{ post.excerpt | strip_html | truncatewords: 24, '...' }}</p>
@@ -38,10 +38,10 @@ permalink: /blog/
 </div>
 <script type="text/javascript">
     //Random image
-    const images = ['/images/hero-0.jpg',
-        '/images/hero-1.jpg',
-        '/images/hero-2.jpg',
-        '/images/hero-3.jpg'];
+    const images = ['{{site.cloudinary}}/q_auto/v1591929418/squarelab/website/hero-0.jpg',
+        '{{site.cloudinary}}/q_auto/v1591929418/squarelab/website/hero-1.jpg',
+        '{{site.cloudinary}}/q_auto/v1591929420/squarelab/website/hero-2.jpg',
+        '{{site.cloudinary}}/q_auto/v1591929420/squarelab/website/hero-3.jpg'];
     document.getElementById('hero').style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
 
     //Pagination

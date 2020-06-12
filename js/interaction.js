@@ -21,55 +21,58 @@ $(function(){
     });
 });
 
-
-//Scroll Magic
 window.onload = function () { // 윈도우 로드를 기다리는 구문
     // Init ScrollMagic
     let controller = new ScrollMagic.Controller({
         refreshInterval: 0
     });
 
+    gsap.registerPlugin(ScrollTrigger);
+
     // Logo
-    new ScrollMagic.Scene({
-        triggerElement: '#playwings',
-        triggerHook: 0.05
-    })
-        .setTween(TweenMax.to('#header', 0.0001, {backgroundColor: '#fff'}))
-        .setClassToggle('.bi-b', 'bi-bb')
-        .addTo(controller);
+    gsap.to("#header", {
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        borderBottom: "1px solid rgba(0,0,0,.12)",
+        scrollTrigger: {
+            trigger: "#playwings",
+            start: "top +=66px",
+            end: "top +=66px",
+            scrub: true,
+            onUpdate: ({progress}) => onUpdate(progress)
+        },
+    });
+
+    function onUpdate(progress) {
+        $(".bi-w")[0].style.opacity = 1 - progress;
+        $(".bi-b")[0].style.opacity = progress;
+    }
 
     // Hiring
-    new ScrollMagic.Scene({
-        triggerElement: '#footer',
-        triggerHook: 1
-    })
-        .setTween(TweenMax.to('#hiring', 0.2, {autoAlpha:0}))
-        .addTo(controller);
+    gsap.to('#hiring', {
+        autoAlpha: 0,
+        scrollTrigger: {
+            trigger: '#footer',
+            start: 'top bottom',
+            end: 'top',
+            toggleActions: 'play reverse restart reverse'
+        }
+    });
+
 
     // Image Fade In Up
-   
-
-    $('.info-img').each(function(){
-
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            triggerHook: 0.7
-        })
-            .setClassToggle(this.children[1], 'fade-in')
-            .addTo(controller);
+    $(".info-img").each(function (i) {
+        let targetImg1 = $(this).find('.first-img');
+        let targetImg2 = $(this).find('.second-img');
+        const imgTl = gsap.timeline({
+            scrollTrigger:{
+                trigger: this,
+                start: "top 70%s",
+                toggleActions: 'play reverse restart reverse'
+            }
+        });
+        imgTl.fromTo(targetImg2, 0.5, {opacity: 0, y: 50}, {opacity: 1, y: 0})
+        imgTl.fromTo(targetImg1, 0.5, {opacity: 0.5, y: 50}, {opacity: 1, y: 0}, '-=0.7')
     });
-
-    $('.info-img').each(function(){
-
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            triggerHook: 0.5
-        })
-            .setClassToggle(this.children[0], 'fade-in-2')
-            .addTo(controller);
-    });
-
-    
 
 
     imagesLoaded(document.body, () => {

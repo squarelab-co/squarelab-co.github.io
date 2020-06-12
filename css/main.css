@@ -444,14 +444,14 @@ i {
 }
 
 .recruit-bg {
-    background-image: url("../images/recruit-bg.jpg");
+    background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591929391/squarelab/website/recruit-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .blog-bg {
-    background-image: url("../images/hero-0.jpg");
+    background-image: url("https://res.cloudinary.com/kyte/image/upload/v1591929418/squarelab/website/hero-0.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -832,7 +832,7 @@ i {
     .recruit-bg {
         height: 543px;
         max-height: 736px;
-        background-image: url("../images/recruit-bg-s.jpg");
+        background-image: url("{{site.cloudinary}}/q_auto/v1591929391/squarelab/website/recruit-bg-s.jpg");
     }
 
     .blog-bg {
