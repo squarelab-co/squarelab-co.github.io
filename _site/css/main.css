@@ -832,7 +832,7 @@ i {
     .recruit-bg {
         height: 543px;
         max-height: 736px;
-        background-image: url("{{site.cloudinary}}/q_auto/v1591929391/squarelab/website/recruit-bg-s.jpg");
+        background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591929391/squarelab/website/recruit-bg-s.jpg");
     }
 
     .blog-bg {
