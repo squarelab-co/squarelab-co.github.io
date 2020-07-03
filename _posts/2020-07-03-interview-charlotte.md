@@ -34,7 +34,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/squarelab/website/post/
 
 <br>
 **여전히 PM이라는 직무가 낯선 분들이 계실 텐데요, 한마디로 간략히 설명해주신다면?**
-> 조직에 따라 PM에 대한 정의가 서로 달라서 일반적으로 얘기하긴 좀 어렵고 스퀘어랩에 한정해서 말씀드리자면, 프로덕트 (서비스)에 대해서 가장 넓고 깊게 아는 사람이라고 정의할 수 있을 것 같습니다. 어떤 프로젝트가 진행되는지, 최근 고객의 피드백은 어떤지, 이 서비스가 어떤 식으로 시장에서 자리매김하고 싶어 하는지 등 모든 부분에 대해 자세히 꽤 뚫고 있는 사람이 PM이라고 생각해주시면 좋을 것 같습니다.
+> 조직에 따라 PM에 대한 정의가 서로 달라서 일반적으로 얘기하긴 좀 어렵고 스퀘어랩에 한정해서 말씀드리자면, 프로덕트 (서비스)에 대해서 가장 넓고 깊게 아는 사람이라고 정의할 수 있을 것 같습니다. 어떤 프로젝트가 진행되는지, 최근 고객의 피드백은 어떤지, 이 서비스가 어떤 식으로 시장에서 자리매김하고 싶어 하는지 등 모든 부분에 대해 자세히 꿰뚫고 있는 사람이 PM이라고 생각해주시면 좋을 것 같습니다.
 
 <br>
 **말씀 덕분에 어렴풋하게나마 PM 직무에 대해 알 것 같은데요. 다양한 업계에서 일하셨는데 Next로 '여행' 서비스를 선택한 이유가 있을까요? 또, 그중에서도 'Kyte'를 선택한 계기가 있다면 무엇일까요?**
@@ -133,8 +133,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/squarelab/website/post/
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/v1593672350/squarelab/website/post/interview_charlotte/interview_charlotte_5.jpg" alt="인터뷰 김도연 2">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/v1593672350/squarelab/website/post/interview_charlotte/interview_charlotte_6.jpg" alt="인터뷰 김도연 3">
+    <img class="column-image" src="{{site.cloudinary}}/q_auto/squarelab/website/post/interview_charlotte/interview_charlotte_5.jpg" alt="인터뷰 샬롯 5">
+    <img class="column-image" src="{{site.cloudinary}}/q_auto/squarelab/website/post/interview_charlotte/interview_charlotte_6.jpg" alt="인터뷰 샬롯 6">
 </div>
 
 <br>
