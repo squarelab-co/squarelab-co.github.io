@@ -1,2 +1,6 @@
-
-.jekyll-cache/
+.idea
+.vscode
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
