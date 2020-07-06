@@ -5,8 +5,8 @@ date: 2020-05-14
 author: 마케팅팀
 categories: 
 - Interview
-og-img: https://res.cloudinary.com/kyte/image/upload/v1591931502/squarelab/website/post/interview-doyon/og_cover.jpg
-img: https://res.cloudinary.com/kyte/image/upload/v1591931500/squarelab/website/post/interview-doyon/cover.jpg
+og-img: https://res.cloudinary.com/kyte/image/upload/v1594016705/squarelab/website/post/interview-doyon/og_cover.jpg
+img: https://res.cloudinary.com/kyte/image/upload/v1594016708/squarelab/website/post/interview-doyon/cover.jpg
 img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/website/post/author/team_marketing.jpg
 ---
 

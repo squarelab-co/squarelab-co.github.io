@@ -5,8 +5,8 @@ date: 2020-04-06
 author: 마케팅팀
 categories: 
 - Interview
-og-img: https://res.cloudinary.com/kyte/image/upload/v1591931722/squarelab/website/post/interview-youngjae/og_cover.jpg
-img: https://res.cloudinary.com/kyte/image/upload/v1591931721/squarelab/website/post/interview-youngjae/cover.jpg
+og-img: https://res.cloudinary.com/kyte/image/upload/v1594016556/squarelab/website/post/interview-youngjae/og_cover.jpg
+img: https://res.cloudinary.com/kyte/image/upload/v1594016634/squarelab/website/post/interview-youngjae/cover.jpg
 img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/website/post/author/team_marketing.jpg
 ---
 
