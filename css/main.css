@@ -340,7 +340,7 @@ video {
     z-index: 100;
     width: 300px;
     height: auto;
-    filter: drop-shadow(0 32px 32px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 32px 32px rgba(0, 0, 0, 0.2));
     transition: all 0.5s ease-out;
     opacity: 0.5;
     transform: translateY(300px);
@@ -350,7 +350,7 @@ video {
     position: absolute;
     width: 300px;
     right: 60px;
-    filter: drop-shadow(0 24px 24px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 24px 24px rgba(0, 0, 0, 0.2));
     transition: all 0.5s ease-out;
     opacity: 0;
     transform: translateY(300px);
