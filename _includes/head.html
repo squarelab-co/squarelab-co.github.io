@@ -15,10 +15,7 @@
   
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   
-  <!--[if lte IE 8]><script src="{{ "/js/ie/html5shiv.js" }}"></script><![endif]-->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' }}">
-  <!--[if lte IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" }}" /><![endif]-->
-  <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" }}" /><![endif]-->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
