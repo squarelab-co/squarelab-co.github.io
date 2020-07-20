@@ -84,7 +84,7 @@ p a {
 }
 
 hr {
-    border-top: 1px dashed rgba(0, 0, 0, .12);
+    border: 1px dashed rgba(0, 0, 0, .12);
     margin: 32px 0;
 }
 
@@ -432,6 +432,7 @@ tbody tr:nth-last-child(2) {
 
 .column-image {
     width: calc(50% - 8px);
+    height: 100%;
 }
 
 .border {
@@ -499,7 +500,7 @@ tbody tr:nth-last-child(2) {
 
 .photos hr{
     width: 40px;
-    border-top: 1px solid rgba(0, 0, 0, .12);
+    border: 1px solid rgba(0, 0, 0, .12);
     margin-top: 18px;
 }
 
