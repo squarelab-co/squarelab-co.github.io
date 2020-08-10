@@ -15,7 +15,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 ---
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_1.jpg" alt="인터뷰 김도연 1">
+<img src="{{site.cloudinary}}/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_1.jpg" alt="인터뷰 김도연 1">
 
 <br>
 **간단한 자기소개 부탁 드립니다.**
@@ -31,8 +31,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_2.jpg" alt="인터뷰 김도연 2">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_3.jpg" alt="인터뷰 김도연 3">
+    <img class="column-image" src="{{site.cloudinary}}/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_2.jpg" alt="인터뷰 김도연 2">
+    <img class="column-image" src="{{site.cloudinary}}/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_3.jpg" alt="인터뷰 김도연 3">
 </div>
 
 
@@ -67,7 +67,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 > 팀원은 어떻게 생각할지 모르겠지만, 모두가 함께 일하고 싶은 회사가 되었으면 해서 노력했는데 그 부분에서 어느 정도 인정을 받은 것 같아 감사하게 생각합니다. 물론 제가 잘해서는 아니고, 스퀘어랩 구성원 모두가 한마음, 한뜻으로 본인의 조직이라고 생각하고 늘 열심히 해주었기 때문에 이런 좋은 평가도 받았다고 생각합니다. 
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_4.jpg" alt="원티드 좋은 기업에 선정된 스퀘어랩">
+<img src="{{site.cloudinary}}/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_4.jpg" alt="원티드 좋은 기업에 선정된 스퀘어랩">
 
 <br>
 **누구나 일하고 싶은 좋은 기업을 만들고 싶다고 하셨는데, 그러기 위해선 어떤 부분이 가장 중요하다고 생각하시나요?**
@@ -86,7 +86,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 > 두 조직의 업무 프로세스, 소통 방식 등 서로 다른 부분이 많아 처음엔 쉽지 않았습니다. 그리고 지금도 약간의 어려움은 여전히 존재하고 있습니다. 둘 중 어떤 것이 좋다, 나쁘다를 떠나 서로 합의점을 찾고 팀원의 이해를 구하는 일을 가장 중요하게 생각했고 이 부분을 위해 많은 노력을 기울였습니다. 아무래도 제가 대표이다 보니 무언가에 의견을 내면 다른 분들이 부담을 느낄 수 있기 때문에 되도록 팀원의 이야기를 듣고 방향을 설정하려고 많은 시간을 쏟았습니다. 다행히도 두 회사 모두 의욕적이고 배려심있는 구성원이 모여 있다 보니 일련의 과정을 통해 스퀘어랩만의 문화가 빠르게 정착될 수 있었습니다.  
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_5.jpg" alt="인터뷰 김도연 5">
+<img src="{{site.cloudinary}}/v1591931500/squarelab/website/post/interview-doyon/interview_doyon_5.jpg" alt="인터뷰 김도연 5">
 
 ---
 
@@ -114,7 +114,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 > 아, 이남장은 제 마음의 고향입니다. 그냥 디폴트로 박혀 있는 것이라고 생각해주시면 됩니다. 사실 사람들이 하도 놀려서 요즘엔 한 달에 몇 번 정도 밖에 방문을 못합니다. 제가 가면 항상 아주머님이 반겨주셨는데 마음대로 가지 못해 아쉽습니다.
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/v1591931502/squarelab/website/post/interview-doyon/interview_doyon_6.jpg" alt="을지로 이남장">
+<img src="{{site.cloudinary}}/v1591931502/squarelab/website/post/interview-doyon/interview_doyon_6.jpg" alt="을지로 이남장">
 <div class="caption"><span>이남장</span> 운영된 지 40년이 넘은 을지로 유명 설렁탕 집으로 스퀘어랩 사무실과 아주 가까이 위치해 있다. 도연 님의 최애 식당.</div>
 
 <br>
@@ -126,7 +126,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 > 여행 가서 사업 생각은 거의 하지 않고 정말 푹 쉬는 편입니다. 가장 좋아하는 장소는 하와이입니다. 워낙 잘 알기도 하고 오랜 시간을 보냈기 때문에 집 같은 편안함이 있습니다. 좋은 곳은 또 다시 가도 여전히 좋더라고요. 만일 하와이에서 길 잃으면 저에게 전화주세요. 어디든 다 훤히 꿰고 있으니까요. (웃음)
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/v1591931501/squarelab/website/post/interview-doyon/interview_doyon_7.jpg" alt="하와이 여행 중인 김도연">
+<img src="{{site.cloudinary}}/v1591931501/squarelab/website/post/interview-doyon/interview_doyon_7.jpg" alt="하와이 여행 중인 김도연">
 
 ---
 

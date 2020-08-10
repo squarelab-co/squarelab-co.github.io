@@ -70,7 +70,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930504/squarelab/w
 
 여행 정보 얻으려고 가입한 미국여행 카페에 미국 여행을 걱정하는 글을 올리게 될 줄이야 ㅠㅠ
 
-<img class="border" src="{{site.cloudinary}}/q_auto/v1591930354/squarelab/website/post/cancel-newyork/cancel-newyork-1.jpg" alt="미국여행 카페에 올린 글">
+<img class="border" src="{{site.cloudinary}}/v1591930354/squarelab/website/post/cancel-newyork/cancel-newyork-1.jpg" alt="미국여행 카페에 올린 글">
 
 <br>
 
@@ -133,7 +133,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930504/squarelab/w
 
 포기하지 말고 호텔측으로 직접 메일을 보내보기로 했다. 애초에 취소불가 상품을 예약한 것은 나였으나, 코로나가 퍼지고 내 의지와 상관없이 항공 스케쥴도 취소된 현재 상황을 호텔 측에서 이해해 줄지도 모른다는 희망을 안고.  
 
-<img class="border" src="{{site.cloudinary}}/q_auto/v1591930354/squarelab/website/post/cancel-newyork/cancel-newyork-3.jpg" alt="호텔로 보낸 메일">
+<img class="border" src="{{site.cloudinary}}/v1591930354/squarelab/website/post/cancel-newyork/cancel-newyork-3.jpg" alt="호텔로 보낸 메일">
 
 ## 2020년 3월 9일
 
@@ -141,7 +141,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930504/squarelab/w
 아주 심플하고도 친절하게 패널티 없는 취소를 해줄테니 예약대행사에 연락을 해보라는 내용이었다.  
 사랑해요!😭. 다음번 여행에 꼭 방문할게요!
 
-<img class="border" src="{{site.cloudinary}}/q_auto/v1591930354/squarelab/website/post/cancel-newyork/cancel-newyork-4.jpg" alt="호텔로부터 받은 답변">
+<img class="border" src="{{site.cloudinary}}/v1591930354/squarelab/website/post/cancel-newyork/cancel-newyork-4.jpg" alt="호텔로부터 받은 답변">
 
 항공권과 취소불가 호텔을 무사히 취소하고 난 뒤에서야 취소가 가능한 그 외 항목들을 취소했다.  
 한인민박은 10%의 수수료를 공제했고, 취소가 불가능할줄 알았던 암트랙은 꽤 많은 수수료를 공제 하고 환불을 해주었다.  

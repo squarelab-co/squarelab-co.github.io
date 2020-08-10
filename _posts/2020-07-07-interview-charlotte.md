@@ -18,7 +18,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/squarelab/website/post/
 ---
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/squarelab/website/post/interview_charlotte/interview_charlotte_1.jpg" alt="인터뷰 샬롯 1">
+<img src="{{site.cloudinary}}/squarelab/website/post/interview_charlotte/interview_charlotte_1.jpg" alt="인터뷰 샬롯 1">
 
 <br>
 **자기소개부터 부탁합니다.**
@@ -63,7 +63,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/squarelab/website/post/
 ---
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/v1593669530/squarelab/website/post/interview_charlotte/interview_charlotte_2.jpg" alt="인터뷰 샬롯 2">
+<img src="{{site.cloudinary}}/v1593669530/squarelab/website/post/interview_charlotte/interview_charlotte_2.jpg" alt="인터뷰 샬롯 2">
 
 <br>
 샬롯 님은 업무를 진행하며 가장 힘들었던 경험 역시 이런 의사결정 과정을 번복하는 경우라고 말했다.
@@ -102,7 +102,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/squarelab/website/post/
 
 ---
 <br>
-<img src="{{site.cloudinary}}/q_auto/squarelab/website/post/interview_charlotte/interview_charlotte_3.jpg" alt="인터뷰 샬롯 3">
+<img src="{{site.cloudinary}}/squarelab/website/post/interview_charlotte/interview_charlotte_3.jpg" alt="인터뷰 샬롯 3">
 
 <br>
 **이제 스퀘어랩 공식 질문을 드리려고 합니다. 샬롯님에게 땋은 머리란?**
@@ -120,7 +120,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/squarelab/website/post/
 > 사실 엄청나게 신경을 쓰지는 않는데 그래도 완전 신경을 안 쓰기도 좀 어려워요. 다른 땐 괜찮은데 배고파서 꼬르륵거릴 때...제일 신경 많이 쓰입니다. 
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/v1593671057/squarelab/website/post/interview_charlotte/interview_charlotte_4.jpg" alt="인터뷰 샬롯 4">
+<img src="{{site.cloudinary}}/v1593671057/squarelab/website/post/interview_charlotte/interview_charlotte_4.jpg" alt="인터뷰 샬롯 4">
 <div class="caption">대표님의 공간을 따로 구분하지 않고 자유롭게 사용하고 있는 스퀘어랩 사무실에서 샬롯 님은 도연 님과 사이 좋게 책상을 나눠쓰고 있다.</div>
 
 <br>
@@ -133,8 +133,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/squarelab/website/post/
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/squarelab/website/post/interview_charlotte/interview_charlotte_5.jpg" alt="인터뷰 샬롯 5">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/squarelab/website/post/interview_charlotte/interview_charlotte_6.jpg" alt="인터뷰 샬롯 6">
+    <img class="column-image" src="{{site.cloudinary}}/squarelab/website/post/interview_charlotte/interview_charlotte_5.jpg" alt="인터뷰 샬롯 5">
+    <img class="column-image" src="{{site.cloudinary}}/squarelab/website/post/interview_charlotte/interview_charlotte_6.jpg" alt="인터뷰 샬롯 6">
 </div>
 
 <br>

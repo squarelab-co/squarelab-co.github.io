@@ -23,7 +23,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 > 네, 사실 원래 다니던 회사를 그만두고 아내와 같이 여기저기 여행하면서 개인 개발을 하려던 계획이 잡힌 상태에서 스퀘어랩에 조인을 하게 되었습니다. 그래서 입사할 때 부터 장기 리모트와 관련해서 충분한 논의를 진행했고 그 결과 지금까지 장기 리모트를 진행하고 있습니다. 작년 6월부터 미국 서부, 그랜드 캐니언 - 샌프란시스코 다녀왔고 9월엔 제주도에서 3개월, 12월 말에는 치앙마이로 옮겨서 올해 2월 초까지 있었습니다. 
 
 <br>
-<img src="{{site.cloudinary}}/q_auto/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_1.jpg" alt="인터뷰 권영재 1">
+<img src="{{site.cloudinary}}/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_1.jpg" alt="인터뷰 권영재 1">
 
 <br>
 **흔히, 원격 근무에 대한 ‘생산성 감소'라는 우려의 목소리도 존재하는데, 직접 경험자로서 어떻게 생각하시는지 궁금합니다.**
@@ -35,8 +35,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_2.jpg" alt="인터뷰 권영재 2">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_3.jpg" alt="인터뷰 권영재 3">
+    <img class="column-image" src="{{site.cloudinary}}/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_2.jpg" alt="인터뷰 권영재 2">
+    <img class="column-image" src="{{site.cloudinary}}/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_3.jpg" alt="인터뷰 권영재 3">
 </div>
 
 <br>
@@ -68,8 +68,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_4.jpg" alt="인터뷰 권영재 4">
-    <img class="column-image" src="{{site.cloudinary}}/q_auto/v1591931722/squarelab/website/post/interview-youngjae/interview_YJK_5.jpg" alt="인터뷰 권영재 5">
+    <img class="column-image" src="{{site.cloudinary}}/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_4.jpg" alt="인터뷰 권영재 4">
+    <img class="column-image" src="{{site.cloudinary}}/v1591931722/squarelab/website/post/interview-youngjae/interview_YJK_5.jpg" alt="인터뷰 권영재 5">
 </div>
 
 ---
@@ -77,7 +77,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 <br>
 영재님은 업무 외에도 코로나19 관련 실시간 상황을 알려주는 [웹사이트(https://coronaboard.kr/)](https://coronaboard.kr/){: target="_blank"}를 개발하여 많은 이들이 코로나19 확산 상황을 신속하고 정확히 파악할 수 있게 많은 도움을 주고 있습니다.
 
-<img class="border" src="{{site.cloudinary}}/q_auto/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_6.jpg" alt="인터뷰 권영재 6">
+<img class="border" src="{{site.cloudinary}}/v1591931721/squarelab/website/post/interview-youngjae/interview_YJK_6.jpg" alt="인터뷰 권영재 6">
 
 <br>
 **코로나19 관련하여 직접 개발하신 상황판 웹사이트가 굉장히 화제가 되었습니다. 이 정도로 많은 분이 사용할 거라 예상하셨나요?**

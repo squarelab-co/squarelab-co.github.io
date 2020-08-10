@@ -16,7 +16,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 
 ## Serverless framework 소개
 
-![serverless-framework.png]({{site.cloudinary}}/q_auto/v1591930826/squarelab/website/post/developing-internal-service-with-serverless-aws/serverless-framework.jpg)
+![serverless-framework.png]({{site.cloudinary}}/v1591930826/squarelab/website/post/developing-internal-service-with-serverless-aws/serverless-framework.jpg)
 
 AWS Lambda + AWS API Gateway를 이용하여 직접 서버 인스턴스를 띄우지 않고서도 서버 기능을 할 수 있다는 사실은 많이 알려져 있습니다. 하지만 막상 이걸 직접 설정 해보려고 하면 해야할 일이 산더미 같습니다. 실제 코드를 작성해서 Lambda에 업로드해야하고, Lambda를 누가 실행 할 수 있는지 적당한 권한을 설정해줘야 하며, API Gateway와 Lambda를 연결해줘야하고, 사용자 지정 도메인도 연결해줘야하며, CloudWatch 로그 설정도 ... (중략). 슬슬 오히려 EC2 인스턴스를 그냥 띄워서 하던대로 하는게 낫지 않을까 생각이 들기 시작하네요.
 

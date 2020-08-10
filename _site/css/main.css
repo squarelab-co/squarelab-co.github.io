@@ -337,7 +337,9 @@ video {
 }
 
 .first-img {
-    z-index: 100;
+    position: absolute;
+    right: 64px;
+    z-index: 1;
     width: 300px;
     height: auto;
     filter: drop-shadow(0 32px 32px rgba(0, 0, 0, 0.2));
@@ -347,14 +349,11 @@ video {
 }
 
 .second-img {
-    position: absolute;
     width: 300px;
-    right: 60px;
     filter: drop-shadow(0 24px 24px rgba(0, 0, 0, 0.2));
     transition: all 0.5s ease-out;
     opacity: 0;
     transform: translateY(300px);
-
 }
 
 .fade-in{
