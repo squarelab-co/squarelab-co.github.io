@@ -769,6 +769,10 @@ i {
     }
 
     .first-img {
+        display: none;
+    }
+
+    .second-img {
         width: 226px;
         height: 458px;
         margin: 0 auto;
@@ -777,10 +781,6 @@ i {
         align-items: center;
         justify-content: center;
         filter: drop-shadow(0 8px 8px rgba(0, 0, 0, .3));
-    }
-
-    .second-img {
-        display: none;
     }
 
     .info-button {
