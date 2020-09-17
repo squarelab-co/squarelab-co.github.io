@@ -5,9 +5,9 @@ date: 2020-02-10
 author: 권영재
 categories: 
 - Engineering
-og-img: https://res.cloudinary.com/kyte/image/upload/v1591930826/squarelab/website/post/developing-internal-service-with-serverless-aws/serverless-framework.jpg
-img: https://res.cloudinary.com/kyte/image/upload/v1591930825/squarelab/website/post/developing-internal-service-with-serverless-aws/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg
-img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/website/post/author/yjiq150.jpg
+og-img: https://res.cloudinary.com/kyte/image/upload/web/post/developing-internal-service-with-serverless-aws/serverless-framework.jpg
+img: https://res.cloudinary.com/kyte/image/upload/web/post/developing-internal-service-with-serverless-aws/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg
+img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/yjiq150.jpg
 ---
 사내에서 사용되는 서비스의 경우 대중을 대상으로 하지 않기 때문에 사용량이 많지 않은 경우가 대부분입니다. AWS Lambda를 사용하면 비용 절감뿐만 아니라 서버를 직접 관리하고 운영할 필요도 없기 때문에 안정적이고 편리합니다. Lambda에서는 warm up 전의 첫 호출시 응답이 느린 cold start 문제가 있긴하지만 오히려 사내 서비스의 경우 상대적으로 유저경험이 덜 중요하기때문에 cold start시에 잠깐 응답이 느려지는 것 정도는 큰 문제가 되지 않습니다.
 
@@ -16,7 +16,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/v1591930505/squarelab/w
 
 ## Serverless framework 소개
 
-![serverless-framework.png]({{site.cloudinary}}/v1591930826/squarelab/website/post/developing-internal-service-with-serverless-aws/serverless-framework.jpg)
+![serverless-framework.png]({{site.cloudinary}}/web/post/developing-internal-service-with-serverless-aws/serverless-framework.jpg)
 
 AWS Lambda + AWS API Gateway를 이용하여 직접 서버 인스턴스를 띄우지 않고서도 서버 기능을 할 수 있다는 사실은 많이 알려져 있습니다. 하지만 막상 이걸 직접 설정 해보려고 하면 해야할 일이 산더미 같습니다. 실제 코드를 작성해서 Lambda에 업로드해야하고, Lambda를 누가 실행 할 수 있는지 적당한 권한을 설정해줘야 하며, API Gateway와 Lambda를 연결해줘야하고, 사용자 지정 도메인도 연결해줘야하며, CloudWatch 로그 설정도 ... (중략). 슬슬 오히려 EC2 인스턴스를 그냥 띄워서 하던대로 하는게 낫지 않을까 생각이 들기 시작하네요.
 

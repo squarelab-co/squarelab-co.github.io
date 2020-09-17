@@ -5,9 +5,9 @@ date: 2020-02-12
 author: 추호연
 categories: 
 - Design
-og-img: https://res.cloudinary.com/kyte/image/upload/v1591930961/squarelab/website/post/get-started-with-cloudinary/cover.jpg
-img: https://res.cloudinary.com/kyte/image/upload/v1591930961/squarelab/website/post/get-started-with-cloudinary/cover.jpg
-img-author: https://res.cloudinary.com/kyte/image/upload/v1591930504/squarelab/website/post/author/jamie.jpg
+og-img: https://res.cloudinary.com/kyte/image/upload/web/post/get-started-with-cloudinary/cover.jpg
+img: https://res.cloudinary.com/kyte/image/upload/web/post/get-started-with-cloudinary/cover.jpg
+img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jamie.jpg
 ---
 새로운 서비스를 만들때 이미지 컨텐츠를 관리하는 것은 디자이너에게 매우 중요한 문제입니다. 디자인이 아무리 잘되어 있어도 컨텐츠가 적절한 퀄리티로 노출되지 않으면 디자인의 품질이 떨어져 보이고 사용자에게 신뢰감을 주기 어렵기 때문입니다.
 
