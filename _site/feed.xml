@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Sep 2020 16:12:05 +0900</pubDate>
-    <lastBuildDate>Thu, 17 Sep 2020 16:12:05 +0900</lastBuildDate>
+    <pubDate>Thu, 17 Sep 2020 16:21:11 +0900</pubDate>
+    <lastBuildDate>Thu, 17 Sep 2020 16:21:11 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -62,7 +62,8 @@
 &lt;i class=&quot;ri-double-quotes-r quote&quot;&gt;&lt;/i&gt;
 &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/web/post/interview-playwings-renewal-2/interview_playwings_renewal_4.jpg&quot; alt=&quot;종엽&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/web/post/interview-playwings-renewal-2/interview_playwings_renewal_4.jpg&quot; alt=&quot;종엽&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;strong&gt;눈에 보이지 않는 개선점 질문을 하나 더 이어가겠습니다. 클라이언트의 경우, 사용 언어를 React Native로 모두 변경했는데요. 이 언어를 사용하게 되면 어떤 이점이 있나요? 또한, 사용자가 체감할 수 있는 부분에도 영향을 주는지 궁금합니다.&lt;/strong&gt;&lt;/p&gt;
@@ -82,7 +83,8 @@
   &lt;p&gt;소피아: 네, 안타깝게도 그런 경우가 있습니다. 그러면 우선 테스트를 아주 잘게 쪼갭니다. 만일 기존 3단계 과정으로 테스트를 진행했는데 원인 파악이 어렵다 싶으면 정말 사소하고 작은 것까지 포함하여 8~9단계로 테스트 시나리오를 쪼개서 하나하나 신중하게 다시 테스트를 진행하죠. 물 샐 틈 없이 그 물을 더 촘촘하게 죈다고 생각해주시면 될 것 같아요.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/web/post/interview-playwings-renewal-2/interview_playwings_renewal_5.jpg&quot; alt=&quot;소피아 슬랙&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/web/post/interview-playwings-renewal-2/interview_playwings_renewal_5.jpg&quot; alt=&quot;소피아 슬랙&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -94,7 +96,8 @@
   &lt;p&gt;블레어: 네. 하이에어 콘텐츠의 경우 직접 탑승까지 해보며 최대한 리얼함을 전달하고자 노력한 콘텐츠였어요. 저희 사용자 분들이 LCC에서 느끼는 아쉬운 부분 중 좌석 간 간격이 좁다는 점이 있는데, 하이에어는 좌석 간 간격이 무려 97cm이고 이외에도 장점들이 많아서 조금 더 항공사 선택의 폭을 넓혀보셨으면 하는 마음에 콘텐츠를 기획하게 됐습니다. 다행이 많은 분이 흥미 있게 구독해주셔서 개인적으로도 큰 보람을 느꼈는데요.&lt;br /&gt;앞으로는 데이터 적인 콘텐츠도 계획 중에 있습니다. 사용자 분들이 저희가 매달 선보이는 가장 많이 검색해본 인기 여행지 1위 콘텐츠나 인구밀도가 가장 낮은 국가 TOP4 콘텐츠 등에 많은 관심을 보여주고 계시더라고요. 그래서 여행에 관한 여러 데이터를 흥미로운 콘텐츠로 정제해 보는 게 목표랍니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/web/post/interview-playwings-renewal-2/interview_playwings_renewal_6.jpg&quot; alt=&quot;하이에어&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/web/post/interview-playwings-renewal-2/interview_playwings_renewal_6.jpg&quot; alt=&quot;하이에어&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;strong&gt;유심히 보니, 콘텐츠마다 카테고리가 다 있는 것 같은데 어떻게 분류되는지도 안내주실 수 있을까요?&lt;/strong&gt;&lt;/p&gt;
@@ -127,7 +130,8 @@
   &lt;p&gt;스윙: 물론 도움이 됩니다! 이전보다 사업 영역이 확장되어 항공 이외의 호텔, 투어, 액티비티 등 섹터를 다룰 수 있기 때문에 기존에 집중하던 항공 영역 외의 여러 상품을 다룰 수 있게 되었습니다. 코로나로 인해 아직 여행 시장이 주춤하지만 상황이 재개되었을 때, 사용자들이 플레이윙즈를 더욱 유용하게 써주시길 바라고 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/v1600326547/web/post/interview-playwings-renewal-2/interview_playwings_renewal_7.jpg&quot; alt=&quot;스윙&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/v1600326547/web/post/interview-playwings-renewal-2/interview_playwings_renewal_7.jpg&quot; alt=&quot;스윙&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -139,7 +143,8 @@
   &lt;p&gt;키: 콘텐츠 영역 쪽이 가장 마음에 들어요. 저 같은 경우 앱을 사용할 때 특별한 목적이 있으면 단발성으로 서비스를 쓰게 되더라고요. 그래서인지 앱을 잘 지우는 편인데요. 5분 이내에 지우는 비율이 60%~70% 정도는 됩니다. 엄청나죠. (웃음) 그래서 한 번 사용하고 아니다 싶으면 바로 삭제하는데, 새로워진 플레이윙즈에는 주기적으로 사용하기에 참 좋은 콘텐츠들이 넘쳐나다 보니, 계속 사용하게 되는 것 같습니다. 이런 부분이 우리 서비스를 더욱 널리, 오래 사용하게 되는 원동력이 된다고 생각합니다.&lt;br /&gt;스윙:저는 푸시 알림을 모아서 보는 기능이 제일 만족스럽습니다. 사용자에게 푸시가 발송된다는 것은 그만큼 퀄리티가 좋은 상품 혹은 콘텐츠라는 방증일 텐데요. 푸시 알림 박스에 접속하면 플레이윙즈가 제공할 수 있는 가장 좋은 것들만 골라서 확인할 수 있다는 것이기에 의미가 있다고 생각합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/web/post/interview-playwings-renewal-2/interview_playwings_renewal_8.jpg&quot; alt=&quot;키&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto,dpr_auto/web/post/interview-playwings-renewal-2/interview_playwings_renewal_8.jpg&quot; alt=&quot;키&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;strong&gt;이렇게나 많은 고민과 노력 끝에 탄생한 현재의 플레이윙즈를 사용하고 계실 사용자에게 한마디 하신다면?&lt;/strong&gt;&lt;/p&gt;
