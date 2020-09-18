@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 플레이윙즈를 만드는 사람들을 만나다-1
-date: 2020-09-17
+date: 2020-09-18
 author: 마케팅팀
 categories: 
 - Interview
