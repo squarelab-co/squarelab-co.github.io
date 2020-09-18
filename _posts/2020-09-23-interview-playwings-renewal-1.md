@@ -119,4 +119,4 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 
 ---
 
-플레이윙즈 리뉴얼 인터뷰는 [2편](https://squarelab.co/blog/interview-playwings-renewal-2/)에서 더 이어집니다.
+플레이윙즈 리뉴얼 인터뷰는 [2편](/blog/interview-playwings-renewal-2/)에서 더 이어집니다.
