@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 일상을 여행으로 만드는 서비스 매니저
-date: 2020-09-24
+date: 2020-09-23
 author: 마케팅팀
 categories:
   - Interview
