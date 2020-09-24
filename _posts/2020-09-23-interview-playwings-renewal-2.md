@@ -3,8 +3,8 @@ layout: post
 title: 플레이윙즈를 만드는 사람들을 만나다-2
 date: 2020-09-18
 author: 마케팅팀
-categories: 
-- Interview
+categories:
+  - Interview
 og-img: https://res.cloudinary.com/kyte/image/upload/v1600325801/web/post/interview-playwings-renewal-2/og_cover.jpg
 img: https://res.cloudinary.com/kyte/image/upload/v1600325710/web/post/interview-playwings-renewal-2/cover.jpg
 img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_marketing.jpg
@@ -127,4 +127,4 @@ UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 �
 
 ## 맺음말
 
-넘치는 이야기와 아이디어로 두 시간의 인터뷰가 정말 짧게 느껴졌는데요. 왁자지껄 이야기를 나누는 서로의 모습을 통해 우리를 움직이게 만드는 원동력이 과연 어디서부터 오는가에 대해 다시금 깨달을 수 있었습니다. 눈을 반짝이며 자신의 이야기를 풀어 놓는 멤버와 그 멤버를 보며 자극 받아 열의를 불태우는 다른 멤버들의 모습을 보면서 우리의 여정은 이제 막 시작되었다는 생각 역시 함께 들었습니다. 플레이윙즈의 이번 리뉴얼 프로젝트는 이렇게 끝을 맺지만, 또 다른 도전은 이제 막 다시 시작됩니다! 앞으로 더 멋지고 놀라운 모습으로 찾아올 플레이윙즈 많은 기대 부탁드립니다. 
+넘치는 이야기와 아이디어로 두 시간의 인터뷰가 정말 짧게 느껴졌는데요. 왁자지껄 이야기를 나누는 서로의 모습을 통해 우리를 움직이게 만드는 원동력이 과연 어디서부터 오는가에 대해 다시금 깨달을 수 있었습니다. 눈을 반짝이며 자신의 이야기를 풀어 놓는 멤버와 그 멤버를 보며 자극 받아 열의를 불태우는 다른 멤버들의 모습을 보면서 우리의 여정은 이제 막 시작되었다는 생각 역시 함께 들었습니다. 플레이윙즈의 이번 리뉴얼 프로젝트는 이렇게 끝을 맺지만, 또 다른 도전은 이제 막 다시 시작됩니다! 앞으로 더 멋지고 놀라운 모습으로 찾아올 플레이윙즈 많은 기대 부탁드립니다.
