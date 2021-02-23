@@ -76,6 +76,7 @@ ul {
   line-height: 2em;
 }
 
+li a,
 p a {
   color: #642ab2;
 }
@@ -542,6 +543,10 @@ tbody tr:nth-last-child(2) {
 
 .photos-author .img-author-2 {
   margin: 0;
+}
+
+.hljs {
+  background: inherit !important;
 }
 
 @media screen and (max-width: 768px) {
