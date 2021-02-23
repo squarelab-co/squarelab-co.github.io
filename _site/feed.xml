@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Feb 2021 10:05:26 +0900</pubDate>
-    <lastBuildDate>Tue, 23 Feb 2021 10:05:26 +0900</lastBuildDate>
+    <pubDate>Tue, 23 Feb 2021 11:58:01 +0900</pubDate>
+    <lastBuildDate>Tue, 23 Feb 2021 11:58:01 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -159,7 +159,7 @@ figma.ui.onmessage = message =&amp;gt; {
   &amp;lt;!-- 이미지를 정보를 표시할 영역입니다. --&amp;gt;
   &amp;lt;p id=&quot;info&quot;&amp;gt;&amp;lt;/p&amp;gt;
   &amp;lt;!-- 함수를 실행하기 위한 버튼입니다. --&amp;gt;
-  &amp;lt;button id=&quot;upload&quot;&amp;gt;Reset&amp;lt;/button&amp;gt;
+  &amp;lt;button id=&quot;reset&quot;&amp;gt;Reset&amp;lt;/button&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;!-- 이미지를 표시할 영역입니다. --&amp;gt;
 &amp;lt;div id=&quot;gallery&quot;&amp;gt;&amp;lt;/div&amp;gt;
@@ -194,8 +194,8 @@ figma.ui.onmessage = message =&amp;gt; {
     }
   }
     
-  //upload 버튼을 클릭하면 window.parent.postMessage()를 사용해 code.js로 이미지 사이즈를 보내줍니다.
-  upload.addEventListener('click', function (e) {
+  //reset 버튼을 클릭하면 window.parent.postMessage()를 사용해 code.js로 이미지 사이즈를 보내줍니다.
+  reset.addEventListener('click', function (e) {
     window.parent.postMessage({pluginMessage: {width: naturalWidth, height: naturalHeight}}, '*');
    }, false);
 &amp;lt;/script&amp;gt;

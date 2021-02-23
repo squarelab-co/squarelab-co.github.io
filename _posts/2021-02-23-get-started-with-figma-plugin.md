@@ -5,8 +5,8 @@ date: 2021-02-23
 author: 추호연
 categories: 
 - Design
-og-img: https://res.cloudinary.com/kyte/image/upload/v1613526504/web/post/get-started-with-figma-plugin/cover.png
-img: https://res.cloudinary.com/kyte/image/upload/v1613526504/web/post/get-started-with-figma-plugin/cover.png
+og-img: https://res.cloudinary.com/kyte/image/upload/web/post/get-started-with-figma-plugin/cover.png
+img: https://res.cloudinary.com/kyte/image/upload/web/post/get-started-with-figma-plugin/cover.png
 img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jamie.jpg
 ---
 
@@ -164,7 +164,7 @@ figma.ui.onmessage = message => {
   <!-- 이미지를 정보를 표시할 영역입니다. -->
   <p id="info"></p>
   <!-- 함수를 실행하기 위한 버튼입니다. -->
-  <button id="upload">Reset</button>
+  <button id="reset">Reset</button>
 </div>
 <!-- 이미지를 표시할 영역입니다. -->
 <div id="gallery"></div>
@@ -199,8 +199,8 @@ figma.ui.onmessage = message => {
     }
   }
     
-  //upload 버튼을 클릭하면 window.parent.postMessage()를 사용해 code.js로 이미지 사이즈를 보내줍니다.
-  upload.addEventListener('click', function (e) {
+  //reset 버튼을 클릭하면 window.parent.postMessage()를 사용해 code.js로 이미지 사이즈를 보내줍니다.
+  reset.addEventListener('click', function (e) {
     window.parent.postMessage({pluginMessage: {width: naturalWidth, height: naturalHeight}}, '*');
    }, false);
 </script>

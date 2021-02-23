@@ -13,7 +13,7 @@
   <meta property="og:description" content="2020 Design Tools Survey에서 Figma가 Sketch를 앞지르고 1위에 올랐습니다. 스퀘어랩도 UI 디자인툴로 Sketch를 사용해오다 몇개월 전부터 Figma를 도입했는데요. Sketch와 마찬가지로 Figma에도 유용한 플러그인이 많고,...">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://squarelab.co/blog/get-started-with-figma-plugin/">
-  <meta property="og:image" content="https://res.cloudinary.com/kyte/image/upload/v1613526504/web/post/get-started-with-figma-plugin/cover.png">
+  <meta property="og:image" content="https://res.cloudinary.com/kyte/image/upload/web/post/get-started-with-figma-plugin/cover.png">
 
   <title>Square Lab 블로그</title>
 
@@ -49,7 +49,7 @@
     </div>
 </header>
   <div class="blog-container">
-    <div class="blog-top" style="background-image:url(https://res.cloudinary.com/kyte/image/upload/v1613526504/web/post/get-started-with-figma-plugin/cover.png); background-size: cover;" >
+    <div class="blog-top" style="background-image:url(https://res.cloudinary.com/kyte/image/upload/web/post/get-started-with-figma-plugin/cover.png); background-size: cover;" >
         <div class="overlay">
             <div class="title-container">
                 <span class="category">Design</span>
@@ -211,7 +211,7 @@ figma.ui.onmessage = message =&gt; {
   &lt;!-- 이미지를 정보를 표시할 영역입니다. --&gt;
   &lt;p id="info"&gt;&lt;/p&gt;
   &lt;!-- 함수를 실행하기 위한 버튼입니다. --&gt;
-  &lt;button id="upload"&gt;Reset&lt;/button&gt;
+  &lt;button id="reset"&gt;Reset&lt;/button&gt;
 &lt;/div&gt;
 &lt;!-- 이미지를 표시할 영역입니다. --&gt;
 &lt;div id="gallery"&gt;&lt;/div&gt;
@@ -246,8 +246,8 @@ figma.ui.onmessage = message =&gt; {
     }
   }
     
-  //upload 버튼을 클릭하면 window.parent.postMessage()를 사용해 code.js로 이미지 사이즈를 보내줍니다.
-  upload.addEventListener('click', function (e) {
+  //reset 버튼을 클릭하면 window.parent.postMessage()를 사용해 code.js로 이미지 사이즈를 보내줍니다.
+  reset.addEventListener('click', function (e) {
     window.parent.postMessage({pluginMessage: {width: naturalWidth, height: naturalHeight}}, '*');
    }, false);
 &lt;/script&gt;
