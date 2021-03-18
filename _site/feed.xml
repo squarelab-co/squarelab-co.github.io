@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Mar 2021 15:44:19 +0900</pubDate>
-    <lastBuildDate>Thu, 18 Mar 2021 15:44:19 +0900</lastBuildDate>
+    <pubDate>Thu, 18 Mar 2021 15:59:15 +0900</pubDate>
+    <lastBuildDate>Thu, 18 Mar 2021 15:59:15 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -15,7 +15,7 @@
 </description>
         <pubDate>Tue, 23 Feb 2021 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/get-started-with-figma-plugin/</link>
-        <guid isPermaLink="true">/blog/get-started-with-figma-plugin/</guid>
+        <guid isPermaLink="false">/blog/get-started-with-figma-plugin/</guid>
         
         
         <category>Design</category>
@@ -28,7 +28,7 @@
 </description>
         <pubDate>Thu, 24 Sep 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/interview-salley/</link>
-        <guid isPermaLink="true">/blog/interview-salley/</guid>
+        <guid isPermaLink="false">/blog/interview-salley/</guid>
         
         
         <category>Interview</category>
@@ -41,7 +41,7 @@
 </description>
         <pubDate>Fri, 18 Sep 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/interview-playwings-renewal-2/</link>
-        <guid isPermaLink="true">/blog/interview-playwings-renewal-2/</guid>
+        <guid isPermaLink="false">/blog/interview-playwings-renewal-2/</guid>
         
         
         <category>Interview</category>
@@ -54,7 +54,7 @@
 </description>
         <pubDate>Fri, 18 Sep 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/interview-playwings-renewal-1/</link>
-        <guid isPermaLink="true">/blog/interview-playwings-renewal-1/</guid>
+        <guid isPermaLink="false">/blog/interview-playwings-renewal-1/</guid>
         
         
         <category>Interview</category>
@@ -72,7 +72,7 @@
 </description>
         <pubDate>Tue, 07 Jul 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/interview-charlotte/</link>
-        <guid isPermaLink="true">/blog/interview-charlotte/</guid>
+        <guid isPermaLink="false">/blog/interview-charlotte/</guid>
         
         
         <category>Interview</category>
@@ -87,7 +87,7 @@
 </description>
         <pubDate>Thu, 21 May 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/unsplash/</link>
-        <guid isPermaLink="true">/blog/unsplash/</guid>
+        <guid isPermaLink="false">/blog/unsplash/</guid>
         
         
         <category>News</category>
@@ -100,7 +100,7 @@
 </description>
         <pubDate>Thu, 14 May 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/interview-doyon/</link>
-        <guid isPermaLink="true">/blog/interview-doyon/</guid>
+        <guid isPermaLink="false">/blog/interview-doyon/</guid>
         
         
         <category>Interview</category>
@@ -113,7 +113,7 @@
 </description>
         <pubDate>Tue, 28 Apr 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/wanted/</link>
-        <guid isPermaLink="true">/blog/wanted/</guid>
+        <guid isPermaLink="false">/blog/wanted/</guid>
         
         
         <category>News</category>
@@ -127,7 +127,7 @@
 </description>
         <pubDate>Tue, 14 Apr 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/newyork-cancel/</link>
-        <guid isPermaLink="true">/blog/newyork-cancel/</guid>
+        <guid isPermaLink="false">/blog/newyork-cancel/</guid>
         
         
         <category>Travelog</category>
@@ -140,7 +140,7 @@
 </description>
         <pubDate>Mon, 06 Apr 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/interview-youngjae/</link>
-        <guid isPermaLink="true">/blog/interview-youngjae/</guid>
+        <guid isPermaLink="false">/blog/interview-youngjae/</guid>
         
         
         <category>Interview</category>
