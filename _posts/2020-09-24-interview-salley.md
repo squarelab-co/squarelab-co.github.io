@@ -5,9 +5,9 @@ date: 2020-09-24
 author: 마케팅팀
 categories:
   - Interview
-og-img: https://res.cloudinary.com/kyte/image/upload/v1600900535/web/post/interview-salley/OG_Cover.jpg
-img: https://res.cloudinary.com/kyte/image/upload/v1600901105/web/post/interview-salley/Cover.jpg
-img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_marketing.jpg
+og-img: https://squarelab.co/images/blog/interview-salley/OG_Cover.jpg
+img: /images/blog/interview-salley/Cover.jpg
+img-author: /images/blog/author/team_marketing.jpg
 ---
 
 비행기에 앉아 이륙을 기다리다 보면 울리는 소리, ‘띵동’. 알림과 함께 비행기는 우리를 여행지로 안내합니다. 플레이윙즈 특가 알림을 받아본 분이라면 아실 텐데요. 매일 아침, 기내 알림 소리와 함께 우리의 일상을 여행으로 바꿔주는 사람이 있습니다. 플레이윙즈의 특가 알림을 보내는 사람, 서비스 매니저 샐리 님을 만나봤습니다.
@@ -15,7 +15,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 ---
 
 <br>
-<img src="{{site.cloudinary}}/v1600902501/web/post/interview-salley/interview_salley_1.jpg" alt="salley1">
+<img src="/images/blog/interview-salley/interview_salley_1.jpg" alt="salley1">
 
 <br>
 **간단한 자기소개 부탁드립니다.**
@@ -26,7 +26,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 >생각해 보니 벌써 5년이 되었더라고요. 사실, 지금은 웃으며 얘기하지만 플레이윙즈에 처음 합류했을 때 창립 멤버 5명 밖에 없던 곳이었고, 스타트업이라 불안하긴 했어요. 스타트업 특유의 속도와 트렌드를 잘 따라갈 수 있을까 걱정도 됐고요. 하지만 여행을 좋아하는 사람의 관점으로 플레이윙즈를 봤을 때 정말 좋은 서비스로 발전할 수 있겠다는 확신이 들었어요.<br>그리고 오히려 인원이 적어 인사 결정도 빨랐고, 개발 착수도 바로 시행되는 게 큰 이점으로 다가오기도 했고요. 물론 업무 패턴이 자주 달라지고, 초창기에는 여러 분야의 업무를 해야 했기 때문에 힘들었지만, 푸시 알림 메시지를 한 번 발송하면 플레이윙즈 동시 접속 사용자가 2만~3만이나 되니 재밌었어요. 보람도 많이 느꼈고요.
 
 <br>
-<img src="{{site.cloudinary}}/v1600848563/web/post/interview-salley/interview_salley_2.jpg" alt="salley2">
+<img src="/images/blog/interview_salley_2.jpg" alt="salley2">
 <center style="font-size:13px; color:rgba(0, 0, 0, 0.6)">플레이윙즈 초창기 사무실, 네임 태그는 포스트잇으로 제작</center>
 
 <br>
@@ -37,8 +37,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/v1600848562/web/post/interview-salley/interview_salley_3.jpg" alt="salley3">
-    <img class="column-image" src="{{site.cloudinary}}/v1600848563/web/post/interview-salley/interview_salley_4.jpg" alt="salley4">
+    <img class="column-image" src="/images/blog/interview-salley/interview_salley_3.jpg" alt="salley3">
+    <img class="column-image" src="/images/blog/interview-salley/interview_salley_4.jpg" alt="salley4">
 </div>
 <center style="font-size:13px; color:rgba(0, 0, 0, 0.6); margin-top:16px">런던 공유 오피스에서 푸시 알림 메시지를 보내던 세라 님<br> 포르투갈 여행 중 특가 정보를 찾던 샐리 님</center>
 
@@ -49,7 +49,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 저희의 가장 중요한 업무 목표는 사용자가 받고 싶었던 특가 정보를 전달하고, 편리하게 구매 전환까지 이뤄지도록 그 플로우에 불편함이 없도록 관리하고, 개선하는 것이라고 생각해요.
 
 <br>
-<img src="{{site.cloudinary}}/v1600902501/web/post/interview-salley/interview_salley_5.jpg" alt="salley5">
+<img src="/images/blog/interview-salley/interview_salley_5.jpg" alt="salley5">
 
 <br>
 샐리 님은 SVM 팀의 바탕은 사용자임을 계속 강조했는데요.
@@ -77,11 +77,11 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 오키나와는 왕복 7만 원대, 보라카이는 왕복 9만 원대로 예매한 적이 있는데요. 오키나와는 특가 평균 운임이 19만 원대이고,  보라카이는 22만 원대입니다. 일반 특가 운임에 비해도 더 저렴하게 다녀온 셈이에요. 이것도 역시 방금 말씀드린 3가지 꿀팁으로 성공한 케이스입니다. (웃음)
 
 <br>
-<img src="{{site.cloudinary}}/v1600903343/web/post/interview-salley/interview_salley_6.jpg" alt="salley6">
+<img src="/images/blog/interview-salley/interview_salley_6.jpg" alt="salley6">
 <center style="font-size:13px; color:rgba(0, 0, 0, 0.6)">샐리 님이 성공한 오키나와 예매 내역</center>
 
 <br>
-<img src="{{site.cloudinary}}/v1600903343/web/post/interview-salley/interview_salley_7.jpg" alt="salley7">
+<img src="/images/blog/interview-salley/interview_salley_7.jpg" alt="salley7">
 <center style="font-size:13px; color:rgba(0, 0, 0, 0.6)">샐리 님이 성공한 보라카이 4명의 왕복 예매 내역</center>
 
 <br>
@@ -90,8 +90,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_8.jpg" alt="salley8">
-    <img class="column-image" src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_9.jpg" alt="salley9">
+    <img class="column-image" src="/images/blog/interview-salley/interview_salley_8.jpg" alt="salley8">
+    <img class="column-image" src="/images/blog/interview-salley/interview_salley_9.jpg" alt="salley9">
 </div>
 <center style="font-size:13px; color:rgba(0, 0, 0, 0.6); margin-top:16px">다같이 떠난 삿포로 여행</center>
 
@@ -102,7 +102,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 예를 들어 싱가포르가 왕복 24만 원이었는데, 왕복 17만 원으로 나간 거예요. 사용자분들이 싱가포르 17만 원? 혹해서 들어오셨지만, 실제 가격과 차이가 나니 이탈이 많았어요. 저희를 신뢰하고 저희 서비스를 이용해 주시는 건데, 그 신뢰를 깬 것 같아 힘들었어요. 이제는 이런 실수가 발생하지 않도록 시스템이 갖춰져 있어서 정말 다행입니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_10.jpg" alt="salley10">
+<img src="/images/blog/interview-salley/interview_salley_10.jpg" alt="salley10">
 
 <br>
 **얼마전에 끝난 리뉴얼 얘기를 안할 수가 없겠네요. 누구보다 오랜 기간 서비스를 운영하고 만드신 분이라, 감회가 정말 새로울 것 같습니다. 어떠세요?**
@@ -113,7 +113,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 항공권은 저희가 쌓아온 데이터와 노하우로 특가의 기준이 잡혀 있습니다. 하지만 호텔이나 새로운 상품군에 대해서는 아직 부족한 부분이 있어요. 이럴 때 가장 중요한 기준이 되어 주는 건 사용자의 시선입니다. 가격이 사용자에게 메리트가 있을까?, 실제 판매가에 비해 우리 상품이 저렴한가?, 사용자들이 원하는 구성으로 상품을 기획되었나? 등을 바탕으로 조사합니다. 이런 작업이 하나하나 쌓이다 보면, 플레이윙즈만의 특가 항공권 기준을 잡은 것처럼 다양한 여행 상품의 특가 기준도 잡힐 것으로 기대하고 있습니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_11.jpg" alt="salley11">
+<img src="/images/blog/interview-salley/interview_salley_11.jpg" alt="salley11">
 
 <br>
 **플레이윙즈 리뉴얼이 다 끝나지 않았다고 하는데요. 기대할만한 많은 변화가 또 있을까요?**
@@ -126,14 +126,14 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 게릴라전이에요. 여행 스타일이 굉장히 즉흥적인 편인데요, 준비를 전혀 하지 않고요, 제가 게으른 편이라서요.(웃음) 유럽 여행을 가도 가방 하나만 가지고 떠날 때도 있고, 비행기를 놓친 적도 많아요. 무모하지만 이렇게 다니는 여행에서 얻는 뜻밖의 즐거움도 있어요.(웃음)
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_12.jpg" alt="salley12">
+<img src="/images/blog/interview-salley/interview_salley_12.jpg" alt="salley12">
 <center style="font-size:13px; color:rgba(0, 0, 0, 0.6)">샐리 님이 직접 찍은 포르투 사진</center>
 한 번은 포르투갈 여행 중 지인들에게 다음 여행지를 선택해 달라고 한 적도 있어요. 그렇게 뽑힌 곳이 포르투갈의 ‘나자레’였는데 여행 정보도 거의 없었어요. 근데 도시에 도착해 보니 서퍼들의 성지로 현지인들에게 유명한 곳이더라고요. 하필 딱 서핑 계절이랑 맞아서 파도가 거의 100m 까지 올라가던 광경도 봤죠. 그리고 평소에 축구에 관심이 없는데, 바르셀로나에 가서 우연히 FC바르셀로나 경기를 직관하게 됐어요. 하필 그때 리오넬 메시가 나왔더라고요. 게다가 직접 2골을 넣고, 2번이나 어시스트에 성공했더라고요? 그날 FC바르셀로나가 5:1로 대승을 했어요. 모든 걸 계획하고 떠났다면 경험하지 못했을 추억이라고 생각해요.
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_13.jpg" alt="salley13">
-    <img class="column-image" src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_14.jpg" alt="salley14">
+    <img class="column-image" src="/images/blog/interview-salley/interview_salley_13.jpg" alt="salley13">
+    <img class="column-image" src="/images/blog/interview-salley/interview_salley_14.jpg" alt="salley14">
 </div>
 <center style="font-size:13px; color:rgba(0, 0, 0, 0.6); margin-top:16px">FC바르셀로나 홈 구장인 캄프 누 경기장에서 샐리 님</center>
 
@@ -142,7 +142,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 저는 비행기를 탈 때 보통 핸드폰을 꺼두는 편인데 그러면 보고 싶었던 푸시 알림 메시지들을 놓치게 되는 경우가 빈번하더라고요. 그래서 플레이윙즈 특가 알림도 놓친 분들이 많겠다는 생각을 했어요. 리뉴얼에 푸시 알림 메시지를 두고두고 볼 수 있도록 알림 박스가 필요하겠다고 기능을 요청드렸죠. 지금은 핸드폰이 꺼져있거나, 켜져 있거나, 놓쳤던 메시지를 언제든 쉽게 보실 수 있을 거예요.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_15.jpg" alt="salley15">
+<img src="/images/blog/interview-salley/interview_salley_15.jpg" alt="salley15">
 
 <br>
 **코로나19가 끝난다면 어딜 제일 가고 싶으세요?**
@@ -154,7 +154,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 왜 이 친구를 이렇게 좋아하나 고민을 해봤거든요? (진지) 일단 제가 겁이 많고 심하게 놀라는 편이에요. 무민이 귀엽지만 트롤이에요, 무섭지만 강한 친구, 그래서 저에게 부적 같은 존재입니다. 같이 있으면 마음이 든든해져요. 처음에는 단순히 귀여운 외형 때문에 좋아하기 시작했는데, 마음이 깊어지다 보니 벌써 8년이나 됐네요.(웃음)
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-salley/interview_salley_16.jpg" alt="salley16">
+<img src="/images/blog/interview-salley/interview_salley_16.jpg" alt="salley16">
 
 <br>
 **무민 말고도 또 좋아하는게 생기셨다고요. 일명 빠르게 드라이브하는 그 게임… 맞죠? (웃음) 게임 클럽을 만들었는데 20명이나 가입했음은 물론 게임 승률도 꽤 높다고 하는데 비결이 있나요?**
@@ -162,8 +162,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/v1600848562/web/post/interview-salley/interview_salley_17.jpg" alt="salley17">
-    <img class="column-image" src="{{site.cloudinary}}/v1600848563/web/post/interview-salley/interview_salley_18.jpg" alt="salley18">
+    <img class="column-image" src="/images/blog/interview-salley/interview_salley_17.jpg" alt="salley17">
+    <img class="column-image" src="/images/blog/interview-salley/interview_salley_18.jpg" alt="salley18">
 </div>
 <div class="caption" style="margin-top:12px"><span>스퀘어랩 점심시간</span> 12시 30분 - 2시</div>
 

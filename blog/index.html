@@ -38,10 +38,9 @@ permalink: /blog/
 </div>
 <script type="text/javascript">
     //Random image
-    const images = ['{{site.cloudinary}}/web/hero-0.jpg',
-        '{{site.cloudinary}}/web/hero-1.jpg',
-        '{{site.cloudinary}}/web/hero-2.jpg',
-        '{{site.cloudinary}}/web/hero-3.jpg'];
+    const images = ['/images/hero-0.jpg',
+        '/images/hero-1.jpg',
+        '/images/hero-2.jpg'];
     document.getElementById('hero').style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
 
     //Pagination

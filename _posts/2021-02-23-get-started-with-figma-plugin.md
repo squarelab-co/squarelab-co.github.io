@@ -5,14 +5,14 @@ date: 2021-02-23
 author: 추호연
 categories: 
 - Design
-og-img: https://res.cloudinary.com/kyte/image/upload/web/post/get-started-with-figma-plugin/cover.png
-img: https://res.cloudinary.com/kyte/image/upload/web/post/get-started-with-figma-plugin/cover.png
-img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jamie.jpg
+og-img: https://squarelab.co/images/blog/get-started-with-figma-plugin/cover.png
+img: /images/blog/get-started-with-figma-plugin/cover.png
+img-author: /images/blog/author/jamie.jpg
 ---
 
 [2020 Design Tools Survey](https://uxtools.co/survey-2020/#ui-design)에서 Figma가 Sketch를 앞지르고 1위에 올랐습니다. 스퀘어랩도 UI 디자인툴로 Sketch를 사용해오다 몇개월 전부터 Figma를 도입했는데요. Sketch와 마찬가지로 Figma에도 유용한 플러그인이 많고, 원하는 기능이 있다면 직접 플러그인을 제작할 수도 있습니다.
 
-<img src="{{site.cloudinary}}/web/post/get-started-with-figma-plugin/tools.png" data-action="zoom">
+<img src="/images/blog/get-started-with-figma-plugin/tools.png" data-action="zoom">
 
 이 포스트에서는 Figma 플러그인 제작하고 배포하는 과정을 공유하고자 합니다. 코딩에 능숙하지 않은 분들도 따라할 수 있도록 가능한 내용을 풀어썼습니다.
 
@@ -20,13 +20,13 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jamie.j
 
 Figma 플러그인 페이지의 In Development 섹션에 새로운 플러그인을 추가합니다. 플러그인 이름을 입력하고 템플릿 선택화면에서 Empty를 선택합니다.
 
-<img src="{{site.cloudinary}}/web/post/get-started-with-figma-plugin/create-a-plugin.png" data-action="zoom">
+<img src="/images/blog/get-started-with-figma-plugin/create-a-plugin.png" data-action="zoom">
 
 ---
 
 In Development 섹션에 방금 추가한 플러그인이 표시 되었습니다. 플러그인을 클릭하면 해당 폴더가 열리고 `code.js`와 `manifest.json` 파일이 생성된 걸 확인할 수 있습니다. 즐겨쓰는 IDE로 파일을 열어 편집을 시작해 볼게요. 그냥 메모장을 쓰셔도 됩니다.
 
-<img src="{{site.cloudinary}}/web/post/get-started-with-figma-plugin/in-development.png" data-action="zoom">
+<img src="/images/blog/get-started-with-figma-plugin/in-development.png" data-action="zoom">
 
 ---
 
@@ -84,7 +84,7 @@ figma.ui.resize(800, 600);
 
 아직 아무런 기능이 없는 상태지만 플러그인을 화면에 표시하기 위한 준비를 마쳤으니 한번 실행해볼까요? 메뉴에서 `Plugin > Development > My first plugin`을 선택하면 아래 이미지 처럼 플러그인이 실행되는걸 확인할 수 있습니다.
 
-<img src="{{site.cloudinary}}/web/post/get-started-with-figma-plugin/hello-world.png" data-action="zoom">
+<img src="/images/blog/get-started-with-figma-plugin/hello-world.png" data-action="zoom">
 
 ### 플러그인에 기능 추가하기
 
@@ -208,14 +208,14 @@ figma.ui.onmessage = message => {
 
 이제 다시 플러그인을 실행시켜 볼게요. 먼저 이미지를 하나 준비해서 사이즈를 변경합니다. 이미지 레이어를 선택된 상태에서 플러그인을 실행하고 Reset 버튼을 클릭하면 이미지가 원본 사이즈로 되돌아 가는 걸 확인할 수 있습니다.
 
-<img src="{{site.cloudinary}}/web/post/get-started-with-figma-plugin/reset.png" data-action="zoom">
+<img src="/images/blog/get-started-with-figma-plugin/reset.png" data-action="zoom">
 
 
 ### 플러그인 배포하기
 
 플러그인이 완성되었다면 누구나 쓸 수 있도록 플러그인을 배포할 차례입니다. Figma 플러그인 페이지로 돌아와 `Publish new plusin`을 클릭해보세요. 플러그인의 아이콘과 설명을 입력할 수 있는 팝업이 노출됩니다. 모두 입력한 뒤 `Publish`하면 Figma 측의 리뷰를 거친 후 [Figma Community](https://www.figma.com/community?tab=plugins&sort=installs)에 공개됩니다.
 
-<img src="{{site.cloudinary}}/web/post/get-started-with-figma-plugin/publish.png" data-action="zoom">
+<img src="/images/blog/get-started-with-figma-plugin/publish.png" data-action="zoom">
 
 
 ### 맺음말

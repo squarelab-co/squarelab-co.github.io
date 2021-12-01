@@ -5,15 +5,15 @@ date: 2020-09-18
 author: 마케팅팀
 categories:
   - Interview
-og-img: https://res.cloudinary.com/kyte/image/upload/v1600325801/web/post/interview-playwings-renewal-2/og_cover.jpg
-img: https://res.cloudinary.com/kyte/image/upload/v1600325710/web/post/interview-playwings-renewal-2/cover.jpg
-img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_marketing.jpg
+og-img: https://squarelab.co/images/blog/interview-playwings-renewal-2/og_cover.jpg
+img: /images/blog/interview-playwings-renewal-2/cover.jpg
+img-author: /images/blog/author/team_marketing.jpg
 ---
 
 UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 시작했는데요. 사용자가 직접 눈으로 확인할 수 없지만, 더 쉽고 편리한 서비스 이용을 위해 애써 주신 엔지니어 세 분의 상세한 답변이 계속 이어졌습니다.
 
 <br>
-<img src="{{site.cloudinary}}/v1600320700/web/post/interview-playwings-renewal-2/interview_playwings_renewal_1.jpg" alt="플레이윙즈 인터뷰 모습">
+<img src="/images/blog/interview_playwings_renewal_1.jpg" alt="플레이윙즈 인터뷰 모습">
 
 ---
 
@@ -24,7 +24,7 @@ UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 �
 > 종엽(엔지니어): 아마 일반 사용자들께서는 ‘오~ 좀 빨라졌는데?’ 이렇게 간단하게 느끼는 부분인데 실제 개발이나 테스트는 정말 까다롭고 어려운 작업이었거든요. 기존에는 기본 기능을 유지, 보수하는 정도로 진행했었다면 이번 리뉴얼을 진행하면서는 기존의 것들을 모두 두고 새로 만들었다고 해도 과언이 아닐 정도로 작은 것부터 차근차근 변경이 진행되었습니다.<br><br>그리고 저희가 프로그래밍을 통해 검색 결과를 정제하려다 보니, 원본 데이터를 전달하는 파트너사와 커뮤니케이션 해야 하는 부분도 많았는데요. 그곳과 저희의 기준이 달라서 필요한 정보가 누락되어 있거나 빠져 있는 경우도 좀 있었거든요. 그런 부분을 내부적으로 정규화하고 정책을 정하는 부분까지 진행하다 보니 조금 더 어려웠던 작업이었습니다. 그러나 아주 조금이라도 항공권 검색 기능이 달라졌다고 느끼는 분이 계신다면 보람차게 여길 수 있을 것 같습니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-2/interview_playwings_renewal_2.jpg" alt="항공권 검색 화면">
+<img src="/images/blog/interview-playwings-renewal-2/interview_playwings_renewal_2.jpg" alt="항공권 검색 화면">
 
 <br>
 **진행해주신 것 중에 추가로 하나 더 여쭤볼게요. 플레이윙즈 '특가 알림' 부분도 추가 개발 진행해주셨는데, 기존보다 더 개선된 부분이 있다면 무엇인가요.**
@@ -35,7 +35,7 @@ UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 �
 > 에이미: 특가상품 알림은 말 그대로 매력적인 상품에 대한 안내를 제공하는 알림이며, 야간 알림은 당일 오후 8시~ 익일 오전 8시 사이의 특가를 안내하는 알림입니다. 특정 상품의 경우는 밤이나 새벽 시간에 오픈하는 경우가 있어 이를 놓치지 마시라고 조금 늦은 시간에 알림을 보내드리고 있습니다. 콘텐츠 푸시는 기존에 없던 새로운 알림인데요. 알림을 켜두면 알찬 여행 정보가 담긴 콘텐츠를 바로바로 받아 볼 수 있는 이점이 있습니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-2/interview_playwings_renewal_3.jpg" alt="특가 상품 알림">
+<img src="/images/blog/interview-playwings-renewal-2/interview_playwings_renewal_3.jpg" alt="특가 상품 알림">
 
 <br>
 **다시 기능 개발 질문으로 돌아가볼게요. 기능 개발과는 달리 눈에 보이지 않지만 개선된 영역도 분명히 있을 것 같은데요. ‘코드 리뉴얼’이 바로 그것이라는 얘길 들었습니다. 정확히 얘기해주실 수 있을까요?**
@@ -53,7 +53,7 @@ UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 �
 </p>
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-2/interview_playwings_renewal_4.jpg" alt="종엽">
+<img src="/images/blog/interview-playwings-renewal-2/interview_playwings_renewal_4.jpg" alt="종엽">
 
 <br>
 **눈에 보이지 않는 개선점 질문을 하나 더 이어가겠습니다. 클라이언트의 경우, 사용 언어를 React Native로 모두 변경했는데요. 이 언어를 사용하게 되면 어떤 이점이 있나요? 또한, 사용자가 체감할 수 있는 부분에도 영향을 주는지 궁금합니다.**
@@ -68,7 +68,7 @@ UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 �
 > 소피아: 네, 안타깝게도 그런 경우가 있습니다. 그러면 우선 테스트를 아주 잘게 쪼갭니다. 만일 기존 3단계 과정으로 테스트를 진행했는데 원인 파악이 어렵다 싶으면 정말 사소하고 작은 것까지 포함하여 8~9단계로 테스트 시나리오를 쪼개서 하나하나 신중하게 다시 테스트를 진행하죠. 물 샐 틈 없이 그 물을 더 촘촘하게 죈다고 생각해주시면 될 것 같아요.
 
 <br>
-<img src="https://res.cloudinary.com/kyte/image/upload/v1600334211/web/post/interview-playwings-renewal-2/interview_playwings_renewal_5.jpg" alt="소피아 슬랙">
+<img src="/images/blog/interview-playwings-renewal-2/interview_playwings_renewal_5.jpg" alt="소피아 슬랙">
 
 ---
 
@@ -79,7 +79,7 @@ UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 �
 > 블레어: 네. 하이에어 콘텐츠의 경우 직접 탑승까지 해보며 최대한 리얼함을 전달하고자 노력한 콘텐츠였어요. 저희 사용자 분들이 LCC에서 느끼는 아쉬운 부분 중 좌석 간 간격이 좁다는 점이 있는데, 하이에어는 좌석 간 간격이 무려 97cm이고 이외에도 장점들이 많아서 조금 더 항공사 선택의 폭을 넓혀보셨으면 하는 마음에 콘텐츠를 기획하게 됐습니다. 다행이 많은 분이 흥미 있게 구독해주셔서 개인적으로도 큰 보람을 느꼈는데요.<br><br>앞으로는 데이터 적인 콘텐츠도 계획 중에 있습니다. 사용자 분들이 저희가 매달 선보이는 가장 많이 검색해본 인기 여행지 1위 콘텐츠나 인구밀도가 가장 낮은 국가 TOP4 콘텐츠 등에 많은 관심을 보여주고 계시더라고요. 그래서 여행에 관한 여러 데이터를 흥미로운 콘텐츠로 정제해 보는 게 목표랍니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-2/interview_playwings_renewal_6.jpg" alt="하이에어">
+<img src="/images/blog/interview-playwings-renewal-2/interview_playwings_renewal_6.jpg" alt="하이에어">
 
 <br>
 **유심히 보니, 콘텐츠마다 카테고리가 다 있는 것 같은데 어떻게 분류되는지도 안내주실 수 있을까요?**
@@ -102,7 +102,7 @@ UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 �
 > 스윙: 물론 도움이 됩니다! 이전보다 사업 영역이 확장되어 항공 이외의 호텔, 투어, 액티비티 등 섹터를 다룰 수 있기 때문에 기존에 집중하던 항공 영역 외의 여러 상품을 다룰 수 있게 되었습니다. 코로나로 인해 아직 여행 시장이 주춤하지만 상황이 재개되었을 때, 사용자들이 플레이윙즈를 더욱 유용하게 써주시길 바라고 있습니다.
 
 <br>
-<img src="{{site.cloudinary}}/v1600326547/web/post/interview-playwings-renewal-2/interview_playwings_renewal_7.jpg" alt="스윙">
+<img src="/images/blog/interview-playwings-renewal-2/interview_playwings_renewal_7.jpg" alt="스윙">
 
 ---
 
@@ -113,7 +113,7 @@ UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 �
 > 키: 콘텐츠 영역 쪽이 가장 마음에 들어요. 저 같은 경우 앱을 사용할 때 특별한 목적이 있으면 단발성으로 서비스를 쓰게 되더라고요. 그래서인지 앱을 잘 지우는 편인데요. 5분 이내에 지우는 비율이 60%~70% 정도는 됩니다. 엄청나죠. (웃음) 그래서 한 번 사용하고 아니다 싶으면 바로 삭제하는데, 새로워진 플레이윙즈에는 주기적으로 사용하기에 참 좋은 콘텐츠들이 넘쳐나다 보니, 계속 사용하게 되는 것 같습니다. 이런 부분이 우리 서비스를 더욱 널리, 오래 사용하게 되는 원동력이 된다고 생각합니다.<br><br>스윙:저는 푸시 알림을 모아서 보는 기능이 제일 만족스럽습니다. 사용자에게 푸시가 발송된다는 것은 그만큼 퀄리티가 좋은 상품 혹은 콘텐츠라는 방증일 텐데요. 푸시 알림 박스에 접속하면 플레이윙즈가 제공할 수 있는 가장 좋은 것들만 골라서 확인할 수 있다는 것이기에 의미가 있다고 생각합니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-2/interview_playwings_renewal_8.jpg" alt="키">
+<img src="/images/blog/interview-playwings-renewal-2/interview_playwings_renewal_8.jpg" alt="키">
 
 <br>
 **이렇게나 많은 고민과 노력 끝에 탄생한 현재의 플레이윙즈를 사용하고 계실 사용자에게 한마디 하신다면?**

@@ -5,15 +5,15 @@ date: 2020-09-18
 author: 마케팅팀
 categories: 
 - Interview
-og-img: https://res.cloudinary.com/kyte/image/upload/web/post/interview-playwings-renewal-1/og_cover.jpg
-img: https://res.cloudinary.com/kyte/image/upload/web/post/interview-playwings-renewal-1/cover.jpg
-img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_marketing.jpg
+og-img: https://squarelab.co/images/blog/interview-playwings-renewal-1/og_cover.jpg
+img: /images/blog/interview-playwings-renewal-1/cover.jpg
+img-author: /images/blog/author/team_marketing.jpg
 ---
 
 플레이윙즈가 새 단장을 마친지도 어느덧 한 달이라는 시간이 지났습니다. 다채롭게 변화된 모습만큼이나 리뉴얼 프로젝트를 위해 애써주신 분들이 많은데요. 그래서 이번에는 플레이윙즈를 새롭게 꾸미기 위해 애써주신 멤버들 이야기를 전하는 시간을 갖고자 합니다. 리뉴얼 프로젝트 이후 오랜만에 한 곳에 모여 그간의 회고와 고마움을 풀어내던 그 자리로 여러분을 초대합니다. 
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-1/interview_playwings_renewal_1.jpg" alt="플레이윙즈 인터뷰 모습">
+<img src="/images/blog/interview-playwings-renewal-1/interview_playwings_renewal_1.jpg" alt="플레이윙즈 인터뷰 모습">
 <div class="caption"><span>인터뷰 참여자</span>도연(CEO), 에이미(PM), 써머&제이(디자이너), 스윙(사업기획), 키&종엽(엔지니어), 세라(SVM), 레아&캐틀린&블레어(마케터), 소피아(QA)</div>
 
 ---
@@ -33,7 +33,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 에이미: 의외로 첫 시작 시점에 큰 반대는 없었습니다. 아마 알게 모르게 다들 사용성 개성이나 고도화를 위한 구조적 변화는 필요하다고 생각해오셨던 것 같습니다. 그리고 워낙에 리뉴얼 프로젝트 시작 시점부터 프로젝트에 대한 목적과 목표가 명확했던 것도 모두의 이해를 구하는 데 큰 도움이 되었다고 생각합니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-1/interview_playwings_renewal_2.jpg" alt="플레이윙즈 리뉴얼 브레인스토밍">
+<img src="/images/blog/interview-playwings-renewal-1/interview_playwings_renewal_2.jpg" alt="플레이윙즈 리뉴얼 브레인스토밍">
 
 <br>
 **리뉴얼 준비하며 코로나라는 아주 큰 복병이 있었습니다. 여행업계가 전반적으로 어려운데 새로운 앱을 출시하는 게 쉽지 않은 결정이었을 것 같은데요.**
@@ -54,7 +54,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 <i class="ri-double-quotes-r quote"></i>
 </p>
 
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-1/interview_playwings_renewal_3.jpg" alt="소피아">
+<img src="/images/blog/interview-playwings-renewal-1/interview_playwings_renewal_3.jpg" alt="소피아">
 
 ---
 
@@ -73,7 +73,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 써머: 앞에서도 홈 화면을 얘기했는데, 여기서도 홈 화면을 얘기할 수밖에 없네요. 처음 개발을 시작하고 QA를 하면서도 변경된 부분이 홈 화면이었어요. 작은 디자인 요소들부터 시작해서 포함되어 있는 내용이나 구성까지 끊임없는 반복의 싸움이었습니다. 홈 화면 진입 시, 플레이윙즈 로고가 움직이는데 이런 애니메이션도 몇 번의 변경 끝에 나오게 되었고요. 특가 상품 썸네일 이미지의 사이즈도 디자인팀에서 여러 번의 회의와 변경 끝에 결정이 되었습니다. 이 밖에도 너무 많지만, 하나하나 다 말하기 어렵네요.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-1/interview_playwings_renewal_4.jpg" alt="써머">
+<img src="/images/blog/interview-playwings-renewal-1/interview_playwings_renewal_4.jpg" alt="써머">
 
 <br>
 **노출 영역이나 배너 구좌가 확대 됨에 따라, 상품기획 측면에서도 기존과는 다른 방향으로 많은 고민을 하셨을 것 같은데요. 리뉴얼을 준비하며 가장 중요하게 생각했던 포인트가 있었을까요?**
@@ -96,7 +96,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 <i class="ri-double-quotes-r quote"></i>
 </p>
 
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-1/interview_playwings_renewal_5.jpg" alt="플레이윙즈 UI">
+<img src="/images/blog/interview-playwings-renewal-1/interview_playwings_renewal_5.jpg" alt="플레이윙즈 UI">
 
 <br>
 **특가 상세 화면에도 많은 변화가 있었습니다. 특가 특성상 워낙 정보가 많기도 하고 수정되는 경우도 빈번해서 사용자도 그만큼 힘들었을 것 같은데요. 리뉴얼된 상세 화면에서는 이런 문제점을 보완한 부분이 있다면 무엇이었을까요?**
@@ -111,7 +111,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 에이미: 네, 맞습니다. 특가를 안내하는 한정적인 기능에서 벗어나 여행 전반에 대한 정보와 영감을 얻어갈 수 있는 플랫폼으로 변모하고 싶기도 했고. 조금 더 편리한 사용성을 제공하고 싶었습니다. 그래서 이번에 회원가입이 선택사항으로 바뀌게 된 계기도 그런 생각이 바탕에 있었고요. 물론 회원가입을 하지 않고도 서비스를 이용할 수 있지만, 회원가입 후 사용자의 이용 행태가 저희 쪽에 수집된다면 더 정교한 특가 알림이나 콘텐츠 추천이 가능하여 회원가입을 유도하는 장치를 곳곳에 마련해두었습니다. 또, 큰 변화는 바로 콘텐츠 영역이 추가되었다는 건데요. 기존에는 앱 푸시를 통하지 않으면 콘텐츠를 만나볼 수 없었는데 리뉴얼 이후부터는 원하면 언제라도 홈 화면 혹은 특가 상세 화면 등에서 언제든 콘텐츠를 만나볼 수 있게 되었습니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-playwings-renewal-1/interview_playwings_renewal_6.jpg" alt="에이미">
+<img src="/images/blog/interview-playwings-renewal-1/interview_playwings_renewal_6.jpg" alt="에이미">
 
 <br>
 **편리한 사용과 유려한 화면 외, 브랜딩 관련해서도 고민이 깊을 것 같은데요. 리뉴얼 프로젝트를 진행하며 사용자에게 “우리가 이런 서비스다.”라는 점을 알리기 위해 추가된 장치가 있을까요?**

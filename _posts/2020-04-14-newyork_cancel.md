@@ -5,9 +5,9 @@ date: 2020-04-14
 author: 김지현
 categories: 
 - Travelog
-og-img: https://res.cloudinary.com/kyte/image/upload/web/post/cancel-newyork/og_cover.jpg
-img: https://res.cloudinary.com/kyte/image/upload/web/post/cancel-newyork/cover.jpg
-img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jihyun.jpg
+og-img: https://squarelab.co/images/blog/cancel-newyork/og_cover.jpg
+img: /images/blog/cancel-newyork/cover.jpg
+img-author: /images/blog/author/jihyun.jpg
 ---
 
 세달 전, 그러니까 2020년 1월 중순 즈음 설레는 마음으로 뉴욕행 비행기 티켓을 끊을 때만 해도 전혀 상상하지 못했습니다. 제가 뉴욕 여행 취소기를 쓰는 날이 올줄 말이죠.
@@ -70,7 +70,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jihyun.
 
 여행 정보 얻으려고 가입한 미국여행 카페에 미국 여행을 걱정하는 글을 올리게 될 줄이야 ㅠㅠ
 
-<img class="border" src="{{site.cloudinary}}/web/post/cancel-newyork/cancel-newyork-1.jpg" alt="미국여행 카페에 올린 글">
+<img class="border" src="/images/blog/cancel-newyork/cancel-newyork-1.jpg" alt="미국여행 카페에 올린 글">
 
 <br>
 
@@ -104,7 +104,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jihyun.
 한국으로의 여행을 여행재고인 3단계로 변경한지 얼마 지나지 않아 내려진 조치였다. 한국인의 입국을 금지한 조치는 아니었으나 돌아가는 분위기가 심상치 않았다.  
 내가 새벽까지 기다려서 미국 대통령의 기자회견을 보게 될 줄이야.
 
-<img class="border" src="https://res.cloudinary.com/kyte/image/upload/web/post/cancel-newyork/cancel-newyork-2.jpg" alt="기사 캡처 - 출처: newsis">
+<img class="border" src="/images/blog/cancel-newyork/cancel-newyork-2.jpg" alt="기사 캡처 - 출처: newsis">
 
 ## 2020년 3월 2일
 
@@ -133,7 +133,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jihyun.
 
 포기하지 말고 호텔측으로 직접 메일을 보내보기로 했다. 애초에 취소불가 상품을 예약한 것은 나였으나, 코로나가 퍼지고 내 의지와 상관없이 항공 스케쥴도 취소된 현재 상황을 호텔 측에서 이해해 줄지도 모른다는 희망을 안고.  
 
-<img class="border" src="{{site.cloudinary}}/web/post/cancel-newyork/cancel-newyork-3.jpg" alt="호텔로 보낸 메일">
+<img class="border" src="/images/blog/cancel-newyork/cancel-newyork-3.jpg" alt="호텔로 보낸 메일">
 
 ## 2020년 3월 9일
 
@@ -141,7 +141,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/jihyun.
 아주 심플하고도 친절하게 패널티 없는 취소를 해줄테니 예약대행사에 연락을 해보라는 내용이었다.  
 사랑해요!😭. 다음번 여행에 꼭 방문할게요!
 
-<img class="border" src="{{site.cloudinary}}/web/post/cancel-newyork/cancel-newyork-4.jpg" alt="호텔로부터 받은 답변">
+<img class="border" src="/images/blog/cancel-newyork/cancel-newyork-4.jpg" alt="호텔로부터 받은 답변">
 
 항공권과 취소불가 호텔을 무사히 취소하고 난 뒤에서야 취소가 가능한 그 외 항목들을 취소했다.  
 한인민박은 10%의 수수료를 공제했고, 취소가 불가능할줄 알았던 암트랙은 꽤 많은 수수료를 공제 하고 환불을 해주었다.  

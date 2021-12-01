@@ -33,7 +33,6 @@ a:focus {
 
 h1 {
   font-size: 40px;
-  font-weight: 600;
   line-height: 1.2em;
 }
 
@@ -41,7 +40,6 @@ h2 {
   font-size: 28px;
   line-height: 40px;
   word-break: keep-all;
-  font-weight: 600;
   margin: 64px 0 8px 0;
 }
 
@@ -121,7 +119,9 @@ blockquote {
     font-style: italic;
     margin: 0;
     padding: 0 16px;
-}*/
+}
+*/
+
 blockquote {
   border-left: 3px solid rgba(0, 0, 0, 0.12);
   margin-inline-start: 0;
@@ -266,6 +266,7 @@ tbody tr:nth-last-child(2) {
   height: 24px;
   border-radius: 16px;
   object-fit: cover;
+  margin-top: -2px;
   margin-right: 8px;
 }
 
@@ -274,6 +275,7 @@ tbody tr:nth-last-child(2) {
   height: 32px;
   border-radius: 20px;
   object-fit: cover;
+  margin-top: -4px;
   margin-right: 8px;
 }
 
@@ -318,7 +320,7 @@ tbody tr:nth-last-child(2) {
 .post img {
   display: block;
   max-width: 100%;
-  margin: 8px 0 0 0;
+  margin: 8px 0;
 }
 
 .post-wrap {
@@ -451,7 +453,7 @@ tbody tr:nth-last-child(2) {
 
 .quote {
   font-size: 24px;
-  margin: 24px 0;
+  margin: 16px 0;
   color: rgba(0, 0, 0, 0.12);
 }
 

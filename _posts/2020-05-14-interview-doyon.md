@@ -5,9 +5,9 @@ date: 2020-05-14
 author: 마케팅팀
 categories: 
 - Interview
-og-img: https://res.cloudinary.com/kyte/image/upload/web/post/interview-doyon/og_cover.jpg
-img: https://res.cloudinary.com/kyte/image/upload/web/post/interview-doyon/cover.jpg
-img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_marketing.jpg
+og-img: https://squarelab.co/images/blog/interview-doyon/og_cover.jpg
+img: /images/blog/interview-doyon/cover.jpg
+img-author: /images/blog/author/team_marketing.jpg
 ---
 
 요즘 떠오르는 회사의 뉴스 기사 볼 때, 그 회사 대표는 누구일까 궁금해하며 검색해 본 적 누구나 있을 텐데요. 입사 지원할 때 그 회사 대표의 인터뷰나 회사 소개 페이지를 꼼꼼히 읽어 내려간 경험도 분명히 있을 테고요. 이처럼, 어떤 회사의 면면을 가장 빠르고 정확하게 아는 방법은 바로 대표의 직접적인 말입니다. 한 회사의 나아갈 방향과 함께 공유하는 조직 문화에 대표의 생각과 고민이 가장 많이 담겼다고 해도 과언이 아닐 정도이니까요. 그래서 특별히 두 번째 인터뷰는 스퀘어랩의 CEO이자, 모든 업무를 총괄하고 계신 도연 님과의 시간으로 꾸려보았습니다. 
@@ -15,7 +15,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 ---
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-doyon/interview_doyon_1.jpg" alt="인터뷰 김도연 1">
+<img src="/images/blog/interview-doyon/interview_doyon_1.jpg" alt="인터뷰 김도연 1">
 
 <br>
 **간단한 자기소개 부탁 드립니다.**
@@ -31,8 +31,8 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 
 <br>
 <div class="column-box">
-    <img class="column-image" src="{{site.cloudinary}}/web/post/interview-doyon/interview_doyon_2.jpg" alt="인터뷰 김도연 2">
-    <img class="column-image" src="{{site.cloudinary}}/web/post/interview-doyon/interview_doyon_3.jpg" alt="인터뷰 김도연 3">
+    <img class="column-image" src="/images/blog/interview-doyon/interview_doyon_2.jpg" alt="인터뷰 김도연 2">
+    <img class="column-image" src="/images/blog/interview-doyon/interview_doyon_3.jpg" alt="인터뷰 김도연 3">
 </div>
 
 
@@ -67,7 +67,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 팀원은 어떻게 생각할지 모르겠지만, 모두가 함께 일하고 싶은 회사가 되었으면 해서 노력했는데 그 부분에서 어느 정도 인정을 받은 것 같아 감사하게 생각합니다. 물론 제가 잘해서는 아니고, 스퀘어랩 구성원 모두가 한마음, 한뜻으로 본인의 조직이라고 생각하고 늘 열심히 해주었기 때문에 이런 좋은 평가도 받았다고 생각합니다. 
 
 <br>
-<img src="{{site.cloudinary}}/v1591931500/web/post/interview-doyon/interview_doyon_4.jpg" alt="원티드 좋은 기업에 선정된 스퀘어랩">
+<img src="/images/blog/interview-doyon/interview_doyon_4.jpg" alt="원티드 좋은 기업에 선정된 스퀘어랩">
 
 <br>
 **누구나 일하고 싶은 좋은 기업을 만들고 싶다고 하셨는데, 그러기 위해선 어떤 부분이 가장 중요하다고 생각하시나요?**
@@ -86,7 +86,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 두 조직의 업무 프로세스, 소통 방식 등 서로 다른 부분이 많아 처음엔 쉽지 않았습니다. 그리고 지금도 약간의 어려움은 여전히 존재하고 있습니다. 둘 중 어떤 것이 좋다, 나쁘다를 떠나 서로 합의점을 찾고 팀원의 이해를 구하는 일을 가장 중요하게 생각했고 이 부분을 위해 많은 노력을 기울였습니다. 아무래도 제가 대표이다 보니 무언가에 의견을 내면 다른 분들이 부담을 느낄 수 있기 때문에 되도록 팀원의 이야기를 듣고 방향을 설정하려고 많은 시간을 쏟았습니다. 다행히도 두 회사 모두 의욕적이고 배려심있는 구성원이 모여 있다 보니 일련의 과정을 통해 스퀘어랩만의 문화가 빠르게 정착될 수 있었습니다.  
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-doyon/interview_doyon_5.jpg" alt="인터뷰 김도연 5">
+<img src="/images/blog/interview-doyon/interview_doyon_5.jpg" alt="인터뷰 김도연 5">
 
 ---
 
@@ -114,7 +114,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 아, 이남장은 제 마음의 고향입니다. 그냥 디폴트로 박혀 있는 것이라고 생각해주시면 됩니다. 사실 사람들이 하도 놀려서 요즘엔 한 달에 몇 번 정도 밖에 방문을 못합니다. 제가 가면 항상 아주머님이 반겨주셨는데 마음대로 가지 못해 아쉽습니다.
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-doyon/interview_doyon_6.jpg" alt="을지로 이남장">
+<img src="/images/blog/interview-doyon/interview_doyon_6.jpg" alt="을지로 이남장">
 <div class="caption"><span>이남장</span> 운영된 지 40년이 넘은 을지로 유명 설렁탕 집으로 스퀘어랩 사무실과 아주 가까이 위치해 있다. 도연 님의 최애 식당.</div>
 
 <br>
@@ -126,7 +126,7 @@ img-author: https://res.cloudinary.com/kyte/image/upload/web/post/author/team_ma
 > 여행 가서 사업 생각은 거의 하지 않고 정말 푹 쉬는 편입니다. 가장 좋아하는 장소는 하와이입니다. 워낙 잘 알기도 하고 오랜 시간을 보냈기 때문에 집 같은 편안함이 있습니다. 좋은 곳은 또 다시 가도 여전히 좋더라고요. 만일 하와이에서 길 잃으면 저에게 전화주세요. 어디든 다 훤히 꿰고 있으니까요. (웃음)
 
 <br>
-<img src="{{site.cloudinary}}/web/post/interview-doyon/interview_doyon_7.jpg" alt="하와이 여행 중인 김도연">
+<img src="/images/blog/interview-doyon/interview_doyon_7.jpg" alt="하와이 여행 중인 김도연">
 
 ---
 
