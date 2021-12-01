@@ -5,12 +5,12 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 Dec 2021 11:17:08 +0900</pubDate>
-    <lastBuildDate>Wed, 01 Dec 2021 11:17:08 +0900</lastBuildDate>
+    <pubDate>Wed, 01 Dec 2021 11:54:51 +0900</pubDate>
+    <lastBuildDate>Wed, 01 Dec 2021 11:54:51 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
-        <title>스퀘어랩의 코드 리뷰 프로세스</title>
+        <title>스퀘어랩의 코드 리뷰 프로세스 (1/2)</title>
         <description>스퀘어랩의 모든 개발자들은 필수적으로 코드 리뷰 프로세스를 거칩니다. 어떤 코드라도 코드 베이스에 올리기 전에 다른 개발자의 리뷰를 받는다는 뜻인데요. 해 보신 분들은 아시겠지만 여기엔 분명한 장단점이 있습니다.
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 스퀘어랩의 코드 리뷰 프로세스
+title: 스퀘어랩의 코드 리뷰 프로세스 (1/2)
 date: 2021-12-01
 author: 전지훈
 categories:
