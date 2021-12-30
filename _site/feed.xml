@@ -5,9 +5,24 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 Dec 2021 11:54:51 +0900</pubDate>
-    <lastBuildDate>Wed, 01 Dec 2021 11:54:51 +0900</lastBuildDate>
+    <pubDate>Thu, 30 Dec 2021 09:52:38 +0900</pubDate>
+    <lastBuildDate>Thu, 30 Dec 2021 09:52:38 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>nginx ingress controller 무중단 업데이트하기</title>
+        <description>AWS 상에서 쿠버네티스(k8s) 클러스터를 운영할때 NLB(Network Load Balancer)와 nginx ingress controller 를 조합해서 사용하면 매우 편리합니다.
+일단 k8s 클러스터로 들어가는 모든 트래픽을 원하는 하나의 네트워크 로드밸런서로 몰아서 사용이 가능하기 때문에 로드밸런서 비용을 절약 가능하고, 여기에 추가로 nginx에서 제공하는 다양한 기능을 모두 사용할 수 있는 장점이 있습니다.
+스퀘어랩에서도 대부분 서비스들이 쿠버네티스 클러스터 위에서 운영되고 있으며 외부에서 클러스터로 들어오는 트래픽은 NLB + nginx ingress controller를 조합해서 처리하고있습니다.
+</description>
+        <pubDate>Thu, 30 Dec 2021 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/update-nginx-ingress-controller/</link>
+        <guid isPermaLink="false">/blog/update-nginx-ingress-controller/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>스퀘어랩의 코드 리뷰 프로세스 (1/2)</title>
@@ -295,20 +310,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
         
         
         <category>News</category>
-        
-      </item>
-    
-      <item>
-        <title>뉴욕 여행 취소기 (feat. 코로나19)</title>
-        <description>세달 전, 그러니까 2020년 1월 중순 즈음 설레는 마음으로 뉴욕행 비행기 티켓을 끊을 때만 해도 전혀 상상하지 못했습니다. 제가 뉴욕 여행 취소기를 쓰는 날이 올줄 말이죠.
-그러나 여행 서비스를 만드는 스퀘어랩에 몸담고 있는 사람으로서 지금의 사태에 마냥 슬퍼하고 있을 수만은 없죠. 저처럼 여행을 취소한, 혹은 취소당한 모든 이들에게 심심한 위로가 되기를 바라며 나의 뉴욕 여행 취소 기록을 남기기로 했습니다. 아래 내용은 저의 취소 경험담을 일지 형식으로 재구성한 것입니다.
-</description>
-        <pubDate>Tue, 14 Apr 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/newyork-cancel/</link>
-        <guid isPermaLink="false">/blog/newyork-cancel/</guid>
-        
-        
-        <category>Travelog</category>
         
       </item>
     

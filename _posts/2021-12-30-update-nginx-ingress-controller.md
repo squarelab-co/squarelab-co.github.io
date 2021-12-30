@@ -5,8 +5,8 @@ date: 2021-12-30
 author: 권영재
 categories:
 - Engineering
-og-img: https://squarelab.co/images/blog/code-review-1/og_cover.jpg
-img: /images/blog/code-review-1/code.jpg
+og-img: https://squarelab.co/images/blog/ingress-nginx/og_cover.jpg
+img: /images/blog/ingress-nginx/og_cover.jpg
 img-author: /images/blog/author/yjiq150.jpg
 ---
 
@@ -48,13 +48,13 @@ nginx기반으로 만들어진 ingress controller는 두가지가 있는데 개�
 이해하기 쉽게 그림으로 표현해보면 다음과 같습니다.
 
 ![현재 상황(변경 전)](/images/blog/ingress-nginx/ingress-nginx-existing.png)
-1. 현재 상황(변경 전)
+<p>1. 현재 상황(변경 전)</p>
 
 ![신규 NLB, ingress-nginx를 추가하여 이중화 한 후 일부 DNS 레코드만 신규 NLB로 변경한 상황(변경 중)](/images/blog/ingress-nginx/ingress-nginx-duplicated.png)
-2. 신규 NLB, ingress-nginx를 추가하여 이중화 한 후 일부 DNS 레코드만 신규 NLB로 변경한 상황(변경 중)
+<p>2. 신규 NLB, ingress-nginx를 추가하여 이중화 한 후 일부 DNS 레코드만 신규 NLB로 변경한 상황(변경 중)</p>
 
 ![모든 DNS 레코드를 변경하고 이중화되었던 기존 NLB, ingress-nginx를 삭제 완료한 상황(변경 완료)](/images/blog/ingress-nginx/ingress-nginx-duplicated.png)
-3. 모든 DNS 레코드를 변경하고 이중화되었던 기존 NLB, ingress-nginx를 삭제 완료한 상황(변경 완료)
+<p>3. 모든 DNS 레코드를 변경하고 이중화되었던 기존 NLB, ingress-nginx를 삭제 완료한 상황(변경 완료)</p>
 
 그런데 위 시나리오를 보면 "한 클러스터에 ingress-nginx controller가 여러개 생기는데 괜찮은걸까?" 라는 의문점이 들 수 있는데, 결론 부터 말하자면 아무 문제 없습니다.
 
