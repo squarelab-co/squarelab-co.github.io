@@ -44,7 +44,7 @@ nginx기반으로 만들어진 ingress controller는 두가지가 있는데 개�
 3. DNS 레코드를 이용하여 기존 NLB로 연결되어있던 일부 도메인 혹은 트래픽의 일부를 신규 NLB로 전달되도록 변경
 4. 신규 설정에 문제 없는 것이 확인되면 신규 NLB, ingress-nginx로 모든 도메인, 모든 트래픽을 전달되도록 변경
 5. DNS 레코드 변경사항이 전파(propagation)가 완료될때까지 충분히 기다린 후 기존 ingress-nginx controller pod으로 더이상 요청이 들어오지 않는 것을 로그로 확인한 후 기존 NLB, ingress-nginx를 삭제
-``
+
 이해하기 쉽게 그림으로 표현해보면 다음과 같습니다.
 
 ![현재 상황(변경 전)](/images/blog/ingress-nginx/ingress-nginx-existing.png)
