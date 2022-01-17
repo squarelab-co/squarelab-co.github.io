@@ -347,7 +347,8 @@ video {
 }
 
 .second-img {
-  width: 300px;
+  width: 284px;
+  margin-top:8px;
   filter: drop-shadow(0 24px 24px rgba(0, 0, 0, 0.2));
   transition: all 0.5s ease-out;
   opacity: 0;
@@ -779,7 +780,7 @@ i {
   }
 
   .second-img {
-    width: 226px;
+    width: auto;
     height: 458px;
     margin: 0 auto;
     display: flex;
