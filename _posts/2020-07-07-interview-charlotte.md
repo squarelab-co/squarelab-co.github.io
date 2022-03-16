@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 여행을 그리는, PM을 만나다
-date: 2020-07-07
+date: 2099-07-07
 author: 마케팅팀
 categories: 
 - Interview

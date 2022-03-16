@@ -5,8 +5,8 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 17 Jan 2022 18:28:07 +0900</pubDate>
-    <lastBuildDate>Mon, 17 Jan 2022 18:28:07 +0900</lastBuildDate>
+    <pubDate>Thu, 17 Mar 2022 08:43:50 +0900</pubDate>
+    <lastBuildDate>Thu, 17 Mar 2022 08:43:50 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -216,19 +216,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
       </item>
     
       <item>
-        <title>일상을 여행으로 만드는 서비스 매니저</title>
-        <description>비행기에 앉아 이륙을 기다리다 보면 울리는 소리, ‘띵동’. 알림과 함께 비행기는 우리를 여행지로 안내합니다. 플레이윙즈 특가 알림을 받아본 분이라면 아실 텐데요. 매일 아침, 기내 알림 소리와 함께 우리의 일상을 여행으로 바꿔주는 사람이 있습니다. 플레이윙즈의 특가 알림을 보내는 사람, 서비스 매니저 샐리 님을 만나봤습니다.
-</description>
-        <pubDate>Thu, 24 Sep 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/interview-salley/</link>
-        <guid isPermaLink="false">/blog/interview-salley/</guid>
-        
-        
-        <category>Interview</category>
-        
-      </item>
-    
-      <item>
         <title>플레이윙즈를 만드는 사람들을 만나다-2</title>
         <description>UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 시작했는데요. 사용자가 직접 눈으로 확인할 수 없지만, 더 쉽고 편리한 서비스 이용을 위해 애써 주신 엔지니어 세 분의 상세한 답변이 계속 이어졌습니다.
 </description>
@@ -255,24 +242,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
       </item>
     
       <item>
-        <title>여행을 그리는, PM을 만나다</title>
-        <description>그리다 :
-
-  연필, 붓 따위로 어떤 사물의 모양을 그와 닮게 선이나 색으로 나타낸다. 
-  상상하거나 회상하다.
-
-국어사전에 ‘그리다’를 검색했을 때 나오는 결과입니다. 인터뷰를 함께 진행하며 이분이야 말로 진정 여행을 그리는 사람이라는 생각이 들었는데요. 아무것도 없던 페이지에 그림을 그려 새로운 서비스를 탄생케하는 모습에서도, 사용자가 더 즐거운 여행을 그릴 수 있도록 귀를 기울이는 태도에서도 여실히 느낄 수 있었습니다. 이번 스퀘어랩 인터뷰의 주인공은 여행을 그리는 Dreamer이자 Writer인, 스퀘어랩의 PM 샬롯 님입니다.
-</description>
-        <pubDate>Tue, 07 Jul 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/interview-charlotte/</link>
-        <guid isPermaLink="false">/blog/interview-charlotte/</guid>
-        
-        
-        <category>Interview</category>
-        
-      </item>
-    
-      <item>
         <title>여행의 영감을 일상에서 나누는 방법</title>
         <description>끝을 알 수 없는 수평선 아래 몸을 누인 여행객 사진 한 장.
 무심하게 도심을 지나쳐 삶을 살아가는 현지인 사진 한 장.
@@ -288,19 +257,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
       </item>
     
       <item>
-        <title>스퀘어랩 CEO를 만나다</title>
-        <description>요즘 떠오르는 회사의 뉴스 기사 볼 때, 그 회사 대표는 누구일까 궁금해하며 검색해 본 적 누구나 있을 텐데요. 입사 지원할 때 그 회사 대표의 인터뷰나 회사 소개 페이지를 꼼꼼히 읽어 내려간 경험도 분명히 있을 테고요. 이처럼, 어떤 회사의 면면을 가장 빠르고 정확하게 아는 방법은 바로 대표의 직접적인 말입니다. 한 회사의 나아갈 방향과 함께 공유하는 조직 문화에 대표의 생각과 고민이 가장 많이 담겼다고 해도 과언이 아닐 정도이니까요. 그래서 특별히 두 번째 인터뷰는 스퀘어랩의 CEO이자, 모든 업무를 총괄하고 계신 도연 님과의 시간으로 꾸려보았습니다.
-</description>
-        <pubDate>Thu, 14 May 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/interview-doyon/</link>
-        <guid isPermaLink="false">/blog/interview-doyon/</guid>
-        
-        
-        <category>Interview</category>
-        
-      </item>
-    
-      <item>
         <title>스퀘어랩, 원티드 좋은 기업에 선정되다</title>
         <description>좋은 회사란 무엇일까요? 사회에 첫발을 떼는 순간부터 직장을 다니고 있는 지금에도 누구나 고민해볼 법한 질문입니다. 월급을 많이 준다든지, 탄탄한 복지를 제공한다든지, 안정적인 고용이 보장된다든지. 개인에 따라 좋은 회사의 기준은 무수히도 많고 다양할 텐데요. 우리가 생각하는 좋은 회사의 기준은 개개인을 인격체로서 존중해주며 인연을 소중히 여기고 명확한 목표와 이해 타당한 목적을 제시해주는 조직이라고 생각합니다. 이런 기준에서 스퀘어랩은 좋은 회사라 자부할 수 있는데요, 그 노력의 일환으로 얼마 전 스퀘어랩이 원티드에서 뽑은 좋은 기업에 선정되는 경사가 있었습니다.
 </description>
@@ -310,6 +266,46 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
         
         
         <category>News</category>
+        
+      </item>
+    
+      <item>
+        <title>뉴욕 여행 취소기 (feat. 코로나19)</title>
+        <description>세달 전, 그러니까 2020년 1월 중순 즈음 설레는 마음으로 뉴욕행 비행기 티켓을 끊을 때만 해도 전혀 상상하지 못했습니다. 제가 뉴욕 여행 취소기를 쓰는 날이 올줄 말이죠.
+그러나 여행 서비스를 만드는 스퀘어랩에 몸담고 있는 사람으로서 지금의 사태에 마냥 슬퍼하고 있을 수만은 없죠. 저처럼 여행을 취소한, 혹은 취소당한 모든 이들에게 심심한 위로가 되기를 바라며 나의 뉴욕 여행 취소 기록을 남기기로 했습니다. 아래 내용은 저의 취소 경험담을 일지 형식으로 재구성한 것입니다.
+</description>
+        <pubDate>Tue, 14 Apr 2020 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/newyork-cancel/</link>
+        <guid isPermaLink="false">/blog/newyork-cancel/</guid>
+        
+        
+        <category>Travelog</category>
+        
+      </item>
+    
+      <item>
+        <title>3,446km 밖에서 개발을 하다</title>
+        <description>스퀘어랩 사무실이 위치한 을지로와 치앙마이 간의 거리는 3,446km로 서울에서 제주도를 4번 가까이 왕복해야 비슷해질 수 있는 거리입니다. 갑작스러운 치앙마이 얘기에 뜬금없다고 생각하시는 분들이 있을 텐데요, 오늘은 이렇게 먼 치앙마이에서 스퀘어랩 플랫폼을 더욱 단단하고 풍성하게 만들기 위해 여념이 없는 개발자 한 분을 소개하고자 합니다. 스퀘어랩 서버 개발자 ‘영재’님을 만나보겠습니다.
+</description>
+        <pubDate>Mon, 06 Apr 2020 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/interview-youngjae/</link>
+        <guid isPermaLink="false">/blog/interview-youngjae/</guid>
+        
+        
+        <category>Interview</category>
+        
+      </item>
+    
+      <item>
+        <title>Square Lab 굿즈 제작기</title>
+        <description>이전에 포스팅했던 스퀘어랩 브랜딩 작업으로 우리의 아이덴티티와 BI를 정하고 나니 슬슬 여러 굿즈에 욕심이 났습니다. 깔끔하고 예뻐서 들고 다니고 싶은 굿즈는 자연스럽게 회사를 홍보하고 멤버들의 소속감을 높이는 좋은 양념이 된다고 생각했습니다. 우리는 그런 맛깔나는 양념을 만들고 싶었습니다.
+</description>
+        <pubDate>Mon, 23 Mar 2020 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/square-lab-goods/</link>
+        <guid isPermaLink="false">/blog/square-lab-goods/</guid>
+        
+        
+        <category>Design</category>
         
       </item>
     

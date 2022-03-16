@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 스퀘어랩 CEO를 만나다
-date: 2020-05-14
+date: 2099-05-14
 author: 마케팅팀
 categories: 
 - Interview

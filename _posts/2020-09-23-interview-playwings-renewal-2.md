@@ -13,7 +13,7 @@ img-author: /images/blog/author/team_marketing.jpg
 UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 시작했는데요. 사용자가 직접 눈으로 확인할 수 없지만, 더 쉽고 편리한 서비스 이용을 위해 애써 주신 엔지니어 세 분의 상세한 답변이 계속 이어졌습니다.
 
 <br>
-<img src="/images/blog/interview_playwings_renewal_1.jpg" alt="플레이윙즈 인터뷰 모습">
+<img src="/images/blog/interview-playwings-renewal-1/interview_playwings_renewal_1.jpg" alt="플레이윙즈 인터뷰 모습">
 
 ---
 
