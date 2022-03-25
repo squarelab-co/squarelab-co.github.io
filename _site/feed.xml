@@ -5,9 +5,23 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Mar 2022 08:43:50 +0900</pubDate>
-    <lastBuildDate>Thu, 17 Mar 2022 08:43:50 +0900</lastBuildDate>
+    <pubDate>Fri, 25 Mar 2022 19:18:27 +0900</pubDate>
+    <lastBuildDate>Fri, 25 Mar 2022 19:18:27 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>스퀘어랩의 코드 리뷰 프로세스 (2/2)</title>
+        <description>지난 포스트에서는 스퀘어랩에서 코드 리뷰를 어떤 툴을 이용해서 하고 있는지, 코드 리뷰가 대체 뭐가 좋아서 하는건지 이야기해 봤습니다.
+주절주절 길게도 말했는데 뭐 딱히 새로운 내용은 없네 라고 생각하실 수도 있을 것 같지만, 사실 여기부터가 제가 이 포스트를 통해 이야기 하고 싶은 진짜 주제입니다.
+</description>
+        <pubDate>Fri, 25 Mar 2022 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/code-review-2/</link>
+        <guid isPermaLink="false">/blog/code-review-2/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>nginx ingress controller 무중단 업데이트하기</title>
@@ -293,19 +307,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
         
         
         <category>Interview</category>
-        
-      </item>
-    
-      <item>
-        <title>Square Lab 굿즈 제작기</title>
-        <description>이전에 포스팅했던 스퀘어랩 브랜딩 작업으로 우리의 아이덴티티와 BI를 정하고 나니 슬슬 여러 굿즈에 욕심이 났습니다. 깔끔하고 예뻐서 들고 다니고 싶은 굿즈는 자연스럽게 회사를 홍보하고 멤버들의 소속감을 높이는 좋은 양념이 된다고 생각했습니다. 우리는 그런 맛깔나는 양념을 만들고 싶었습니다.
-</description>
-        <pubDate>Mon, 23 Mar 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/square-lab-goods/</link>
-        <guid isPermaLink="false">/blog/square-lab-goods/</guid>
-        
-        
-        <category>Design</category>
         
       </item>
     

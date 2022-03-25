@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="여행과 기술을 연결하고, 사용자와 여행을 이어주는 스퀘어랩만의 노하우를 확인해 보세요.">
+  <meta name="msapplication-TileColor" content="#782bde">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="google-site-verification" content="-kdxteMBSgKizw-6qHNm1-5nfxb7H6947J64jmjbBEg" />
+
+  <meta property="og:site_name" content="Square Lab 블로그">
+  <meta property="og:title" content="스퀘어랩의 코드 리뷰 프로세스 (2/2)">
+  <meta property="og:description" content="지난 포스트에서는 스퀘어랩에서 코드 리뷰를 어떤 툴을 이용해서 하고 있는지, 코드 리뷰가 대체 뭐가 좋아서 하는건지 이야기해 봤습니다. 주절주절 길게도 말했는데 뭐 딱히 새로운...">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://squarelab.co/blog/code-review-2/">
+  <meta property="og:image" content="https://squarelab.co/images/blog/code-review-1/og_cover.jpg">
+
+  <title>Square Lab 블로그</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/blog.css">
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/zoom.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" rel="stylesheet" >
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  출처: https://uxgjs.tistory.com/102 [UX 공작소]
+  <script src="/js/zoom.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157710299-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-157710299-1');
+  </script>
+</head>
+  <body>
+  <header id="blog-header" class="header">
+    <div class="blog-header-container">
+        <a href="/blog">
+          <img src="/images/squarelab-bi-blog.png" width="200" class="bi-blog" alt="스퀘어랩 기술블로그 로고">
+        </a>
+        <a href="/"><i class="ri-home-4-line"></i></a>
+    </div>
+</header>
+  <div class="blog-container">
+    <div class="blog-top" style="background-image:url(/images/blog/code-review-1/code.jpg); background-size: cover;" >
+        <div class="overlay">
+            <div class="title-container">
+                <span class="category">Engineering</span>
+                <h1 class="ctitle-top">스퀘어랩의 코드 리뷰 프로세스 (2/2)</h1>
+                <div class="author">
+                    <img class="img-author-2" src="/images/blog/author/jihoon.jpg">
+                    <small class="small-top" >전지훈</small><small>|</small><small name="locale-date">Mar 25, 2022</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog-row">
+        <div class="post">
+            <p><a href="/blog/code-review-1/">지난 포스트</a>에서는 스퀘어랩에서 코드 리뷰를 어떤 툴을 이용해서 하고 있는지, 코드 리뷰가 대체 뭐가 좋아서 하는건지 이야기해 봤습니다.
+주절주절 길게도 말했는데 <code class="highlighter-rouge">뭐 딱히 새로운 내용은 없네</code> 라고 생각하실 수도 있을 것 같지만, 사실 여기부터가 제가 이 포스트를 통해 이야기 하고 싶은 진짜 주제입니다.</p>
+
+<p>이렇게 장점이 많은 코드 리뷰지만 <strong>잘</strong>하기 위해서 하나 꼭 넘어야 할 산이 있습니다.
+그것은 하필 우리 개발자들에게 불편하기 짝이 없는 <code class="highlighter-rouge">글쓰기</code>입니다. 코드 리뷰는 모두 <code class="highlighter-rouge">텍스트</code>로 진행되기 때문입니다.
+글쓰기는 사실 코드 리뷰 뿐만아니라 우리가 매일 쓰는 협업툴인 슬랙, 지라, 컨플루언스 등을 잘 활용하기 위해서도 꼭 필요합니다.
+저희 팀 영재님의 <a href="https://squarelab.co/blog/interview-youngjae/">지난 인터뷰</a>에서도 강조된 바 있죠?</p>
+
+<p class="quotes">
+<i class="ri-double-quotes-l quote"></i>
+이런 협업 도구들은 대부분을 ‘글’이 매개체이다보니,<br />결국 원격 근무를 하면서도 커뮤니케이션에 문제가 없으려면<br />평소에 ‘글’ 을 통해서 사람들과 빠르고 정확하게 의사소통 할 수 있는<br />능력이 필수적이라고 생각합니다.
+<i class="ri-double-quotes-r quote"></i>
+</p>
+
+<p>옆자리 팀원에게 던지는 “퇴근하고 맥주나 한잔 ㄱㄱ?” 같은게 아닌, 남이 또는 내가 작성한 코드에 대한 의견을 텍스트를 통해 나누는 것은 생각보다 꽤 어려운 일입니다.</p>
+
+<p>제가 본 많은 개발자들 중에는 불필요하게 빙빙 돌려말하는걸 비효율이라고 생각하는 돌직구 투수들이 꽤 많았습니다. 그런 면들로 인해 대하기 쉽지 않았던 기억도 있구요. 그리고 역시나 코드 리뷰에서 그런 개발자들을 만나게 되면 이 사람과 어떻게 의사소통을 하면 좋을지 몰라 꽤 힘들었던 기억도 있습니다.
+만약 주위에 그렇지 않은 개발자가 있다면 그 분은 이미 코드를 잘 짜는걸 넘어 상대방의 마음까지 헤아릴 줄 아는 훌륭한 인격을 장착한 분이 틀림 없으니 그 분을 당신의 코드 리뷰 롤모델로 삼으시길 강력하게 추천드리겠습니다.</p>
+
+<p>그럼 그의 얼굴을 떠올리며 코드 리뷰를 잘 하기 위해 어떤걸 잘 해야 하는지 몇 가지 짚어볼까요?</p>
+
+<hr />
+
+<h2 id="그-사람으로-빙의하자">그 사람으로 빙의하자</h2>
+
+<p>코드 리뷰를 진행하다보면, 아니 꼭 리뷰가 아니어도 남이 짠 코드를 보면 첫눈에 이해가 안될 때가 종종 있습니다. 이럴 때 많은 사람들이 아마 이렇게 생각할겁니다.</p>
+
+<p class="quotes">
+<i class="ri-double-quotes-l quote"></i>
+아니 이걸 왜 '이따구로' 짰지?
+<i class="ri-double-quotes-r quote"></i>
+</p>
+
+<p>인정합니다. 저도 그럴 때가 있습니다 😬</p>
+
+<p>하지만 코드 리뷰를 진행해보면 그 사람이 코드를 그렇게 작성한 <code class="highlighter-rouge">이유</code>는 분명히 있습니다. 코드 구조화를 중요시하는 내가 두개의 서비스로 나눌 로직을 퍼포먼스를 중요시하는 누군가는 하나의 서비스에 같이 넣을 수도 있고, 내가 모르는 서비스 운영상의 이슈로 인해 어쩔 수 없이 어떤 예외케이스 처리가 필요해서 구조를 희생해야 하는 경우도 있고, 지금 내가 생각하는 그 방법으로 코드를 작성하려고 해봤지만 잘 안돼서 지금의 방법으로 돌아왔을 수도 있고…
+이런 경우 그것도 모르고 지금 이 코드가 왜 안좋으며 내가 생각한 코드가 더 좋다는걸 열심히 키보드 두들기며 설명하는 것보다 좀 더 좋은 방법이 있습니다.</p>
+
+<p><img src="/images/blog/code-review-2/meditation.jpg" alt="Meditation" /></p>
+
+<p><strong>그건 바로 그 사람으로 빙의해 보는겁니다.</strong></p>
+
+<p>코드를 처음 봤는데 나도 모르게 눈썹이 치켜올려지고 한숨쉴 준비를 하고 에에~? 따위의 소리가 입밖으로 나오려고 할 때 한 숨 멈추고 코드를 작성한 사람으로 빙의해 보는겁니다. 그리고 이 사람이 어떤 생각으로 이 코드를 작성했는지를 최대한 읽으려고 노력해 보는거죠.</p>
+
+<p>정말 별거 아닌거 같지만 이렇게 한 번 그 사람을 이해하려고 하고 커멘트를 하게 되면 이 코드가 왜 이렇게 내 생각과 다르게 작성되었는지 조금이나마 더 이해할 수 있고, 이렇게 되면 신기하게도 코드 리뷰를 하는 마음가짐과 말투부터 좀 달라지게 됩니다. 아무래도 도대체 내 머리로 이해할 수 없는 코드를 짠 사람에게 말을 할 때와, 그 사람이 어떤 생각으로 이렇게 코드를 짰는지 좀 아는 상태로 말을 할 때 뉘앙스가 좀 다르지 않겠어요?</p>
+
+<p>코드 리뷰도 결국 사람들끼리 하는거라 사람들 끼리의 의사소통이 부드러워지고 서로 같은 방향을 보고 대화를 한다는 느낌이 들게 되면 의견이 다르더라도 불필요하게 충돌하거나 하지 않고 같이 더 좋은 코드를 만드는데 도움이 된답니다.</p>
+
+<hr />
+
+<h2 id="인문학적-소양을-최대한으로-발휘하자">인문학적 소양을 최대한으로 발휘하자</h2>
+
+<p><img src="/images/blog/code-review-2/coworkers1.jpg" alt="Coworkers1" /></p>
+
+<p>개발자에게 코드는 화가가 그린 그림이고 뮤지션이 만든 음악이고 제 친구 JD의 말을 빌리면 내가 (머리와 손가락과 커피로) 낳은 자식입니다.
+(뒤에 좀 더 설명하겠지만 그렇다고 애지중지 나의 분신처럼 아끼라는 뜻은 아닙니다.)</p>
+
+<p>표현은 조금씩 달라도 어느정도 내가 묻어 있는 결과물이라는 얘긴데요, 코드만 보고도 누가 짰는지 대충 알겠는 일이 꽤 잦은걸 보면 틀린 말은 아닌 것 같습니다. 그렇다보니 코드에 커멘트를 한다는게 코드를 작성한 사람 자체에 커멘트를 하는 것과 비슷하다고 생각해요. 앞서 말했듯 코드를 작성할 때에는 항상 뭔가 이유가 있게 마련이고, 그 이유라는건 결국 코드를 작성한 사람이 어떤 생각을 했느냐에 따라 생기는거니까요.
+그러면 <code class="highlighter-rouge">이 코드는 이래저래서 별로 안좋으니 이런 방법이 나을거 같습니다.</code> 라는 말은 어쩌면 <code class="highlighter-rouge">당신 생각은 별로 안좋은 생각인거 같고 제 생각엔 이런데 이쪽이 나을거 같습니다.</code> 라는 말과 비슷하게 들릴 수도 있겠어요. 어떤 사람은 내 나름대로 열심히 머리 굴려서 짠 코드에 대해 그런 이야기를 들으면 기분이 그닥 좋지 않을 수도 있을 것 같구요. (아무리 논리적으로 타당한 이유를 같이 이야기해준다고 해도 말이죠. 그게 문제가 아니라니까요?)</p>
+
+<p>그런데 코드 리뷰를 진행하다 보면 유독 어떤 사람이 내 생각과 반대되는 의견을 말하는거나 내 실수를 지적하는데 별 거부감이 들지 않고 오히려 고마운 마음이 드는 경우가 있습니다. (물론 맞는 말이어도 듣기 싫은 경우도 있습니다)
+여기가 바로 그 Reviewer의 <code class="highlighter-rouge">인문학적 소양</code>이 발휘되는 부분입니다. 이 인문학적 소양이라는게 공돌이인 제가 이야기하는 건데 그렇게 거창한건 아니겠죠? 정말 간단하게 이야기하면 <code class="highlighter-rouge">서로 배려하고 기분 안나쁘게</code> 하자는거에요 그냥.
+내 의견이 받아들여져서 이 코드가 좀 더 나은 방향으로 개선되길 원한다면 더욱요.</p>
+
+<p>사실 많은 공돌이들에게 가장 큰 관심사는 <code class="highlighter-rouge">효율</code>이 아닐까 싶습니다. 그래서 사람 말투 기분 그런게 뭐 중요하냐고 생각할 수 있겠지만 사실 정말 중요합니다.
+코드 리뷰에서 제가 가장 중요하게 생각하는걸 하나 꼽으라면 바로 <code class="highlighter-rouge">자세</code>입니다. 그리고 그 자세를 결정하는게 바로 그 사람의 말투, 커멘트라는 글쓰기를 하는 마음가짐 등 다시 말해 인문학적 소양이라고 생각해요.</p>
+
+<p>저의 경우엔 내가 짠 코드에 대한 리뷰를 부탁할 때 리뷰어의 시간을 빌리는 데에 대한 고마움, 우리 팀원이 이 코드를 열심히 고민해가며 짰을걸 알고 같이 고민하는 마음으로 적는 커멘트, 내 생각과 달라도 분명 나름대로 고민한 결과일 이 코드를 좀 더 이해해 보려는 노력 같은 식으로 구현되는거 같네요.
+결국 코드 리뷰도 우리팀 코드 좀 더 좋게 만들려고 다같이 힘을 모으는건데 서로 합심하는 팀과 서로 말한마디에 불편해하는 팀 중 어느 팀이 더 잘할지는 말안해도 뻔한거죠.</p>
+
+<p>그렇다면 Reviewee는 인문학적 소양을 어떻게 발휘하면 될까요?
+아래에서 좀 더 자세히 언급되겠지만 내가 만든 코드를 리뷰해달라고 내놓을 때 이 코드를 <code class="highlighter-rouge">내 코드</code>라고 생각하지 않으면 꽤 많은게 해결됩니다.
+Reviewer의 경우처럼 커멘트 하고 받아들일 때 인문학적 소양을 발휘해야 하는건 당연하겠죠?</p>
+
+<hr />
+
+<h2 id="이-코드는-누구의-코드인가">이 코드는 누구의 코드인가?</h2>
+
+<p><img src="/images/blog/code-review-2/coworkers2.jpg" alt="Coworkers2" /></p>
+
+<p>우리가 회사에서 작성하는 코드는 법적으로 회사의 소유입니다… 같은 얘기를 하려는게 아니고 이 코드가 결국 무엇을 만들고 있는지에 대해서 이야기해 보려고 합니다.</p>
+
+<p>내가 만들고 있는 이 코드가 우리 팀에서 만드는 커다란 비행기의 오른쪽 날개라고 칩시다.
+가끔 어떤 사람은 앞서 말했던 것처럼 코드에 자기 자신을 너무 투영하다 보니 비행기와 어울리지 않는 자신만의 날개를 만들어낼 때가 있습니다.
+전투기를 만드는데 이쁘다는 이유로 프로펠러를 다는 식으로요. 또는 내가 만든 이 날개가 성능이 좋았으면 하는, 정말 잘 만들고 싶은 마음이 너무 강해 여객기를 만드는데 전투기의 날개를 만들기도 합니다. 그리고 반대쪽 날개도 같은 걸로 바꾸자고 하기도 하죠.</p>
+
+<p>이런 경우 코드 리뷰를 하다보면 자신이 왜 이런 날개를 만들었는지 열심히 설명해 팀원들을 설득하려 하고 설득에 성공해 우리 비행기와 어울리지 않는 날개를 달게 되기도 하고 설득에 실패해 좌절하기도 합니다.
+설득에 성공했는지 실패했는지는, 이 사람이 만들어낸 날개가 유용한지 아닌지는 사실 중요하지 않아요.</p>
+
+<p><strong>중요한건 이 사람에게 우리가 비행기를 만들고 있다는 사실보다 지금 만들고 있는 날개가 중요하다는 사실입니다.</strong></p>
+
+<p>이런 경우는 앞서 잠시 언급했듯 내가 짠 <code class="highlighter-rouge">코드</code>에 너무 애착을 가지게 되면 생기곤 합니다.
+이럴 때 코드에 누군가 커멘트를 하게 되면 아무래도 조금 방어적인 자세를 취하게 되고 내 코드의 근거를 설명하느라 불필요하게 시간이 오래 걸리거나, 서로 입장을 고수하느라 해결되지 않는 갈등이 생겨 이러지도 저러지도 못하는 경우가 생기기도 하죠.
+당연하게도 이 상황은 프로젝트의 원활한 진행에 도움이 되지는 않습니다.</p>
+
+<p class="quotes">
+<i class="ri-double-quotes-l quote"></i>
+내가 지금 작성하는 이 코드는 내 것이 아닙니다.
+<i class="ri-double-quotes-r quote"></i>
+</p>
+
+<p>이 코드는 지금은 내가 작성하지만 나중에는 다른 누구라도 손댈 수 있는 우리 팀의 코드입니다.
+개발자에게 코드는 화가의 그림이니 음악이니 하는 소리를 하다가 갑자기 이런 얘길하니 좀 당황스러울 수도 있겠지만, 엄연히 다른 얘기입니다.
+우리팀이 힙지로에 힙합 클럽을 오픈해서 다같이 힙합을 만드는데 나는 혼을 불어넣어 내가 좋아하는 아름다운 피아노 소나타를 만든다면 어떨까요?
+저는 우리 클럽에 어울리게 똑같이 혼을 불어 넣은 힙합이나 EDM정도면 참 좋을 것 같아요.</p>
+
+<p><strong>우리는 팀이니까!</strong></p>
+
+<p>내가 만들고 있는 이 날개를 정말 잘 만드는 것도 중요하지만 모든게 결국 우리 팀이 같이 만드는 커다란 비행기가 잘 날 수 있게 하기 위한 것임을 잊지 말아요!</p>
+
+<hr />
+
+<h2 id="잡설">잡설</h2>
+
+<p>코드 리뷰라는건 정말 양날의 검인 것 같습니다.
+집단지성을 활용해 견고한 코드베이스를 만들어주는 고마운 존재이기도 하면서 리뷰 하나 주고받을 때마다 감정적으로 평정을 유지하려고 노력하다보면 나의 인성 경험치가 쌓이는걸 느끼며 내가 개발자인지 성직자 지망생인지 헷갈리기도 합니다. 다른 사람이 내 코드에 커멘트해준걸 보며 내가 왜 처음부터 저 생각을 못했는지 좌절감이 들 때도 있구요. (그냥 제가 타고난 성격이 좋질 않아서 그럴 수도 있습니다 ㅋㅋ)</p>
+
+<p>그렇다고 해도 전 새로운 프로젝트를 시작한다면 아묻따 코드 리뷰 시스템을 도입할겁니다.
+코드 리뷰를 하기 시작한지 4년 정도 밖에 되지 않았지만 이제는 코드 리뷰를 안하고 코드를 내보낸다는게 정말 상상도 되지 않네요.</p>
+
+<p>이제껏 제가 이야기한 코드 리뷰시 주의사항의 가장 큰 줄기는 <code class="highlighter-rouge">의사소통</code>입니다.
+의사소통이라는게 원래 어려운건데 화가의 그림이며 뮤지션의…(중략) 코드를 놓고 의사소통을 하는 것 또한 역시 어렵습니다.</p>
+
+<p>이게 중요하다는걸 진짜 너무 너무 심하게 과하게 강조하고 싶어서 제가 표현을 <code class="highlighter-rouge">코드 리뷰 엄청 어렵고 시간도 빼앗기고 잘못하면 서로 기분상할 수 있고 자존심도 상할 뿐더러 신경 엄청엄청 어어엄청 써야돼서 진짜 피곤함</code> 같은 식으로 해서 그렇지 스퀘어랩 개발자들은 알아서 서로서로 잘 해서 코드 리뷰 때문에 문제 생길 일은 없는거 같습니다.</p>
+
+<p>저의 경우는 오히려 코드 리뷰를 하면서 커멘트를 주고 받다 보면 우리 팀은 알아서 서로 배려하고 존중해 주는구나 싶은 생각이 들 때가 많아서 팀웍 게이지가 올라가는 장점도 있다고 느낍니다.</p>
+
+<p>그러니까!</p>
+
+<h4 id="코드-리뷰-좋아요">코드 리뷰 좋아요!</h4>
+<h4 id="게릿-좋아요">게릿 좋아요!</h4>
+<h4 id="써보세요">써보세요!</h4>
+
+<hr />
+
+<p><a href="https://squarelabrecruit.notion.site/squarelabrecruit/e8a18d1db1424fbe8a27144af8e48315">스퀘어랩은 언제나 채용중입니다.</a> 스퀘어랩에 조인해서 여행 기술의 혁신을 함께 해나가실 분을 찾습니다!</p>
+
+        </div>
+        <div class="back-button">
+            <a href="/blog">목록으로</a>
+        </div>
+        <div class="fb-comments" data-href="https://squarelab.co/blog/code-review-2/" data-num-posts="4" data-width="100%"></div>
+        <!--   <div class="side-bar">
+    <div class="spacing"></div>
+    <h5 class="title-category">CATEGORIES</h5>
+    <p>
+        <a href="/blog"> ALL</a>
+        <span class="badge badge-theme pull-right"></span>
+    </p>
+    
+    <p>
+        <a href="/blog/#Engineering"> Engineering</a>
+        <span class="badge badge-theme pull-right">5</span>
+    </p>
+    
+    <p>
+        <a href="/blog/#Design"> Design</a>
+        <span class="badge badge-theme pull-right">4</span>
+    </p>
+    
+    <p>
+        <a href="/blog/#Interview"> Interview</a>
+        <span class="badge badge-theme pull-right">3</span>
+    </p>
+    
+    <p>
+        <a href="/blog/#Travelog"> Travelog</a>
+        <span class="badge badge-theme pull-right">1</span>
+    </p>
+    
+    <p>
+        <a href="/blog/#News"> News</a>
+        <span class="badge badge-theme pull-right">2</span>
+    </p>
+    
+
+    <div class="spacing"></div>
+</div>
+
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+        <div></div>
+    </div>
+    <div class="menu">
+        <div>
+            <div>
+                <a href="/index.html"><img src="/images/squarelab-bi-rec.png" width="32px" height="32px"
+                                           class="menu-logo"></a>
+                <p>
+                    <a href="/blog">ALL</a>
+                    <span class="badge badge-theme pull-right"></span>
+                </p>
+                
+                <p>
+                    <a href="/category/#Engineering"> Engineering</a>
+                    <span class="badge badge-theme pull-right">5</span>
+                </p>
+
+                
+                <p>
+                    <a href="/category/#Design"> Design</a>
+                    <span class="badge badge-theme pull-right">4</span>
+                </p>
+
+                
+                <p>
+                    <a href="/category/#Interview"> Interview</a>
+                    <span class="badge badge-theme pull-right">3</span>
+                </p>
+
+                
+                <p>
+                    <a href="/category/#Travelog"> Travelog</a>
+                    <span class="badge badge-theme pull-right">1</span>
+                </p>
+
+                
+                <p>
+                    <a href="/category/#News"> News</a>
+                    <span class="badge badge-theme pull-right">2</span>
+                </p>
+
+                
+
+
+            </div>
+        </div>
+    </div>
+</div> 
+
+  -->
+    </div>
+</div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.5&appId=1052544885096271";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="/js/locale-date.js"></script>
+  <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <ul class="copyright">
+            <li>&copy;
+                Square Lab
+            </li>
+            <li>
+                (주)스퀘어랩 | 04542 서울특별시 중구 청계천로 100 시그니쳐타워 서관 11층<br>
+                사업자등록번호 151-87-00987 | 통신판매업신고번호 2018-서울중구-1626호<br>
+                이메일 contact@squarelab.co | 대표자 윤민
+            </li>
+        </ul>
+        <div class="icons">
+            <div class="icon"><a href="https://unsplash.com/@squarelab" target="_blank">
+                <i class="ri-unsplash-fill"></i></a></div>
+            <div class="icon"><a href="https://www.instagram.com/squarelab.co/" target="_blank">
+                <i class="ri-instagram-line social"></i></a></div>
+            <div class="icon"><a href="https://www.facebook.com/squarelab.co/" target="_blank">
+                <i class="ri-facebook-circle-fill social"></i></a></div>
+        </div>
+    </div>
+</footer>
+  </body>
+</html>
