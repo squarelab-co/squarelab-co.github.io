@@ -58,6 +58,7 @@ p {
   font-size: 16px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.6);
+  word-break: normal;
 }
 
 strong {
