@@ -16,7 +16,7 @@ img-author: /images/blog/author/jihoon.jpg
 이렇게 장점이 많은 코드 리뷰지만 **잘**하기 위해서 하나 꼭 넘어야 할 산이 있습니다.
 그것은 하필 우리 개발자들에게 불편하기 짝이 없는 `글쓰기`입니다. 코드 리뷰는 모두 `텍스트`로 진행되기 때문입니다.
 글쓰기는 사실 코드 리뷰 뿐만아니라 우리가 매일 쓰는 협업툴인 슬랙, 지라, 컨플루언스 등을 잘 활용하기 위해서도 꼭 필요합니다.
-저희 팀 영재님의 [지난 인터뷰](https://squarelab.co/blog/interview-youngjae/)에서도 강조된 바 있죠?
+저희 팀 영재님의 [지난 인터뷰](/blog/interview-youngjae/)에서도 강조된 바 있죠?
 
 <p class="quotes">
 <i class="ri-double-quotes-l quote"></i>
