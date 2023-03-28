@@ -5,9 +5,22 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Nov 2022 15:04:59 +0900</pubDate>
-    <lastBuildDate>Mon, 14 Nov 2022 15:04:59 +0900</lastBuildDate>
+    <pubDate>Mon, 27 Mar 2023 18:46:43 +0900</pubDate>
+    <lastBuildDate>Mon, 27 Mar 2023 18:46:43 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>DEVIEW 2023 후기</title>
+        <description>이 포스트는 입사 2주차(따끈따끈)의 백엔드 개발자가 DEVIEW 2023에 다녀온 후기에요. 현장 분위기와 제가 들었던 세션에 대한 약간의 설명을 담은 글이니 세션의 자세한 내용을 알고 싶은 분들은 DEVIEW 2023 공식홈페이지를 방문해주세요!
+</description>
+        <pubDate>Mon, 27 Mar 2023 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/deview2023/</link>
+        <guid isPermaLink="false">/blog/deview2023/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>스퀘어랩의 코드 리뷰 프로세스 (2/2)</title>
@@ -294,19 +307,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
         
         
         <category>Travelog</category>
-        
-      </item>
-    
-      <item>
-        <title>3,446km 밖에서 개발을 하다</title>
-        <description>스퀘어랩 사무실이 위치한 을지로와 치앙마이 간의 거리는 3,446km로 서울에서 제주도를 4번 가까이 왕복해야 비슷해질 수 있는 거리입니다. 갑작스러운 치앙마이 얘기에 뜬금없다고 생각하시는 분들이 있을 텐데요, 오늘은 이렇게 먼 치앙마이에서 스퀘어랩 플랫폼을 더욱 단단하고 풍성하게 만들기 위해 여념이 없는 개발자 한 분을 소개하고자 합니다. 스퀘어랩 서버 개발자 ‘영재’님을 만나보겠습니다.
-</description>
-        <pubDate>Mon, 06 Apr 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/interview-youngjae/</link>
-        <guid isPermaLink="false">/blog/interview-youngjae/</guid>
-        
-        
-        <category>Interview</category>
         
       </item>
     
