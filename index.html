@@ -1,12 +1,49 @@
 ---
 layout: default
 ---
+<!--
 <div id="hiring">
     <a href="https://squarelabrecruit.notion.site/squarelabrecruit/a8feb171c8f541899c16d34305798d80" target="_blank">
         <img src="/images/hiring-1.svg" class="hiring-web">
         <img src="/images/hiring-2.svg" class="hiring-mobile">
     </a>
 </div>
+-->
+<!-- Notice -->
+<link rel="stylesheet" type="text/css" href="/css/micromodal.css"/>
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="false">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">
+                    합병에 따른 채권자 이의신청 공고
+                </h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content">
+                <p>당사는 2023년 4월 24일 개최된 이사회에서(상법 제527조의2 및 제527조의3에 따른 간이 및 소규모 합병) 주식회사 타이드스퀘어(서울특별시 중구 남대문로 78,
+                    8층,9층(명동1가,타임워크명동빌딩))에 흡수합병되어 해산하기로 결의 하였으므로, 이에 대하여 이의가 있는 채권자 및 이해관계인은 본 공고일로부터 1개월 이내에(2023년 5월
+                    25일까지) 당사에 이의를 제출하여 주실 것을 공고합니다.</p>
+                <p style="background-color: rgba(0, 0, 0, .04);border-radius: 8px;padding:16px"><strong>이의신청
+                    접수처</strong><br>서울특별시 중구 을지로5길 19, 페럼타워 24층<br>주식회사 스퀘어랩 재무회계팀</p>
+                <p>2023년 4월 25일</p>
+                <p style="text-align:right;margin:16px 0 0 0;font-size:13px">주식회사 스퀘어랩<br>서울특별시 중구 을지로5길 19,<br>페럼타워 24층
+                    에스24057호(수하동)<br>대표이사 윤민</p>
+                <p></p>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script>
+    if (new Date() > new Date('2023-04-25 09:00:00')) {
+        MicroModal.init();
+        MicroModal.show('modal-1');
+    }
+</script>
+
 <main>
     <div class="morph-wrap">
         <svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
@@ -57,7 +94,8 @@ layout: default
     <div class="content-wrap">
         <div class="content content--layout content--layout-4 content--layout-5">
             <img class="content__author" src="/images/author-4.svg" alt="Expension of vision and experience">
-            <video class="video content__img" preload="auto" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+            <video class="video content__img" preload="auto" autoplay="autoplay" loop="loop" muted="muted"
+                   playsinline="playsinline">
                 <source src="/images/video.mp4" type="video/mp4">
             </video>
             <img class="content__title" src="/images/title-4.svg" alt="Expansion">
@@ -81,11 +119,13 @@ layout: default
                 <p class="opacity60">일상을 깨우는 알림으로 우린 오늘도 여행을 나섭니다.</p>
             </div>
             <div class="info-body">
-                <p class="info-p opacity60"><span class="text-bold">실시간 여행 특가 알림</span><br>언제 오픈될지 모르는 항공사∙호텔∙액티비티 특가<br>
+                <p class="info-p opacity60"><span class="text-bold">실시간 여행 특가 알림</span><br>언제 오픈될지 모르는 항공사∙호텔∙액티비티
+                    특가<br>
                     플레이윙즈에서 오픈 즉시 알림을 받아보세요.</p>
                 <p class="info-p opacity60"><span class="text-bold">어떤 곳에서도 볼 수 없는 특가 꿀팁</span><br>직접 손품 팔아 가격 비교할 필요 없이<br>
                     에디터 예매팁으로 손쉽게 특가 정보를 확인하세요.</p>
-                <p class="info-p opacity60"><span class="text-bold">다양한 테마로 만나는 전문 여행 정보</span><br>트렌디한 여행 정보 찾아 헤매지 말고<br>
+                <p class="info-p opacity60"><span class="text-bold">다양한 테마로 만나는 전문 여행 정보</span><br>트렌디한 여행 정보 찾아 헤매지
+                    말고<br>
                     지금 바로 활용할 수 있는 콘텐츠로 여행을 준비하세요.</p>
             </div>
             <div class="info-button">
@@ -134,12 +174,12 @@ layout: default
             </div>
             <div class="info-body">
                 <p class="info-p opacity60"><span class="text-bold">손쉬운 호텔 예약 서비스</span>
-                  <br>호텔 검색부터 결제까지 한번에 이어지는 예약 서비스와 카이트 한정으로 제공되는 특가 상품도 놓치지 마세요.</p>
+                    <br>호텔 검색부터 결제까지 한번에 이어지는 예약 서비스와 카이트 한정으로 제공되는 특가 상품도 놓치지 마세요.</p>
                 <p class="info-p opacity60"><span class="text-bold">한눈에 가격이 보이는 항공 캘린더</span>
-                  <br>저렴한 항공권 찾아다닐 필요 없이 언제가 가장 저렴한 때인지를 알려주는 카이트 캘린더로 항공권을 구매하세요.
+                    <br>저렴한 항공권 찾아다닐 필요 없이 언제가 가장 저렴한 때인지를 알려주는 카이트 캘린더로 항공권을 구매하세요.
                 </p>
                 <p class="info-p opacity60"><span class="text-bold">담기만 해도 여행이 시작되는 버킷리스트</span>
-                  <br>계획으로만 남아 있던 여행을 친구와 함께 버킷리스트에 담고 여정을 시작하세요.</p>
+                    <br>계획으로만 남아 있던 여행을 친구와 함께 버킷리스트에 담고 여정을 시작하세요.</p>
             </div>
             <div class="info-button">
                 <div class="social-box">
@@ -147,7 +187,8 @@ layout: default
                             class="button1"><i class="ri-apple-fill"></i>App Store
                     </button>
                     <button type="button"
-                            onclick="window.open('https://play.google.com/store/apps/details?id=co.squarelab.kyte')"><i class="ri-google-play-fill"></i>Google Play
+                            onclick="window.open('https://play.google.com/store/apps/details?id=co.squarelab.kyte')"><i
+                            class="ri-google-play-fill"></i>Google Play
                     </button>
                 </div>
                 <div class="social-box">
@@ -176,7 +217,8 @@ layout: default
             <p>새로운 방식으로 여행을 이야기하는 스퀘어랩은 주어진 업무를 책임감 안에서
                 자율적으로 해결해나갈 인재를 찾습니다.</p>
             <div class="button-2">
-                <button type="button" onclick="window.open('https://squarelabrecruit.notion.site/squarelabrecruit/a8feb171c8f541899c16d34305798d80')"
+                <button type="button"
+                        onclick="window.open('https://squarelabrecruit.notion.site/squarelabrecruit/a8feb171c8f541899c16d34305798d80')"
                         class="button-w">채용 사이트 바로가기
                 </button>
             </div>
