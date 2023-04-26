@@ -10,19 +10,17 @@ img: /images/blog/datadog-poc/datadog.png
 img-author: /images/blog/author/seongbin.png
 ---
 
-> 스퀘어랩에서는 각 microservice 별로 발생하는 로그들을 logstash를 활용하여 수집하고 있습니다.
-> 이 과정에서 쌓이게 되는 수많은 로그들을 관리하는 비용을 줄이고, 서비스 모니터링과 로그 관리를 더욱 편리하게 할 수 있다는 기대를 갖고 Datadog을 적용해보는 POC 기간을 갖게 되었습니다.
-> 이 글은 Datadog 연동에 대한 관심이 있으신 분들에게 도움이 될 것 같습니다.
+스퀘어랩에서는 각 microservice 별로 발생하는 로그들을 logstash를 활용하여 수집하고 있습니다. 이 과정에서 쌓이게 되는 수많은 로그들을 관리하는 비용을 줄이고, 서비스 모니터링과 로그 관리를 더욱 편리하게 할 수 있다는 기대를 갖고 Datadog을 적용해보는 POC 기간을 갖게 되었습니다. 이 글은 Datadog 연동에 대한 관심이 있으신 분들에게 도움이 될 것 같습니다.
 
 
-# Datadog 적용 과정
+## Datadog 적용 과정
 K8s 클러스터에 Datadog을 적용하는 과정은 다음과 같이 세 단계로 요약할 수 있습니다.
-Helm chart install ➡ Deployment tagging / 환경변수 주입 ➡ 재배포
+Helm chart install → Deployment tagging / 환경변수 주입 → 재배포
 
 prd 환경에 적용하기 위한 준비 단계로, 먼저 dev 환경에 Datadog을 적용해보았습니다.
 dev와 prd cluster에서 각각 `values-dev.yaml` / `values-prd.yaml` 를 사용하도록 했습니다.
 
-## Datadog helm chart Install
+### Datadog helm chart Install
 `helm install`이 성공적으로 마무리 되면, datadog-cluster 가 생성되고, k8s cluster의 각 노드별로 Datadog agent pod이 하나씩 생성되게 됩니다.
 [여기](https://github.com/DataDog/helm-charts/blob/main/charts/datadog/values.yaml)에서 values.yaml의 default 값을 참고하여, 필요한 부분만 골라서 yaml 파일을 작성했습니다.
 처음 적용 과정에서 어떤 옵션이 필요한지 판단하기가 어려워 많은 시행착오를 거쳤고, 이 과정에서 겪은 시행착오들과, 처음 Datadog을 적용해보려는 분들에게 도움이 될 만한 내용들을 소개해드리겠습니다.
@@ -251,6 +249,6 @@ Datadog 측으로부터 현재 Node.JS와 Kotlin의 Framework를 아직 지원�
 
 [Datadog java trace GitHub repository](https://github.com/DataDog/dd-trace-java/releases)에서 잦은 release가 일어나고 있습니다. 어쩌면 코드 내부로 tracing관련 코드를 가져오는 것 보다는 auto instrumentation이 잘 작동하기를 기다리거나 해당 Repository에 직접 기여하는 것이 나을 수도 있겠습니다.
 
-# 마무리
+## 마무리
 Datadog helm chart install시의 설정만 제대로 해준다면, k8s 환경에서 Datadog을 적용하는 것은 꽤나 편리했습니다. 기존에 logstash상에서 로그를 검색하면서 겪었던 불편함은 Datadog을 사용하면서 어느정도 해소될 수 있었습니다. 서비스별 monitor나 dashboard도 확인하기 편리하여, 트래픽이 몰리는 시점에 대비하여 deployment의 scale out을 진행할 때 모니터링 하기에도 유용했습니다.
 비용과 사용성을 고려하여 dev cluster에서는 log indexing기능만 사용하고, prd에서는 APM이나 DB monitoring까지 적용해서 사용한다면 훨씬 경제적으로 log를 관리할 수 있을 것으로 기대됩니다.
