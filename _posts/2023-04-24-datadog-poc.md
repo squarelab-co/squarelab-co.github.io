@@ -31,7 +31,7 @@ dev와 prd cluster에서 각각 `values-dev.yaml` / `values-prd.yaml` 를 사용
 처음에는 `values.yaml` 파일 내에 `clusterName` 등 필수 값과 사용할 기능들을 `enable: true`로 설정한 후, Datadog으로부터 발급받은 apiKey와 함께 `helm install` 을 진행했습니다.
 
 이 때 아래와 같은 error가 발생했습니다.
-```
+```text
 Error: INSTALLATION FAILED: execution error at (datadog/templates/_helpers.tpl:17:4): This version of the chart requires an agent image 7.36.0 or greater. If you want to force and skip this check, use `--set agents.image.doNotCheckTag=true`
 ```
 당시 `values.yaml` 내에 `tag` 를 설정해주지 않아서 발생했던 문제였습니다.
@@ -68,12 +68,12 @@ spec:
         admission.datadoghq.com/js-lib.version: v0.00.0
         # or admission.datadoghq.com/java-lib.version: v0.00.0
     spec:
-	  containers:
+      containers:
         - name: service-name
           ...
-		  env:
-			...
-			- name: DD_LOGS_INJECTION
+          env:
+              ...
+            - name: DD_LOGS_INJECTION
               value: 'true'
 ```
 
@@ -145,9 +145,9 @@ kubectl create secret generic datadog-secret --from-literal api-key="api key fro
 `values-dev.yaml`  에서는 아래와 같이 secretBackend command를 설정해주어야하며, 이로 인해 `ENC` 태그로 둘러쌓여있는 부분이 변환 될 수 있습니다.
 ```yaml
 datadog:
-	apiKey: ENC[k8s_secret@dev/datadog-secret/api-key]
-	secretBackend:
-		command: '/readsecret_multiple_providers.sh'
+  apiKey: ENC[k8s_secret@dev/datadog-secret/api-key]
+  secretBackend:
+    command: '/readsecret_multiple_providers.sh'
 ```
 
 ---
@@ -168,7 +168,7 @@ datadog:
         cluster_check: true
         init_config:
         instances:
-		  - dbm: true
+          - dbm: true
             host: ENC[k8s_secret@namespace/dbm-cred/host]
             port: ENC[k8s_secret@namespace/dbm-cred/port]
             username: ENC[k8s_secret@namespace/dbm-cred/username]
@@ -243,7 +243,7 @@ APM trace 기능이 제대로 동작한다면, 편리하게 확인할 수 있는
 
 그러나 Remapper를 적용하면 Log - Search에서는 `trace_id` attribute가 `request_id`로 변경된 것을 확인할 수 있지만, APM에서는 `trace_id` 가 그대로 `64 bits unsigned int` 형태로 존재했습니다.
 
-Java 계열의 서비스는 `mdc` 내부에 `dd.trace_id` 가 주입되고 있어서 Log - Configuration의 `Preprocessing for JSON logs` 단계에서 기본 설정에 추가로 `mdc.dd.trace_id` 를 추가해야했습니다.
+Java 계열의 서비스는 `mdc` 내부에 `dd.trace_id` 가 주입되고 있어서 Log - Configuration의 `Preprocessing for JSON logs` 단계에서 `Trace Id attributes` 설정에 `mdc.dd.trace_id` 를 추가해야했습니다.
 
 Datadog 측으로부터 현재 Node.JS와 Kotlin의 Framework를 아직 지원하고 있지 않기 때문에 auto instrumentation이 제대로 적용되지 않는 현상으로 확인하였고, 코드 단에서 header 정보를 Node.JS에서 추출하여 Kotlin(Java)로 주입하는 방법을 안내받았습니다.
 
