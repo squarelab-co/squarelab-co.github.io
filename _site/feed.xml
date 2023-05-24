@@ -5,13 +5,13 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Apr 2023 15:18:19 +0900</pubDate>
-    <lastBuildDate>Wed, 26 Apr 2023 15:18:19 +0900</lastBuildDate>
+    <pubDate>Wed, 24 May 2023 18:25:32 +0900</pubDate>
+    <lastBuildDate>Wed, 24 May 2023 18:25:32 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>K8s 클러스터에 Datadog 적용하기</title>
-        <description>스퀘어랩에서는 각 microservice 별로 발생하는 로그들을 logstash를 활용하여 수집하고 있습니다. 이 과정에서 쌓이게 되는 수많은 로그들을 관리하는 비용을 줄이고, 서비스 모니터링과 로그 관리를 더욱 편리하게 할 수 있다는 기대를 갖고 Datadog을 적용해보는 POC 기간을 갖게 되었습니다. 이 글은 Datadog 연동에 대한 관심이 있으신 분들에게 도움이 될 것 같습니다.
+        <description>스퀘어랩에서는 각 microservice 별로 발생하는 로그들을 logstash를 활용하여 수집하고 있습니다. 이 과정에서 쌓이게 되는 수많은 로그들을 관리하는 비용을 줄이고, 서비스 모니터링과 로그 관리를 더욱 편리하게 할 수 있다는 기대를 갖고 Datadog을 적용해보는 PoC 기간을 갖게 되었습니다. 이 글은 Datadog 연동에 대한 관심이 있으신 분들에게 도움이 될 것 같습니다.
 </description>
         <pubDate>Mon, 24 Apr 2023 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/datadog-poc/</link>

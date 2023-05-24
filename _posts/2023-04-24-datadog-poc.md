@@ -10,7 +10,7 @@ img: /images/blog/datadog-poc/datadog.png
 img-author: /images/blog/author/seongbin.png
 ---
 
-스퀘어랩에서는 각 microservice 별로 발생하는 로그들을 logstash를 활용하여 수집하고 있습니다. 이 과정에서 쌓이게 되는 수많은 로그들을 관리하는 비용을 줄이고, 서비스 모니터링과 로그 관리를 더욱 편리하게 할 수 있다는 기대를 갖고 Datadog을 적용해보는 POC 기간을 갖게 되었습니다. 이 글은 Datadog 연동에 대한 관심이 있으신 분들에게 도움이 될 것 같습니다.
+스퀘어랩에서는 각 microservice 별로 발생하는 로그들을 logstash를 활용하여 수집하고 있습니다. 이 과정에서 쌓이게 되는 수많은 로그들을 관리하는 비용을 줄이고, 서비스 모니터링과 로그 관리를 더욱 편리하게 할 수 있다는 기대를 갖고 Datadog을 적용해보는 PoC 기간을 갖게 되었습니다. 이 글은 Datadog 연동에 대한 관심이 있으신 분들에게 도움이 될 것 같습니다.
 
 
 ## Datadog 적용 과정
@@ -252,3 +252,4 @@ Datadog 측으로부터 현재 Node.JS와 Kotlin의 Framework를 아직 지원�
 ## 마무리
 Datadog helm chart install시의 설정만 제대로 해준다면, k8s 환경에서 Datadog을 적용하는 것은 꽤나 편리했습니다. 기존에 logstash상에서 로그를 검색하면서 겪었던 불편함은 Datadog을 사용하면서 어느정도 해소될 수 있었습니다. 서비스별 monitor나 dashboard도 확인하기 편리하여, 트래픽이 몰리는 시점에 대비하여 deployment의 scale out을 진행할 때 모니터링 하기에도 유용했습니다.
 비용과 사용성을 고려하여 dev cluster에서는 log indexing기능만 사용하고, prd에서는 APM이나 DB monitoring까지 적용해서 사용한다면 훨씬 경제적으로 log를 관리할 수 있을 것으로 기대됩니다.
+마지막으로, PoC 기간 동안 많은 도움 주신 데이터독 관계자 분들과 메가존 기술팀 분들께 감사드립니다! 🙇‍♂️
