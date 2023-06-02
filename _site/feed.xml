@@ -5,9 +5,22 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 May 2023 18:29:46 +0900</pubDate>
-    <lastBuildDate>Wed, 24 May 2023 18:29:46 +0900</lastBuildDate>
+    <pubDate>Fri, 02 Jun 2023 13:57:00 +0900</pubDate>
+    <lastBuildDate>Fri, 02 Jun 2023 13:57:00 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Prisma의 트랜잭션 지원 알아보기 + 사용해보기</title>
+        <description>서비스 개발을 하다보면 DB의 사용은 거의 필수불가결합니다. 또한 서비스와 그 로직은 점점 복잡해지고 그에 따라 여러 가지 문제를 맞닥뜨리게 되는데, 이 중 몇 가지 패턴은 데이터를 다루는 DB 작업에 트랜잭션(Transaction) 개념을 도입하여 해결할 수 있습니다.
+</description>
+        <pubDate>Wed, 31 May 2023 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/prisma-transactions/</link>
+        <guid isPermaLink="false">/blog/prisma-transactions/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>K8s 클러스터에 Datadog 적용하기</title>
@@ -290,19 +303,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
         <pubDate>Thu, 21 May 2020 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/unsplash/</link>
         <guid isPermaLink="false">/blog/unsplash/</guid>
-        
-        
-        <category>News</category>
-        
-      </item>
-    
-      <item>
-        <title>스퀘어랩, 원티드 좋은 기업에 선정되다</title>
-        <description>좋은 회사란 무엇일까요? 사회에 첫발을 떼는 순간부터 직장을 다니고 있는 지금에도 누구나 고민해볼 법한 질문입니다. 월급을 많이 준다든지, 탄탄한 복지를 제공한다든지, 안정적인 고용이 보장된다든지. 개인에 따라 좋은 회사의 기준은 무수히도 많고 다양할 텐데요. 우리가 생각하는 좋은 회사의 기준은 개개인을 인격체로서 존중해주며 인연을 소중히 여기고 명확한 목표와 이해 타당한 목적을 제시해주는 조직이라고 생각합니다. 이런 기준에서 스퀘어랩은 좋은 회사라 자부할 수 있는데요, 그 노력의 일환으로 얼마 전 스퀘어랩이 원티드에서 뽑은 좋은 기업에 선정되는 경사가 있었습니다.
-</description>
-        <pubDate>Tue, 28 Apr 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/wanted/</link>
-        <guid isPermaLink="false">/blog/wanted/</guid>
         
         
         <category>News</category>
