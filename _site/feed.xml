@@ -5,9 +5,22 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Jun 2023 13:57:00 +0900</pubDate>
-    <lastBuildDate>Fri, 02 Jun 2023 13:57:00 +0900</lastBuildDate>
-    <generator>Jekyll v4.0.0</generator>
+    <pubDate>Mon, 24 Jul 2023 10:27:38 +0900</pubDate>
+    <lastBuildDate>Mon, 24 Jul 2023 10:27:38 +0900</lastBuildDate>
+    <generator>Jekyll v4.0.1</generator>
+    
+      <item>
+        <title>Testing 101</title>
+        <description>Testing 101
+</description>
+        <pubDate>Mon, 24 Jul 2023 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/testing101/</link>
+        <guid isPermaLink="false">/blog/testing101/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>Prisma의 트랜잭션 지원 알아보기 + 사용해보기</title>
