@@ -5,9 +5,22 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Jul 2023 17:38:12 +0900</pubDate>
-    <lastBuildDate>Mon, 24 Jul 2023 17:38:12 +0900</lastBuildDate>
+    <pubDate>Fri, 04 Aug 2023 10:44:02 +0900</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2023 10:44:02 +0900</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
+    
+      <item>
+        <title>누가 재시도 요청을 하였는가?</title>
+        <description>이번 글에서는 카이트 항공 서비스 리뉴얼을 하는 과정에서 만났던 ‘자동 재시도 요청으로 인한 중복 예약 생성 오류’에 대한 트러블 슈팅 과정을  단계적으로 소개해드리려고 합니다. 이 글이 문제가 발생했을 때 실무에서 어떤식으로 원인을 찾고 문제를 해결해 나가는지 궁금해하시는 분들에게 도움이 되었으면 좋겠습니다.
+</description>
+        <pubDate>Fri, 04 Aug 2023 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/who-did-retry-the-request/</link>
+        <guid isPermaLink="false">/blog/who-did-retry-the-request/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>Testing 101</title>
@@ -291,34 +304,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
         
         
         <category>Interview</category>
-        
-      </item>
-    
-      <item>
-        <title>플레이윙즈를 만드는 사람들을 만나다-1</title>
-        <description>플레이윙즈가 새 단장을 마친지도 어느덧 한 달이라는 시간이 지났습니다. 다채롭게 변화된 모습만큼이나 리뉴얼 프로젝트를 위해 애써주신 분들이 많은데요. 그래서 이번에는 플레이윙즈를 새롭게 꾸미기 위해 애써주신 멤버들 이야기를 전하는 시간을 갖고자 합니다. 리뉴얼 프로젝트 이후 오랜만에 한 곳에 모여 그간의 회고와 고마움을 풀어내던 그 자리로 여러분을 초대합니다.
-</description>
-        <pubDate>Fri, 18 Sep 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/interview-playwings-renewal-1/</link>
-        <guid isPermaLink="false">/blog/interview-playwings-renewal-1/</guid>
-        
-        
-        <category>Interview</category>
-        
-      </item>
-    
-      <item>
-        <title>여행의 영감을 일상에서 나누는 방법</title>
-        <description>끝을 알 수 없는 수평선 아래 몸을 누인 여행객 사진 한 장.
-무심하게 도심을 지나쳐 삶을 살아가는 현지인 사진 한 장.
-누구 하나 없는 적막 가득한 새벽 어느 외딴 도로 사진 한 장.
-</description>
-        <pubDate>Thu, 21 May 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/unsplash/</link>
-        <guid isPermaLink="false">/blog/unsplash/</guid>
-        
-        
-        <category>News</category>
         
       </item>
     

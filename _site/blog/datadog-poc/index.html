@@ -111,25 +111,25 @@ dev와 prd cluster에서 각각 <code class="highlighter-rouge">values-dev.yaml<
   <span class="na">name</span><span class="pi">:</span> <span class="s">deployment-name</span>
   <span class="na">labels</span><span class="pi">:</span>
     <span class="s">...</span>
-    <span class="s">tags.datadoghq.com/env</span><span class="pi">:</span> <span class="s">${ENV}</span> <span class="c1"># dev | qa | rc | prd</span>
-    <span class="s">tags.datadoghq.com/service</span><span class="pi">:</span> <span class="s">service-name</span>
-    <span class="s">tags.datadoghq.com/version</span><span class="pi">:</span> <span class="s">${VERSION}</span>
+    <span class="s">tags.datadoghq.com/env</span><span class="err">:</span> <span class="s">${ENV}</span> <span class="c1"># dev | qa | rc | prd</span>
+    <span class="na">tags.datadoghq.com/service</span><span class="pi">:</span> <span class="s">service-name</span>
+    <span class="na">tags.datadoghq.com/version</span><span class="pi">:</span> <span class="s">${VERSION}</span>
 <span class="na">spec</span><span class="pi">:</span>
   <span class="s">...</span>
-  <span class="s">template</span><span class="pi">:</span>
+  <span class="s">template</span><span class="err">:</span>
     <span class="na">metadata</span><span class="pi">:</span>
       <span class="na">annotations</span><span class="pi">:</span>
         <span class="s">...</span>
-        <span class="s">admission.datadoghq.com/js-lib.version</span><span class="pi">:</span> <span class="s">v0.00.0</span>
-        <span class="c1"># or admission.datadoghq.com/java-lib.version: v0.00.0</span>
+        <span class="s">admission.datadoghq.com/js-lib.version</span><span class="err">:</span> <span class="s">v0.00.0</span>
+        <span class="s"># or admission.datadoghq.com/java-lib.version</span><span class="err">:</span> <span class="s">v0.00.0</span>
     <span class="na">spec</span><span class="pi">:</span>
       <span class="na">containers</span><span class="pi">:</span>
         <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">service-name</span>
           <span class="s">...</span>
           <span class="na">env</span><span class="pi">:</span>
               <span class="s">...</span>
-            <span class="s">- name</span><span class="pi">:</span> <span class="s">DD_LOGS_INJECTION</span>
-              <span class="na">value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">true'</span>
+            <span class="s">- name</span><span class="err">:</span> <span class="s">DD_LOGS_INJECTION</span>
+              <span class="s">value</span><span class="err">:</span> <span class="s1">'</span><span class="s">true'</span>
 </code></pre></div></div>
 
 <hr />
@@ -180,9 +180,9 @@ dev와 prd cluster에서 각각 <code class="highlighter-rouge">values-dev.yaml<
 <p>Health check 와 같은 내용들은 로그 indexing은 해야하지만, trace 대상에서는 제외하는 것이 맞게다고 판단하여 resource를 기준으로 완전히 제외했습니다.</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">datadog</span><span class="pi">:</span>
   <span class="s">...</span>
-  <span class="s">agents</span><span class="pi">:</span>
+  <span class="s">agents</span><span class="err">:</span>
     <span class="s">...</span>
-    <span class="s">containers</span><span class="pi">:</span>
+    <span class="s">containers</span><span class="err">:</span>
       <span class="na">traceAgent</span><span class="pi">:</span>
         <span class="na">env</span><span class="pi">:</span>
           <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">DD_APM_IGNORE_RESOURCES</span>
@@ -225,10 +225,10 @@ Datadog apiKey 의 경우, <code class="highlighter-rouge">helm chart install / 
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">datadog</span><span class="pi">:</span>
   <span class="s">...</span>
-  <span class="s">clusterAgent</span><span class="pi">:</span>
+  <span class="s">clusterAgent</span><span class="err">:</span>
     <span class="s">...</span>
-    <span class="s">confd</span><span class="pi">:</span>
-      <span class="s">mysql.yaml</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">confd</span><span class="err">:</span>
+      <span class="na">mysql.yaml</span><span class="pi">:</span> <span class="pi">|-</span>
         <span class="s">cluster_check: true</span>
         <span class="s">init_config:</span>
         <span class="s">instances:</span>
@@ -334,7 +334,7 @@ APM trace 기능이 제대로 동작한다면, 편리하게 확인할 수 있는
     
     <p>
         <a href="/blog/#Engineering"> Engineering</a>
-        <span class="badge badge-theme pull-right">8</span>
+        <span class="badge badge-theme pull-right">10</span>
     </p>
     
     <p>
@@ -378,7 +378,7 @@ APM trace 기능이 제대로 동작한다면, 편리하게 확인할 수 있는
                 
                 <p>
                     <a href="/category/#Engineering"> Engineering</a>
-                    <span class="badge badge-theme pull-right">8</span>
+                    <span class="badge badge-theme pull-right">10</span>
                 </p>
 
                 
