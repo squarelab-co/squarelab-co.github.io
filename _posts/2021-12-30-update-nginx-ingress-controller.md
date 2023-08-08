@@ -5,8 +5,8 @@ date: 2021-12-30
 author: 권영재
 categories:
 - Engineering
-og-img: https://squarelab.co/images/blog/ingress-nginx/og_cover.jpg
-img: /images/blog/ingress-nginx/og_cover.jpg
+og-img: https://squarelab.co/images/blog/ingress-nginx/og_cover_mod.jpg
+img: /images/blog/ingress-nginx/og_cover_mod.jpg
 img-author: /images/blog/author/yjiq150.jpg
 ---
 

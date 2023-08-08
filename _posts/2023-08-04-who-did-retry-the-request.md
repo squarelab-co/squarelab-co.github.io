@@ -5,8 +5,8 @@ date: 2023-08-04
 author: 권영재
 categories:
 - Engineering
-og-img: https://squarelab.co/images/blog/ingress-nginx/og_cover.jpg
-img: /images/blog/ingress-nginx/og_cover.jpg
+og-img: https://squarelab.co/images/blog/who-did-retry-the-request/og_cover.jpg
+img: /images/blog/who-did-retry-the-request/og_cover.jpg
 img-author: /images/blog/author/yjiq150.jpg
 ---
 
@@ -215,5 +215,5 @@ Changes with nginx 1.9.13                                        29 Mar 2016
 
 ## 각주
 
-[^1]:  https://github.com/axios/axios#request-config
-[^2]: https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#connection-idle-timeout
+[^1]: [axios request config](https://github.com/axios/axios#request-config)
+[^2]: [AWS NLB connection idle timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#connection-idle-timeout)
