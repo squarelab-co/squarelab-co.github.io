@@ -69,31 +69,34 @@ img-author: /images/Kyte.png
 
 2. 실제 수정 작업을 진행합니다. IDE나 텍스트 에디터를 통해 파일의 내용을 수정하고 로컬 환경에 반영합니다. 이 부분에 대한 자세한 예시는 생략하겠습니다.
 
-3. `222` 항목을 추가한 `file0`를 커밋
+3. `GitHub`에서는 보통 (기존 커밋은 그대로 유지하고) 수정한 내용을 아예 새로운 커밋으로 쌓아올리면서 변경 내역을 공유/리뷰/관리합니다. 아래 과정을 통해 새로운 커밋을 생성합니다.
+
+4. `222` 항목을 추가한 `file0`를 커밋
     ```bash
     $ git add file0
     $ git commit -m "Insert missing data to file0"
     ```
 
-4. `123`을 `012`로 변경한 `file2`를 커밋
+5. `123`을 `012`로 변경한 `file2`를 커밋
     ```bash
     $ git add file2
     $ git commit -m "Fix wrong data in file2"
     ```
 
-5. `PR`을 진행중인 Remote source repository(`origin`)에 커밋을 반영(Push)
+6. `PR`을 진행중인 Remote source repository(`origin`)에 커밋을 반영(Push)
     ```bash
     $ git push origin
     ```
 
-6. PR에 추가 작업을 진행했음을 알려 추가적인 리뷰를 진행(이후 과정은 큰 문제 없이 바로 리뷰를 통과한 경우를 가정)
+7. PR에 추가 작업을 진행했음을 알려 추가적인 리뷰를 진행(이후 과정은 큰 문제 없이 바로 리뷰를 통과한 경우를 가정)
 
-7. 리뷰어가 추가적인 리뷰를 완료하고 PR을 승인
+8. 리뷰어가 추가적인 리뷰를 완료하고 PR을 승인
     - 여기까지 진행되면 아래와 같은 상태가 됩니다. GitHub 설정 등에 따라 조금 다르게 표시될 수 있습니다.
+    - 수정 작업이 신규 커밋으로 추가된 것, 이를 리뷰 과정에 언급한 것, 리뷰어가 확인 후 승인한 것 등을 확인할 수 있습니다.
 
     ![GitHub 리뷰 완료 상태](/images/blog/git-gerrit-review-demo/github-review-02.png)
 
-8. 화면 하단의 녹색 `Merge pull request` 버튼을 통해 `PR`을 브랜치에 반영하면 전체 작업이 마무리됩니다. 이미 많이 익숙한 과정이라 생각해서 아주 자세한 부분까지 설명하지는 않았습니다.
+9. 화면 하단의 녹색 `Merge pull request` 버튼을 통해 `PR`을 브랜치에 반영하면 전체 작업이 마무리됩니다. 이미 많이 익숙한 과정이라 생각해서 아주 자세한 부분까지 설명하지는 않았습니다.
 
 ![GitHub 머지 완료 상태](/images/blog/git-gerrit-review-demo/github-review-03.png)
 
@@ -195,19 +198,28 @@ img-author: /images/Kyte.png
     Type 'yes' to confirm, other to cancel: yes
     ```
 
-9. 새 Patchset의 추가 리뷰가 완료된 두 커밋은 아래와 같은 상태가 됩니다.
+9. 새 `Patchset`의 추가 리뷰가 완료된 두 커밋은 아래와 같은 상태가 됩니다. 커밋 ID는 변경되지만, `Change-Id`는 유지됩니다.
 
-    * 커밋 `1c6798320543bf10066631ccd577e08e4e636c23`
+    * 커밋 `1c6798320543bf10066631ccd577e08e4e636c23` → `525e68be8aa1c4aff3b0ba0f24561259e9fd8d06`
 
         ![Gerrit 수정/리뷰 완료 1](/images/blog/git-gerrit-review-demo/gerrit-review-04.png)
 
-    * 커밋 `b2cdd39e6c800f7db50c5c76c7f0fe689ec732bb`
+        * `Gerrit`은 커밋이 수정될 때마다 `Patchset`이란 단위를 통해 변경 사항을 업데이트/관리합니다. `GitHub`이 보통 커밋 자체는 그대로 두고 다른 커밋을 쌓아올리는 방식이라면, `Gerrit`은 커밋 내부적으로 히스토리를 관리하는 방식입니다.
+        * 아래와 같은 화면을 통해 `Patchset` `1`/`2`를 비교해 볼 수 있습니다. 여러 `Patchset` 사이를 옮겨다니면서 다양한 시점에서 변경 사항을 확인해 볼 수 있어 편리합니다. (예: `Patchset`: `base` to `end`, `3` to `4` 등)
+
+            ![Gerrit 수정/리뷰 완료 1](/images/blog/git-gerrit-review-demo/gerrit-review-04_01.png)
+
+    * 커밋 `b2cdd39e6c800f7db50c5c76c7f0fe689ec732bb` → `00c4bab0b8fa904ad015c956b487be42eb0eac82`
 
         ![Gerrit 수정/리뷰 완료 2](/images/blog/git-gerrit-review-demo/gerrit-review-05.png)
 
 10. `Gerrit`에 함께 제출했던 마지막 CL을 확인해보면 우측 상단에 `SUBMIT INCLUDING PARENTS` 버튼이 활성화된 것을 볼 수 있습니다. 이를 사용해 지금까지 작업한 내용을 모두 반영합니다.
 
     ![Gerrit submit](/images/blog/git-gerrit-review-demo/gerrit-review-06.png)
+
+11. 커밋들이 전부 머지되고 작업이 완료된 상태입니다.
+
+    ![Gerrit merged](/images/blog/git-gerrit-review-demo/gerrit-review-07.png)
 
 `Gerrit`에서의 작업 방식을 소개하는 것이 목표였던 만큼, `GitHub` 보다는 조금 더 자세히 설명해 보았습니다.
 
