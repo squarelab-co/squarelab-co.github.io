@@ -5,9 +5,22 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Aug 2023 09:59:39 +0900</pubDate>
-    <lastBuildDate>Tue, 08 Aug 2023 09:59:39 +0900</lastBuildDate>
+    <pubDate>Wed, 30 Aug 2023 18:22:39 +0900</pubDate>
+    <lastBuildDate>Wed, 30 Aug 2023 18:22:39 +0900</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
+    
+      <item>
+        <title>Git + Gerrit, 리뷰 받은 코드를 수정해봅시다. Step-by-step (vs. GitHub)</title>
+        <description>온전히 혼자서만 작업하는 경우가 아니라면, 코드 리뷰는 소프트웨어 개발 중 빼놓을 수 없는 과정이라고 할 수 있습니다. 그리고 그 중요도가 점점 커지면서 여러 가지 방법론이나 도구들이 개발되었고, 각 조직의 특성에 맞추어 널리, 다양하게 사용되고 있습니다.
+</description>
+        <pubDate>Wed, 30 Aug 2023 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/git-gerrit-review-demo/</link>
+        <guid isPermaLink="false">/blog/git-gerrit-review-demo/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>누가 재시도 요청을 하였는가?</title>
@@ -291,19 +304,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
         
         
         <category>Design</category>
-        
-      </item>
-    
-      <item>
-        <title>플레이윙즈를 만드는 사람들을 만나다-2</title>
-        <description>UI, UX에 이어 기능 개발 및 QA 관련 질문으로 인터뷰를 다시 시작했는데요. 사용자가 직접 눈으로 확인할 수 없지만, 더 쉽고 편리한 서비스 이용을 위해 애써 주신 엔지니어 세 분의 상세한 답변이 계속 이어졌습니다.
-</description>
-        <pubDate>Fri, 18 Sep 2020 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/interview-playwings-renewal-2/</link>
-        <guid isPermaLink="false">/blog/interview-playwings-renewal-2/</guid>
-        
-        
-        <category>Interview</category>
         
       </item>
     
