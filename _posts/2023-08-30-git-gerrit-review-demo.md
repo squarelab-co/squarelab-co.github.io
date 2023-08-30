@@ -88,10 +88,10 @@ img-author: /images/Kyte.png
     $ git push origin
     ```
 
-7. PR에 추가 작업을 진행했음을 알려 추가적인 리뷰를 진행(이후 과정은 큰 문제 없이 바로 리뷰를 통과한 경우를 가정)
+7. `PR`에 추가 작업을 진행했음을 알려 추가적인 리뷰를 진행(이후 과정은 큰 문제 없이 바로 리뷰를 통과한 경우를 가정)
 
-8. 리뷰어가 추가적인 리뷰를 완료하고 PR을 승인
-    - 여기까지 진행되면 아래와 같은 상태가 됩니다. GitHub 설정 등에 따라 조금 다르게 표시될 수 있습니다.
+8. 리뷰어가 추가적인 리뷰를 완료하고 `PR`을 승인
+    - 여기까지 진행되면 아래와 같은 상태가 됩니다. `GitHub` 설정 등에 따라 조금 다르게 표시될 수 있습니다.
     - 수정 작업이 신규 커밋으로 추가된 것, 이를 리뷰 과정에 언급한 것, 리뷰어가 확인 후 승인한 것 등을 확인할 수 있습니다.
 
     ![GitHub 리뷰 완료 상태](/images/blog/git-gerrit-review-demo/github-review-02.png)
@@ -241,7 +241,7 @@ img-author: /images/Kyte.png
 로컬 환경에 작업한 내용 자체가 완결성을 가지고 리모트에도 동일하게 반영되며, 작업이 완료된 결과도 (`GitHub`에 비해) 대개 간단한 형태로 유지됩니다.
 
 그러나 한편으로는 조금 불편하고 불친절하다고 볼 수도 있습니다. GUI는 딱 기본적인 부분만 갖추고 있으며, Web 환경에서의 코드 네비게이션, 비교 등은 기본적으로 불가능합니다.
-기존 커밋을 하나하나 수정하여 새로운 Patchset을 올리는 과정은, `PR`에 새 커밋을 쌓아올리는 단순한 과정에 비교하면 조금 피곤할 때도 있습니다.
+기존 커밋을 하나하나 수정하여 새로운 `Patchset`을 올리는 과정은, `PR`에 새 커밋을 쌓아올리는 단순한 과정에 비교하면 조금 피곤할 때도 있습니다.
 
 <script>(function(i,s,o,g,r,a,m){i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//scripts.poll-maker.com/3012/pollembed.js','qp');</script><a href='https://take.supersurvey.com/poll4916491x558343d6-152' data-poll='4916491x558343d6-152' target="_blank" style='width:300px; display:block;'>GitHub vs. Gerrit 어떤 방식을 선호하시나요?</a>
 
