@@ -5,9 +5,23 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Aug 2023 18:22:39 +0900</pubDate>
-    <lastBuildDate>Wed, 30 Aug 2023 18:22:39 +0900</lastBuildDate>
+    <pubDate>Sat, 14 Oct 2023 22:21:08 +0900</pubDate>
+    <lastBuildDate>Sat, 14 Oct 2023 22:21:08 +0900</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
+    
+      <item>
+        <title>신입 개발자의 시스템 푸시 개발기</title>
+        <description>입사한지 어느덧 8개월이 훌쩍 지나버린 지금. 신입 개발자는 무엇을 하고 있을까요?
+입사 후 맡은 일 중 가장 큰 비중을 차지했던 시스템 푸시에 대해 소개해보려고 합니다.
+</description>
+        <pubDate>Fri, 13 Oct 2023 00:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/system-push/</link>
+        <guid isPermaLink="false">/blog/system-push/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>Git + Gerrit, 리뷰 받은 코드를 수정해봅시다. Step-by-step (vs. GitHub)</title>
@@ -291,19 +305,6 @@ Reviewee는 기본적으로 작성한 코드에 대한 다양한 시각의 리�
         
         
         <category>Engineering</category>
-        
-      </item>
-    
-      <item>
-        <title>Figma 플러그인 만들기</title>
-        <description>2020 Design Tools Survey에서 Figma가 Sketch를 앞지르고 1위에 올랐습니다. 스퀘어랩도 UI 디자인툴로 Sketch를 사용해오다 몇개월 전부터 Figma를 도입했는데요. Sketch와 마찬가지로 Figma에도 유용한 플러그인이 많고, 원하는 기능이 있다면 직접 플러그인을 제작할 수도 있습니다.
-</description>
-        <pubDate>Tue, 23 Feb 2021 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/get-started-with-figma-plugin/</link>
-        <guid isPermaLink="false">/blog/get-started-with-figma-plugin/</guid>
-        
-        
-        <category>Design</category>
         
       </item>
     
