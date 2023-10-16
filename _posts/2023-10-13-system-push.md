@@ -45,7 +45,7 @@ img-author: /images/blog/author/joy.jpg
 ### 1. Braze 대시보드에서 발송할 푸시 캠페인 템플릿을 작성한다.
 API로 트리거될 캠페인을 만드는 과정입니다. 이 글에서는 캠페인 설정시 중요한 부분만 설명하며 캠페인을 만드는 자세한 과정은 Braze에서 제공하는 [가이드라인](https://www.braze.com/docs/user_guide/engagement_tools/campaigns)을 참고하시면 됩니다.
 
-lequid문법으로 `api_trigger_properties`를 설정하게 된다면 API로 트리거할 때 설정하고 싶은 값을 함께 넣어준다면 푸시 발송시에 설정한 값으로 발송되게 됩니다. 이처럼 title, message와 deep link 부분을 아래 사진과 같이 설정해줍니다.
+liquid문법으로 `api_trigger_properties`를 설정하게 된다면 API로 트리거할 때 설정하고 싶은 값을 함께 넣어준다면 푸시 발송시에 설정한 값으로 발송되게 됩니다. 이처럼 title, message와 deep link 부분을 아래 사진과 같이 설정해줍니다.
 <div class="column-box">
     <img class="column-image" src="/images/blog/system-push/braze-01.png" alt="braze캠페인1">
     <img class="column-image border" src="/images/blog/system-push/braze-02.png" alt="braze 캠페인2">
