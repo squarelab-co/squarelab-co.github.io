@@ -5,8 +5,8 @@ date: 2023-10-13
 author: 조이
 categories:
   - Engineering
-og-img: https://squarelab.co/images/blog/deview2023/keynote_banner.jpg
-img: /images/blog/deview2023/keynote_banner.jpg
+og-img: https://squarelab.co/images/blog/system-push/cover.png
+img: /images/blog/system-push/cover.png
 img-author: /images/blog/author/joy.jpg
 ---
 
