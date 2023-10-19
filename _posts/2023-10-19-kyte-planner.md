@@ -5,7 +5,7 @@ date: 2023-10-19
 author: 짜이
 categories:
   - Interview
-og-img: https://squarelab.co/images/blog/system-push/cover.png
+og-img: https://squarelab.co/images/blog/kyte-planner/planner-cover.png
 img: /images/blog/kyte-planner/planner-cover.png
 img-author: /images/blog/author/chai.png
 ---
@@ -70,6 +70,8 @@ img-author: /images/blog/author/chai.png
 
 ![image5](/images/blog/kyte-planner/planner5.png)
 
+---
+
 ## 당신의 여행을 알고 싶어요
 
 ### 🤔 좋은 질문이란?
@@ -112,6 +114,6 @@ img-author: /images/blog/author/chai.png
 
 ![image8](/images/blog/kyte-planner/planner8.png)
 
-회사 내부 테스트 결과는 모두 비슷한 여행지가 나와서 테스트에 혹시 오류가 있었는지 고민을 하기도 했는데, 라이브 된 후 살펴보니 골고루 결과 페이지가 나와서 다행이었어요. 세상은 넓고 취향은 다양하다는 진리를 다시금 깨닫게 되었습니다. 프로젝트에 참여한 모든 사람이 머리가 쪼개지는 고통을 겪으며 완성한 <여행타입 테스트>! 이번 여행타입 테스트 콘텐츠가 스케치였다면, 조만간 카이트의 사용자를 조금 더 면밀히 분석해 세심한 제안을 건넬 수 있는 채색 같은 콘텐츠를 만들 수 있지 않을까 기대해봅니다.
+회사 내부 테스트 결과는 모두 비슷한 여행지가 나와서 테스트에 혹시 오류가 있었는지 고민을 하기도 했는데, 라이브 된 후 살펴보니 골고루 결과 페이지가 나와서 다행이었어요. 세상은 넓고 취향은 다양하다는 진리를 다시금 깨닫게 되었습니다. 프로젝트에 참여한 모든 사람이 머리가 쪼개지는 고통을 겪으며 완성한 '여행타입 테스트!' 이번 여행타입 테스트 콘텐츠가 스케치였다면, 조만간 카이트의 사용자를 조금 더 면밀히 분석해 세심한 제안을 건넬 수 있는 채색 같은 콘텐츠를 만들 수 있지 않을까 기대해봅니다.
 
 카이트 여행타입 테스트 제작기는 2편에서 이어집니다. 프로젝트에 참여한 인원들의 생생한 인터뷰가 궁금하시다면 2편을 기대해주세요!
