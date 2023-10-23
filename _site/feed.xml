@@ -5,13 +5,13 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Oct 2023 15:50:23 +0900</pubDate>
-    <lastBuildDate>Thu, 19 Oct 2023 15:50:23 +0900</lastBuildDate>
+    <pubDate>Mon, 23 Oct 2023 11:50:12 +0900</pubDate>
+    <lastBuildDate>Mon, 23 Oct 2023 11:50:12 +0900</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
       <item>
-        <title>당신의 여행 타입을 알려줄게요! 여행타입 테스트 제작기 1편</title>
-        <description>
+        <title>진짜 여행 전문가가 만든 여행타입 테스트 제작기 1편</title>
+        <description>얼마 전, 카이트에서 여행타입 테스트를 공개했습니다. 테스트를 시작하면 여행을 떠나기 전부터 여행을 거쳐 돌아오기까지의 상황을 가정한 19가지의 질문이 주어집니다. 차근차근 답하는 대로 8가지 유형에 각각 점수가 매겨지는데요. 테스트를 마치면 16가지 결과 중 하나를 만날 수 있어요.
 </description>
         <pubDate>Thu, 19 Oct 2023 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/kyte-planner/</link>
