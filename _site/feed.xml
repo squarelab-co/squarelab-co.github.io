@@ -5,9 +5,22 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Oct 2023 11:04:24 +0900</pubDate>
-    <lastBuildDate>Mon, 30 Oct 2023 11:04:24 +0900</lastBuildDate>
+    <pubDate>Wed, 01 Nov 2023 00:21:00 +0900</pubDate>
+    <lastBuildDate>Wed, 01 Nov 2023 00:21:00 +0900</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
+    
+      <item>
+        <title>말 안 듣는 this, Typescript Custom ESLint Rule로 혼내주기</title>
+        <description>Nest.JS 기반의 서버를 개발하면서, 코드 작성시 실수 하기 쉬웠던 부분이 있었습니다. Javascript의 this 가 예상하지 않은 object를 가리킬 수도 있는 코드를 작성하게 되는 경우였는데요. 특정 경우에 발생할 수 있는 this 로 인한 버그를 typescript custom eslint rule을 제작하여 방지해보고자 했습니다.
+</description>
+        <pubDate>Tue, 31 Oct 2023 23:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/custom-typescript-eslint-rule/</link>
+        <guid isPermaLink="false">/blog/custom-typescript-eslint-rule/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>진짜 여행 전문가가 만든 여행타입 테스트 제작기 1편</title>
@@ -122,21 +135,6 @@
         <pubDate>Fri, 25 Mar 2022 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/code-review-2/</link>
         <guid isPermaLink="false">/blog/code-review-2/</guid>
-        
-        
-        <category>Engineering</category>
-        
-      </item>
-    
-      <item>
-        <title>nginx ingress controller 무중단 업데이트하기</title>
-        <description>AWS 상에서 쿠버네티스(k8s) 클러스터를 운영할때 NLB(Network Load Balancer)와 nginx ingress controller 를 조합해서 사용하면 매우 편리합니다.
-일단 k8s 클러스터로 들어가는 모든 트래픽을 원하는 하나의 네트워크 로드밸런서로 몰아서 사용이 가능하기 때문에 로드밸런서 비용을 절약 가능하고, 여기에 추가로 nginx에서 제공하는 다양한 기능을 모두 사용할 수 있는 장점이 있습니다.
-스퀘어랩에서도 대부분 서비스들이 쿠버네티스 클러스터 위에서 운영되고 있으며 외부에서 클러스터로 들어오는 트래픽은 NLB + nginx ingress controller를 조합해서 처리하고있습니다.
-</description>
-        <pubDate>Thu, 30 Dec 2021 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/update-nginx-ingress-controller/</link>
-        <guid isPermaLink="false">/blog/update-nginx-ingress-controller/</guid>
         
         
         <category>Engineering</category>
