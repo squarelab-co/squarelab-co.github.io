@@ -341,7 +341,7 @@ const domCancelPnr = this.client.domCancelPnr as (
 ```
 
 `this.client.domCancelPnr` 라는 함수의 파라미터 타입을 `as` 키워드를 사용하여 변경하고, 그렇게 변경한 타입의 함수를 사용하는 경우입니다.
-`this.client.domCancelPnr` 를 `domCancelPnrV2` 라는 변수로 타입을 재정의하여 사용하려는 의도가 있는 코드입니다. 이는 **사례 2**를 방지하기 위한 `no-direct-class-method-referencing` Rule을 위반하게 됩니다. 이런 경우는 어떻게 처리하면 좋을까요?
+`this.client.domCancelPnr` 를 `domCancelPnr` 이라는 변수로 타입을 재정의하여 사용하려는 의도가 있는 코드입니다. 이는 **사례 2**를 방지하기 위한 `no-direct-class-method-referencing` Rule을 위반하게 됩니다. 이런 경우는 어떻게 처리하면 좋을까요?
 `as` 라는 키워드로 타입이 단언되어있을 경우에는 해당 Rule을 위반하지 않도록 rule에 option을 부여하는 식으로 해결할 수도 있을 것이고, 아예 다른 방식으로 구현할 수는 없을까 생각해볼 수도 있겠습니다.
 
 완성된 플러그인은 현재 [이곳](https://www.npmjs.com/package/eslint-plugin-tidesquare) 에서 사용해보실 수 있습니다.
