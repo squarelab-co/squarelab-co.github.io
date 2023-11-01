@@ -79,21 +79,23 @@ john.orderCoffee("Espresso"); // Logs: "Making Espresso in: NaN minutes."
 
 Javascript에서는 함수가 어떻게 호출되는지에 따라서 `this`가 동적으로 결정되기 때문에, `Arrow Function` 형태로 호출하면, Lexical Context 안의 `this`를 가지도록 할 수 있습니다.
 
-그래서 원치 않는 동작으로부터 방지하기 위해, 어떤 함수를 함수의 인자로 넘길 때에는, `arrow function` 형태, 혹은 `this`를 명시적으로 바인드 해준 형태로 넘겨주도록 하는 룰을 만들어보기로 했습니다.
+그래서 원치 않는 동작으로부터 방지하기 위해, 어떤 함수를 함수의 인자로 넘길 때에는, `arrow function` 형태, 혹은 `this`를 명시적으로 바인드 해준 형태로 넘겨주도록 하는 ESLint Rule을 만들어보기로 했습니다. 이런 Rule을 누군가 만들어놨을 법 한데, 못 찾겠더라구요. 😭
 
 ---
 
 ## ESLint
 
-JS 기반 프로젝트에서는 ESLint 룰을 적용함으로써 프로젝트의 코드 품질을 향상시키고, 코딩 컨벤션을 일치함으로써 팀원간의 협업을 용이하게 할 수 있습니다. 단순히 이런 이점이 있음을 아는 것도 충분하다고 생각하지만, ESLint가 어떤식으로 특정 룰을 검사해내는지 원리를 이해한다면, 우리 팀이나 프로젝트에 알맞는 룰을 만들어낼 수도 있을 것입니다. 그러나, 우리가 주로 사용하는 rule 들은 대부분 이미 만들어져있으므로, 스스로 직접 만들기보다는 기존에 존재하는 규칙을 어떻게 조합해서 사용할 수 있을지 찾아보는 것이 시간을 많이 아낄 수 있을 것입니다.
+JS 기반 프로젝트에서는 ESLint Rule을 적용함으로써 프로젝트의 코드 품질을 향상시키고, 코딩 컨벤션을 일치함으로써 팀원간의 협업을 용이하게 할 수 있습니다. 단순히 이런 이점이 있음을 아는 것도 충분하다고 생각하지만, ESLint가 어떤식으로 특정 Rule을 검사해내는지 원리를 이해한다면, 우리 팀이나 프로젝트에 알맞는 Rule을 만들어낼 수도 있을 것입니다.
 
-> ESLint에서 기본적으로 정말 많은 룰을 제공합니다. ([링크](https://eslint.org/docs/latest/rules/))
+> 그러나, 우리가 주로 사용할 유용한 rule 들은 대부분 이미 만들어져있으므로, 스스로 직접 만들기보다는 기존에 존재하는 Rule들을 찾아보고, 이들을 어떻게 조합해서 사용할 수 있을지를 알아보는 것이 시간을 많이 아낄 수 있을 것입니다. 🫠
+
+> ESLint에서 기본적으로 정말 많은 Rule을 제공합니다. ([링크](https://eslint.org/docs/latest/rules/))
 
 ### AST
 
-우리가 작성한 JS 코드는 V8 엔진의 컴파일러에 의해 파싱 과정을 거쳐 AST(Abstract Syntax Tree)가 생성되고, 이는 바이트 코드로 변환됩니다. 아래 이미지는 [v8 공식 홈페이지에서 바이트코드 컴파일러가 어떻게 작동하는지](https://v8.dev/blog/background-compilation)를 설명한 그림입니다.
+우리가 작성한 JS 코드는 V8 엔진의 컴파일러에 의해 파싱 과정을 거쳐 AST(Abstract Syntax Tree)가 생성되고, 이는 바이트 코드로 변환됩니다. 아래 이미지는 [V8 엔진의 바이트코드 컴파일러가 어떻게 작동하는지](https://v8.dev/blog/background-compilation)를 설명한 그림입니다.
 ![JS AST](https://v8.dev/_img/background-compilation/bytecode.svg)
-우리는 프로젝트에서 ESLint를 사용함으로써, V8 엔진이 코드를 컴파일하기 이전에 미리 AST를 만들어보고, 여기서 규칙에 맞지 않는 문법을 검사 해볼 수 있는 것입니다.
+우리는 프로젝트에서 ESLint를 사용함으로써, V8 엔진이 코드를 컴파일하기 이전에 미리 AST를 만들어보고, 여기서 Rule에 맞지 않는 문법을 검사 해볼 수 있습니다.
 
 [AST Explorer](https://astexplorer.net/) 에서 Javascript 코드를 입력해보면, 우측에 Tree 탭에서 현재 커서가 위치하는 곳이 AST 내부에서 어떤 노드에 해당하는지를 확인해볼 수 있습니다.
 위 이미지에서의 예시를 그대로 한번 입력해보겠습니다.
@@ -145,7 +147,7 @@ function f(a) {
 ### 이걸로 어떻게 Custom Rule을 만드나요?
 
 우리는 이 구조를 활용해서 우리가 원하는 ESLint Rule을 작성할 수 있습니다.
-만약 우리가 "함수의 이름은 반드시 소문자로 시작해야한다" 와 같은 규칙을 만들고 싶다면, 어떤 식으로 이 규칙을 만들어볼 수 있을까요?
+만약 우리가 "함수의 이름은 반드시 소문자로 시작해야한다" 와 같은 Rule을 만들고 싶다면, 어떤 식으로 이 Rule을 만들어볼 수 있을까요?
 AST에서 타입이 `FunctionDeclaration`인 노드를 찾고, 이 노드의 id의 `name`의 첫번째 글자가 소문자인지를 확인하면 될 것입니다.
 
 AST를 탐색하는 과정에는 [`esquery`](https://estools.github.io/esquery/) 를 사용할 수 있습니다. `esquery`는 CSS 셀렉터랑 유사한 문법을 사용해서 AST 노드를 선택하는 것을 가능하게 해줍니다.
@@ -166,7 +168,7 @@ CallExpression > MemberExpression
 
 위의 `esquery`에는 함정이 있는데요, 우리가 원한 `myClock.showTime` 뿐만이 아니라, `console.log` 와`this.currentTime` 까지 모두 검출해버렸습니다. ESLint의 한계를 마주하게 되는 지점입니다. Javascript 만으로는 이 이상 검출해낼 수는 없습니다.
 
-만약 Typescript로 코드를 작성했다면, 타입을 활용해서 검출할 수 있으면 좋겠다는 생각이 자연스럽게 드는 지점입니다. 다행히도, Typescript와 ESLint 를 조합하여 룰을 만들어낼 수 있었습니다.
+만약 Typescript로 코드를 작성했다면, 타입을 활용해서 검출할 수 있으면 좋겠다는 생각이 자연스럽게 드는 지점입니다. 다행히도, Typescript와 ESLint 를 조합하여 Rule을 만들어낼 수 있었습니다.
 
 ### [Typescript-ESLint](https://github.com/typescript-eslint)
 
@@ -235,7 +237,7 @@ module.exports = {
 
 #### lib/rules
 
-- `lib/rules` 내부에는 사례1, 2 발생을 방지하는 룰에 대한 스펙을 각각 작성했습니다.
+- `lib/rules` 내부에는 사례1, 2 발생을 방지하는 Rule에 대한 스펙을 각각 작성했습니다.
 
 - **사례 1**을 방지하는 `no-direct-class-method-passing` Rule의 경우 아래와 같은 형태로 작성했습니다.
 
@@ -333,7 +335,7 @@ const domCancelPnr = this.client.domCancelPnr as (
 ```
 
 `this.client.domCancelPnr` 라는 함수의 파라미터 타입을 `as` 키워드를 사용하여 변경하고, 그렇게 변경한 타입의 함수를 사용하는 경우입니다.
-`this.client.domCancelPnr` 를 `domCancelPnrV2` 라는 변수로 타입을 재정의하여 사용하려는 의도가 있는 코드입니다. 이는 **사례 2**를 방지하기 위한 `no-direct-class-method-referencing` 룰을 위반하게 됩니다. 이런 경우는 어떻게 처리하면 좋을까요?
+`this.client.domCancelPnr` 를 `domCancelPnrV2` 라는 변수로 타입을 재정의하여 사용하려는 의도가 있는 코드입니다. 이는 **사례 2**를 방지하기 위한 `no-direct-class-method-referencing` Rule을 위반하게 됩니다. 이런 경우는 어떻게 처리하면 좋을까요?
 `as` 라는 키워드로 타입이 단언되어있을 경우에는 해당 Rule을 위반하지 않도록 rule에 option을 부여하는 식으로 해결할 수도 있을 것이고, 아예 다른 방식으로 구현할 수는 없을까 생각해볼 수도 있겠습니다.
 
 완성된 플러그인은 현재 [이곳](https://www.npmjs.com/package/eslint-plugin-tidesquare) 에서 사용해보실 수 있습니다.
