@@ -408,7 +408,7 @@ TypeScript는 어떤 식으로 AST를 생성하는지에 대해서는 위에서 
 </code></pre></div></div>
 
 <p><code class="highlighter-rouge">this.client.domCancelPnr</code> 라는 함수의 파라미터 타입을 <code class="highlighter-rouge">as</code> 키워드를 사용하여 변경하고, 그렇게 변경한 타입의 함수를 사용하는 경우입니다.
-<code class="highlighter-rouge">this.client.domCancelPnr</code> 를 <code class="highlighter-rouge">domCancelPnrV2</code> 라는 변수로 타입을 재정의하여 사용하려는 의도가 있는 코드입니다. 이는 <strong>사례 2</strong>를 방지하기 위한 <code class="highlighter-rouge">no-direct-class-method-referencing</code> Rule을 위반하게 됩니다. 이런 경우는 어떻게 처리하면 좋을까요?
+<code class="highlighter-rouge">this.client.domCancelPnr</code> 를 <code class="highlighter-rouge">domCancelPnr</code> 이라는 변수로 타입을 재정의하여 사용하려는 의도가 있는 코드입니다. 이는 <strong>사례 2</strong>를 방지하기 위한 <code class="highlighter-rouge">no-direct-class-method-referencing</code> Rule을 위반하게 됩니다. 이런 경우는 어떻게 처리하면 좋을까요?
 <code class="highlighter-rouge">as</code> 라는 키워드로 타입이 단언되어있을 경우에는 해당 Rule을 위반하지 않도록 rule에 option을 부여하는 식으로 해결할 수도 있을 것이고, 아예 다른 방식으로 구현할 수는 없을까 생각해볼 수도 있겠습니다.</p>
 
 <p>완성된 플러그인은 현재 <a href="https://www.npmjs.com/package/eslint-plugin-tidesquare">이곳</a> 에서 사용해보실 수 있습니다.
