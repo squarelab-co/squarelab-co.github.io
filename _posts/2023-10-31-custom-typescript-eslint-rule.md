@@ -239,7 +239,7 @@ module.exports = {
 
 - `lib/rules` 내부에는 사례1, 2 발생을 방지하는 Rule에 대한 스펙을 각각 작성했습니다.
 
-- **사례 1**을 방지하는 `no-direct-class-method-passing` Rule의 경우 아래와 같은 형태로 작성했습니다.
+- **사례 1**을 방지하는 `no-direct-class-method-passing` Rule 코드를 한번 살펴보겠습니다.
 
 ```javascript
 const { ESLintUtils } = require('@typescript-eslint/utils')
@@ -264,7 +264,13 @@ module.exports.rule = createRule({
                 node: argument,
                 messageId: 'noDirectClassMethodPassing',
                 fix(fixer) {
-                  // 해당 부분을 어떻게 고칠 것인지, fixedCode 생성
+                  const sourceCode = context.getSourceCode()
+                  const argument = sourceCode.getText(node.arguments[i])
+                  const parametersLength = type?.symbol?.declarations[0].parameters?.length ?? 0
+                  const parameters = Array.from({ length: parametersLength })
+                    .map((_, i) => `$${i}`)
+                    .join(',')
+                  const fixedCode = `(${parameters}) => ${argument}(${parameters})`
                   return fixer.replaceText(node.arguments[i], fixedCode)
                 },
 	// ...
@@ -280,8 +286,8 @@ module.exports.rule = createRule({
 })
 ```
 
-- `CallExpression`들에 대해, `arguments` 마다 타입이 `MethodDeclaration` 인지를 확인하고, 에러상황임을 `report` 합니다.
-- `fix` 옵션이 주어질 경우, `fixedCode`로 해당 부분을 고칠 수 있습니다.
+- `CallExpression`들에 대해, `arguments` 마다 타입이 `MethodDeclaration` 인지를 확인하고, 에러상황일 경우 `report` 합니다.
+- `fix` 옵션이 주어질 경우, `fixedCode`를 생성해서 해당 부분을 고칠 수 있습니다.
 
 <br/>
 

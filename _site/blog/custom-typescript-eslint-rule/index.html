@@ -297,7 +297,7 @@ TypeScript는 어떤 식으로 AST를 생성하는지에 대해서는 위에서 
     <p><code class="highlighter-rouge">lib/rules</code> 내부에는 사례1, 2 발생을 방지하는 Rule에 대한 스펙을 각각 작성했습니다.</p>
   </li>
   <li>
-    <p><strong>사례 1</strong>을 방지하는 <code class="highlighter-rouge">no-direct-class-method-passing</code> Rule의 경우 아래와 같은 형태로 작성했습니다.</p>
+    <p><strong>사례 1</strong>을 방지하는 <code class="highlighter-rouge">no-direct-class-method-passing</code> Rule 코드를 한번 살펴보겠습니다.</p>
   </li>
 </ul>
 
@@ -323,7 +323,13 @@ TypeScript는 어떤 식으로 AST를 생성하는지에 대해서는 위에서 
                 <span class="na">node</span><span class="p">:</span> <span class="nx">argument</span><span class="p">,</span>
                 <span class="na">messageId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">noDirectClassMethodPassing</span><span class="dl">'</span><span class="p">,</span>
                 <span class="nx">fix</span><span class="p">(</span><span class="nx">fixer</span><span class="p">)</span> <span class="p">{</span>
-                  <span class="c1">// 해당 부분을 어떻게 고칠 것인지, fixedCode 생성</span>
+                  <span class="kd">const</span> <span class="nx">sourceCode</span> <span class="o">=</span> <span class="nx">context</span><span class="p">.</span><span class="nx">getSourceCode</span><span class="p">()</span>
+                  <span class="kd">const</span> <span class="nx">argument</span> <span class="o">=</span> <span class="nx">sourceCode</span><span class="p">.</span><span class="nx">getText</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+                  <span class="kd">const</span> <span class="nx">parametersLength</span> <span class="o">=</span> <span class="nx">type</span><span class="p">?.</span><span class="nx">symbol</span><span class="p">?.</span><span class="nx">declarations</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">parameters</span><span class="p">?.</span><span class="nx">length</span> <span class="o">??</span> <span class="mi">0</span>
+                  <span class="kd">const</span> <span class="nx">parameters</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">({</span> <span class="na">length</span><span class="p">:</span> <span class="nx">parametersLength</span> <span class="p">})</span>
+                    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`$</span><span class="p">${</span><span class="nx">i</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+                    <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">)</span>
+                  <span class="kd">const</span> <span class="nx">fixedCode</span> <span class="o">=</span> <span class="s2">`(</span><span class="p">${</span><span class="nx">parameters</span><span class="p">}</span><span class="s2">) =&gt; </span><span class="p">${</span><span class="nx">argument</span><span class="p">}</span><span class="s2">(</span><span class="p">${</span><span class="nx">parameters</span><span class="p">}</span><span class="s2">)`</span>
                   <span class="k">return</span> <span class="nx">fixer</span><span class="p">.</span><span class="nx">replaceText</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">fixedCode</span><span class="p">)</span>
                 <span class="p">},</span>
 	<span class="c1">// ...</span>
@@ -340,8 +346,8 @@ TypeScript는 어떤 식으로 AST를 생성하는지에 대해서는 위에서 
 </code></pre></div></div>
 
 <ul>
-  <li><code class="highlighter-rouge">CallExpression</code>들에 대해, <code class="highlighter-rouge">arguments</code> 마다 타입이 <code class="highlighter-rouge">MethodDeclaration</code> 인지를 확인하고, 에러상황임을 <code class="highlighter-rouge">report</code> 합니다.</li>
-  <li><code class="highlighter-rouge">fix</code> 옵션이 주어질 경우, <code class="highlighter-rouge">fixedCode</code>로 해당 부분을 고칠 수 있습니다.</li>
+  <li><code class="highlighter-rouge">CallExpression</code>들에 대해, <code class="highlighter-rouge">arguments</code> 마다 타입이 <code class="highlighter-rouge">MethodDeclaration</code> 인지를 확인하고, 에러상황일 경우 <code class="highlighter-rouge">report</code> 합니다.</li>
+  <li><code class="highlighter-rouge">fix</code> 옵션이 주어질 경우, <code class="highlighter-rouge">fixedCode</code>를 생성해서 해당 부분을 고칠 수 있습니다.</li>
 </ul>
 
 <p><br /></p>
