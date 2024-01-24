@@ -5,9 +5,22 @@
     <description>새로운 시선으로 여행을 바라보는 사람들</description>
     <link>https://www.squarelab.co/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 02 Nov 2023 08:25:52 +0900</pubDate>
-    <lastBuildDate>Thu, 02 Nov 2023 08:25:52 +0900</lastBuildDate>
+    <pubDate>Wed, 24 Jan 2024 12:32:57 +0900</pubDate>
+    <lastBuildDate>Wed, 24 Jan 2024 12:32:57 +0900</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
+    
+      <item>
+        <title>최저가 항공 요금 수집을 위한 데이터 파이프라인 개발기</title>
+        <description>카이트에서는 사용자에게 출/도착 날짜별 최저가를 시각적으로 한눈에 보여주기위해 아래처럼 항공 캘린더 기능을 제공합니다. 이 기능이 어떻게 구현된 것인지 궁금하지 않으신가요?
+</description>
+        <pubDate>Wed, 24 Jan 2024 10:00:00 +0900</pubDate>
+        <link>https://squarelab.co/blog/how-to-build-flight-fare-data-pipeline-with-argo/</link>
+        <guid isPermaLink="false">/blog/how-to-build-flight-fare-data-pipeline-with-argo/</guid>
+        
+        
+        <category>Engineering</category>
+        
+      </item>
     
       <item>
         <title>말 안 듣는 this, Typescript Custom ESLint Rule로 혼내주기</title>
@@ -121,20 +134,6 @@
         <pubDate>Mon, 27 Mar 2023 00:00:00 +0900</pubDate>
         <link>https://squarelab.co/blog/deview2023/</link>
         <guid isPermaLink="false">/blog/deview2023/</guid>
-        
-        
-        <category>Engineering</category>
-        
-      </item>
-    
-      <item>
-        <title>스퀘어랩의 코드 리뷰 프로세스 (2/2)</title>
-        <description>지난 포스트에서는 스퀘어랩에서 코드 리뷰를 어떤 툴을 이용해서 하고 있는지, 코드 리뷰가 대체 뭐가 좋아서 하는건지 이야기해 봤습니다.
-주절주절 길게도 말했는데 뭐 딱히 새로운 내용은 없네 라고 생각하실 수도 있을 것 같지만, 사실 여기부터가 제가 이 포스트를 통해 이야기 하고 싶은 진짜 주제입니다.
-</description>
-        <pubDate>Fri, 25 Mar 2022 00:00:00 +0900</pubDate>
-        <link>https://squarelab.co/blog/code-review-2/</link>
-        <guid isPermaLink="false">/blog/code-review-2/</guid>
         
         
         <category>Engineering</category>
