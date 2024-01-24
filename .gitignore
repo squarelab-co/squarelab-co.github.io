@@ -5,3 +5,4 @@
 .jekyll-metadata
 .DS_Store
 vendor
+_site
