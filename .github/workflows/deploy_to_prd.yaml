@@ -1,0 +1,33 @@
+name: Deploy to prd
+on:
+  push:
+    branches:
+      - prd
+
+permissions:
+  contents: read
+  # Required to use OIDC: https://github.com/aws-actions/configure-aws-credentials#OIDC
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Ref: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+      - name: Configure AWS credentials with OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # This role and OIDC are configured using CloudFormation template. See `github-oidc-squarelab-co` stack in CF.
+          role-to-assume: arn:aws:iam::904843649885:role/github-oidc-squarelab-co-Role-xjmxU6q6BXAH
+          aws-region: ap-northeast-1
+      - name: Run deploy script
+        run: ./deploy.sh
