@@ -269,6 +269,6 @@ object Main {
 ![dag_success](/images/blog/argo-exit-status-143/dag_success.png)
 이상 현상이 발생했을 때는 로그를 꼼꼼히 살펴보는 것이 중요한 것 같습니다. 이상 현상이 발생할 수 있는 부분을 찾은 이후에는, 근본적인 문제를 해결하기 위해 유지보수가 유용하도록 코드를 수정할 수 있어야하겠습니다. 명시적으로 `executorService` 를 종료하는 방식을 통해서, 불필요하게 사용되고 있던 서버 자원을 절약할 수 있었습니다. DI 패턴에 맞게 코드를 작성하는데 도움 주신 영재님께 감사드립니다. 🙇‍♂️
 
-다만, 이것이 근본적인 문제를 해결한 것은 아니었습니다.[`activeDeadlineSeconds`]([Argo Workflows - Timeouts](https://argo-workflows.readthedocs.io/en/latest/walk-through/timeouts/)) 가 충분하게 설정되어있었으나, 재시도 될 때에는 2분 정도로 짧게 유지되는 것이 `exit status 143` 의 근본적인 원인이었습니다.
+다만, 이것이 근본적인 문제를 해결한 것은 아니었습니다.[`activeDeadlineSeconds`](https://argo-workflows.readthedocs.io/en/latest/walk-through/timeouts/) 가 충분하게 설정되어있었으나, 재시도 될 때에는 2분 정도로 짧게 유지되는 것이 `exit status 143` 의 근본적인 원인이었습니다.
 
 이 문제는 어떻게 해결했을까요? 다음 글을 기대해주세요 🙏
