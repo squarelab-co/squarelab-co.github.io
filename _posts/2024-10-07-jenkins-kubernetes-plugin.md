@@ -24,7 +24,7 @@ Jenkins는 소프트웨어 개발의 빌드, 테스트, 배포를 자동화하�
 
 ![jenkins-job](/images/blog/jenkins-kubernetes-plugin/jenkins-job.png)
 
-Jenkins에서는 agent 마다 executor 수를 정해놓게 되는데, 이는 한개의 agent가 최대 처리할 수 있는 pipeline 수에 해당합니다. 위와 같이 executor 숫자보다 연쇄적으로 실행되어야하는 job의 개수가 더 많다면, Job D는 자신이 실행될 수 있는 executor를 기다리기만 하고 있을 것이고, Job A~Job C는 complete 되지 않고 executor 자리를 차지하고 있을 것입니다. 중요한 pipeline이 먼저 실행되도록 우선 순위 관리를 할 수는 있지만, 이런 구조에서 문제 상황을 방지하는 방법은 agent 수(인스턴스 수)를 늘리는 것 말고는 쉽게 떠오르지 않습니다.
+Jenkins에서는 agent 마다 executor 수를 정해놓게 되는데, 이는 한개의 agent가 최대 처리할 수 있는 pipeline 수에 해당합니다. jenkins pipeline을 사용할 때, 다른 job을 참조하여 호출하는 식으로, 여러개의 job을 연결해서 사용하는 것은 일반적입니다. 만약 위와 같이 executor 숫자보다 연쇄적으로 실행되어야하는 job의 개수가 더 많다면, Job D는 자신이 실행될 수 있는 executor를 기다리기만 하고 있을 것이고, Job A~Job C는 complete 되지 않고 executor 자리를 차지하고 있을 것입니다. 중요한 pipeline이 먼저 실행되도록 우선 순위 관리를 할 수는 있지만, 이런 구조에서 문제 상황을 방지하는 방법은 agent 수(인스턴스 수)를 늘리는 것 말고는 쉽게 떠오르지 않습니다.
 
 ### 2. 리소스 관리
 각 pipeline이 요구하는 리소스 사양을 적절히 만족시키기 어렵습니다.
