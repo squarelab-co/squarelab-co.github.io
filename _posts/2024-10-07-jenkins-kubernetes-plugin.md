@@ -12,7 +12,7 @@ img-author: /images/blog/author/seongbin.png
 
 Jenkins는 소프트웨어 개발의 빌드, 테스트, 배포를 자동화하는 오픈 소스 CI/CD 도구입니다. 다양한 플러그인을 통해 유연하게 파이프라인을 구성하여 효율적인 작업 처리가 가능합니다.
 
-기존에는 Jenkins pipeline 작업만을 위한 2~3개의 kubernetes node를 생성하고, 각 node 마다 jenkins agent pod을 띄우는 형태로 모든 jenkins pipeline들이 수행되고 있었습니다. 이로 인해 생겼던 여러가지 문제를 kubernetes plugin 도입과 spot instance 사용을 통해 빌드 프로세스를 개선하고, AWS 비용을 상당량 줄이게 된 과정을 소개합니다.
+기존에는 Jenkins pipeline 작업만을 위한 2~3개의 kubernetes node를 생성하고, 각 node 마다 jenkins agent pod을 DaemonSet 형태로 띄우는 형태로 모든 jenkins pipeline들이 수행되고 있었습니다. 이로 인해 생겼던 여러가지 문제를 kubernetes plugin 도입과 spot instance 사용을 통해 빌드 프로세스를 개선하고, AWS 비용을 상당량 줄이게 된 과정을 소개합니다.
 
 ## 문제 상황
 ![k8s-as-is](/images/blog/jenkins-kubernetes-plugin/k8s-as-is.png)
@@ -255,3 +255,7 @@ spot instance를 사용한 시간은 총 589시간(**고정 인스턴스 대비 
 Spot instance를 사용할 때는 작업 중단 가능성을 감안해야합니다. 코드를 테스트하고, 빌드, 배포하는 환경에서는 작업이 중단 되더라도 재시도하면 되기 때문에 spot instance를 사용하는 것이 적절해보입니다. 비용적인 측면에서도, on-demand instance 보다 spot instance를 사용하는게 컴퓨팅 자원을 훨씬 효율적으로 사용할 수 있음을 확인할 수 있었습니다. 노드가 새롭게 생성될 때 Daily build 이미지를 한번 pull 하게 되지만, 이 때 걸리는 delay는 크게 느껴지지 않았습니다. 결론적으로 서버 비용을 상당히 줄이면서, 배포 프로세스를 최적화할 수 있었습니다.
 
 Spot instance를 사용할 때 고려하게 됐던 여러가지 내용들을 이 글에 작성해보았는데, 다른 분들께도 AWS 비용을 최적화 하는데 도움이 되었으면 좋겠습니다.
+
+## 참고 자료
+* [200여개 서비스 모노레포의 파이프라인 최적화](https://toss.tech/article/monorepo-pipeline)
+* [인프랩의 EC2 스팟 인스턴스를 활용한 Jenkins 기반의 CI/CD 구축 사례](https://aws.amazon.com/ko/blogs/tech/inflab-ec2-spot-instance/)
